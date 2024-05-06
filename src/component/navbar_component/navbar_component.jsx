@@ -1,17 +1,18 @@
 import * as React from 'react';
-import {AppBar,Box,Toolbar,IconButton,Typography,Menu }from '@mui/material';
+import {AppBar,Box,Toolbar,IconButton,Typography,Menu ,Container,Button,MenuItem}from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 import Logo from '../../assets/image/logo.png'
 import FacebookIcon from "@mui/icons-material/Facebook";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
-const pages = ['Home', 'Add Property', 'Rent','Rent','Request Property'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+import './navbar.style.css'
+// import Divider from '../ui/orange-divider'
+
+const itemList = ['Home', 'Add Property', 'Sale','Rent','Request Property'];
+// const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -29,11 +30,11 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+    <AppBar position="static"  sx={{background:'#FFFFFF'}}>
+      <Container maxWidth="xl" >
+        <Toolbar disableGutters >
 
-          <img src={Logo} alt="img" />
+          <img src={Logo} alt="img"  className='logo-pic'/>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -63,10 +64,12 @@ function NavBar() {
               sx={{
                 display: { xs: 'block', md: 'none' },
               }}
+              
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {itemList.map((item) => (
+                <MenuItem key={item} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center" className='itemList'>          {item}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -74,49 +77,56 @@ function NavBar() {
           </Box>
           
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {itemList.map((item) => (
               <Button
-                key={page}
+                key={item}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ marginX:4,
+                    color:'292c6a',
+                    fontWeight:600,
+                     display: 'block' }}
+                className='itemList'
               >
-                {page}
+                {item}
               </Button>
             ))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
+          {/* <Divider/> */}
           <Box >
+          
             <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:'10px'}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:1}}
                 >
                     <FacebookIcon sx={{color:"blue"}}/>
                 </IconButton>
                 <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:'10px'}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:1}}
                 >
                     <YouTubeIcon sx={{color:"red"}}/>
                 </IconButton>
                 <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:'10px'}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:1}}
                 >
                     <PinterestIcon sx={{color:"#E60023"}}/>
 
                 </IconButton>
                 <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:'10px'}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:1}}
                 >
                     <InstagramIcon sx={{color:"#405DE6"}}/>
                 </IconButton>
                 <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:'10px'}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:1}}
                 >
                     <LinkedInIcon sx={{color:" #0077b5"}}/>
                 </IconButton>
             </Box>
+            {/* <Divider/> */}
 
            
-            <Menu
+            {/* <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
@@ -137,7 +147,7 @@ function NavBar() {
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
-            </Menu>
+            </Menu> */}
           </Box>
         </Toolbar>
       </Container>
