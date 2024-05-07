@@ -20,7 +20,7 @@ function Footer() {
           </Typography>
           
           <Typography className='responsive_fontsize16'>
-           by Ghar Niwas - Real Estate in Nepal -Buy, Rent, Sell Property (ghar, jagga) in Nepal.&nbsp;
+           by Ghar Niwas - Real Estate in Nepal -Buy, Rent, Sell Property (ghar, jagga) in Nepal. &nbsp;
           </Typography>
           
           <Typography className='responsive_fontsize16'>

@@ -16,17 +16,13 @@ const itemList = ['Home', 'Add Property', 'Sale','Rent','Request Property'];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
@@ -43,7 +39,7 @@ function NavBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="#000000"
             >
               <MenuIcon />
             </IconButton>
@@ -65,11 +61,12 @@ function NavBar() {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' },
+                
               }}
               
             >
               {itemList.map((item) => (
-                <MenuItem key={item} onClick={handleCloseNavMenu}>
+                <MenuItem key={item} onClick={handleCloseNavMenu} >
                   <Typography textAlign="center" className='itemList'>{item}
                   </Typography>
                 </MenuItem>
@@ -127,34 +124,6 @@ function NavBar() {
                 </IconButton>
                 </VerticalDivider>   
             </Box>
-            
-            
-          
-           
-
-           
-            {/* <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu> */}
           </Box>
         </Toolbar>
       </Container>

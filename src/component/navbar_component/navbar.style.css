@@ -7,14 +7,7 @@
 .logo-pic{
     margin-right: 100px;
 }
-.vertical-divider{
-    border-left: 3px solid orange;
-    height: 50px;
-    position: absolute;
-    left: 75%;
-    margin-left: 20px;
-    top: 15px;   
-}
+
 .itemList{
     position: relative;
 }
