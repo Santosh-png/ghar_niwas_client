@@ -5,20 +5,19 @@ import {
     Slide,
 } from "@mui/material";
 import PremiumList from "./premiumListingService";
-import PremiunCard from './PremiumCard';
-import PremiumCard from "./PremiumCard";
+// import PremiumCard from "./PremiumCard";
 function PremiumSection() {
     return (
         <Box
             sx={{}}
         >
-            <Box sx={{
-                    // display: "flex",
-                    // justifyContent: "center",
-                    // alignItems: "center",
-                    // flexDirection: "column",
+            {/* <Box sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    flexDirection: "column",
 
-                }}>
+                }}> */}
                 <Typography
                     sx={{
                         fontSize: "12px",
@@ -30,18 +29,12 @@ function PremiumSection() {
                 >
                    Premium Listing
                 </Typography>
-                <Box 
-                    sx={{
-                        border: "1px solid red",
-                        display: "flex"
-                    }}
-                >
-                    <PremiumCard/>
-                    <PremiumCard/>
-                    <PremiumCard/>
+
+                <Box>
+                    <PremiumList/>
                 </Box>
 
-            </Box>
+            {/* </Box> */}
         </Box>
     );
 }
