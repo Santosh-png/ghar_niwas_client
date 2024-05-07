@@ -1,10 +1,9 @@
 // import PremiumCard from './premiumListingCard.jsx';
-import PremiumCard from "./PremiumCard";
+import FeaturedCard from "./featuredCard";
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {Box} from "@mui/material";
 function PremiumList() {
   const settings = {
     dots: true,
@@ -45,13 +44,12 @@ function PremiumList() {
  return(
   <div className="center__carousel">
     <Slider {...settings}>
-      <PremiumCard/>
-      <PremiumCard/>
-      <PremiumCard/>
-      <PremiumCard/>
-      <PremiumCard/>
-      <PremiumCard/>
-     {/* </Box> */}
+      <FeaturedCard/>
+      <FeaturedCard/>
+      <FeaturedCard/>
+      <FeaturedCard/>
+      <FeaturedCard/>
+      <FeaturedCard/>
     </Slider>
   </div>
   

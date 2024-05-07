@@ -1,20 +1,18 @@
-// import PremiumCard from './premiumListingCard.jsx';
-import PremiumCard from "./PremiumCard";
+import UploadedCard from "./uploadedCard"; 
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {Box} from "@mui/material";
-function PremiumList() {
+
+function UploadedList() {
   const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
+    dots:true,
+    // className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
     slidesToShow: 3,
-    slidesToScroll: 1,
-    // initialSlide:0,
-    autoPlay:true,  
-    arrows:false,
+    speed: 500,
     responsive: [
         {
           breakpoint: 1024,
@@ -41,21 +39,19 @@ function PremiumList() {
           }
         }
       ]
-  };
- return(
-  <div className="center__carousel">
-    <Slider {...settings}>
-      <PremiumCard/>
-      <PremiumCard/>
-      <PremiumCard/>
-      <PremiumCard/>
-      <PremiumCard/>
-      <PremiumCard/>
-     {/* </Box> */}
-    </Slider>
-  </div>
-  
- )
+};
+return (
+    <div className="center__carousel">
+      <Slider {...settings}>
+        <UploadedCard/>
+        <UploadedCard/>
+        <UploadedCard/>
+        <UploadedCard/>
+        <UploadedCard/>
+        <UploadedCard/>
+      </Slider>
+    </div>
+  );
 }
 
-export default PremiumList;
+export default UploadedList;

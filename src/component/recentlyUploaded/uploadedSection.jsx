@@ -1,12 +1,12 @@
 import React from "react";
 import Divider from '@mui/material/Divider';
+
 import {
     Box,
     Typography
 } from "@mui/material";
-import PremiumList from "./premiumListingService";
-// import PremiumCard from "./PremiumCard";
-function PremiumSection() {
+import UploadedList from "./uploadedListing";
+function UploadedSection() {
     return (
         <Box sx={{marginTop:"80px"}}>
                 <Typography
@@ -20,13 +20,13 @@ function PremiumSection() {
                         mb:"20px"
                     }}
                 >
-                    <Divider>Premium Listing</Divider>
+                  <Divider>Recently Uploaded</Divider> 
                 </Typography>
 
                 <Box>
-                    <PremiumList/>
+                    <UploadedList/>
                 </Box>
         </Box>
     );
 }
-export default PremiumSection;
+export default UploadedSection;

@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-function PremiumCard() {
+function TopListingCard() {
   return (
     <Card sx={{ maxWidth: 300 }}>
       <CardActionArea>
@@ -14,8 +14,7 @@ function PremiumCard() {
         //   height="140"
          maxWidth="300px"
          maxHeight="300px"
-         
-          image="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          image="https://plus.unsplash.com/premium_photo-1661883964999-c1bcb57a7357?q=80&w=1428&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Top Listing Image"
         />
         <CardContent>
@@ -36,4 +35,4 @@ function PremiumCard() {
     </Card>
   );
 }
-export default PremiumCard;
+export default TopListingCard;
