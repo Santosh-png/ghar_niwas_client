@@ -11,6 +11,7 @@ function LandingPage() {
       <NavBar />
       <FirstSection/>
       <PremiumSection/>
+      
       <Contact />
       <Footer />
     </div>
