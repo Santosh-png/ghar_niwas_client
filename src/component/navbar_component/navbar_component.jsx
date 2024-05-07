@@ -82,7 +82,7 @@ function NavBar() {
                 onClick={handleCloseNavMenu}
                 sx={{ marginX:4,
                      color:'292c6a',
-                     fontSize:'20px',
+                     fontSize:'19px',
                      fontWeight:600,
                      display: 'block' }}
                 className='itemList'

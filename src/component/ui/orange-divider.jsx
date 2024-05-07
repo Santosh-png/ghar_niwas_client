@@ -13,6 +13,7 @@ function VerticalDivider({children}) {
            width:"2px",
            backgroundColor:"#292C6A",
            height:"30px",
+           margin:"10px"
       }}/>
             
     {children}
