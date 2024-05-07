@@ -25,7 +25,7 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static"  sx={{background:'#FFFFFF',padding:"16px 0px"}}>
+    <AppBar position="static"  sx={{background:'#FFFFFF'}}>
       <Container maxWidth="xl" >
         <Toolbar disableGutters >
 
@@ -82,7 +82,7 @@ function NavBar() {
                 onClick={handleCloseNavMenu}
                 sx={{ marginX:4,
                      color:'292c6a',
-                     fontSize:'19px',
+                     fontSize:'18px',
                      fontWeight:600,
                      display: 'block' }}
                 className='itemList'
@@ -95,7 +95,7 @@ function NavBar() {
          {/* for the mobile view  */}
           <Box sx={{ flexGrow: 0 }}>
           
-          <Box sx={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <VerticalDivider>
             <IconButton 
                     sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",margin:1}}
