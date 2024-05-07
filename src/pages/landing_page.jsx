@@ -1,15 +1,16 @@
 import React from 'react';
 import AboutSection from '../pages/AboutSection';
+import ClientFeedback from '../component/clientFeedbackList';
 
 
 function LandingPage() {
     return (
       <>
-        
-          <AboutSection/>
-        
+      <ClientFeedback/>
+      <AboutSection />
       </>
     );
   }
 
 export default LandingPage;
+

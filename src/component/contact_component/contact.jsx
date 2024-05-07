@@ -9,7 +9,8 @@ function Contact(){
         display:'flex',
         alignItems:'center',
         justifyContent:'space-evenly',
-        color:'#292C6A'
+        color:'#292C6A',
+        margin:'10px'
     }}>
      <Typography >
             <h3 className='responsive_fontsize24'>Quick Links</h3>

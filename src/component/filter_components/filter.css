@@ -1,0 +1,24 @@
+.filtering{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0rem;
+}
+
+.filter_section{
+    display: flex;
+    height: 105px;
+    width: auto;
+    background-color: white;
+    margin-top: 0rem;
+    padding: 2rem 5rem 2rem 5rem;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.select{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}

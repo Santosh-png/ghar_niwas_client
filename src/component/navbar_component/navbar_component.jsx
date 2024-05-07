@@ -81,8 +81,9 @@ function NavBar() {
                 key={item}
                 onClick={handleCloseNavMenu}
                 sx={{ marginX:4,
-                    color:'292c6a',
-                    fontWeight:600,
+                     color:'292c6a',
+                     fontSize:'20px',
+                     fontWeight:600,
                      display: 'block' }}
                 className='itemList'
               >
@@ -90,35 +91,35 @@ function NavBar() {
               </Button>
             ))}
           </Box>
-          
+
          {/* for the mobile view  */}
           <Box sx={{ flexGrow: 0 }}>
           
           <Box>
             <VerticalDivider>
             <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:1}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",margin:1}}
                 >
                     <FacebookIcon sx={{color:"blue"}}/>
                 </IconButton>
                 <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:1}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",margin:1}}
                 >
                     <YouTubeIcon sx={{color:"red"}}/>
                 </IconButton>
                 <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:1}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",margin:1}}
                 >
                     <PinterestIcon sx={{color:"#E60023"}}/>
 
                 </IconButton>
                 <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:1}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",margin:1}}
                 >
                     <InstagramIcon sx={{color:"#405DE6"}}/>
                 </IconButton>
                 <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:1}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  #292C6A",margin:1}}
                 >
                     <LinkedInIcon sx={{color:" #0077b5"}}/>
                 </IconButton>

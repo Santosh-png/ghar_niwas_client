@@ -1,0 +1,25 @@
+.LandingSection{
+    height: 89.6vh;
+    max-width: 100%;
+    background-image: url('../assets/heroImage.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;  
+}
+
+.search_bar{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    background-color: white;
+    opacity: 90%;
+    padding: 0.75rem 20rem 0.5rem 1.5rem;
+    border-radius: 10px;
+}
+
+.header-line{
+    margin-bottom: 2rem;
+}

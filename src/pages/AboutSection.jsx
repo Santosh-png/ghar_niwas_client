@@ -1,7 +1,5 @@
 import React from "react";
-import { Box, Button, Typography } from "@mui/material";
-import OrangeDivider from '../component/ui/orangeDivider_ui';
-
+import { Box, Typography } from "@mui/material";
 import logo from "../assets/image/logo.png";
 
 function AboutSection() {
@@ -10,9 +8,9 @@ function AboutSection() {
         sx={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-around",
           flexDirection: "row",
-          marginTop: ""
+          justifyContent: "space-between",
+          padding: "2rem 2.5rem 2rem 2.5rem"
         }}
       >
         {/* LEFT SIDE */}
@@ -22,9 +20,8 @@ function AboutSection() {
             width: "100%",
             display: "flex",
             flexDirection: "column",
-            // justifyContent: "center",
-            // alignItems: "center",
             gap: "0.7rem",
+            ml:"1rem"
           }}
         >
           <Typography variant="h1"
@@ -33,13 +30,13 @@ function AboutSection() {
               fontWeight: "600",
               color: "primary.main",
               display:"flex",
-              flexDirection:"row"
+              flexDirection:"row",
+              marginTop: "15px"
 
             }}
         >
-              <OrangeDivider>
+              
               About Us
-            </OrangeDivider>
 
           </Typography>
           <p className="responsive_fontsize16" >
@@ -49,9 +46,9 @@ function AboutSection() {
         {/* RIGHT SIDE */}
 
         <Box 
-          // sx= {{display:"flex", flexDirection:"column"}}
+          sx= {{display:"flex", flexDirection:"column", marginTop:"4.5rem", alignItems:"center"}}
           >
-        <img src={logo} alt="Ghar Niwas" style={{ maxHeight: "650px" }} />
+        <img src={logo} alt="Ghar Niwas" style={{Height: "12rem", width:"12rem"}} />
         </Box>
 
       </Box >
