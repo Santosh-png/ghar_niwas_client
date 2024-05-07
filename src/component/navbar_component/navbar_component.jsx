@@ -1,21 +1,21 @@
 import * as React from 'react';
-import {AppBar,Box,Toolbar,IconButton,Typography,Menu }from '@mui/material';
+import {AppBar,Box,Toolbar,IconButton,Typography,Menu ,Container,Button,MenuItem}from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 import Logo from '../../assets/image/logo.png'
 import FacebookIcon from "@mui/icons-material/Facebook";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
-const pages = ['Home', 'Add Property', 'Rent','Rent','Request Property'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+import './navbar.style.css'
+import VerticalDivider from '../ui/orange-divider'
+
+const itemList = ['Home', 'Add Property', 'Sale','Rent','Request Property'];
+
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -24,16 +24,12 @@ function NavBar() {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+    <AppBar position="static"  sx={{background:'#FFFFFF'}}>
+      <Container maxWidth="xl" >
+        <Toolbar disableGutters >
 
-          <img src={Logo} alt="img" />
+          <img src={Logo} alt="img"  className='logo-pic'/>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -42,10 +38,12 @@ function NavBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="#000000"
             >
               <MenuIcon />
             </IconButton>
+
+            {/* mobile view  */}
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -62,82 +60,70 @@ function NavBar() {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' },
+                
               }}
+              
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {itemList.map((item) => (
+                <MenuItem key={item} onClick={handleCloseNavMenu} >
+                  <Typography textAlign="center" className='itemList'>{item}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
             
           </Box>
-          
+
+          {/* desktop view  */}          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {itemList.map((item) => (
               <Button
-                key={page}
+                key={item}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ marginX:4,
+                    color:'292c6a',
+                    fontWeight:600,
+                     display: 'block' }}
+                className='itemList'
               >
-                {page}
+                {item}
               </Button>
             ))}
           </Box>
-
+          
+         {/* for the mobile view  */}
           <Box sx={{ flexGrow: 0 }}>
-          <Box >
+          
+          <Box>
+            <VerticalDivider>
             <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:'10px'}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:1}}
                 >
                     <FacebookIcon sx={{color:"blue"}}/>
                 </IconButton>
                 <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:'10px'}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:1}}
                 >
                     <YouTubeIcon sx={{color:"red"}}/>
                 </IconButton>
                 <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:'10px'}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:1}}
                 >
                     <PinterestIcon sx={{color:"#E60023"}}/>
 
                 </IconButton>
                 <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:'10px'}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:1}}
                 >
                     <InstagramIcon sx={{color:"#405DE6"}}/>
                 </IconButton>
                 <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:'10px'}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  rgba(33, 108, 222, 1)",margin:1}}
                 >
                     <LinkedInIcon sx={{color:" #0077b5"}}/>
                 </IconButton>
+                </VerticalDivider>   
             </Box>
-
-           
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
           </Box>
         </Toolbar>
       </Container>

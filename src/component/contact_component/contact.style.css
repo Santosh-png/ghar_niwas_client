@@ -1,0 +1,24 @@
+.responsive_fontsize20 li{
+   list-style: none;
+}
+.responsive_fontsize24{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    font-family:'Times New Roman', Times, serif;
+
+}
+.responsive_fontsize20 a{
+    text-decoration: none;
+    color:#292C6A;
+}
+
+.vertical-divider{
+    border-left: 3px solid #000000;
+    height: 220px;
+    position: absolute;
+    left: 33%;
+    margin-left: -4px;
+    top: 240px;
+    
+}
