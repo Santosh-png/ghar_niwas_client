@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material'
-import VerticalDivider from '../ui/orange-divider'
+
 
 
 function Footer() {

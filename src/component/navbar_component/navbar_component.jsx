@@ -11,7 +11,6 @@ import './navbar.style.css'
 import VerticalDivider from '../ui/orange-divider'
 
 const itemList = ['Home', 'Add Property', 'Sale','Rent','Request Property'];
-// const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 
 function NavBar() {
@@ -74,8 +73,8 @@ function NavBar() {
             </Menu>
             
           </Box>
-          {/* desktop view  */}
-          
+
+          {/* desktop view  */}          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {itemList.map((item) => (
               <Button
@@ -91,6 +90,7 @@ function NavBar() {
               </Button>
             ))}
           </Box>
+          
          {/* for the mobile view  */}
           <Box sx={{ flexGrow: 0 }}>
           
