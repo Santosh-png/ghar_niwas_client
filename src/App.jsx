@@ -3,7 +3,6 @@ import React from 'react'
 import NavBar from './component/navbar_component/navbar_component'
 import Footer from './component/footer_component/footer'
 import Contact from './component/contact_component/contact'
-import React from 'react';
 
 
 import './global.css'
@@ -14,7 +13,6 @@ function App() {
         <>     
         <NavBar/>
 
-        <>
 
         <LandingPage />
         </>
@@ -22,4 +20,4 @@ function App() {
      
   }
 
-export default App
+export default App;
