@@ -9,6 +9,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import IconButton from '@mui/material/IconButton';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CallIcon from '@mui/icons-material/Call';
+import Divider from '@mui/material/Divider';
 
 
 function Contact(){
@@ -20,7 +21,7 @@ function Contact(){
         alignItems:'center',
         justifyContent:'space-evenly',
         color:'#292C6A',
-        marginTop:'10px',
+        marginTop:'30px',
         textAlign:'center'
     }}>
      <Box>
@@ -65,7 +66,7 @@ function Contact(){
                
             </Box>
         </Box> 
-        <hr/>
+        <Divider orientation="horizontal" flexItem sx={{margin:'20px'}}/>
        {/* <div className='vertical-divider'></div> */}
         <Box  sx={{paddingTop:'20px'}}>
             <h3 className='responsive_fontsize24'>Properties</h3>
@@ -76,7 +77,7 @@ function Contact(){
             
             </ul>
         </Box> 
-        {/* <div className='vertical-divider'></div> */}
+        <Divider orientation="horizontal" flexItem sx={{margin:'20px'}} />
         <Box sx={{paddingTop:'20px'}}>
             <h3 className='responsive_fontsize24'>Contact Info</h3>
             <ul className='responsive_fontsize20'>
