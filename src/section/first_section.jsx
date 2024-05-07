@@ -14,11 +14,7 @@ function FirstSectionLanding() {
   return (
     <>
         <Box className="LandingSection">
-            <Box className= "header-line"
-              sx={{
-                maxWidth: "100%",
-              }}
-            >
+            <Box className= "header-line">
               <Typography
               variant='h1'
               className='responsive_fontSize48'
@@ -41,7 +37,20 @@ function FirstSectionLanding() {
                 }}
               >
                 An innovative way of finding the place of your choice.
-                A place of recognizing your style of living a life.              
+                              
+              </Typography>
+
+              <Typography
+              variant='h3'
+              className='responsive_fontSize32'
+                sx={{
+                  color: "accent.white",
+                  fontWeight: "medium",
+                  fontFamily: "Roboto Serif ",
+                  textAlign: 'center',
+                }}
+              >
+                 A place of recognizing your style of living a life.
               </Typography>
             </Box>
 
