@@ -47,6 +47,8 @@ function NavBar() {
             >
               <MenuIcon />
             </IconButton>
+
+            {/* mobile view  */}
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -68,13 +70,14 @@ function NavBar() {
             >
               {itemList.map((item) => (
                 <MenuItem key={item} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" className='itemList'>          {item}
+                  <Typography textAlign="center" className='itemList'>{item}
                   </Typography>
                 </MenuItem>
               ))}
             </Menu>
             
           </Box>
+          {/* desktop view  */}
           
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {itemList.map((item) => (
