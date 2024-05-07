@@ -5,23 +5,19 @@ import InputBase from '@mui/material/InputBase';
 
 
 import './first_section.css';
-import CustomFilterPanelContent from '../component/filter_components/filter';
+import CustomFilterPanelContent from '../filter_components/filter';
 
-function FirstSectionLanding() {
+function FirstSection() {
 
   const ariaLabel = { 'aria-label': 'description' };
 
   return (
     <>
-        <Box className="LandingSection">
-            <Box className= "header-line"
-              sx={{
-                maxWidth: "100%",
-              }}
-            >
+        <Box className="HeroSection">
+            <Box className= "header-line">
               <Typography
               variant='h1'
-              className='responsive_fontSize48'
+              className='responsive_fontSize64'
                 sx={{
                   fontFamily: "Roboto Slab",
                   color: "secondary.main",
@@ -40,8 +36,19 @@ function FirstSectionLanding() {
                   textAlign: 'center',
                 }}
               >
-                An innovative way of finding the place of your choice.
-                A place of recognizing your style of living a life.              
+                An innovative way of finding the place of your choice.                
+              </Typography>
+              <Typography
+              variant='h3'
+              className='responsive_fontSize32'
+                sx={{
+                  color: "accent.white",
+                  fontWeight: "medium",
+                  fontFamily: "Roboto Serif ",
+                  textAlign: 'center',
+                }}
+              >
+                 A place of recognizing your style of living a life.
               </Typography>
             </Box>
 
@@ -63,4 +70,4 @@ function FirstSectionLanding() {
   )
 }
 
-export default FirstSectionLanding
+export default FirstSection
