@@ -25,7 +25,7 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static"  sx={{background:'#FFFFFF'}}>
+    <AppBar position="static"  sx={{background:'#FFFFFF',padding:"16px 0px"}}>
       <Container maxWidth="xl" >
         <Toolbar disableGutters >
 
