@@ -25,7 +25,7 @@ function Contact(){
         textAlign:'center'
     }}>
      <Box>
-            <h3 className='responsive_fontsize24'>Quick Links</h3>
+            <h3 className='responsive_fontsize26'>Quick Links</h3>
             <ul className='responsive_fontsize20'>
                 <a href="#"><li>Home</li></a>
                 <a href="#"><li>FAQs</li></a>
@@ -36,7 +36,7 @@ function Contact(){
             </ul>
 
             <Box sx={{display: { xs: 'flex', md: 'none' }}}>
-            {/* <VerticalDivider> */}
+            
             <IconButton 
                     sx={{backgroundColor:"white", boxShadow:" 0px 4px 4px 0px #292C6A",margin:1}}
                 >
@@ -67,8 +67,9 @@ function Contact(){
             </Box>
         </Box> 
         <Divider orientation="horizontal" flexItem sx={{margin:'20px'}}/>
-       {/* <div className='vertical-divider'></div> */}
-        <Box  sx={{paddingTop:'20px'}}>
+        <Divider orientation="vertical" flexItem sx={{margin:'20px',backgroundColor:'accent.black'}}/>
+       
+        <Box  sx={{paddingLeft:'60px'}}>
             <h3 className='responsive_fontsize24'>Properties</h3>
             <ul className='responsive_fontsize20'>
                 <a href="#"><li>House for Sale/Rent</li></a>
@@ -78,6 +79,8 @@ function Contact(){
             </ul>
         </Box> 
         <Divider orientation="horizontal" flexItem sx={{margin:'20px'}} />
+        <Divider orientation="vertical" flexItem 
+            sx={{margin:'20px', backgroundColor:'accent.black'}}/>
         <Box sx={{paddingTop:'20px'}}>
             <h3 className='responsive_fontsize24'>Contact Info</h3>
             <ul className='responsive_fontsize20'>
