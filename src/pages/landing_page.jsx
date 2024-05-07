@@ -1,14 +1,3 @@
-
-import React from 'react'
-import FirstSectionLanding from '../section/first_section'
-import PremiumSection from '../component/premiumListing/premiumListingSection';
-import PremiumList from '../component/premiumListing/premiumListingService'
-function LandingPage() {
-  return (
-    <div>
-      <FirstSectionLanding/>
-      <PremiumSection/>
-
 import React from 'react';
 import FirstSection from '../component/cover_section/first_section'
 import NavBar from '../component/navbar_component/navbar_component'
@@ -20,6 +9,7 @@ function LandingPage() {
     <div>
       <NavBar />
       <FirstSection/>
+      <PremiumSection/>
       <Contact />
       <Footer />
     </div>
