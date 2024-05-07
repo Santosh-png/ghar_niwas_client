@@ -41,6 +41,7 @@ function Contact(){
                 <li>Lalitpur,Nepal</li>
                 <li>Call/SMS/Whatsapp</li>
                 <li>01-1234567,+9779877735741</li>
+                <li>hello</li>
                 
             </ul>
 
