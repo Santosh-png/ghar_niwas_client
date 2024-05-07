@@ -1,18 +1,34 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
+import React from 'react'
+import { Box} from '@mui/material'
 
-export default function FlexDivider() {
+function VerticalDivider({children}) {
+ 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-       
-        border: '3px solid black '
-      }}
-    >
-      <Divider orientation="vertical" variant="middle"  />
+   
+   <Box sx={{display:"flex",
+             alignItems:"center",
+             justifyContent:"center"
+             }}>
+     <Box  sx={{
+           width:"2px",
+           backgroundColor:"#292C6A",
+           height:"30px",
+      }}/>
+            
+    {children}
+     
+     <Box sx={{ 
+                textAlign:"center",
+                width:"50px",
+                backgroundColor:"accent.main" ,
+                height:"1px"
+              }}/>
+            
     
-    </Box>
-  );
+  </Box>
+
+   
+  )
 }
+
+export default VerticalDivider
