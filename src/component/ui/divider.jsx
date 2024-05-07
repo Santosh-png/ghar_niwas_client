@@ -12,8 +12,9 @@ function VerticalDivider({children}) {
      <Box  sx={{
            width:"2px",
            backgroundColor:"#292C6A",
-           height:"30px",
-           margin:"10px"
+           height:"45px",
+           mr:"15px",
+           marginTop:'10px'
       }}/>
             
     {children}

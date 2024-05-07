@@ -8,7 +8,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import './navbar.style.css'
-import VerticalDivider from '../ui/orange-divider'
+import VerticalDivider from '../ui/divider'
 
 const itemList = ['Home', 'Add Property', 'Sale','Rent','Request Property'];
 
@@ -95,7 +95,7 @@ function NavBar() {
          {/* for the mobile view  */}
           <Box sx={{ flexGrow: 0 }}>
           
-          <Box>
+          <Box sx={{display:'flex',justifyContent:'center',alignItems:'center'}}>
             <VerticalDivider>
             <IconButton 
                     sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",margin:1}}
