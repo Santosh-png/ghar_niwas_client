@@ -3,9 +3,8 @@ import {
     Box,
     Typography
 } from "@mui/material";
-import PremiumList from "./premiumListingService";
-// import PremiumCard from "./PremiumCard";
-function PremiumSection() {
+import UploadedList from "./uploadedListing";
+function UploadedSection() {
     return (
         <Box>
                 <Typography
@@ -19,13 +18,13 @@ function PremiumSection() {
                         mb:"20px"
                     }}
                 >
-                   Premium Listing
+                   Recently Uploaded
                 </Typography>
 
                 <Box>
-                    <PremiumList/>
+                    <UploadedList/>
                 </Box>
         </Box>
     );
 }
-export default PremiumSection;
+export default UploadedSection;
