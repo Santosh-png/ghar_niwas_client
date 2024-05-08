@@ -48,7 +48,7 @@ function FirstSection() {
               </Typography>
 
             <Box className= "search_bar">
-            <SearchIcon style={{marginTop: '0.4rem', opacity: "50%"}}/>
+            <SearchIcon style={{marginTop: '0.2rem', opacity: "50%"}}/>
             <Typography>
             <InputBase
               sx={{fontSize: "16px"}}
