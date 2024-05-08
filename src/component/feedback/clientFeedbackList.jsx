@@ -19,7 +19,7 @@ function ClientFeedbackList() {
         autoplay: true,
     };
     return (
-        <Box className="center__carousel" sx={{ padding: "47px" , color:"primary.main" , border:"1px solid blue"}}>
+        <Box className="center__carousel" sx={{ padding: "47px" , color:"primary.main" }}>
             <Slider {...settings}>
                 <ClientFeedbackCard />
                 <ClientFeedbackCard />
