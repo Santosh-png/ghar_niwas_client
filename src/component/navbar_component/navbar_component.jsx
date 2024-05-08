@@ -69,6 +69,42 @@ function NavBar() {
                   </Typography>
                 </MenuItem>
               ))}
+
+              {/* social media icons for the mobile view */}
+              <Box 
+                sx={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(2,1fr)'
+                  
+                 
+                  }}>
+               <IconButton 
+                    sx={{backgroundColor:"white"}}
+                >
+                    <FacebookIcon sx={{color:"blue"}}/>
+                </IconButton>
+                <IconButton 
+                    sx={{backgroundColor:"white",margin:1}}
+                >
+                    <YouTubeIcon sx={{color:"red"}}/>
+                </IconButton>
+                <IconButton 
+                    sx={{backgroundColor:"white"}}
+                >
+                    <PinterestIcon sx={{color:"#E60023"}}/>
+
+                </IconButton>
+                <IconButton 
+                    sx={{backgroundColor:"white"}}
+                >
+                    <InstagramIcon sx={{color:"#ffc273"}}/>
+                </IconButton>
+                <IconButton 
+                    sx={{backgroundColor:"white",margin:1}}
+                >
+                    <LinkedInIcon sx={{color:" #0077b5"}}/>
+                </IconButton>
+                </Box>
             </Drawer>
             </Box> 
           
@@ -91,7 +127,7 @@ function NavBar() {
             ))}
           </Box>
 
-         {/* for the mobile view  */}
+         {/* for the desktop view  */}
           <Box sx={{ flexGrow: 0 }}>
           
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
@@ -115,7 +151,7 @@ function NavBar() {
                 <IconButton 
                     sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",margin:1}}
                 >
-                    <InstagramIcon sx={{color:"#405DE6"}}/>
+                    <InstagramIcon sx={{color:"#ffc273"}}/>
                 </IconButton>
                 <IconButton 
                     sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  #292C6A",margin:1}}
