@@ -13,6 +13,7 @@ function UploadedList() {
     centerPadding: "60px",
     slidesToShow: 3,
     speed: 500,
+    arrow:false,
     responsive: [
         {
           breakpoint: 1024,
