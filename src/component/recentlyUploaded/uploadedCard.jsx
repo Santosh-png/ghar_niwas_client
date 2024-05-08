@@ -1,11 +1,11 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import {Grid} from '@mui/material'
+import {Grid ,Box} from '@mui/material'
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
-function UploadedCard() {
+function UploadedCard({price, title, name, date}) {
   return ( 
     <Card sx={{ maxWidth: 300 }}>      
         <CardMedia
@@ -18,16 +18,20 @@ function UploadedCard() {
         />
         
         <CardContent>
-          {/* <Typography gutterBottom variant="h5" component="div"> */}
-          <Typography className='responsive_fontSize14' sx={{fontWeight:"700",lineHeight:"18.74px",font:"Roboto Serif"}} >
-           Ghar Niwas
-          </Typography>
-          {/* <Typography variant="body2" color="text.secondary" */}
-          <Typography
-          className='responsive_fontSize14' sx={{font:"Roboto Serif",fontWeight:"400",letterSpacing:"0.25px"}}
-          >
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, error.
-          </Typography>
+        <Typography gutterBottom variant="h5" component="div">
+          {price}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+         {title}
+        </Typography>
+        <Box sx={{display:'flex', flexDirection:'row',justifyContent:"space-between"}}>
+        <Typography variant="body2" color="text.secondary" >
+         posted by: {name}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+         {date}
+        </Typography>
+         </Box>
         </CardContent>
     </Card>
   );

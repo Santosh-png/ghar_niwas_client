@@ -1,0 +1,68 @@
+
+export default [
+    {
+        id: 1,
+        location: "Bhaisepati",
+        price: "$50000",
+        title: "House for rent",
+        name: "sarita",
+        date: "2 months ago",
+    },
+    {
+        id: 2,
+        location: "Bhaisepati",
+        price: "$80000",
+        title: "land for rent",
+        name: "ashika",
+        date: "4 weeks ago",
+    },
+    {
+        id: 3,
+        location: "Bhaisepati",
+        price: "$20000",
+        title: "House for sale",
+        name: "samima",
+        date: "1 months ago",
+    },
+    {
+        id: 4,
+        location: "Bhaisepati",
+        price: "$80000",
+        title: "House for sale",
+        name: "sam",
+        date: "3 months ago",
+    },
+    {
+        id: 5,
+        location: "kusunti",
+        price: "$30000",
+        title: "land for rent",
+        name: "praju",
+        date: "7 months ago",
+    },
+    {
+        id: 6,
+        location: "tahachal",
+        price: "$70000",
+        title: "land for sale",
+        name: "ram",
+        date: "9 months ago",
+    },
+    {
+        id: 7,
+        location: "Bhaisepati",
+        price: "$900000",
+        title: "House for rent",
+        name: "sarita",
+        date: "3 months ago",
+    },
+    {
+        id: 8,
+        location: "Bhaisepati",
+        price: "$990000",
+        title: "House for rent",
+        name: "rina",
+        date: "10 months ago",
+    },
+
+] 
