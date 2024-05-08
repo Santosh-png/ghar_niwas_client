@@ -9,10 +9,10 @@
     margin-right: 100px;
 }
 
-.itemList{
+.responsive_fontsize20{
     position: relative;
 }
-.itemList::after{
+.responsive_fontsize20::after{
     content: '';
     width:0;
     height: 3px;
@@ -21,7 +21,7 @@
     left: 0;
     bottom:-6px;
 }
-.itemList:hover::after{
+.responsive_fontsize20:hover::after{
     width: 100%;
     transition: 1s ease all;
 }

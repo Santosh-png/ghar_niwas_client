@@ -9,7 +9,6 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import './navbar.style.css'
 import VerticalDivider from '../ui/divider'
-
 const itemList = ['Home', 'Add Property', 'Sale','Rent','Request Property'];
 
 
@@ -39,17 +38,19 @@ function NavBar() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="#000000"
+              
             >
               <MenuIcon />
             </IconButton>
 
             {/* mobile view  */}
+
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: 'bottom',
-                horizontal: 'left',
+                horizontal: 'center',
               }}
               keepMounted
               transformOrigin={{
@@ -59,14 +60,14 @@ function NavBar() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: 'block', md: 'none' }
                 
               }}
               
             >
               {itemList.map((item) => (
                 <MenuItem key={item} onClick={handleCloseNavMenu} >
-                  <Typography textAlign="center" className='itemList'>{item}
+                  <Typography textAlign="center" className='responsive_fontsize20'>{item}
                   </Typography>
                 </MenuItem>
               ))}
@@ -82,10 +83,9 @@ function NavBar() {
                 onClick={handleCloseNavMenu}
                 sx={{ marginX:4,
                      color:'292c6a',
-                     fontSize:'18px',
                      fontWeight:600,
                      display: 'block' }}
-                className='itemList'
+                className='responsive_fontsize20'
               >
                 {item}
               </Button>
