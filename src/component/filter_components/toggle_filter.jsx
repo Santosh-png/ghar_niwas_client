@@ -14,14 +14,14 @@ function ToggleFilter() {
     setAlignment(newAlignment);
   };
 
-  const handleClick = (e) => {
-    e.preventDefault(); // Prevent the default behavior
-    setAnchorEl(e.currentTarget);
+  const handleClick = (event) => {
+    event.preventDefault(); // Prevent the default behavior
+    setAnchorEl(event.currentTarget);
   };
   
 
-  const handleClose = (e) => {
-    e.preventDefault(); // Prevent the default behavior
+  const handleClose = (event) => {
+    event.preventDefault(); // Prevent the default behavior
     setAnchorEl(null);
   };
   const open = Boolean(anchorEl);
