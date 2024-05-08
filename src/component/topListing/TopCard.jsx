@@ -11,7 +11,9 @@ function TopListingCard() {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+        //   height="140"
+         maxWidth="300px"
+         maxHeight="300px"
           image="https://plus.unsplash.com/premium_photo-1661883964999-c1bcb57a7357?q=80&w=1428&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Top Listing Image"
         />
@@ -26,7 +28,7 @@ function TopListingCard() {
         //   variant="body2" color="text.secondary"
           className='responsive_fontSize14' sx={{font:"Roboto Serif",fontWeight:"400",letterSpacing:"0.25px"}}
           >
-            Lorem ipsum dolor sit amet.
+           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, quaerat.
           </Typography>
         </CardContent>
       </CardActionArea>

@@ -1,4 +1,6 @@
 import React from "react";
+import Divider from '@mui/material/Divider';
+
 import {
     Box,
     Typography
@@ -6,7 +8,7 @@ import {
 import FeaturedList from './featuredListingService';
 function FeaturedSection(){
     return(
-        <Box>
+        <Box sx={{marginTop:"80px"}}>
             <Typography
             sx={{
                 fontSize: "12px",
@@ -17,7 +19,7 @@ function FeaturedSection(){
                 textAlign:"center",
                 mb:"20px"
             }}>
-                Featured Listing
+               <Divider> Featured Listing </Divider>
             </Typography>
             <Box>
                 <FeaturedList/>

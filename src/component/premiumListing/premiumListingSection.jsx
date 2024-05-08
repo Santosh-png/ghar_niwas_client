@@ -1,4 +1,5 @@
 import React from "react";
+import Divider from '@mui/material/Divider';
 import {
     Box,
     Typography
@@ -7,7 +8,7 @@ import PremiumList from "./premiumListingService";
 // import PremiumCard from "./PremiumCard";
 function PremiumSection() {
     return (
-        <Box>
+        <Box sx={{marginTop:"80px"}}>
                 <Typography
                     sx={{
                         fontSize: "12px",
@@ -19,7 +20,7 @@ function PremiumSection() {
                         mb:"20px"
                     }}
                 >
-                   Premium Listing
+                    <Divider>Premium Listing</Divider>
                 </Typography>
 
                 <Box>

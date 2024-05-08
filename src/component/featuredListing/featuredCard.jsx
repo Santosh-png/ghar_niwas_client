@@ -11,7 +11,9 @@ function FeaturedCard() {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+        //   height="140"
+         maxWidth="300px"
+         maxHeight="300px"
           image="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Featured Listing Image"
         />
@@ -26,8 +28,8 @@ function FeaturedCard() {
         //   variant="body2" color="text.secondary"
           className='responsive_fontSize14' sx={{font:"Roboto Serif",fontWeight:"400",letterSpacing:"0.25px"}}
           >
-            Lorem ipsum dolor sit amet.
-          </Typography>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, soluta.         
+        </Typography>
         </CardContent>
       </CardActionArea>
     </Card>

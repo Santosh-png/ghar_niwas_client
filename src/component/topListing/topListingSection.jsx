@@ -1,4 +1,6 @@
 import React from "react";
+import Divider from '@mui/material/Divider';
+
 import {
     Box,
     Typography
@@ -6,7 +8,7 @@ import {
 import TopList from "./TopListingService";
 function TopSection(){
     return(
-        <Box>
+        <Box sx={{marginTop:"80px"}}>
             <Typography
             sx={{
                 fontSize: "12px",
@@ -17,7 +19,7 @@ function TopSection(){
                 textAlign:"center",
                 mb:"20px"
             }}>
-                Top Listing
+                <Divider>Top Listing</Divider>
             </Typography>
             <Box>
                 <TopList/>

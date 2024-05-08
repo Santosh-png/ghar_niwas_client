@@ -1,4 +1,6 @@
 import React from "react";
+import Divider from '@mui/material/Divider';
+
 import {
     Box,
     Typography
@@ -6,7 +8,7 @@ import {
 import UploadedList from "./uploadedListing";
 function UploadedSection() {
     return (
-        <Box>
+        <Box sx={{marginTop:"80px"}}>
                 <Typography
                     sx={{
                         fontSize: "12px",
@@ -18,7 +20,7 @@ function UploadedSection() {
                         mb:"20px"
                     }}
                 >
-                   Recently Uploaded
+                  <Divider>Recently Uploaded</Divider> 
                 </Typography>
 
                 <Box>
