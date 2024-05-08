@@ -22,47 +22,42 @@ function FirstSection() {
                   fontFamily: "Roboto Slab",
                   color: "secondary.main",
                   fontWeight: "bold", 
-                  textAlign: "center"
                 }}
               >
                 SELL, BUY, RENT YOUR PROPERTIES
               </Typography>
               <Typography
-              variant='h3'
-              className='responsive_fontSize32'
+              className='responsive_fontsize32'
                 sx={{
                   color: "accent.white",
                   fontWeight: "medium",
                   fontFamily: "Roboto Serif ",
-                  textAlign: 'center',
                 }}
               >
                 An innovative way of finding the place of your choice.                
               </Typography>
               <Typography
-              variant='h3'
-              className='responsive_fontSize32'
+              className='responsive_fontsize32'
                 sx={{
                   color: "accent.white",
                   fontWeight: "medium",
                   fontFamily: "Roboto Serif ",
-                  textAlign: 'center',
                 }}
               >
                  A place of recognizing your style of living a life.
               </Typography>
-            </Box>
 
             <Box className= "search_bar">
             <SearchIcon style={{marginTop: '0.4rem', opacity: "50%"}}/>
             <Typography>
             <InputBase
-              sx={{fontSize: "20px"}}
+              sx={{fontSize: "16px"}}
               placeholder="Search By City, State "
               inputProps={{ 'aria-label': 'search google maps' }}
             />
             </Typography>
             </Box>
+          </Box>
 
             <CustomFilterPanelContent/>
         </Box>
