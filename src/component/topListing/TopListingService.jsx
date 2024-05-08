@@ -11,14 +11,14 @@ function TopList(){
         speed:500,
         slidesToShow:3,
         slidesToScroll:1,       
-        autoPlay:true,
-        arrow:false,
+        autoplay:true,
+        arrows:false,
         responsive:[
             {
                 breakpoint: 1024,
                 settings: {
                   slidesToShow: 2,
-                  slidesToScroll: 3,
+                  slidesToScroll: 2,
                   infinite: true,
                   dots: true
                 }
@@ -26,7 +26,7 @@ function TopList(){
               {
                 breakpoint: 600,
                 settings: {
-                  slidesToShow: 2,
+                  slidesToShow: 3,
                   slidesToScroll: 2,
                   initialSlide: 2
                 }

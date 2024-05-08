@@ -43,7 +43,7 @@
     display: grid;
     place-items: center;
     /* width: 80%; */
-    margin: auto;
+    margin:0 auto;
     padding: 0px;
   }
  
