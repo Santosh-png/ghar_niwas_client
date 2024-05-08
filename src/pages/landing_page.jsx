@@ -5,6 +5,7 @@ import Contact from '../component/contact_component/contact'
 import Footer from '../component/footer_component/footer'
 import PremiumSection from '../component/premiumListing/premiumListingSection';
 import TopSection from '../component/topListing/topListingSection';
+import FeaturedSection from '../component/featuredListing/featuredSection'; 
 
 function LandingPage() {
   return (
@@ -13,6 +14,7 @@ function LandingPage() {
       <FirstSection/>
       <PremiumSection/>
       <TopSection/>
+      <FeaturedSection/>
       <Contact />
       <Footer />
     </div>
