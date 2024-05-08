@@ -3,16 +3,17 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import uploadedListItems from "./uploadedListItems";
 
 function UploadedList() {
   const settings = {
-    dots:true,
-    // className: "center",
-    centerMode: true,
-    infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 3,
-    speed: 500,
+        dots:true,
+        infinite:true,
+        speed:500,
+        slidesToShow:3,
+        slidesToScroll:1,       
+        autoplay:true,
+        arrows:false,
     responsive: [
         {
           breakpoint: 1024,
@@ -41,14 +42,22 @@ function UploadedList() {
       ]
 };
 return (
-    <div className="center__carousel">
+    <div className="center__carousel"
+    style={{ display: "flex", flexDirection: "column", width: "100%" }}
+    >
       <Slider {...settings}>
-        <UploadedCard/>
-        <UploadedCard/>
-        <UploadedCard/>
-        <UploadedCard/>
-        <UploadedCard/>
-        <UploadedCard/>
+      {uploadedListItems.map((item) => (
+          <div key={item.id} className="top-card-wrapper">
+     <UploadedCard 
+        imageUrl={item.imageUrl}
+        location={item.location}
+        price={item.price}
+        title={item.title}
+        name={item.name}
+        date={item.date}
+     />
+    </div>
+  ))}
       </Slider>
     </div>
   );

@@ -1,5 +1,5 @@
 .HeroSection{
-    height: 89.6vh;
+    height: fit-content;
     max-width: 100%;
     background-image: url('../../assets/heroImage.png');
     background-repeat: no-repeat;
@@ -8,18 +8,28 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;  
+    padding: 4rem;
+}
+
+.header-line{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .search_bar{
-    max-width: 80%;
-    width: 35%;
+    height: auto;
+    width: 65%;
     display: flex;
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 0.5rem;
     background-color: white;
     opacity: 90%;
-    padding: 0.75rem 8rem 0.5rem 1.5rem;
+    padding: 0.25rem  2rem;
     border-radius: 10px;
+    margin-top: 2rem;
 }
 
 .header-line{

@@ -3,9 +3,9 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import { CardActionArea , Box} from '@mui/material';
 
-function PremiumCard() {
+function PremiumCard({price, title, name, date}) {
   return (
     <Card sx={{ maxWidth: 300 }}>
       <CardActionArea>
@@ -19,18 +19,20 @@ function PremiumCard() {
           alt="Top Listing Image"
         />
         <CardContent>
-          <Typography
-        //    gutterBottom variant="h5" component="div"
-           className='responsive_fontSize14' sx={{fontWeight:"700",lineHeight:"18.74px",font:"Roboto Serif"}}
-          >
-            Ghar Niwas
-          </Typography>
-          <Typography 
-        //   variant="body2" color="text.secondary"
-          className='responsive_fontSize14' sx={{font:"Roboto Serif",fontWeight:"400",letterSpacing:"0.25px"}}
-          >
-           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, quaerat.
-          </Typography>
+        <Typography gutterBottom variant="h5" component="div">
+          {price}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+         {title}
+        </Typography>
+        <Box sx={{display:'flex', flexDirection:'row',justifyContent:"space-between"}}>
+        <Typography variant="body2" color="text.secondary" >
+         posted by: {name}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+         {date}
+        </Typography>
+        </Box>
         </CardContent>
       </CardActionArea>
     </Card>
