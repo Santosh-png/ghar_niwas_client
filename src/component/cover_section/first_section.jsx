@@ -5,7 +5,7 @@ import InputBase from '@mui/material/InputBase';
 
 
 import './first_section.css';
-import CustomFilterPanelContent from '../filter_components/filter';
+import PropertyFilter from '../filter_components/property_filter';
 
 function FirstSection() {
 
@@ -59,7 +59,7 @@ function FirstSection() {
             </Box>
           </Box>
 
-            <CustomFilterPanelContent/>
+            <PropertyFilter/>
         </Box>
 
 
