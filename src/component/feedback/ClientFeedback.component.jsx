@@ -1,35 +1,40 @@
 import React from 'react'
 import ClientFeedbackList from './clientFeedbackList'
 import { Typography,Box } from '@mui/material'
-// import ClientAvatarList from './clientAvatarList'
+import HorizontalDivider from "../ui/HorizontalDivider";
 const ClientFeedback= () => {
   return (
-   <Box >
-       
+    <>
+    <Box>
+        <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: "5rem", gap: "1rem"}}>
+          <HorizontalDivider />
             <Typography 
                 variant="h4"
                 sx={{
                  
                   fontSize: "32px",
                   fontWeight: "600",
-                  color: "primary.main",
+                  color: "accent.black ",
                   display:"flex",
                   flexDirection:"column",
-                  marginTop: "5rem",
+                //   marginTop: "5rem",
                   textAlign:"center",
+                  letterSpacing:"1px"
                   
     
                 }}
               
             >
-            Clients Feedback</Typography>
+            Clients Feedback
+            </Typography>
+        <HorizontalDivider/>
+    </Box>
 
         <Box>
             <ClientFeedbackList />
-           
-            {/* <ClientAvatarList/> */}
         </Box>
-   </Box>
+        </Box>
+   </>
   )
 }
 export default ClientFeedback;

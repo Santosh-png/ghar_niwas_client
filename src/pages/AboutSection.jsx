@@ -1,19 +1,22 @@
+
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import logo from "../assets/image/logo.png";
 
 function AboutSection() {
- 
+
   return (
+    <>
       <Box
         sx={{
-          display: "flex",
+          display:{xs: 'reverse-column', md: "flex"},
           alignItems: "center",
           flexDirection: "row",
           justifyContent: "space-between",
           padding: "2rem 2.5rem 2rem 2.5rem",
          
         }}
+        
       >
         {/* LEFT SIDE */}
         <Box
@@ -44,7 +47,7 @@ function AboutSection() {
 
           </Typography>
           <p className="responsive_fontsize16" >
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
           </p>
         </Box>
         {/* RIGHT SIDE */}
@@ -57,7 +60,9 @@ function AboutSection() {
         </Box>
 
       </Box >
+      </>
   );
 }
 
 export default AboutSection;
+
