@@ -15,15 +15,18 @@ function CustomFilterPanelContent() {
   const [maxamount, setMaxAmount] = React.useState('');
 
   const handleChangeProperty = (event) => {
+    event.preventDefault();
     setProperty(event.target.value);
   };
 
   const handleChangeLocation = (event) => {
+    event.preventDefault();
     setLocation(event.target.value);
   };
 
 
   const handleChangeMaximum = (event) => {
+    event.preventDefault();
     setMaxAmount(event.target.value);
   };
 
