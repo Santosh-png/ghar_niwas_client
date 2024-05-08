@@ -5,7 +5,7 @@ import Contact from '../component/contact_component/contact'
 import Footer from '../component/footer_component/footer'
 import PremiumSection from '../component/premiumListing/premiumListingSection';
 import AboutSection from './AboutSection';
-import ClientFeedback from '../component/feedback/clientFeedbackList';
+import ClientFeedback from '../component/feedback/ClientFeedback.component';
 
 function LandingPage() {
   return (
