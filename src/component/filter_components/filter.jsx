@@ -3,7 +3,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { Typography, Box } from '@mui/material';
+import { Typography, Box} from '@mui/material';
 
 
 import './filter.css'
@@ -30,15 +30,14 @@ function CustomFilterPanelContent() {
 
   return (
     <div className='fitering'>
-    <ToggleFilter />
-        <Box className = "filter_section"
-            sx={{
-                display: {
-                    xs: 'column'
-                }
-            }}
-        >
-        <Box className="select">
+      <ToggleFilter />
+
+      <Box className="filter_section"
+        sx={{
+          display:{ xs: 'column', md: 'flex'}
+        }}
+      >
+        <Box className="select"  >
             <Typography>Looking For</Typography>
             <FormControl sx={{mr: '1rem', minWidth: 200 }} size='small'>
                 <InputLabel id="demo-select-small-label">Property Type</InputLabel>
@@ -61,51 +60,49 @@ function CustomFilterPanelContent() {
         </Box>
 
 
-    <Box className="select">
-        <Typography className='responsive_fontsize20'> Locations</Typography>
-        <FormControl sx={{mr: "1rem", minWidth: 200 }} size="small">
-        <InputLabel id="demo-select-small-label">All Cities</InputLabel>
-        <Select
-            labelId="demo-select-small-label"
-            id="demo-select-small"
-            value={location}
-            label="All Citites"
-            onChange={handleChangeLocation}
-        >
-            <MenuItem value="">
-            <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Kathmandu</MenuItem>
-            <MenuItem value={20}>Bhaktapur</MenuItem>
-            <MenuItem value={30}>Lalitpur</MenuItem>
-        </Select>
-        </FormControl>
-    </Box>
-
-    <Box className="select">
-        <Typography>Price Range</Typography>
-        <FormControl sx={{mr: "1rem", minWidth: 200 }} size="small">
-        <InputLabel id="demo-select-small-label">Price Range</InputLabel>
-        <Select
-            labelId="demo-select-small-label"
-            id="demo-select-small"
-            value={maxamount}
-            label="Amount"
-            onChange={handleChangeMaximum}
-        >
-            <MenuItem value="">
+        <Box className="select">
+            <Typography className='responsive_fontsize20'> Locations</Typography>
+            <FormControl sx={{mr: "1rem", minWidth: 200 }} size="small">
+            <InputLabel id="demo-select-small-label">All Cities</InputLabel>
+            <Select
+                labelId="demo-select-small-label"
+                id="demo-select-small"
+                value={location}
+                label="All Citites"
+                onChange={handleChangeLocation}
+            >
+                <MenuItem value="">
                 <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>$Ten</MenuItem>
-            <MenuItem value={20}>$Twenty</MenuItem>
-            <MenuItem value={30}>$hirty</MenuItem>
-        </Select>
-        </FormControl>
+                </MenuItem>
+                <MenuItem value={10}>Kathmandu</MenuItem>
+                <MenuItem value={20}>Bhaktapur</MenuItem>
+                <MenuItem value={30}>Lalitpur</MenuItem>
+            </Select>
+            </FormControl>
         </Box>
 
-        
-        <ButtonComponent/>
-    </Box>
+        <Box className="select">
+            <Typography>Price Range</Typography>
+            <FormControl sx={{mr: "1rem", minWidth: 200 }} size="small">
+            <InputLabel id="demo-select-small-label">Price Range</InputLabel>
+            <Select
+                labelId="demo-select-small-label"
+                id="demo-select-small"
+                value={maxamount}
+                label="Amount"
+                onChange={handleChangeMaximum}
+            >
+                <MenuItem value="">
+                    <em>None</em>
+                </MenuItem>
+                <MenuItem value={10}>$Ten</MenuItem>
+                <MenuItem value={20}>$Twenty</MenuItem>
+                <MenuItem value={30}>$hirty</MenuItem>
+            </Select>
+            </FormControl>
+        </Box>
+          <ButtonComponent/>
+      </Box>
     </div>
   );
 }
