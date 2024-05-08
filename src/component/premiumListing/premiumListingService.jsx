@@ -43,7 +43,7 @@ function PremiumList() {
       ]
   };
  return(
-  <div className="center__carousel" style={{backgroundColor:"yellow"}}>
+  <div className="center__carousel">
     <Slider {...settings}>
       <PremiumCard/>
       <PremiumCard/>
