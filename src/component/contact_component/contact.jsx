@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography} from '@mui/material';
+import { Box, List, ListItem, Typography} from '@mui/material';
 import './contact.style.css'
 import FacebookIcon from "@mui/icons-material/Facebook";
 import PinterestIcon from "@mui/icons-material/Pinterest";
@@ -26,16 +26,16 @@ function Contact(){
     }}>
      <Box sx={{paddingLeft:'50px'}}>
         <Box className='itemTitle' >
-            <Typography variant className='responsive_fontsize24'>Quick Links</Typography>
+            <Typography className='responsive_fontsize24'>Quick Links</Typography>
         </Box>    
-            <ul className='responsive_fontsize18'>
-                <a href="#"><li>Home</li></a>
-                <a href="#"><li>FAQs</li></a>
-                <a href="#"><li>Land for Sale</li></a>
-                <a href="#"><li>Advertisements</li></a>
-                <a href="#"><li>Contact Us</li></a>
+            <List className='responsive_fontsize18'>
+                <a href="#"><ListItem>Home</ListItem></a>
+                <a href="#"><ListItem>FAQs</ListItem></a>
+                <a href="#"><ListItem>Land for Sale</ListItem></a>
+                <a href="#"><ListItem>Advertisements</ListItem></a>
+                <a href="#"><ListItem>Contact Us</ListItem></a>
                 
-            </ul>
+            </List>
      
               {/* icons for the mobile view */}
             <Box sx={{display: { xs: 'flex', md: 'none' }}}>
@@ -69,19 +69,19 @@ function Contact(){
                
             </Box>
         </Box> 
-        <Divider orientation="horizontal" flexItem sx={{margin:'20px',display: { xs: 'flex', md: 'none' }}}/>
-        <Divider orientation="vertical" variant="middle"  flexItem sx={{margin:'20px 20px 200px 20px', backgroundColor:'accent.black'}}/>
+            <Divider orientation="horizontal" flexItem sx={{margin:'20px',display: { xs: 'flex', md: 'none' }}}/>
+            <Divider orientation="vertical" variant="middle"  flexItem sx={{margin:'20px 20px 200px 20px', backgroundColor:'accent.black'}}/>
        
         <Box sx={{paddingLeft:'50px'}} >
             <Box className='itemTitle'>
             <Typography variant='' className='responsive_fontsize24'>Properties</Typography>
             </Box>
-            <ul className='responsive_fontsize18'>
-                <a href="#"><li>House for Sale/Rent</li></a>
-                <a href="#"><li>Land for Sale/Rent</li></a>
-                <a href="#"><li>Apartment for Sale/Rent</li></a>
+            <List className='responsive_fontsize18'>
+                <a href="#"><ListItem>House for Sale/Rent</ListItem></a>
+                <a href="#"><ListItem>Land for Sale/Rent</ListItem></a>
+                <a href="#"><ListItem>Apartment for Sale/Rent</ListItem></a>
             
-            </ul>
+            </List>
         </Box> 
 
         <Divider orientation="horizontal" flexItem sx={{margin:'20px',display: { xs: 'flex', md: 'none' }}} />
@@ -90,29 +90,29 @@ function Contact(){
 
         <Box sx={{padding:'0 50px',overflow:'hidden'}}>
             <Box className='itemTitle'>
-            <Typography  variant='' className='responsive_fontsize24'>Contact Info</Typography>
+            <Typography className='responsive_fontsize24'>Contact Info</Typography>
             </Box>
-            <ul className='responsive_fontsize18'>
+            <List className='responsive_fontsize18'>
                
-                <li>
+                <ListItem>
                         <LocationOnIcon/>
                      Kusunti 13 Lalitpur,Nepal
-                </li>
-                <li> 
+                </ListItem>
+                <ListItem> 
                         <CallIcon />
                     
                         01-1234567
-                  </li>  
-                <li><WhatsAppIcon/>
+                  </ListItem>  
+                <ListItem><WhatsAppIcon/>
                 +9779877735741
-                </li>
+                </ListItem>
                
                 
                 
-            </ul>
+            </List>
 
             <Box className='map'> 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28271.991916311705!2d85.29495851139528!3d27.655502971182738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb177f078f1cd9%3A0xb514415c5a76afb3!2sKusunti%2C%20Lalitpur%2044700!5e0!3m2!1sen!2snp!4v1715060575540!5m2!1sen!2snp" width="100%" height="200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28271.991916311705!2d85.29495851139528!3d27.655502971182738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb177f078f1cd9%3A0xb514415c5a76afb3!2sKusunti%2C%20Lalitpur%2044700!5e0!3m2!1sen!2snp!4v1715060575540!5m2!1sen!2snp" width="100%" height="200" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </Box>
         </Box> 
        
