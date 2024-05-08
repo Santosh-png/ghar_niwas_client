@@ -1,5 +1,11 @@
 /* responsive font size for 13 to 16 px */
 /* 1rem=16px */
+.apply-maxWidth{
+   max-width:1536px;
+   margin-left:auto;
+   margin-right:auto;
+   padding:1rem;
+}
 *{
    margin: 0;
    padding: 0;
@@ -16,6 +22,7 @@
  .responsive_fontsize18{
     font-size: clamp(0.95rem, 2vw + 0.5rem,1.125rem);                                     
   }
+  
  /* clamp(minimum,current,maximum) */
  .responsive_fontsize20{
     font-size: clamp(0.9rem, 2vw + 0.5rem,1.25rem);                                     
@@ -45,9 +52,3 @@
  
  /* for 16px */
  
- .apply-maxwidth{
-      max-width:"1536px"; 
-      margin-left: auto;
-      margin-right: auto;
-      padding: 1rem;                                  
- }
