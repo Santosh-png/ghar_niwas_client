@@ -9,7 +9,6 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import './navbar.style.css'
 import VerticalDivider from '../ui/divider'
-
 const itemList = ['Home', 'Add Property', 'Sale','Rent','Request Property'];
 
 
@@ -44,6 +43,7 @@ function NavBar() {
             </IconButton>
 
             {/* mobile view  */}
+            
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}

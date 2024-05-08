@@ -23,8 +23,10 @@ function Contact(){
         marginTop:'30px',
         textAlign:'center'
     }}>
-     <Box>
+     <Box sx={{paddingLeft:'50px'}}>
+        <Box className='itemTitle' >
             <Typography variant className='responsive_fontsize24'>Quick Links</Typography>
+        </Box>    
             <ul className='responsive_fontsize20'>
                 <a href="#"><li>Home</li></a>
                 <a href="#"><li>FAQs</li></a>
@@ -68,8 +70,10 @@ function Contact(){
         <Divider orientation="horizontal" flexItem sx={{margin:'20px'}}/>
         <Divider orientation="vertical" flexItem sx={{margin:'20px',backgroundColor:'accent.black'}}/>
        
-        <Box  sx={{paddingLeft:'60px'}}>
+        <Box sx={{paddingLeft:'50px'}} >
+            <Box className='itemTitle'>
             <Typography variant='' className='responsive_fontsize24'>Properties</Typography>
+            </Box>
             <ul className='responsive_fontsize20'>
                 <a href="#"><li>House for Sale/Rent</li></a>
                 <a href="#"><li>Land for Sale/Rent</li></a>
@@ -81,8 +85,10 @@ function Contact(){
         <Divider orientation="vertical" flexItem 
             sx={{margin:'20px', backgroundColor:'accent.black'}}/>
 
-        <Box sx={{paddingTop:'20px'}}>
+        <Box sx={{paddingLeft:'50px'}}>
+            <Box className='itemTitle'>
             <Typography  variant='' className='responsive_fontsize24'>Contact Info</Typography>
+            </Box>
             <ul className='responsive_fontsize20'>
                
                 <li>
@@ -102,8 +108,8 @@ function Contact(){
                 
             </ul>
 
-            <Box sx={{paddingTop:' 10px',paddingLeft:'20px',paddingBottom:'10px'}} className='map'> 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28271.991916311705!2d85.29495851139528!3d27.655502971182738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb177f078f1cd9%3A0xb514415c5a76afb3!2sKusunti%2C%20Lalitpur%2044700!5e0!3m2!1sen!2snp!4v1715060575540!5m2!1sen!2snp" width="250" height="150" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <Box sx={{paddingTop:' 10px',paddingBottom:'10px'}} className='map'> 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28271.991916311705!2d85.29495851139528!3d27.655502971182738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb177f078f1cd9%3A0xb514415c5a76afb3!2sKusunti%2C%20Lalitpur%2044700!5e0!3m2!1sen!2snp!4v1715060575540!5m2!1sen!2snp" width="550" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </Box>
         </Box> 
        

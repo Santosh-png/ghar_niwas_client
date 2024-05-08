@@ -5,10 +5,14 @@
 .responsive_fontsize20{
     padding-top: 10px;
 }
-.responsive_fontsize24{    
+.itemTitle{ 
+    
     font-weight: 600;
-    position: relative;
+    
     display: flex;
+}
+.responsive_fontsize24{
+    position: relative;
 }
 .responsive_fontsize24::after{
     content: '';
