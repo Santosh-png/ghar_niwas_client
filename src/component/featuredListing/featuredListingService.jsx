@@ -20,7 +20,7 @@ function PremiumList() {
           breakpoint: 1024,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 3,
+            slidesToScroll: 2,
             infinite: true,
             dots: true
           }

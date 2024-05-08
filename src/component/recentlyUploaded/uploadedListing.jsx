@@ -43,21 +43,21 @@ function UploadedList() {
 };
 return (
     <div className="center__carousel"
-    style={{ display: "flex", flexDirection: "column", width: "100%" }}
+    style={{ display: "flex", flexDirection: "column", width: "100%",transform:'scale(0.8)',transition:"all 0.4s ease-in-out"}}
     >
       <Slider {...settings}>
       {uploadedListItems.map((item) => (
           <div key={item.id} className="top-card-wrapper">
-     <UploadedCard 
-        imageUrl={item.imageUrl}
-        location={item.location}
-        price={item.price}
-        title={item.title}
-        name={item.name}
-        date={item.date}
-     />
-    </div>
-  ))}
+            <UploadedCard 
+                imageUrl={item.imageUrl}
+                location={item.location}
+                price={item.price}
+                title={item.title}
+                name={item.name}
+                date={item.date}
+            />
+            </div>
+        ))}
       </Slider>
     </div>
   );

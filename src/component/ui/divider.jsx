@@ -2,9 +2,7 @@ import React from 'react'
 import { Box} from '@mui/material'
 
 function VerticalDivider({children}) {
- 
   return (
-   
    <Box sx={{display:"flex",
              alignItems:"center",
              justifyContent:"center"
@@ -17,20 +15,15 @@ function VerticalDivider({children}) {
            marginTop:'10px'
       }}/>
             
-    {children}
-     
+    {children}    
      <Box sx={{ 
                 textAlign:"center",
                 width:"50px",
                 backgroundColor:"accent.main" ,
                 height:"1px"
-              }}/>
-            
-    
-  </Box>
-
-   
+              }}/>  
+  </Box> 
   )
 }
 
-export default VerticalDivider
+export default VerticalDivider;
