@@ -3,6 +3,7 @@ import { Box, Typography } from "@mui/material";
 import logo from "../assets/image/logo.png";
 
 function AboutSection() {
+ 
   return (
       <Box
         sx={{
@@ -47,7 +48,8 @@ function AboutSection() {
 
         <Box 
           sx= {{display:"flex", flexDirection:"column", marginTop:"4.5rem", alignItems:"center"}}
-          >
+        >
+         
         <img src={logo} alt="Ghar Niwas" style={{Height: "12rem", width:"12rem"}} />
         </Box>
 
