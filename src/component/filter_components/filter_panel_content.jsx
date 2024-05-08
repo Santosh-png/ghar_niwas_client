@@ -30,13 +30,9 @@ function CustomFilterPanelContent() {
 
   return (
     <div className='fitering'>
-      <ToggleFilter />
-
-      <Box className="filter_section"
-        sx={{
-          display:{ xs: 'column', md: 'flex'}
-        }}
-      >
+      <Box className="filter_section" sx={{
+        display: {md: "flex"}
+        }}>
         <Box className="select"  >
             <Typography>Looking For</Typography>
             <FormControl sx={{mr: '1rem', minWidth: 200 }} size='small'>
