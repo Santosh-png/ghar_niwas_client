@@ -12,6 +12,7 @@
 }
 .responsive_fontsize24{
     position: relative;
+    /* background-color: #edab03; */
 }
 .responsive_fontsize24::after{
     content: '';
@@ -22,6 +23,9 @@
     left: 0;
     bottom:-6px;
 }
+.map{
+    margin:5px 0px 20px 0px
+}
 .responsive_fontsize24:hover::after{
     width: 100%;
 }
@@ -29,4 +33,7 @@
     text-decoration: none;
     color:#292C6A;
 }
+
+
+    
 
