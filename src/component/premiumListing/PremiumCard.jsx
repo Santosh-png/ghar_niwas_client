@@ -16,10 +16,14 @@ function PremiumCard() {
         />
         
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          {/* <Typography gutterBottom variant="h5" component="div"> */}
+          <Typography className='responsive_fontSize14' sx={{fontWeight:"700",lineHeight:"18.74px",font:"Roboto Serif"}} >
            Ghar Niwas
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          {/* <Typography variant="body2" color="text.secondary" */}
+          <Typography
+          className='responsive_fontSize14' sx={{font:"Roboto Serif",fontWeight:"400",letterSpacing:"0.25px"}}
+          >
            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere dignissimos, quia vero obcaecati expedita commodi deleniti laborum cumque optio ex fuga sit autem nihil. Nemo error repellendus asperiores atque hic?
           </Typography>
         </CardContent>
