@@ -24,7 +24,7 @@
     bottom:-6px;
 }
 .map{
-    background-color: gray;
+    margin:5px 0px 20px 0px
 }
 .responsive_fontsize24:hover::after{
     width: 100%;

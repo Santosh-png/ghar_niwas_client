@@ -69,8 +69,8 @@ function Contact(){
                
             </Box>
         </Box> 
-        <Divider orientation="horizontal" flexItem sx={{margin:'20px'}}/>
-        <Divider orientation="vertical" variant="middle"  flexItem sx={{margin:'20px',backgroundColor:'accent.black'}}/>
+        <Divider orientation="horizontal" flexItem sx={{margin:'20px',display: { xs: 'flex', md: 'none' }}}/>
+        <Divider orientation="vertical" variant="middle"  flexItem sx={{margin:'20px 20px 200px 20px', backgroundColor:'accent.black'}}/>
        
         <Box sx={{paddingLeft:'50px'}} >
             <Box className='itemTitle'>
@@ -83,9 +83,10 @@ function Contact(){
             
             </ul>
         </Box> 
-        <Divider orientation="horizontal" flexItem sx={{margin:'20px'}} />
+
+        <Divider orientation="horizontal" flexItem sx={{margin:'20px',display: { xs: 'flex', md: 'none' }}} />
         <Divider orientation="vertical" flexItem 
-            sx={{margin:'20px', backgroundColor:'accent.black'}}/>
+            sx={{margin:'15px 0px 200px 0px', backgroundColor:'accent.black'}}/>
 
         <Box sx={{padding:'0 50px',overflow:'hidden'}}>
             <Box className='itemTitle'>
@@ -111,7 +112,7 @@ function Contact(){
             </ul>
 
             <Box className='map'> 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28271.991916311705!2d85.29495851139528!3d27.655502971182738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb177f078f1cd9%3A0xb514415c5a76afb3!2sKusunti%2C%20Lalitpur%2044700!5e0!3m2!1sen!2snp!4v1715060575540!5m2!1sen!2snp" width="100%" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28271.991916311705!2d85.29495851139528!3d27.655502971182738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb177f078f1cd9%3A0xb514415c5a76afb3!2sKusunti%2C%20Lalitpur%2044700!5e0!3m2!1sen!2snp!4v1715060575540!5m2!1sen!2snp" width="100%" height="200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </Box>
         </Box> 
        
