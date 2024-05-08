@@ -1,13 +1,26 @@
 .responsive_fontsize20 li{
    list-style: none;
+   display:flex;
 }
-.responsive_fontsize24{
-    text-align: center;
-    font-size: 24px;
+.responsive_fontsize20{
+    padding-top: 10px;
+}
+.responsive_fontsize24{    
     font-weight: 600;
-    font-family:'Times New Roman', Times, serif;
-    margin-bottom: 10px;
-
+    position: relative;
+    display: flex;
+}
+.responsive_fontsize24::after{
+    content: '';
+    width:0;
+    height: 3px;
+    background:#FBAF1A;
+    position: absolute;
+    left: 0;
+    bottom:-6px;
+}
+.responsive_fontsize24:hover::after{
+    width: 100%;
 }
 .responsive_fontsize20 a{
     text-decoration: none;
