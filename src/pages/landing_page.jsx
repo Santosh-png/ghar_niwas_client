@@ -1,13 +1,3 @@
-
-import React from 'react'
-import FirstSectionLanding from '../section/first_section'
-import PremiumSection from '../component/premiumListing/premiumListingSection';
-function LandingPage() {
-  return (
-    <div>
-      <FirstSectionLanding/>
-      <PremiumSection/>
-
 import React from 'react';
 import FirstSection from '../component/cover_section/first_section'
 import NavBar from '../component/navbar_component/navbar_component'
