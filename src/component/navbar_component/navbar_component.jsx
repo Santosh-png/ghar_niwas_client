@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {AppBar,Box,Toolbar,IconButton,Typography,Menu ,Container,Button,MenuItem}from '@mui/material';
+import {AppBar,Box,Toolbar,IconButton,Typography,Menu ,Container,Button,MenuItem, Drawer}from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Logo from '../../assets/image/logo.png'
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -24,12 +24,12 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static"  sx={{background:'#FFFFFF'}}>
+    <AppBar position="static"  sx={{background:'blue'}}>
       <Container maxWidth="xl" >
-        <Toolbar disableGutters >
-
+        <Toolbar disableGutters  className="apply-maxwidth"
+         sx={{py:"0",width:"100%"}}>
+         
           <img src={Logo} alt="img"  className='logo-pic'/>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -38,30 +38,23 @@ function NavBar() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="#000000"
-              
+                           
             >
-              <MenuIcon />
+              <MenuIcon sx={{backgroundColor:"red"}}/>
             </IconButton>
-
+           
             {/* mobile view  */}
 
-            <Menu
+            <Drawer
               id="menu-appbar"
               anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'center',
-              }}
+              anchor="right"
+             onClose={() => setIsMobileDrawerOpen(false)}
               keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
               open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' }
-                
+                              
               }}
               
             >
@@ -71,9 +64,9 @@ function NavBar() {
                   </Typography>
                 </MenuItem>
               ))}
-            </Menu>
-            
-          </Box>
+            </Drawer>
+            </Box> 
+          
 
           {/* desktop view  */}          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
