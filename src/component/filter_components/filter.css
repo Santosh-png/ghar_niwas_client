@@ -6,15 +6,14 @@
 }
 
 .filter_section{
-    display: flex;
+    /* display: flex; */
     height: auto;
     width: auto ;
     background-color: white;
     margin-top: 0rem;
-    padding: 2rem 5rem 2rem 5rem;
+    padding: 2rem 3rem 2rem 3rem;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;    
 }
 
 
@@ -29,7 +28,7 @@
     display: flex;
 }
 
-  @media (max-width: 600px) {
+  /* @media (max-width: 600px) {
     .filter_section {
       position: inherit;
       top: -10;
@@ -48,4 +47,4 @@
       margin-bottom: 1rem;
     }
   }
-  
+   */

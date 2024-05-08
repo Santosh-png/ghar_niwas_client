@@ -13,7 +13,7 @@
 
 .search_bar{
     height: auto;
-    width: 40%;
+    width: 35%;
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
