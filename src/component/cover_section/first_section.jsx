@@ -5,7 +5,7 @@ import InputBase from '@mui/material/InputBase';
 
 
 import './first_section.css';
-import CustomFilterPanelContent from '../filter_components/filter';
+import PropertyFilter from '../filter_components/property_filter';
 
 function FirstSection() {
 
@@ -48,7 +48,7 @@ function FirstSection() {
               </Typography>
 
             <Box className= "search_bar">
-            <SearchIcon style={{marginTop: '0.4rem', opacity: "50%"}}/>
+            <SearchIcon style={{marginTop: '0.2rem', opacity: "50%"}}/>
             <Typography>
             <InputBase
               sx={{fontSize: "16px"}}
@@ -59,7 +59,7 @@ function FirstSection() {
             </Box>
           </Box>
 
-            <CustomFilterPanelContent/>
+            <PropertyFilter/>
         </Box>
 
 
