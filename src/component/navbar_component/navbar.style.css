@@ -6,14 +6,10 @@
 }
 
 .logo-pic{
-    /* margin-right: 300px; */
-    background-color: aqua;
+    margin-right: 300px; 
+    /* background-color: aqua; */
 }
-#menu-appbar{
-    display: flex;
-    justify-content: flex-start;
-    
-}
+
 .responsive_fontsize20{
     position: relative;
 }

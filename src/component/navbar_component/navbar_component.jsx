@@ -24,7 +24,7 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static"  sx={{background:'blue'}}>
+    <AppBar position="static"  sx={{background:'#FFFFFF'}}>
       <Container maxWidth="xl" >
         <Toolbar disableGutters  className="apply-maxwidth"
          sx={{py:"0",width:"100%"}}>
@@ -48,10 +48,17 @@ function NavBar() {
             <Drawer
               id="menu-appbar"
               anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              onClose={handleCloseNavMenu}
+              // anchorEl={anchorElNav}
               anchor="right"
-             onClose={() => setIsMobileDrawerOpen(false)}
-              keepMounted
               open={Boolean(anchorElNav)}
+            //  onClose={() => setIsMobileDrawerOpen(false)}
+              keepMounted
+              // open={Boolean(anchorElNav)}
               sx={{
                 display: { xs: 'block', md: 'none' }
                               
@@ -89,7 +96,7 @@ function NavBar() {
           <Box sx={{ flexGrow: 0 }}>
           
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <VerticalDivider>
+            <VerticalDivider/>
             <IconButton 
                     sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",margin:1}}
                 >
@@ -116,7 +123,7 @@ function NavBar() {
                 >
                     <LinkedInIcon sx={{color:" #0077b5"}}/>
                 </IconButton>
-                </VerticalDivider>   
+                
             </Box>
           </Box>
         </Toolbar>
