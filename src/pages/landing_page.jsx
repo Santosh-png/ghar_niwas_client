@@ -7,6 +7,9 @@ import PremiumSection from '../component/premiumListing/premiumListingSection';
 import TopSection from '../component/topListing/topListingSection';
 import FeaturedSection from '../component/featuredListing/featuredSection';
 import UploadedSection from '../component/recentlyUploaded/uploadedSection';
+import AboutSection from './AboutSection';
+import ClientFeedback from '../component/feedback/clientFeedbackList';
+
 
 function LandingPage() {
   return (
@@ -17,6 +20,8 @@ function LandingPage() {
       <TopSection/>
       <FeaturedSection/>
       <UploadedSection/>
+      <ClientFeedback/>
+      <AboutSection/>
       <Contact />
       <Footer />
     </div>
