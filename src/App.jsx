@@ -3,7 +3,6 @@ import './global.css'
 import LandingPage from './pages/landing_page'
 
 function App() {
-
       return(  
         <>   
         <LandingPage />

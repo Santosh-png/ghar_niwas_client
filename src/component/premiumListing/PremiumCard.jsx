@@ -5,18 +5,17 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea , Box} from '@mui/material';
 
-function PremiumCard({price, title, name, date}) {
+function PremiumCard({price, title, name, date,imageUrl}) {
   return (
     <Card sx={{ maxWidth: 300 }}>
       <CardActionArea>
         <CardMedia
           component="img"
         //   height="140"
-         maxWidth="300px"
-         maxHeight="300px"
+         Width="300px"
+         Height="300px"
          
-          image="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Top Listing Image"
+          image={imageUrl}
         />
         <CardContent>
         <Typography gutterBottom variant="h5" component="div">

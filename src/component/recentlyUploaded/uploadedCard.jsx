@@ -1,22 +1,26 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import {Grid ,Box} from '@mui/material'
+// import {Grid} from '@mui/material'
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import {Grid ,Box} from '@mui/material'
 
-function UploadedCard({price, title, name, date}) {
+function UploadedCard({price, title, name, date,imageUrl}) {
   return ( 
+    <div>
     <Card sx={{ maxWidth: 300 }}>      
         <CardMedia
           component="img"
+          margin="auto"
+
         //   height="140"
           maxWidth="300px"
           maxHeight="300px"
-          image="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          image={imageUrl}
           alt="House Image"
+  
         />
-        
         <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {price}
@@ -34,6 +38,7 @@ function UploadedCard({price, title, name, date}) {
          </Box>
         </CardContent>
     </Card>
+    </div>
   );
 }
 export default UploadedCard;

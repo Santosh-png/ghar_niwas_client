@@ -5,6 +5,7 @@ import {
 } from "@mui/material";
 import UploadedList from "./uploadedListing";
 import HorizontalDivider from "../ui/HorizontalDivider";
+import CenteredCarousel from "./CenteredCarousel";
 function UploadedSection() {
     return (
         <Box sx={{marginTop:"80px"}}>
@@ -40,8 +41,8 @@ function UploadedSection() {
       </Box>
       {/* second Box */}
       <Box sx={{ display: "flex", width: "100%", flexDirection: "row" }}>
-        <UploadedList/>
-
+        {/* <UploadedList/> */}
+          <CenteredCarousel />
       </Box>
     </Box>
     );
