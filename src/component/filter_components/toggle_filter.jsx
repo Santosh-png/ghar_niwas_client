@@ -1,6 +1,7 @@
 import React from 'react';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import ButtonComponent from '../button_components/button';
 
 function ToggleFilter() {
     const [alignment, setAlignment] = React.useState('web');

@@ -17,11 +17,12 @@ function FirstSection() {
             <Box className= "header-line">
               <Typography
               variant='h1'
-              className='responsive_fontSize64'
+              className='responsive_fontsize64'
                 sx={{
                   fontFamily: "Roboto Slab",
                   color: "secondary.main",
                   fontWeight: "bold", 
+                  textAlign: "center"
                 }}
               >
                 SELL, BUY, RENT YOUR PROPERTIES
@@ -54,11 +55,13 @@ function FirstSection() {
 
             <Box className= "search_bar">
             <SearchIcon style={{marginTop: '0.4rem', opacity: "50%"}}/>
+            <Typography>
             <InputBase
               sx={{fontSize: "20px"}}
               placeholder="Search By City, State "
               inputProps={{ 'aria-label': 'search google maps' }}
             />
+            </Typography>
             </Box>
 
             <CustomFilterPanelContent/>
