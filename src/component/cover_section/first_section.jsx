@@ -51,13 +51,13 @@ function FirstSection() {
             {/* search for properties based on keyword like house, land, flat, apartment, room, studio, studio apartment, 1BHK, 2BHK, 3BHK, single, double and so on  */}
             <Box className= "search_bar">
             <SearchIcon style={{marginTop: '0.2rem', opacity: "50%"}}/>
-            <Typography>
+            {/* <Typography> */}
             <InputBase
               sx={{fontSize: "16px"}}
               placeholder="Search By City, State "
               inputProps={{ 'aria-label': 'search google maps' }}
             />
-            </Typography>
+            {/* </Typography> */}
             </Box>
           </Box>
 
