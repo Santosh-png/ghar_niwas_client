@@ -38,9 +38,10 @@ function NavBar() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="#000000"
-                           
+              edge="end"
+              sx={{ ...(open && { display: 'flex', left:'80%'}) }}             
             >
-              <MenuIcon sx={{backgroundColor:"red"}}/>
+              <MenuIcon sx={{fontSize:'40px'}}/>
             </IconButton>
            
             {/* mobile view  */}
@@ -76,13 +77,14 @@ function NavBar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {itemList.map((item) => (
               <Button
+              className='responsive_fontsize20'
                 key={item}
                 onClick={handleCloseNavMenu}
-                sx={{ marginX:4,
+                sx={{ marginX:3,
                      color:'292c6a',
                      fontWeight:600,
                      display: 'block' }}
-                className='responsive_fontsize20'
+                
               >
                 {item}
               </Button>
