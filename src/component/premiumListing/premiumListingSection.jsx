@@ -8,23 +8,16 @@ import PremiumList from "./premiumListingService";
 // import PremiumCard from "./PremiumCard";
 function PremiumSection() {
     return (
-        <Box
-            sx={{}}
-        >
-            {/* <Box sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    flexDirection: "column",
-
-                }}> */}
+        <Box>
                 <Typography
                     sx={{
                         fontSize: "12px",
                         letterSpacing: "4px",
                         color: "secondary.secondary_600",
                         fontFamily: "fontFamily",
-                        textTransform: "uppercase"
+                        textTransform: "uppercase",
+                        textAlign:"center",
+                        mb:"20px"
                     }}
                 >
                    Premium Listing
@@ -33,8 +26,6 @@ function PremiumSection() {
                 <Box>
                     <PremiumList/>
                 </Box>
-
-            {/* </Box> */}
         </Box>
     );
 }
