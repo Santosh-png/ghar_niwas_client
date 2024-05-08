@@ -28,7 +28,7 @@ function Contact(){
         <Box className='itemTitle' >
             <Typography variant className='responsive_fontsize24'>Quick Links</Typography>
         </Box>    
-            <ul className='responsive_fontsize20'>
+            <ul className='responsive_fontsize18'>
                 <a href="#"><li>Home</li></a>
                 <a href="#"><li>FAQs</li></a>
                 <a href="#"><li>Land for Sale</li></a>
@@ -36,7 +36,8 @@ function Contact(){
                 <a href="#"><li>Contact Us</li></a>
                 
             </ul>
-
+     
+              {/* icons for the mobile view */}
             <Box sx={{display: { xs: 'flex', md: 'none' }}}>
             
             <IconButton 
@@ -75,7 +76,7 @@ function Contact(){
             <Box className='itemTitle'>
             <Typography variant='' className='responsive_fontsize24'>Properties</Typography>
             </Box>
-            <ul className='responsive_fontsize20'>
+            <ul className='responsive_fontsize18'>
                 <a href="#"><li>House for Sale/Rent</li></a>
                 <a href="#"><li>Land for Sale/Rent</li></a>
                 <a href="#"><li>Apartment for Sale/Rent</li></a>
@@ -90,7 +91,7 @@ function Contact(){
             <Box className='itemTitle'>
             <Typography  variant='' className='responsive_fontsize24'>Contact Info</Typography>
             </Box>
-            <ul className='responsive_fontsize20'>
+            <ul className='responsive_fontsize18'>
                
                 <li>
                         <LocationOnIcon/>
