@@ -3,6 +3,7 @@ import { Box, Typography } from "@mui/material";
 import logo from "../assets/image/logo.png";
 
 function AboutSection() {
+ 
   return (
       <Box
         sx={{
@@ -10,7 +11,8 @@ function AboutSection() {
           alignItems: "center",
           flexDirection: "row",
           justifyContent: "space-between",
-          padding: "2rem 2.5rem 2rem 2.5rem"
+          padding: "2rem 2.5rem 2rem 2.5rem",
+         
         }}
       >
         {/* LEFT SIDE */}
@@ -21,7 +23,8 @@ function AboutSection() {
             display: "flex",
             flexDirection: "column",
             gap: "0.7rem",
-            ml:"1rem"
+            ml:"1rem",
+            // border:"1 px solid blue"
           }}
         >
           <Typography variant="h1"
@@ -31,7 +34,8 @@ function AboutSection() {
               color: "primary.main",
               display:"flex",
               flexDirection:"row",
-              marginTop: "15px"
+              marginTop: "15px",
+             
 
             }}
         >
@@ -47,7 +51,8 @@ function AboutSection() {
 
         <Box 
           sx= {{display:"flex", flexDirection:"column", marginTop:"4.5rem", alignItems:"center"}}
-          >
+        >
+         
         <img src={logo} alt="Ghar Niwas" style={{Height: "12rem", width:"12rem"}} />
         </Box>
 

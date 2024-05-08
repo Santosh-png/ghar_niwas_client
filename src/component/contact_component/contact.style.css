@@ -1,20 +1,23 @@
-.responsive_fontsize20 li{
+.responsive_fontsize18 li{
    list-style: none;
    display:flex;
+   padding-top: 10px;
 }
-.responsive_fontsize20{
+.responsive_fontsize18{
     padding-top: 10px;
 }
-.responsive_fontsize24{    
+.itemTitle{ 
     font-weight: 600;
-    position: relative;
     display: flex;
+}
+.responsive_fontsize24{
+    position: relative;
 }
 .responsive_fontsize24::after{
     content: '';
     width:0;
     height: 3px;
-    background:#FBAF1A;
+    background:#edab03;
     position: absolute;
     left: 0;
     bottom:-6px;
@@ -22,17 +25,8 @@
 .responsive_fontsize24:hover::after{
     width: 100%;
 }
-.responsive_fontsize20 a{
+.responsive_fontsize18 a{
     text-decoration: none;
     color:#292C6A;
 }
 
-.vertical-divider{
-    border-left: 3px solid #000000;
-    height: 220px;
-    position: absolute;
-    left: 33%;
-    margin-left: -4px;
-    top: 240px;
-    
-}

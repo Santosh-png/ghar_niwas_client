@@ -1,46 +1,35 @@
-// import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
+import React from 'react';
+import { Box } from '@mui/material';
+import Slider from 'react-slick';
+import ClientFeedbackCard from './ClientFeedbackCard.component'; 
+// import ClientAvatarList from './clientAvatarList'; 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-export default function ClientFeedback() {
-  return (
-    <div>
-      <Typography variant="h4" align="center" color="accent.black" marginTop="20px">
-        Clients Feedback
-      </Typography>
-      
-      <div style={{ display: 'flex' }}>
-       
-        <Card sx={{ maxWidth: 345, marginTop: "20px", backgroundColor: "primary.main", marginLeft:"55px", marginRight: "7rem" }}>
-          <CardContent>
-            <Typography variant="body2" Color="text.secondary">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </Typography>
-          </CardContent>
-        </Card>
-       
-       
-       <Card sx={{ maxWidth: 345, marginTop: "20px", backgroundColor: "primary.main", marginRight: "7rem" }}>
-          <CardContent>
-            <Typography variant="body2"  Color="text.secondary">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </Typography>
-          </CardContent>
-        </Card>
-       
-       
-       
-        <Card sx={{ maxWidth: 345, marginTop: "20px", backgroundColor: "primary.main" }}>
-          <CardContent>
-            <Typography variant="body2" color="text.secondary">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            </Typography>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
-  );
+function ClientFeedbackList() {
+    const settings = {
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true,
+        pauseOnHover: true,
+        focusOnSelect: true,
+        autoplay: true,
+    };
+    return (
+        <Box className="center__carousel" sx={{ padding: "47px" , color:"primary.main" }}>
+            <Slider {...settings}>
+                <ClientFeedbackCard />
+                <ClientFeedbackCard />
+                <ClientFeedbackCard />
+                <ClientFeedbackCard />
+                <ClientFeedbackCard />
+                <ClientFeedbackCard />
+            </Slider>
+        </Box>
+    );
 }
+
+export default ClientFeedbackList;
