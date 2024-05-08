@@ -1,14 +1,13 @@
 .responsive_fontsize20 li{
    list-style: none;
    display:flex;
+   padding-top: 10px;
 }
 .responsive_fontsize20{
     padding-top: 10px;
 }
 .itemTitle{ 
-    
     font-weight: 600;
-    
     display: flex;
 }
 .responsive_fontsize24{

@@ -10,6 +10,7 @@ import IconButton from '@mui/material/IconButton';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CallIcon from '@mui/icons-material/Call';
 import Divider from '@mui/material/Divider';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 
 function Contact(){
@@ -99,11 +100,15 @@ function Contact(){
                         <CallIcon />
                     
                     
-                    Call/SMS/Whatsapp
+                    Call
                 </li>
                 <li> 
-                    &nbsp; &nbsp; 01-1234567,+9779877735741
+                    &nbsp;&nbsp;&nbsp; &nbsp; 01-1234567
                 </li>
+                <li><WhatsAppIcon/>
+                    Whatsapp
+                </li>
+                <li> &nbsp;&nbsp;&nbsp; &nbsp;+9779877735741</li>
                 
                 
             </ul>
