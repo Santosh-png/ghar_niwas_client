@@ -14,7 +14,7 @@ const ClientFeedback= () => {
                  
                   fontSize: "32px",
                   fontWeight: "600",
-                  color: "primary.main",
+                  color: "accent.black ",
                   display:"flex",
                   flexDirection:"column",
                 //   marginTop: "5rem",
