@@ -7,7 +7,6 @@ import { Typography, Box} from '@mui/material';
 
 
 import './filter.css'
-import ToggleFilter from './toggle_filter';
 import ButtonComponent from '../button_components/button';
 
 function CustomFilterPanelContent() {
