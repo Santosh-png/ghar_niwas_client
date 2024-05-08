@@ -53,12 +53,9 @@ function NavBar() {
                 horizontal: 'left',
               }}
               onClose={handleCloseNavMenu}
-              // anchorEl={anchorElNav}
               anchor="right"
               open={Boolean(anchorElNav)}
-            //  onClose={() => setIsMobileDrawerOpen(false)}
               keepMounted
-              // open={Boolean(anchorElNav)}
               sx={{
                 display: { xs: 'block', md: 'none' }
                               
