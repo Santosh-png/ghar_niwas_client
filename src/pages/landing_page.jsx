@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import FirstSection from '../component/cover_section/first_section'
 import NavBar from '../component/navbar_component/navbar_component'
 import Contact from '../component/contact_component/contact'

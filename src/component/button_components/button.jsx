@@ -6,7 +6,6 @@ function ButtonComponent() {
     <div>
         <Button variant="contained" 
                 sx={{
-                    // display: {xs: 'none', md: "flex"},
                     backgroundColor: "primary.main",
                     color: "white",
                     minWidth: 150,
