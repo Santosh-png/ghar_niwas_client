@@ -6,45 +6,52 @@ import "slick-carousel/slick/slick-theme.css";
 import "../../global.css";
 import TopListItems from "./TopListItems";
 
-function Toplist() {
-    const settings = {
-      dots: true,
-      centerMode: true, // Enable center mode
-      centerPadding: "0px", // Adjust padding if necessary
-      slidesToShow: 3, // Show 3 slides at a time
-      slidesToScroll: 1,
-      autoplay: true,
+function TopList(){
+    const settings={
+        dots:true,
+        infinite:false,
+        speed:500,
+        slidesToShow:4,
+        slidesToScroll:1,       
+        autoplay:true,
+        arrows:false,
         responsive: [
+          {
+            breakpoint: 1350,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2,
+              infinite: true,
+              dots: true
+            }
+          },
             {
-              breakpoint: 1025,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true,
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2,
+                  infinite: true,
+                  dots: true
+                }
               },
-            },
-      
-            {
-              breakpoint: 900,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true,
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 2,
+                  initialSlide: 2
+                }
               },
-            },
-            {
-              breakpoint: 640,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                dots: true,
-              },
-            },
-        ],   
-    }
-  return (
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+        ]
+    };
+return(
     <div className="center__carousel"
     style={{ display: "flex", flexDirection: "column", width: "100%" }}
     >

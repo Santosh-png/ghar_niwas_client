@@ -9,8 +9,6 @@ import FeaturedSection from '../component/featuredListing/featuredSection';
 import UploadedSection from '../component/recentlyUploaded/uploadedSection';
 import AboutSection from './AboutSection';
 import ClientFeedback from '../component/feedback/ClientFeedback.component';
-import FilteredSection from '../component/filter_components/fitered_section';
-import LabTabs from '../component/filter_components/tablabel';
 import ListSection from '../component/Listing/ListingSection';
 
 
@@ -28,7 +26,6 @@ function LandingPage() {
       <AboutSection/>
       <Contact />
       <Footer />
-      {/* <LabTabs/> */}
     </div>
   )
 }

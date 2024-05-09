@@ -5,13 +5,13 @@ export default [
         location: "Bhaisepati",
         price: "$50000",
         title: "House for rent",
-        name: "sarita",
+        name: "SadoBato",
         date: "2 months ago",
     },
     {
         id: 2,
         imageUrl:' https://images.unsplash.com/photo-1605276373954-0c4a0dac5b12?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        location: "Bhaisepati",
+        location: "Sanepa",
         price: "$80000",
         title: "land for rent",
         name: "ashika",
@@ -30,8 +30,8 @@ export default [
     },
     {
         id: 4,
-        imageUrl:'https://images.unsplash.com/photo-1560026301-88340cf16be7?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        location: "Bhaisepati",
+        imageUrl:'https://images.unsplash.com/photo-1576941089067-2de3c901e126?q=80&w=978&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        location: "Kusunti",
         price: "$80000",
         title: "House for sale",
         name: "sam",
@@ -40,7 +40,7 @@ export default [
     {
         id: 5,
         imageUrl:'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        location: "kusunti",
+        location: "Lalitpur",
         price: "$30000",
         title: "land for rent",
         name: "praju",
@@ -49,7 +49,7 @@ export default [
     {
         id: 6,
         imageUrl:'https://images.unsplash.com/photo-1558036117-15d82a90b9b1?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        location: "tahachal",
+        location: "Tahachal",
         price: "$70000",
         title: "land for sale",
         name: "ram",
@@ -67,7 +67,7 @@ export default [
     {
         id: 8,
         imageUrl:'https://images.unsplash.com/photo-1576941089067-2de3c901e126?q=80&w=978&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        location: "Bhaisepati",
+        location: "Sanepa",
         price: "$990000",
         title: "House for rent",
         name: "rina",
