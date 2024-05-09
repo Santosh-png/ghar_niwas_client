@@ -13,7 +13,7 @@ function ClientFeedbackList() {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         pauseOnHover: true,
         focusOnSelect: true,
         autoplay: true,
@@ -30,8 +30,10 @@ function ClientFeedbackList() {
             {
               breakpoint: 600,
               settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: true,
+                centerPadding:"20px",
                 initialSlide: 2
               }
             },

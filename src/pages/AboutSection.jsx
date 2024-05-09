@@ -28,6 +28,7 @@ function AboutSection() {
             gap: "0.7rem",
             ml:"1rem",
             // border:"1 px solid blue"
+            
           }}
         >
           <Typography variant="h1"
