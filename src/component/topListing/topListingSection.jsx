@@ -9,7 +9,7 @@ import TopList from "./TopListingService";
 import HorizontalDivider from "../ui/HorizontalDivider";
 function TopSection(){
     return(
-        <Box sx={{marginTop:"80px"}}>
+        <Box sx={{marginTop:"20px",border:'1px solid red'}}>
         {/* first box */}
   
         <Box
@@ -19,20 +19,19 @@ function TopSection(){
             justifyContent: "center",
             flexDirection: "column",
             alignItems: "center",
-            marginTop: "68px",
+            marginTop: "30px",
           }}
         >
-          <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center"}}>
+          <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center",marginBottom:'1rem'}}>
           <HorizontalDivider />
-          <Typography
-            sx={{
-              fontSize: "32px",
-              color: "secondary.secondary_600",
-              fontFamily: "fontFamily",
+          <Typography className="responsive_fontsize32"
+            sx={{           
+              // color: "secondary.secondary_600",
               fontWeight:"bold",
               padding:"10px",
               textAlign:"center",
               letterSpacing:"1px",
+              color:'primary.main'
             }}
           >
             Top Listing
@@ -42,8 +41,7 @@ function TopSection(){
         </Box>
         {/* second Box */}
         <Box sx={{ display: "flex", width: "100%", flexDirection: "row" }}>
-          <TopList/>
-  
+          <TopList/> 
         </Box>
       </Box>
     )

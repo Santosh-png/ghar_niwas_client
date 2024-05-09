@@ -50,8 +50,8 @@ const drawerWidth=350;
 
             <Drawer
               id="menu-appbar"
-              anchorel={anchorElNav}
-              anchororigin={{
+              anchorEl={anchorElNav}
+              anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'left',
               }}
@@ -85,7 +85,6 @@ const drawerWidth=350;
               <Box 
                 sx={{
                   display: 'flex'
-                  
                                  
                   }}>
                <IconButton 

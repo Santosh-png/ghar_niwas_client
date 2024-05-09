@@ -10,12 +10,21 @@ function PremiumList() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     // initialSlide:0,
     autoplay:true,  
     arrows:false,
     responsive: [
+      {
+        breakpoint: 1350,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
         {
           breakpoint: 1024,
           settings: {
@@ -28,7 +37,7 @@ function PremiumList() {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 2,
             initialSlide: 2
           }
@@ -44,7 +53,8 @@ function PremiumList() {
   };
  return(
   <div className="center__carousel"
-  style={{ display: "flex", flexDirection: "column", width: "100%" }}
+  style={{ display: "flex", flexDirection: "column", width: "100%"
+   }}
   >
     <Slider {...settings}>
     {featureListItems.map((item) => (
