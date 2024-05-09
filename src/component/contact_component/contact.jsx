@@ -36,9 +36,12 @@ function Contact(){
                 <a href="#"><li>Contact Us</li></a>
                 
             </ul>
-     
+            < Box sx={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(2,1fr)'                 
+                  }}>
               {/* icons for the mobile view */}
-            <Box sx={{display: { xs: 'flex', md: 'none' }}}>
+            <Box sx={{display: { xs: 'block', md: 'none' }}}>
             
             <IconButton 
                     sx={{backgroundColor:"white", boxShadow:" 0px 4px 4px 0px #292C6A",margin:1}}
@@ -68,9 +71,10 @@ function Contact(){
                 </IconButton>
                
             </Box>
+            </Box> 
         </Box> 
         <Divider orientation="horizontal" flexItem sx={{margin:'20px',display: { xs: 'flex', md: 'none' }}}/>
-        <Divider orientation="vertical" variant="middle"  flexItem sx={{margin:'20px 20px 200px 20px', backgroundColor:'accent.black'}}/>
+        <Divider orientation="vertical" variant="middle"  flexItem sx={{margin:'20px 20px 200px 20px', backgroundColor:'accent.black',display:{xs:'none',md:'flex'}}}/>
        
         <Box sx={{paddingLeft:'50px'}} >
             <Box className='itemTitle'>
@@ -86,7 +90,7 @@ function Contact(){
 
         <Divider orientation="horizontal" flexItem sx={{margin:'20px',display: { xs: 'flex', md: 'none' }}} />
         <Divider orientation="vertical" flexItem 
-            sx={{margin:'15px 0px 200px 0px', backgroundColor:'accent.black'}}/>
+            sx={{margin:'15px 0px 200px 0px', backgroundColor:'accent.black',display:{xs:'none',md:'flex'}}}/>
 
         <Box sx={{padding:'0 50px',overflow:'hidden'}}>
             <Box className='itemTitle'>
