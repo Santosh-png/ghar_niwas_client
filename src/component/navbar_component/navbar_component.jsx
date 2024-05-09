@@ -48,7 +48,7 @@ function NavBar() {
 
             <Drawer
               id="menu-appbar"
-              // anchorEl={anchorElNav}
+              anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'left',
