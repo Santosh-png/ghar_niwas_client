@@ -30,7 +30,7 @@ const drawerWidth=350;
         <Toolbar disableGutters  className="apply-maxwidth"
          sx={{py:"0",width:"100%"}}>
          
-          <img src={Logo} alt="img"  className='logo-pic' sx={{width: "100%", height: "100%" }} />
+          <img src={Logo} alt="img"  className='logo-pic' sx={{width:{xs:'200px',sm:'200px',md:'950px'}, height:{xs:'200px',sm:'200px',md:'950px'} }} />
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
