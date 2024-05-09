@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {AppBar,Box,Toolbar,IconButton,Typography,Menu ,Container,Button,MenuItem, Drawer}from '@mui/material';
+import {AppBar,Box,Toolbar,IconButton,Typography,Menu ,Container,Button,MenuItem, Drawer,Divider}from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Logo from '../../assets/image/logo.png'
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -8,7 +8,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import './navbar.style.css'
-import VerticalDivider from '../ui/divider'
+// import VerticalDivider from '../ui/divider'
 const itemList = ['Home', 'Add Property', 'Sale','Rent','Request Property'];
 
 
@@ -23,14 +23,14 @@ function NavBar() {
     setAnchorElNav(null);
   };
  
-
+const drawerWidth=350;
   return (
     <AppBar position="static"  sx={{background:'#FFFFFF'}}>
       <Container maxWidth="xl" >
         <Toolbar disableGutters  className="apply-maxwidth"
          sx={{py:"0",width:"100%"}}>
          
-          <img src={Logo} alt="img"  className='logo-pic' />
+          <img src={Logo} alt="img"  className='logo-pic' sx={{width: "100%", height: "100%" }} />
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -43,7 +43,7 @@ function NavBar() {
               edge="end"
               sx={{ ...(open && { display: 'flex', left:'80%'}) }}             
             >
-              <MenuIcon sx={{font:'20px'}}/>
+              <MenuIcon sx={{fontSize:'40px'}}/>
             </IconButton>
            
             {/* mobile view  */}
@@ -60,17 +60,23 @@ function NavBar() {
               open={Boolean(anchorElNav)}
               keepMounted
               sx={{
-                display: { xs: 'flex', md: 'none' }
-                
-
-              
-                              
+                width: drawerWidth,
+                flexShrink: 1,
+                '& .MuiDrawer-paper': {
+                  width: drawerWidth,
+                },
+                display:{xs:'flex', md:'none'},
+               
               }}
               
             >
               {itemList.map((item) => (
-                <MenuItem key={item} onClick={handleCloseNavMenu} className='responsive_fontsize20'>
-                  <Typography textAlign="center" className='itemList'>{item}
+                <MenuItem key={item} onClick={handleCloseNavMenu} >
+
+                  <Typography textAlign="center" className='itemList'>
+                  <Typography className='responsive_fontsize20' sx={{ fontSize:'30px', fontFamily:'Roboto Serif',margin:'20px 20px'}}>  
+                    {item}
+                  </Typography>  
                   </Typography>
                 </MenuItem>
               ))}
@@ -79,33 +85,34 @@ function NavBar() {
               <Box 
                 sx={{
                   display: 'flex'
+                  
                                  
                   }}>
                <IconButton 
                     sx={{backgroundColor:"white"}}
                 >
-                    <FacebookIcon sx={{color:"blue"}}/>
+                    <FacebookIcon sx={{color:"blue",fontSize:"40px"}}/>
                 </IconButton>
                 <IconButton 
                     sx={{backgroundColor:"white",margin:1}}
                 >
-                    <YouTubeIcon sx={{color:"red"}}/>
+                    <YouTubeIcon sx={{color:"red",fontSize:"40px"}}/>
                 </IconButton>
                 <IconButton 
                     sx={{backgroundColor:"white"}}
                 >
-                    <PinterestIcon sx={{color:"#E60023"}}/>
+                    <PinterestIcon sx={{color:"#E60023",fontSize:"40px"}}/>
 
                 </IconButton>
                 <IconButton 
                     sx={{backgroundColor:"white"}}
                 >
-                    <InstagramIcon sx={{color:"#ffc273cd"}}/>
+                    <InstagramIcon sx={{color:"#ffc273cd",fontSize:"40px"}}/>
                 </IconButton>
                 <IconButton 
                     sx={{backgroundColor:"white",margin:1}}
                 >
-                    <LinkedInIcon sx={{color:" #0077b5"}}/>
+                    <LinkedInIcon sx={{color:" #0077b5",fontSize:"40px"}}/>
                 </IconButton>
                 </Box>
             </Drawer>
@@ -113,22 +120,24 @@ function NavBar() {
           
 
           {/* desktop view  */}          
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'} }} className='responsive_fontsize20'>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'} }} >
             {itemList.map((item) => (
               
               <Button
-                className='itemList '
+                className='itemList responsive_fontsize20'
                 key={item}
                 onClick={handleCloseNavMenu}
                 sx={{ marginX:3,
                      color:'292c6a',
                      fontWeight:600,
-                     display: 'block',
+                     display: 'flex',
                      fontFamily: "Roboto Serif",
                     }}
                 
               >
+               <Typography className='responsive_fontsize24' sx={{fontWeight:'600'}}> 
                 {item}
+                </Typography> 
               </Button>
             ))}
           </Box>
@@ -137,35 +146,58 @@ function NavBar() {
           <Box sx={{ flexGrow: 0 }}>
           
           <Box sx={{ display: { xs: 'none', md: 'flex' }}}>
-            <VerticalDivider/>
+          <Divider
+               className='responsive_fontsize18'
+              orientation="vertical"
+              variant="middle"
+              flexItem
+              sx={{
+                borderLeftWidth: 1.5,
+                borderColor: "#232323",
+                height: "25px",
+              }}
+            />
+            <Box sx={{ mx: "0.2rem", display: "flex", alignItems: "center"  }} >
             <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",margin:1}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",marginX:1}}
                 >
-                    <FacebookIcon sx={{color:"blue"}}/>
-                </IconButton>
-                <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",margin:1}}
+              <InstagramIcon sx={{color:"orange"}}  />
+            </IconButton> 
+            <IconButton 
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",marginX:1}}
                 >
-                    <YouTubeIcon sx={{color:"red"}}/>
-                </IconButton>
-                <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",margin:1}}
-                >
-                    <PinterestIcon sx={{color:"#E60023"}}/>
-
-                </IconButton>
-                <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",margin:1}}
-                >
-                    <InstagramIcon sx={{color:"#ffc273"}}/>
-                </IconButton>
-                <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px  #292C6A",margin:1}}
-                >
-                    <LinkedInIcon sx={{color:" #0077b5"}}/>
-                </IconButton>
+              <FacebookIcon sx={{color:"blue"}}/>
+            </IconButton>
+            <IconButton 
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",marginX:1}}
+                >  
+              <YouTubeIcon sx={{color:"#FA0505"}} />
+            </IconButton>
+            <IconButton 
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",marginX:1}}
+                >  
+              <LinkedInIcon sx={{color:"#78A1DE"}}/>
+            </IconButton>
+            <IconButton 
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",marginX:1}}
+                >  
+              <PinterestIcon sx={{color:"red"}} />
+            </IconButton>  
                 
+             
             </Box>
+            <Divider
+              orientation="vertical"
+              variant="middle"
+              flexItem
+              sx={{
+                borderLeftWidth: 1.5,
+                borderColor: "#232323",
+                height: "25px",
+              }}
+            />
+           
+          </Box>
           </Box>
         </Toolbar>
       </Container>
