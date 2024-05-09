@@ -10,9 +10,10 @@ const ClientFeedback= () => {
           <HorizontalDivider />
             <Typography 
                 variant="h4"
+                className='responsive_fontsize32'
                 sx={{
                  
-                  fontSize: "32px",
+                  // fontSize: "32px",
                   fontWeight: "600",
                   color: "accent.black ",
                   display:"flex",
