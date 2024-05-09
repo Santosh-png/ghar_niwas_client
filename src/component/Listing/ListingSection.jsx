@@ -1,13 +1,15 @@
 import React from "react";
+import Divider from '@mui/material/Divider';
+
 import {
     Box,
     Typography
 } from "@mui/material";
-import PremiumList from "../card/cardServices";
+import Listing from "./listingService";
 import HorizontalDivider from "../ui/HorizontalDivider";
-function PremiumSection() {
-    return (
-        <Box sx={{marginTop:"0px",border:'1px solid blue'}}>
+function ListSection(){
+    return(
+        <Box sx={{marginTop:"80px", width:"100%"}}>
         {/* first box */}
   
         <Box
@@ -17,32 +19,34 @@ function PremiumSection() {
             justifyContent: "center",
             flexDirection: "column",
             alignItems: "center",
-            marginTop: "30px",
+            marginTop: "68px",
+            width:'100%'
           }}
         >
-          <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center",marginBottom:'1rem',}}>
+          <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center"}}>
           <HorizontalDivider />
-          <Typography className="responsive_fontsize32"
+          <Typography
             sx={{
-              // color: "secondary.secondary_600",
+              fontSize: "32px",
+              color: "secondary.secondary_600",
+              fontFamily: "fontFamily",
               fontWeight:"bold",
-              padding:"0px",
+              padding:"10px",
               textAlign:"center",
               letterSpacing:"1px",
-              color:'primary.main'
             }}
           >
-            Premium Listing
+             Listing
           </Typography>
           <HorizontalDivider />
           </Box>
         </Box>
         {/* second Box */}
         <Box sx={{ display: "flex", width: "100%", flexDirection: "row" }}>
-          <PremiumList/>
+          <Listing/>
   
         </Box>
       </Box>
-    );
+    )
 }
-export default PremiumSection;
+export default ListSection;

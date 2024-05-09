@@ -6,7 +6,7 @@ import {
 import Fab from '@mui/material/Fab';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import data from "./uploadedListItems";
+import data from "../card/cardItems";
 import Card from "./CarouselCard";
 
 export default function CenteredCarousel(props) {
