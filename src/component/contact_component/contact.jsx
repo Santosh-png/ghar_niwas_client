@@ -81,7 +81,7 @@ function Contact(){
         <Box sx={{paddingLeft:'50px'}} >
             
             <Typography  className='itemTitle'>
-               <Typography variant="h3" sx={{fontWeight:'600'}} className='responsive_fontsize24' >
+               <Typography variant="h3" sx={{fontWeight:'600'}} className='responsive_fontsize26' >
                  Properties
                 </Typography> 
              
@@ -99,10 +99,11 @@ function Contact(){
         <Divider orientation="vertical" flexItem 
             sx={{margin:'15px 0px 200px 0px', backgroundColor:'accent.black',display:{xs:'none',md:'flex'}}}/>
 
+
         <Box sx={{padding:'0 50px',overflow:'hidden'}}>
             
             <Typography  className='itemTitle '>
-            <Typography variant="h3" sx={{fontWeight:'600'}} className='responsive_fontsize24'>
+            <Typography variant="h3" sx={{fontWeight:'600'}} className='responsive_fontsize26'>
                  Contact Info
             </Typography>
             </Typography>
