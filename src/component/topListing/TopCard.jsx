@@ -14,8 +14,8 @@ function TopListingCard({price, title, name, date,imageUrl}) {
       margin="auto"
 
     //   height="140"
-      Width="300px"
-      Height="300px"
+      width="300px"
+      height="300px"
       image={imageUrl}
       alt="House Image"
 
