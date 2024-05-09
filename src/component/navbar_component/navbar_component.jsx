@@ -50,8 +50,8 @@ function NavBar() {
 
             <Drawer
               id="menu-appbar"
-              anchorel={anchorElNav}
-              anchororigin={{
+              anchorEl={anchorElNav}
+              anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'left',
               }}
@@ -78,8 +78,10 @@ function NavBar() {
               {/* social media icons for the mobile view */}
               <Box 
                 sx={{
-                  display: 'flex'
-                                 
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(2,1fr)'
+                  
+                 
                   }}>
                <IconButton 
                     sx={{backgroundColor:"white"}}

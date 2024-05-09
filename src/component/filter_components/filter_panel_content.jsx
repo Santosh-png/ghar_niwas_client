@@ -33,11 +33,12 @@ function CustomFilterPanelContent() {
   return (
     <div className='fitering'>
       <Box className="filter_section" sx={{
-        display: {md: "flex"}
+        display: {md: "flex"},
+        gap: "2rem"
         }}>
-        <Box className="select"  >
+        <Box className="select" >
             <Typography>Looking For</Typography>
-            <FormControl sx={{mr: '1rem', minWidth: 200 }} size='small'>
+            <FormControl sx={{minWidth: 200 }} size='small'>
                 <InputLabel id="demo-select-small-label">Property Type</InputLabel>
                 <Select
                     labelId="demo-select-small-label"
@@ -60,7 +61,7 @@ function CustomFilterPanelContent() {
 
         <Box className="select">
             <Typography> Locations</Typography>
-            <FormControl sx={{mr: "1rem", minWidth: 200 }} size="small">
+            <FormControl sx={{ minWidth: 200 }} size="small">
             <InputLabel id="demo-select-small-label">All Cities</InputLabel>
             <Select
                 labelId="demo-select-small-label"
@@ -81,7 +82,7 @@ function CustomFilterPanelContent() {
 
         <Box className="select">
             <Typography>Price Range</Typography>
-            <FormControl sx={{mr: "1rem", minWidth: 200 }} size="small">
+            <FormControl sx={{minWidth: 200 }} size="small">
             <InputLabel id="demo-select-small-label">Price Range</InputLabel>
             <Select
                 labelId="demo-select-small-label"
