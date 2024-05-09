@@ -7,12 +7,12 @@
     padding-top: 10px;
 }
 .itemTitle{ 
-    font-weight: 600;
+   
     display: flex;
 }
 .responsive_fontsize24{
     position: relative;
-    /* background-color: #edab03; */
+    
 }
 .responsive_fontsize24::after{
     content: '';

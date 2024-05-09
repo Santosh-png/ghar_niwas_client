@@ -69,8 +69,9 @@ function Contact(){
                
             </Box>
             </Box> 
-        </Box> 
+        {/* </Box>  */}
         <Divider orientation="horizontal" flexItem sx={{margin:'20px',display: { xs: 'flex', md: 'none' }}}/>
+
         <Divider orientation="vertical" variant="middle"  flexItem sx={{margin:'20px 20px 200px 20px', backgroundColor:'accent.black',display:{xs:'none',md:'flex'}}}/>
        
         <Box sx={{paddingLeft:'50px'}} >
@@ -117,7 +118,7 @@ function Contact(){
             </Box>
         </Box> 
        
-
+  </Box>
    
     </>
  );
