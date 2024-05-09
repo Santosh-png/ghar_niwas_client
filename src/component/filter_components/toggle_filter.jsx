@@ -49,7 +49,7 @@ function ToggleFilter() {
                 color: alignment === 'all status' ? 'white' : 'white', // Change color if selecteD
               }}
               >
-              <Typography className='responsive_fontsize20' >All Status</Typography>
+              <Typography className='responsive_fontsize16' >All Status</Typography>
             </ToggleButton>
             <Popover
               id={id}
@@ -82,7 +82,7 @@ function ToggleFilter() {
                 color: alignment === 'all status' ? 'white' : 'white', // Change color if selecteD
               }}
               >
-              <Typography className='responsive_fontsize20' >For Sale</Typography>
+              <Typography className='responsive_fontsize16' >For Sale</Typography>
             </ToggleButton>
             <Popover
               id={id}
@@ -115,7 +115,7 @@ function ToggleFilter() {
                 color: alignment === 'all status' ? 'white' : 'white', // Change color if selecteD
               }}
               >
-              <Typography className='responsive_fontsize20' >For Rent</Typography>
+              <Typography className='responsive_fontsize16' >For Rent</Typography>
             </ToggleButton>
             <Popover
               id={id}
