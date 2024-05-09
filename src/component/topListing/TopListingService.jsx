@@ -1,8 +1,9 @@
-import TopListingCard from "./TopCard";
 import React from "react";
 import Slider from "react-slick";
+import TopCard from "./TopCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../../global.css";
 import TopListItems from "./TopListItems";
 
 function TopList(){
@@ -25,39 +26,39 @@ function TopList(){
             }
           },
             {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                infinite: true,
-                dots: true
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2,
+                  infinite: true,
+                  dots: true
+                }
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 2,
+                  initialSlide: 2
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
               }
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 2,
-                initialSlide: 2
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-          ]
+        ]
     };
 return(
     <div className="center__carousel"
     style={{ display: "flex", flexDirection: "column", width: "100%" }}
     >
-        <Slider {...settings}>
+      <Slider {...settings}>
         {TopListItems.map((item) => (
           <div key={item.id} className="top-card-wrapper">
-     <TopListingCard 
+     <TopCard 
         imageUrl={item.imageUrl}
         location={item.location}
         price={item.price}
@@ -67,8 +68,9 @@ return(
      />
     </div>
   ))}
-        </Slider>
-    </div> 
-)
+  </Slider>
+  </div>
+  ); 
 }
-export default TopList;
+
+export default Toplist;

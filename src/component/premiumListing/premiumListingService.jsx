@@ -13,6 +13,7 @@ function PremiumList() {
     infinite: true,
     speed: 500,
     slidesToShow: 4,
+    centerMode:true,
     slidesToScroll: 1,
     // initialSlide:0,
     autoplay:true,  
