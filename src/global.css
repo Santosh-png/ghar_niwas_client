@@ -1,5 +1,9 @@
 /* responsive font size for 13 to 16 px */
 /* 1rem=16px */
+/* <style> */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+/* </style> */
+
 .apply-maxWidth{
    max-width:1536px;
    margin-left:auto;
