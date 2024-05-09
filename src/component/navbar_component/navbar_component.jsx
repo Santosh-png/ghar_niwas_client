@@ -8,6 +8,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import './navbar.style.css'
+
 // import VerticalDivider from '../ui/divider'
 const itemList = ['Home', 'Add Property', 'Sale','Rent','Request Property'];
 
@@ -30,7 +31,10 @@ const drawerWidth=350;
         <Toolbar disableGutters  className="apply-maxwidth"
          sx={{py:"0",width:"100%"}}>
          
-          <img src={Logo} alt="img"  className='logo-pic' sx={{width:{xs:'190px',sm:'200px',md:'250px'}, height:{xs:'190px',sm:'200px',md:'250px'} }} />
+          <img src={Logo} alt="img"  className='logo-pic' 
+            sx={{width:{xs:'190px',sm:'200px',md:'250px'}, 
+                height:{xs:'190px',sm:'200px',md:'250px'} 
+                }} />
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -118,7 +122,8 @@ const drawerWidth=350;
             </Box> 
           
 
-          {/* desktop view  */}          
+          {/* desktop view  */}  
+                  
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'} }} >
             {itemList.map((item) => (
               
@@ -131,8 +136,8 @@ const drawerWidth=350;
                      fontWeight:600,
                      display: 'flex',
                      fontFamily: "Roboto Serif",
-                     padding:'10px',
-                     letterSpacing:'0.1rem'
+                     padding:'5px',
+                     letterSpacing:'0.25rem'
                     }}
                 
               >
@@ -155,10 +160,11 @@ const drawerWidth=350;
               sx={{
                 borderLeftWidth: 1.5,
                 borderColor: "#232323",
-                height: "25px",
+                height: "30px",
+                
               }}
             />
-            <Box sx={{ mx: "0.2rem", display: "flex", alignItems: "center"  }} >
+            <Box sx={{ mx: "0.2rem", display: "flex", alignItems: "center"}} >
             <IconButton 
                     sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",marginX:1}}
                 >
