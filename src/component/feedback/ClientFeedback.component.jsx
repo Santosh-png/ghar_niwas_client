@@ -6,7 +6,7 @@ const ClientFeedback= () => {
   return (
     <>
     <Box>
-        <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: "5rem", gap: "1rem"}}>
+        <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", margin: "3rem 0 2rem 0", gap: "1rem"}}>
           <HorizontalDivider />
             <Typography 
                 variant="h4"
@@ -18,7 +18,6 @@ const ClientFeedback= () => {
                   color: "primary.main",
                   display:"flex",
                   flexDirection:"column",
-                //   marginTop: "5rem",
                   textAlign:"center",
                   letterSpacing:"1px"
                   
