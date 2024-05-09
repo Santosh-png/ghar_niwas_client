@@ -15,6 +15,7 @@ export default [
         price: "$80000",
         title: "land for rent",
         name: "ashika",
+        status: "rent",
         date: "4 weeks ago",
     },
     {
@@ -24,6 +25,7 @@ export default [
         price: "$20000",
         title: "House for sale",
         name: "samima",
+        status: "sale",
         date: "1 months ago",
     },
     {

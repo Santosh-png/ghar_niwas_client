@@ -22,7 +22,7 @@ const ClientFeedbackCard = () => {
       <CardHeader
         avatar={
           <Avatar>
-            R
+            A
           </Avatar>
         }
         action={

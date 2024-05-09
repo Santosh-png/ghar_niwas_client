@@ -12,8 +12,8 @@ function FeaturedCard({price, title, name, date,imageUrl}) {
         <CardMedia
           component="img"
         //   height="140"
-         Width="300px"
-         Height="300px"
+         width="300px"
+         height="300px"
           image={imageUrl}
         />
         <CardContent>

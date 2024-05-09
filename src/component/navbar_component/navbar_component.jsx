@@ -30,6 +30,7 @@ function NavBar() {
          sx={{py:"0",width:"100%"}}>
          
           <img src={Logo} alt="img"  className='logo-pic'/>
+
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -41,15 +42,15 @@ function NavBar() {
               edge="end"
               sx={{ ...(open && { display: 'flex', left:'80%'}) }}             
             >
-              <MenuIcon sx={{fontSize:'40px'}}/>
+              <MenuIcon sx={{font:'20px'}}/>
             </IconButton>
            
             {/* mobile view  */}
 
             <Drawer
               id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
+              anchorel={anchorElNav}
+              anchororigin={{
                 vertical: 'bottom',
                 horizontal: 'left',
               }}
@@ -58,25 +59,23 @@ function NavBar() {
               open={Boolean(anchorElNav)}
               keepMounted
               sx={{
-                display: { xs: 'block', md: 'none' }
+                display: { xs: 'flex', md: 'none' }
                               
               }}
               
             >
               {itemList.map((item) => (
-                <MenuItem key={item} onClick={handleCloseNavMenu} >
-                  <Typography textAlign="center" className='responsive_fontsize20'>{item}
+                <MenuItem key={item} onClick={handleCloseNavMenu} className='responsive_fontsize20'>
+                  <Typography textAlign="center" className='itemList'>{item}
                   </Typography>
                 </MenuItem>
               ))}
-
+             <hr></hr>
               {/* social media icons for the mobile view */}
               <Box 
                 sx={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(2,1fr)'
-                  
-                 
+                  gridTemplateColumns: 'repeat(2,1fr)'                 
                   }}>
                <IconButton 
                     sx={{backgroundColor:"white"}}
@@ -97,7 +96,7 @@ function NavBar() {
                 <IconButton 
                     sx={{backgroundColor:"white"}}
                 >
-                    <InstagramIcon sx={{color:"#ffc273"}}/>
+                    <InstagramIcon sx={{color:"#ffc273cd"}}/>
                 </IconButton>
                 <IconButton 
                     sx={{backgroundColor:"white",margin:1}}
@@ -110,10 +109,10 @@ function NavBar() {
           
 
           {/* desktop view  */}          
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} className='responsive_fontsize20'>
             {itemList.map((item) => (
               <Button
-              className='responsive_fontsize20'
+                className='itemList'
                 key={item}
                 onClick={handleCloseNavMenu}
                 sx={{ marginX:3,
@@ -130,7 +129,7 @@ function NavBar() {
          {/* for the desktop view  */}
           <Box sx={{ flexGrow: 0 }}>
           
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }}}>
             <VerticalDivider/>
             <IconButton 
                     sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",margin:1}}
