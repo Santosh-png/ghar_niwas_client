@@ -4,6 +4,7 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import Popover from '@mui/material/Popover';
 
 import CustomFilterPanelContent from './filter_panel_content';
+import { Typography } from '@mui/material';
 
 function ToggleFilter() {
     const [alignment, setAlignment] = React.useState('all status');
@@ -35,10 +36,12 @@ function ToggleFilter() {
             aria-label="Platform"
             sx={{
                 background: "#656A29",
-                mt: "9rem",
+                mt: "6rem",
                 opacity: "80%"
             }}
-            >
+        >
+
+          {/* all status toggle button  */}
             <ToggleButton value="all status"
               aria-describedby ={id}
               onClick={handleAllStatusClick} 
@@ -46,7 +49,7 @@ function ToggleFilter() {
                 color: alignment === 'all status' ? 'white' : 'white', // Change color if selecteD
               }}
               >
-              All Status
+              <Typography className='responsive_fontsize20' >All Status</Typography>
             </ToggleButton>
             <Popover
               id={id}
@@ -70,9 +73,73 @@ function ToggleFilter() {
               <CustomFilterPanelContent/>
             </Popover>
 
-            <ToggleButton value="for sale" sx={{color: "white"}}>
-              For Sale</ToggleButton>
-            <ToggleButton value="for rent" sx={{color: "white"}}>for Rent</ToggleButton>
+
+          {/* For sale toggle button */}
+            <ToggleButton value="all status"
+              aria-describedby ={id}
+              onClick={handleAllStatusClick} 
+              sx={{
+                color: alignment === 'all status' ? 'white' : 'white', // Change color if selecteD
+              }}
+              >
+              <Typography className='responsive_fontsize20' >For Sale</Typography>
+            </ToggleButton>
+            <Popover
+              id={id}
+              open= {open}
+              anchorEl={anchorEl}
+              onClose={handleClose}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left', // Align with the left side of the button
+              }}
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left', // Align with the left side of the button
+              }}
+              sx={{
+                display:{
+                  md: "none"
+                }
+              }}
+            >
+              <CustomFilterPanelContent/>
+            </Popover>
+            
+
+            {/* For rent toggle button */}
+            <ToggleButton value="all status"
+              aria-describedby ={id}
+              onClick={handleAllStatusClick} 
+              sx={{
+                color: alignment === 'all status' ? 'white' : 'white', // Change color if selecteD
+              }}
+              >
+              <Typography className='responsive_fontsize20' >For Rent</Typography>
+            </ToggleButton>
+            <Popover
+              id={id}
+              open= {open}
+              anchorEl={anchorEl}
+              onClose={handleClose}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left', // Align with the left side of the button
+              }}
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left', // Align with the left side of the button
+              }}
+              sx={{
+                display:{
+                  md: "none"
+                }
+              }}
+            >
+              <CustomFilterPanelContent/>
+            </Popover>
+
+            
         </ToggleButtonGroup>
   </>
   )
