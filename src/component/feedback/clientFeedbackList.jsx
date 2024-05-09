@@ -5,6 +5,7 @@ import ClientFeedbackCard from './ClientFeedbackCard.component';
 // import ClientAvatarList from './clientAvatarList'; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ClientFeedbackItems from './ClientFeedbackItems';
 
 function ClientFeedbackList() {
     const settings = {
@@ -47,17 +48,31 @@ function ClientFeedbackList() {
           ]
     };
     return (
-        <Box className="center__carousel" sx={{ padding: "47px" , color:"primary.main" }}>
+        <div className="center__carousel" sx={{ padding: "47px" , color:"primary.main" }}>
             <Slider {...settings}>
+                {/* <ClientFeedbackCard />
                 <ClientFeedbackCard />
                 <ClientFeedbackCard />
                 <ClientFeedbackCard />
                 <ClientFeedbackCard />
-                <ClientFeedbackCard />
-                <ClientFeedbackCard />
+                <ClientFeedbackCard /> */}
+
+                {ClientFeedbackItems.map((item) => (
+                          <div key={item.id} className="top-card-wrapper">
+                    <ClientFeedbackCard
+                        name={item.name}
+                        location={item.location}
+                        post={item.post}
+                        date={item.date}
+                        feedback={item.feedback}
+                        
+                    />
+                    </div>
+                  ))}
+      
+
             </Slider>
-        </Box>
+        </div>
     );
 }
-
 export default ClientFeedbackList;

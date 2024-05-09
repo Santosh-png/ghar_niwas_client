@@ -1,5 +1,3 @@
-// // import PremiumCard from './premiumListingCard.jsx';
-// // import PremiumCard from "./PremiumCard";
 // import Card from '../card/card';
 // import React from "react";
 // import Slider from "react-slick";
@@ -8,7 +6,6 @@
 // import {Box} from "@mui/material";
 // import PremiumListItems from '../card/cardItems';
 
-// <<<<<<< SamimaMiya
 // function PremiumList() {
 //   const settings = {
 //     dots: true,
@@ -57,7 +54,8 @@
 //   };
 //  return(
 //   <div className="center__carousel"
-//   style={{width: "100%"}}
+//   style={{ display: "flex", flexDirection: "column", width: "100%"
+//    }}
 //   >
 //     <Slider {...settings}>
 //     {PremiumListItems.map((item) => (
@@ -74,74 +72,6 @@
 //   ))}
 //     </Slider>
 //   </div>
-// =======
-// function PremiumList() {
-//   const settings = {
-//     dots: true,
-//     infinite: true,
-//     speed: 500,
-//     slidesToShow: 4,
-//     centerMode:true,
-//     slidesToScroll: 1,
-//     // initialSlide:0,
-//     autoplay:true,  
-//     arrows:false,
-//     responsive: [
-//       {
-//         breakpoint: 1350,
-//         settings: {
-//           slidesToShow: 3,
-//           slidesToScroll: 2,
-//           infinite: true,
-//           dots: true
-//         }
-//       },
-//         {
-//           breakpoint: 1024,
-//           settings: {
-//             slidesToShow: 2,
-//             slidesToScroll: 2,
-//             infinite: true,
-//             dots: true
-//           }
-//         },
-//         {
-//           breakpoint: 600,
-//           settings: {
-//             slidesToShow: 1,
-//             slidesToScroll: 2,
-//             initialSlide: 2
-//           }
-//         },
-//         {
-//           breakpoint: 480,
-//           settings: {
-//             slidesToShow: 1,
-//             slidesToScroll: 1
-//           }
-//         }
-//       ]
-//   };
-//  return(
-//   <div className="center__carousel"
-//   style={{width: "100%"}}
-//   >
-//     <Slider {...settings}>
-//     {PremiumListItems.map((item) => (
-//           <div key={item.id} className="top-card-wrapper">
-//      <PremiumCard 
-//         imageUrl={item.imageUrl}
-//         location={item.location}
-//         price={item.price}
-//         title={item.title}
-//         name={item.name}
-//         date={item.date}
-//      />
-//     </div>
-//   ))}
-//     </Slider>
-//   </div>
-// >>>>>>> master
   
 //  )
 // }
