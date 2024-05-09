@@ -4,13 +4,17 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea , Box} from '@mui/material';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
-
-function TopListingCard({price, title, name, date,imageUrl}) {
+function TopListingCard({price, title, name, 
+  location,date,imageUrl}) {
   return (
     <div style={{marginBottom:'1rem',display:"flex",alignItems:"center",justifyContent:"center"}}>
-      <Card sx={{ maxWidth: 300 }}>      
-        `<CardMedia
+      <Card sx={{ maxWidth: 300 }}>  
+      <div style={{position:'relative'}}>
+        <LocationOnIcon style={{position:"absolute",top:"90%",color:"#ffffff"}}/>
+      <Typography style={{position:"absolute",top:"90%",color:"#FFFFFF",marginLeft:"30px"}}variant='body2' color="textSecondary" component="p">{location}</Typography>    
+        <CardMedia
             component="img"
             margin="auto"
 
@@ -21,6 +25,7 @@ function TopListingCard({price, title, name, date,imageUrl}) {
             alt="House Image"
 
         />
+        </div>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {price}

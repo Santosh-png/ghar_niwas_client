@@ -4,20 +4,27 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea , Box} from '@mui/material';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
-function PremiumCard({price, title, name, date,imageUrl}) {
+function PremiumCard({price, title, name, date,imageUrl,location}) {
   return (
     <div style={{paddingBottom:'1rem',display:"flex",alignItems:"center",justifyContent:"center"}} >
     <Card sx={{ maxWidth: 300}}>
       <CardActionArea>
-        <CardMedia
+      <div style={{position:'relative'}}>
+        <LocationOnIcon style={{position:"absolute",top:"90%",color:"#ffffff"}}/>
+      <Typography style={{position:"absolute",top:"90%",color:"#FFFFFF",marginLeft:"30px"}}variant='body2' color="textSecondary" component="p">{location}</Typography>
+      <CardMedia 
         component='img'
          Width="300px"
          Height="300px"
         //  width="100%"
         //  height="100%"
+       
         image={imageUrl}
-        />
+        /></div>
+        
+        
         <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {price}

@@ -24,11 +24,9 @@ function TopSection(){
         >
           <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center",marginBottom:'1rem'}}>
           <HorizontalDivider />
-          <Typography
-            sx={{
-              fontSize: "32px",
+          <Typography className="responsive_fontsize32"
+            sx={{           
               color: "secondary.secondary_600",
-              fontFamily: "fontFamily",
               fontWeight:"bold",
               padding:"10px",
               textAlign:"center",
@@ -42,8 +40,7 @@ function TopSection(){
         </Box>
         {/* second Box */}
         <Box sx={{ display: "flex", width: "100%", flexDirection: "row" }}>
-          <TopList/>
-  
+          <TopList/> 
         </Box>
       </Box>
     )

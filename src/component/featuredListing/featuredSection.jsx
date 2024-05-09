@@ -24,11 +24,9 @@ function FeaturedSection(){
       >
         <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center",marginBottom:'2rem'}}>
         <HorizontalDivider />
-        <Typography
+        <Typography className="responsive_fontsize32"
           sx={{
-            fontSize: "32px",
             color: "secondary.secondary_600",
-            fontFamily: "fontFamily",
             fontWeight:"bold",
             padding:"10px",
             textAlign:"center",

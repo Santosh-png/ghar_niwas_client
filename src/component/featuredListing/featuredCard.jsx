@@ -4,12 +4,17 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea ,Box} from '@mui/material';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
-function FeaturedCard({price, title, name, date,imageUrl}) {
+
+function FeaturedCard({price, title, name,location, date,imageUrl}) {
   return (
     <div style={{marginBottom:'1rem',display:"flex",alignItems:"center",justifyContent:"center"}}>
     <Card sx={{ maxWidth: 300 }}>
       <CardActionArea>
+      <div style={{position:'relative'}}>
+        <LocationOnIcon style={{position:"absolute",top:"90%",color:"#ffffff"}}/>
+      <Typography style={{position:"absolute",top:"90%",color:"#FFFFFF",marginLeft:"30px"}}variant='body2' color="textSecondary" component="p">{location}</Typography>
         <CardMedia
           component="img"
         //   height="140"
@@ -17,6 +22,7 @@ function FeaturedCard({price, title, name, date,imageUrl}) {
          Height="300px"
           image={imageUrl}
         />
+        </div>
         <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {price}
