@@ -27,7 +27,7 @@
     margin:5px 0px 20px 0px
 }
 .itemTitle:hover::after{
-    width: 100%;
+    width: 50%;
     transition: 2s ease;
 }
 .responsive_fontsize18 a{

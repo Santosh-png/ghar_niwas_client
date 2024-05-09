@@ -25,9 +25,13 @@ function Contact(){
         textAlign:'center'
     }}>
      <Box sx={{paddingLeft:'50px'}}>
-        <Box className='item' >
-            <Typography  variant="h1" sx={{fontWeight:'600'}} className='itemTitle responsive_fontsize24'>Quick Links</Typography>
-        </Box>    
+       
+            <Typography   className='itemTitle'>
+               <Typography className='responsive_fontsize26' variant="h3" sx={{fontWeight:'600'}}>
+                Quick Links
+                </Typography>  
+            </Typography>
+       
             <ul className='responsive_fontsize18'>
                 <a href="#"><ListItem>Home</ListItem></a>
                 <a href="#"><ListItem>FAQs</ListItem></a>
@@ -75,9 +79,14 @@ function Contact(){
         <Divider orientation="vertical" variant="middle"  flexItem sx={{margin:'20px 20px 200px 20px', backgroundColor:'accent.black',display:{xs:'none',md:'flex'}}}/>
        
         <Box sx={{paddingLeft:'50px'}} >
-            <Box className='item'>
-            <Typography  variant="h1" sx={{fontWeight:'600'}} className='itemTitle responsive_fontsize24'>Properties</Typography>
-            </Box>
+            
+            <Typography  className='itemTitle'>
+               <Typography variant="h3" sx={{fontWeight:'600'}} className='responsive_fontsize24' >
+                 Properties
+                </Typography> 
+             
+            </Typography>
+           
             <List className='responsive_fontsize18'>
                 <a href="#"><ListItem>House for Sale/Rent</ListItem></a>
                 <a href="#"><ListItem>Land for Sale/Rent</ListItem></a>
@@ -91,9 +100,12 @@ function Contact(){
             sx={{margin:'15px 0px 200px 0px', backgroundColor:'accent.black',display:{xs:'none',md:'flex'}}}/>
 
         <Box sx={{padding:'0 50px',overflow:'hidden'}}>
-            <Box >
-            <Typography  variant="h1" sx={{fontWeight:'600'}} className='itemTitle responsive_fontsize24'>Contact Info</Typography>
-            </Box>
+            
+            <Typography  className='itemTitle '>
+            <Typography variant="h3" sx={{fontWeight:'600'}} className='responsive_fontsize24'>
+                 Contact Info
+            </Typography>
+            </Typography>
             <List className='responsive_fontsize18'>
                
                 <ListItem>
