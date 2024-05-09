@@ -12,7 +12,7 @@ const { imageUrl, location, price, title, name, date } = data[dataIndex];
         width: "100%",
         height: 300,
         userSelect: "none",  
-        position:'relative' ,
+        position:'relative',
          
       }}
       className="my-slide-component"

@@ -3,7 +3,6 @@ import {
     Box,
     Typography
 } from "@mui/material";
-import UploadedList from "../card/cardItems";
 import HorizontalDivider from "../ui/HorizontalDivider";
 import CenteredCarousel from "./CenteredCarousel";
 function UploadedSection() {
