@@ -22,6 +22,7 @@ function NavBar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+ 
 
   return (
     <AppBar position="static"  sx={{background:'#FFFFFF'}}>
@@ -29,7 +30,7 @@ function NavBar() {
         <Toolbar disableGutters  className="apply-maxwidth"
          sx={{py:"0",width:"100%"}}>
          
-          <img src={Logo} alt="img"  className='logo-pic'/>
+          <img src={Logo} alt="img"  className='logo-pic' />
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -60,6 +61,9 @@ function NavBar() {
               keepMounted
               sx={{
                 display: { xs: 'flex', md: 'none' }
+                
+
+              
                               
               }}
               
@@ -74,8 +78,8 @@ function NavBar() {
               {/* social media icons for the mobile view */}
               <Box 
                 sx={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(2,1fr)'                 
+                  display: 'flex'
+                                 
                   }}>
                <IconButton 
                     sx={{backgroundColor:"white"}}
@@ -109,16 +113,19 @@ function NavBar() {
           
 
           {/* desktop view  */}          
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} className='responsive_fontsize20'>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'} }} className='responsive_fontsize20'>
             {itemList.map((item) => (
+              
               <Button
-                className='itemList'
+                className='itemList '
                 key={item}
                 onClick={handleCloseNavMenu}
                 sx={{ marginX:3,
                      color:'292c6a',
                      fontWeight:600,
-                     display: 'block' }}
+                     display: 'block',
+                     fontFamily: "Roboto Serif",
+                    }}
                 
               >
                 {item}
