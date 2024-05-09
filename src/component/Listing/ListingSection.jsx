@@ -1,15 +1,15 @@
 import React from "react";
 import Divider from '@mui/material/Divider';
+
 import {
     Box,
     Typography
 } from "@mui/material";
-import PremiumList from "./premiumListingService";
+import Listing from "./listingService";
 import HorizontalDivider from "../ui/HorizontalDivider";
-// import PremiumCard from "./PremiumCard";
-function PremiumSection() {
-    return (
-        <Box sx={{marginTop:"40px" , padding:" 0 10px 10px 10px", borderRadius:" 0 0 10px 10px", }}>
+function ListSection(){
+    return(
+        <Box sx={{marginTop:"80px", width:"100%"}}>
         {/* first box */}
   
         <Box
@@ -20,6 +20,7 @@ function PremiumSection() {
             flexDirection: "column",
             alignItems: "center",
             marginTop: "68px",
+            width:'100%'
           }}
         >
           <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center"}}>
@@ -35,17 +36,17 @@ function PremiumSection() {
               letterSpacing:"1px",
             }}
           >
-            Premium Listing
+             Listing
           </Typography>
           <HorizontalDivider />
           </Box>
         </Box>
         {/* second Box */}
         <Box sx={{ display: "flex", width: "100%", flexDirection: "row" }}>
-          <PremiumList/>
+          <Listing/>
   
         </Box>
       </Box>
-    );
+    )
 }
-export default PremiumSection;
+export default ListSection;

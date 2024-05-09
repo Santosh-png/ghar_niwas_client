@@ -11,6 +11,7 @@ import AboutSection from './AboutSection';
 import ClientFeedback from '../component/feedback/ClientFeedback.component';
 import FilteredSection from '../component/filter_components/fitered_section';
 import LabTabs from '../component/filter_components/tablabel';
+import ListSection from '../component/Listing/ListingSection';
 
 
 function LandingPage() {
@@ -18,6 +19,7 @@ function LandingPage() {
     <div>
       <NavBar />    
       <FirstSection/>
+      <ListSection />
       <PremiumSection/>
       <TopSection/>
       <FeaturedSection/>
