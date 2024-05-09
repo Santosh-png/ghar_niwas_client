@@ -35,7 +35,7 @@ const { imageUrl, location, price, title, name, date } = data[dataIndex];
         <Typography sx={{color:'primary.main'}} variant="body2" color="text.secondary">
         {title}
         </Typography>
-        <Box sx={{display:'flex', flexDirection:'row',justifyContent:"space-between" ,color:'primary.main'}}>
+        <Box sx={{display:'flex',flexDirection:'row',justifyContent:"space-between" ,color:'primary.main'}}>
         <Typography sx={{color:'primary.main'}} variant="body2" color="text.secondary" >
         posted by: {name}
         </Typography>

@@ -10,7 +10,7 @@ function TopListingCard({price, title, name,
   location,date,imageUrl}) {
   return (
     <div style={{marginBottom:'1rem',display:"flex",alignItems:"center",justifyContent:"center"}}>
-      <Card sx={{ maxWidth: 300 }}>  
+      <Card >  
       <div style={{position:'relative'}}>
         <LocationOnIcon style={{position:"absolute",top:"90%",color:"#ffffff"}}/>
       <Typography style={{position:"absolute",top:"90%",color:"#FFFFFF",marginLeft:"30px"}}variant='body2' color="textSecondary" component="p">{location}</Typography>    
@@ -19,8 +19,11 @@ function TopListingCard({price, title, name,
             margin="auto"
 
     //   height="140"
-      Width="300px"
-      Height="300px"
+      // Width="300px"
+      // Height="300px"
+      sx={{
+        height:{xs:"150px",sm:"200px",md:"250px",lg:'300px'},width:{xs:"250px",sm:"300px",md:"350px",lg:'40px'}
+      }}
       image={imageUrl}
       alt="House Image"
 

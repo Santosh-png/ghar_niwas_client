@@ -10,7 +10,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 function FeaturedCard({price, title, name,location, date,imageUrl}) {
   return (
     <div style={{marginBottom:'1rem',display:"flex",alignItems:"center",justifyContent:"center"}}>
-    <Card sx={{ maxWidth: 300 }}>
+    <Card>
       <CardActionArea>
       <div style={{position:'relative'}}>
         <LocationOnIcon style={{position:"absolute",top:"90%",color:"#ffffff"}}/>
@@ -18,9 +18,12 @@ function FeaturedCard({price, title, name,location, date,imageUrl}) {
         <CardMedia
           component="img"
         //   height="140"
-         width="300px"
-         height="300px"
+        //  width="300px"
+        //  height="300px"
           image={imageUrl}
+          sx={{
+            height:{xs:"150px",sm:"200px",md:"250px",lg:'300px'},width:{xs:"250px",sm:"300px",md:"350px",lg:'400px'}
+          }}
         />
         </div>
         <CardContent>
