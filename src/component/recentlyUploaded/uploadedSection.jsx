@@ -39,10 +39,10 @@ function UploadedSection() {
         </Box>
       </Box>
       {/* second Box */}
-      <Box sx={{ display: "flex", width: "100%", flexDirection: "row" }}>
+      {/* <Box sx={{ display: "flex", width: "100%", flexDirection: "row" }}> */}
         <UploadedList/>
 
-      </Box>
+      {/* </Box> */}
     </Box>
     );
 }

@@ -48,7 +48,7 @@ function PremiumList() {
   >
     <Slider {...settings}>
     {featureListItems.map((item) => (
-          <div key={item.id} className="top-card-wrapper">
+          // <div key={item.id} className="top-card-wrapper">
      <FeaturedCard 
         imageUrl={item.imageUrl}
         location={item.location}
@@ -57,7 +57,7 @@ function PremiumList() {
         name={item.name}
         date={item.date}
      />
-    </div>
+    // </div>
   ))}
     </Slider>
   </div>

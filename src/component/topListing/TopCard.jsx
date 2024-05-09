@@ -7,7 +7,7 @@ import { CardActionArea } from '@mui/material';
 
 function TopListingCard() {
   return (
-    <Card sx={{ maxWidth: 300 }}>
+    <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
           component="img"

@@ -50,5 +50,12 @@
     margin: auto;
     padding: 0px;
   }
-
+  .slick-track {
+   display: grid;
+   place-items: center;
+ }
  
+
+ .top-card-wrapper{
+   width: auto;
+ }

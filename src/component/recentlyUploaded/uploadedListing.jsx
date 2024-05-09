@@ -47,7 +47,7 @@ return (
     >
       <Slider {...settings}>
       {uploadedListItems.map((item) => (
-          <div key={item.id} className="top-card-wrapper">
+          // <div key={item.id} className="top-card-wrapper">
      <UploadedCard 
         imageUrl={item.imageUrl}
         location={item.location}
@@ -56,7 +56,7 @@ return (
         name={item.name}
         date={item.date}
      />
-    </div>
+    // </div>
   ))}
       </Slider>
     </div>
