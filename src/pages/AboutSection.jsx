@@ -29,7 +29,7 @@ function AboutSection() {
             flexDirection: 'column',
             gap: "1rem",
             ml:"2.5rem",
-            border: "1px solid black"
+            // border: "1px solid black"
             
           }}
         >
@@ -40,7 +40,7 @@ function AboutSection() {
               color: "primary.main",
               display:"flex",
               marginTop: "1.5rem",
-              border: "1px solid red",
+              // border: "1px solid red",
             }}
           >
               About Us
@@ -50,7 +50,7 @@ function AboutSection() {
    
           <Box>
             <p className="responsive_fontsize16" >
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  
             </p>
           </Box>
         </Box>
@@ -67,7 +67,7 @@ function AboutSection() {
                   marginTop:"-0rem", 
                   marginRight:"5rem",
                   alignItems:"center",
-                  border: "1px solid red"
+                  // border: "1px solid red"
                 }}
               >
               
