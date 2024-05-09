@@ -7,7 +7,7 @@ import CustomFilterPanelContent from './filter_panel_content';
 import { Typography } from '@mui/material';
 
 function ToggleFilter() {
-    const [alignment, setAlignment] = React.useState(null);
+    const [alignment, setAlignment] = React.useState('all status');
     const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleChangeToggle = (event, newAlignment) => {
