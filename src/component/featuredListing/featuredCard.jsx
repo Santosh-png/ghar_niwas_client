@@ -7,6 +7,7 @@ import { CardActionArea ,Box} from '@mui/material';
 
 function FeaturedCard({price, title, name, date,imageUrl}) {
   return (
+    <div style={{marginBottom:'1rem',display:"flex",alignItems:"center",justifyContent:"center"}}>
     <Card sx={{ maxWidth: 300 }}>
       <CardActionArea>
         <CardMedia
@@ -34,6 +35,7 @@ function FeaturedCard({price, title, name, date,imageUrl}) {
         </CardContent>
       </CardActionArea>
     </Card>
+    </div>
   );
 }
 export default FeaturedCard;

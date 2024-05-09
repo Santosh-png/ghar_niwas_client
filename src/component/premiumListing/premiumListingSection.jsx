@@ -9,7 +9,7 @@ import HorizontalDivider from "../ui/HorizontalDivider";
 // import PremiumCard from "./PremiumCard";
 function PremiumSection() {
     return (
-        <Box sx={{marginTop:"80px"}}>
+        <Box sx={{marginTop:"0px",border:'1px solid red'}}>
         {/* first box */}
   
         <Box
@@ -19,18 +19,19 @@ function PremiumSection() {
             justifyContent: "center",
             flexDirection: "column",
             alignItems: "center",
-            marginTop: "68px",
+            marginTop: "30px",
           }}
         >
-          <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center"}}>
+          <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center",marginBottom:'2rem',}}>
           <HorizontalDivider />
           <Typography
             sx={{
+             
               fontSize: "32px",
               color: "secondary.secondary_600",
-              fontFamily: "fontFamily",
+              // fontFamily: "fontFamily",
               fontWeight:"bold",
-              padding:"10px",
+              padding:"0px",
               textAlign:"center",
               letterSpacing:"1px",
             }}

@@ -7,15 +7,16 @@ import { CardActionArea , Box} from '@mui/material';
 
 function PremiumCard({price, title, name, date,imageUrl}) {
   return (
-    <Card sx={{ maxWidth: 300 }}>
+    <div style={{paddingBottom:'1rem',display:"flex",alignItems:"center",justifyContent:"center"}} >
+    <Card sx={{ maxWidth: 300}}>
       <CardActionArea>
         <CardMedia
-          component="img"
-        //   height="140"
+        component='img'
          Width="300px"
          Height="300px"
-         
-          image={imageUrl}
+        //  width="100%"
+        //  height="100%"
+        image={imageUrl}
         />
         <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -35,6 +36,7 @@ function PremiumCard({price, title, name, date,imageUrl}) {
         </CardContent>
       </CardActionArea>
     </Card>
+    </div>
   );
 }
 export default PremiumCard;

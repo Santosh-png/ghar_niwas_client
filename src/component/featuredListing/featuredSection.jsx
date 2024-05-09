@@ -9,7 +9,7 @@ import FeaturedList from './featuredListingService';
 import HorizontalDivider from "../ui/HorizontalDivider";
 function FeaturedSection(){
     return(
-        <Box sx={{marginTop:"80px"}}>
+        <Box sx={{marginTop:"20px",border:'1px solid red'}}>
       {/* first box */}
 
       <Box
@@ -19,10 +19,10 @@ function FeaturedSection(){
           justifyContent: "center",
           flexDirection: "column",
           alignItems: "center",
-          marginTop: "68px",
+          marginTop: "30px",
         }}
       >
-        <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center"}}>
+        <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center",marginBottom:'2rem'}}>
         <HorizontalDivider />
         <Typography
           sx={{
