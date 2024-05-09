@@ -2,11 +2,10 @@ import React from 'react';
 import CenteredCarousel from './CenteredCarousel';
 import { Typography,Box} from '@mui/material';
 const Card = React.memo(function (props) {
-  const {data, dataIndex} = props;
+const {data, dataIndex} = props;
+const { imageUrl, location, price, title, name, date } = data[dataIndex];
   
-  const { imageUrl, location, price, title, name, date } = data[dataIndex];
-  
-  console.log("Check data data: ", data);
+  // console.log("Check data data: ", data);
   return (
     <div
       style={{
@@ -20,18 +19,17 @@ const Card = React.memo(function (props) {
     >
       <img
         style={{         
-          maxHeight: "100%",
-          width: "100%",
+          height: "80%",
+          width: 'inherit',
           objectFit: "cover",
-          borderRadius: 0,
-          
+          borderRadius: 0,         
         }}
         draggable={false}
         src={imageUrl}
         alt='image' 
       />
-      <div style={{backgroundColor:'red', position:'absolute',width:"100%"}}>
-          <Typography sx={{color:'primary.main'}}gutterBottom variant="h5" component="div">
+      <div style={{position:'absolute',width:"inherit"}}>
+        <Typography sx={{color:'primary.main'}}gutterBottom variant="h5" component="div">
           {price}
         </Typography>
         <Typography sx={{color:'primary.main'}} variant="body2" color="text.secondary">
@@ -46,6 +44,7 @@ const Card = React.memo(function (props) {
         </Typography> 
         </Box>
       </div>
+
     </div>
   );
 });

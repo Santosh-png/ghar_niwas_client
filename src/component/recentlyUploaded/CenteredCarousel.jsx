@@ -12,7 +12,7 @@ import Card from "./CarouselCard";
 export default function CenteredCarousel(props) {
   const ref = React.useRef();
   return (
-    <div style={{ width: "100%", position: "relative",border:'1px solid red',paddingBottom:'50px',marginTop:'20px',backgroundColor:'peachpuff'}}>
+    <div style={{ width: "100%", position: "relative",border:'1px solid red',paddingBottom:'50px',marginTop:'20px'}}>
       <ResponsiveContainer
         carouselRef={ref}
         render={(parentWidth, carouselRef) => {

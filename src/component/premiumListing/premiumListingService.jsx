@@ -55,7 +55,7 @@ function PremiumList() {
   };
  return(
   <div className="center__carousel"
-  style={{width: "100%",backgroundColor:"yellow"}}
+  style={{width: "100%"}}
   >
     <Slider {...settings}>
     {PremiumListItems.map((item) => (

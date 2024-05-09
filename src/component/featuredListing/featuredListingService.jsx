@@ -53,8 +53,7 @@ function PremiumList() {
   };
  return(
   <div className="center__carousel"
-  style={{ display: "flex", flexDirection: "column", width: "100%",backgroundColor
-    :'pink'
+  style={{ display: "flex", flexDirection: "column", width: "100%"
    }}
   >
     <Slider {...settings}>

@@ -9,7 +9,7 @@ import FeaturedList from './featuredListingService';
 import HorizontalDivider from "../ui/HorizontalDivider";
 function FeaturedSection(){
     return(
-        <Box sx={{marginTop:"20px",border:'1px solid red',backgroundColor:'palegreen'}}>
+        <Box sx={{marginTop:"20px",border:'1px solid red'}}>
       {/* first box */}
 
       <Box

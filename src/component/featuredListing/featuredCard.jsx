@@ -18,23 +18,23 @@ function FeaturedCard({price, title, name,location, date,imageUrl}) {
         <CardMedia
           component="img"
         //   height="140"
-         Width="300px"
-         Height="300px"
+         width="300px"
+         height="300px"
           image={imageUrl}
         />
         </div>
         <CardContent>
-        <Typography sx={{color:'primary.main'}} gutterBottom variant="h5" component="div">
+        <Typography className="responsive_fontsize24" sx={{color:'primary.main'}} gutterBottom variant="h5" component="div">
           {price}
         </Typography>
-        <Typography sx={{color:'primary.main'}} variant="body2" color="text.secondary">
+        <Typography className="responsive_fontsize14" sx={{color:'primary.main'}} variant="body2" color="text.secondary">
          {title}
         </Typography>
         <Box sx={{display:'flex', flexDirection:'row',justifyContent:"space-between"}}>
-        <Typography  sx={{color:'primary.main'}}variant="body2" color="text.secondary" >
+        <Typography className="responsive_fontsize14" sx={{color:'primary.main'}}variant="body2" color="text.secondary" >
          posted by: {name}
         </Typography>
-        <Typography sx={{color:'primary.main'}} variant="body2" color="text.secondary">
+        <Typography className="responsive_fontsize14" sx={{color:'primary.main'}} variant="body2" color="text.secondary">
          {date}
         </Typography>
         </Box>

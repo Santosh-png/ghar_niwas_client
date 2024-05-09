@@ -9,7 +9,7 @@ import HorizontalDivider from "../ui/HorizontalDivider";
 // import PremiumCard from "./PremiumCard";
 function PremiumSection() {
     return (
-        <Box sx={{marginTop:"0px",border:'1px solid blue',backgroundColor:"red"}}>
+        <Box sx={{marginTop:"0px",border:'1px solid blue'}}>
         {/* first box */}
   
         <Box

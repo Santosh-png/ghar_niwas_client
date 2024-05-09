@@ -8,7 +8,7 @@ import HorizontalDivider from "../ui/HorizontalDivider";
 import CenteredCarousel from "./CenteredCarousel";
 function UploadedSection() {
     return (
-        <Box sx={{marginTop:"50px",border:'1px solid blue',color:'primary.main',paddingBottom:'50px',backgroundColor:'royalblue'}}>
+        <Box sx={{marginTop:"50px",border:'1px solid blue',color:'primary.main',paddingBottom:'50px'}}>
       {/* first box */}
 
       <Box

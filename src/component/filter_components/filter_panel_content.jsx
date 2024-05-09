@@ -59,7 +59,7 @@ function CustomFilterPanelContent() {
 
 
         <Box className="select">
-            <Typography className='responsive_fontsize20'> Locations</Typography>
+            <Typography> Locations</Typography>
             <FormControl sx={{mr: "1rem", minWidth: 200 }} size="small">
             <InputLabel id="demo-select-small-label">All Cities</InputLabel>
             <Select
