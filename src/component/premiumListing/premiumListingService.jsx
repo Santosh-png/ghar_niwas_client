@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {Box} from "@mui/material";
 import PremiumListItems from "./premiumListItems";
+
 function PremiumList() {
   const settings = {
     dots: true,

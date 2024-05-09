@@ -9,7 +9,7 @@ import TopList from "./TopListingService";
 import HorizontalDivider from "../ui/HorizontalDivider";
 function TopSection(){
     return(
-        <Box sx={{marginTop:"20px",border:'1px solid red'}}>
+        <Box sx={{marginTop:"20px",border:'1px solid red',backgroundColor:'greenyellow'}}>
         {/* first box */}
   
         <Box
@@ -26,11 +26,12 @@ function TopSection(){
           <HorizontalDivider />
           <Typography className="responsive_fontsize32"
             sx={{           
-              color: "secondary.secondary_600",
+              // color: "secondary.secondary_600",
               fontWeight:"bold",
               padding:"10px",
               textAlign:"center",
               letterSpacing:"1px",
+              color:'primary.main'
             }}
           >
             Top Listing

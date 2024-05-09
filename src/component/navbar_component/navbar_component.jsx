@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {AppBar,Box,Toolbar,IconButton,Typography,Menu ,Container,Button,MenuItem}from '@mui/material';
+import {AppBar,Box,Toolbar,IconButton,Typography,Menu ,Container,Button,MenuItem, Drawer}from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Logo from '../../assets/image/logo.png'
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -26,10 +26,10 @@ function NavBar() {
   return (
     <AppBar position="static"  sx={{background:'#FFFFFF'}}>
       <Container maxWidth="xl" >
-        <Toolbar disableGutters >
-
+        <Toolbar disableGutters  className="apply-maxwidth"
+         sx={{py:"0",width:"100%"}}>
+         
           <img src={Logo} alt="img"  className='logo-pic'/>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -38,30 +38,27 @@ function NavBar() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="#000000"
-              
+                           
             >
-              <MenuIcon />
+              <MenuIcon sx={{backgroundColor:"red"}}/>
             </IconButton>
-
+           
             {/* mobile view  */}
 
-            <Menu
+            <Drawer
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: 'bottom',
-                horizontal: 'center',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
                 horizontal: 'left',
               }}
-              open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
+              anchor="right"
+              open={Boolean(anchorElNav)}
+              keepMounted
               sx={{
                 display: { xs: 'block', md: 'none' }
-                
+                              
               }}
               
             >
@@ -71,9 +68,9 @@ function NavBar() {
                   </Typography>
                 </MenuItem>
               ))}
-            </Menu>
-            
-          </Box>
+            </Drawer>
+            </Box> 
+          
 
           {/* desktop view  */}          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -96,7 +93,7 @@ function NavBar() {
           <Box sx={{ flexGrow: 0 }}>
           
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <VerticalDivider>
+            <VerticalDivider/>
             <IconButton 
                     sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",margin:1}}
                 >
@@ -123,7 +120,7 @@ function NavBar() {
                 >
                     <LinkedInIcon sx={{color:" #0077b5"}}/>
                 </IconButton>
-                </VerticalDivider>   
+                
             </Box>
           </Box>
         </Toolbar>

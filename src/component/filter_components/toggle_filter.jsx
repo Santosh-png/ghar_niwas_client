@@ -10,18 +10,16 @@ function ToggleFilter() {
     const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleChangeToggle = (event, newAlignment) => {
-    event.preventDefault();
-    setAlignment(newAlignment);
+      setAlignment(newAlignment);
   };
 
-  const handleClick = (event) => {
-    event.preventDefault(); // Prevent the default behavior
-    setAnchorEl(event.currentTarget);
+  const handleAllStatusClick = (e) => {
+    setAlignment(prevAlignment => prevAlignment === 'all status' ? null : 'all status'); 
+    setAnchorEl(e.currentTarget)
   };
   
 
   const handleClose = (event) => {
-    event.preventDefault(); // Prevent the default behavior
     setAnchorEl(null);
   };
   const open = Boolean(anchorEl);
@@ -39,15 +37,17 @@ function ToggleFilter() {
             sx={{
                 background: "#656A29",
                 mt: "9rem",
-                gap: "1rem",
+                // gap: "1rem", 
                 opacity: "80%"
             }}
             >
             <ToggleButton value="all status"
               aria-describedby ={id}
-              variant='contained'
-              onClick={handleClick}
-            >
+              onClick={handleAllStatusClick} 
+              sx={{
+                color: alignment === 'all status' ? 'white' : 'white', // Change color if selecteD
+              }}
+              >
               All Status
             </ToggleButton>
             <Popover
@@ -69,9 +69,7 @@ function ToggleFilter() {
                 }
               }}
             >
-                  <Box>
-                    <CustomFilterPanelContent/>
-                  </Box>
+              <CustomFilterPanelContent/>
             </Popover>
 
             <ToggleButton value="for sale" sx={{color: "white"}}>For Sale</ToggleButton>

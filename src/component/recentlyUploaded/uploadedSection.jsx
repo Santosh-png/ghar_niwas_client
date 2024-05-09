@@ -8,7 +8,7 @@ import HorizontalDivider from "../ui/HorizontalDivider";
 import CenteredCarousel from "./CenteredCarousel";
 function UploadedSection() {
     return (
-        <Box sx={{marginTop:"80px"}}>
+        <Box sx={{marginTop:"50px",border:'1px solid blue',color:'primary.main',paddingBottom:'50px',backgroundColor:'royalblue'}}>
       {/* first box */}
 
       <Box
@@ -18,7 +18,7 @@ function UploadedSection() {
           justifyContent: "center",
           flexDirection: "column",
           alignItems: "center",
-          marginTop: "68px",
+          marginTop: "30px",
         }}
       >
         <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center"}}>

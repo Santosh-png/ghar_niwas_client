@@ -24,17 +24,17 @@ function FeaturedCard({price, title, name,location, date,imageUrl}) {
         />
         </div>
         <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography sx={{color:'primary.main'}} gutterBottom variant="h5" component="div">
           {price}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography sx={{color:'primary.main'}} variant="body2" color="text.secondary">
          {title}
         </Typography>
         <Box sx={{display:'flex', flexDirection:'row',justifyContent:"space-between"}}>
-        <Typography variant="body2" color="text.secondary" >
+        <Typography  sx={{color:'primary.main'}}variant="body2" color="text.secondary" >
          posted by: {name}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography sx={{color:'primary.main'}} variant="body2" color="text.secondary">
          {date}
         </Typography>
         </Box>

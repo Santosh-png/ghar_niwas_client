@@ -8,8 +8,8 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 function PremiumCard({price, title, name, date,imageUrl,location}) {
   return (
-    <div style={{paddingBottom:'1rem',display:"flex",alignItems:"center",justifyContent:"center"}} >
-    <Card sx={{ maxWidth: 300}}>
+    <div style={{paddingBottom:'1rem',display:"flex",alignItems:"center",alignSelf:'center',justifyContent:"center"}} >
+    <Card sx={{ maxWidth:300}}>
       <CardActionArea>
       <div style={{position:'relative'}}>
         <LocationOnIcon style={{position:"absolute",top:"90%",color:"#ffffff"}}/>
@@ -25,18 +25,18 @@ function PremiumCard({price, title, name, date,imageUrl,location}) {
         /></div>
         
         
-        <CardContent>
+        <CardContent sx={{color:'primary.main'}}>
         <Typography gutterBottom variant="h5" component="div">
           {price}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography sx={{color:'primary.main'}} variant="body2" color="text.secondary">
          {title}
         </Typography>
         <Box sx={{display:'flex', flexDirection:'row',justifyContent:"space-between"}}>
-        <Typography variant="body2" color="text.secondary" >
+        <Typography sx={{color:'primary.main'}} variant="body2" color="text.secondary" >
          posted by: {name}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography sx={{color:'primary.main'}} variant="body2" color="text.secondary">
          {date}
         </Typography>
         </Box>

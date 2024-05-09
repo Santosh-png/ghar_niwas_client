@@ -9,18 +9,17 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import data from "./uploadedListItems";
 import Card from "./CarouselCard";
 
-
 export default function CenteredCarousel(props) {
   const ref = React.useRef();
   return (
-    <div style={{ width: "100%", position: "relative" }}>
+    <div style={{ width: "100%", position: "relative",border:'1px solid red',paddingBottom:'50px',marginTop:'20px',backgroundColor:'peachpuff'}}>
       <ResponsiveContainer
         carouselRef={ref}
         render={(parentWidth, carouselRef) => {
-          let currentVisibleSlide = 5;
-          if (parentWidth <= 1440) currentVisibleSlide = 3;
-          if (parentWidth <= 1080) currentVisibleSlide = 1;
-          return (
+          let currentVisibleSlide = 3;
+          if (parentWidth <= 1240) currentVisibleSlide = 3;
+          if (parentWidth <= 900) currentVisibleSlide = 1;
+          return (          
             <StackedCarousel
               ref={carouselRef}
               slideComponent={Card}
@@ -30,6 +29,7 @@ export default function CenteredCarousel(props) {
               currentVisibleSlide={currentVisibleSlide}
               maxVisibleSlide={5}
               useGrabCursor
+              
             />
           );
         }}
@@ -60,28 +60,3 @@ export default function CenteredCarousel(props) {
   );
 }
 
-// export const Card = React.memo(function (props) {
-//   const { data, dataIndex } = props;
-//   const { imageUrl } = data[dataIndex];
-//   return (
-//     <div
-//       style={{
-//         width: "100%",
-//         height: 300,
-//         userSelect: "none",
-//       }}
-//       className="my-slide-component"
-//     >
-//       <img
-//         style={{
-//           height: "100%",
-//           width: "100%",
-//           objectFit: "cover",
-//           borderRadius: 0,
-//         }}
-//         draggable={false}
-//         src={imageUrl}
-//       />
-//     </div>
-//   );
-// });
