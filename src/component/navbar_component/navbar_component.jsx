@@ -30,7 +30,7 @@ const drawerWidth=350;
         <Toolbar disableGutters  className="apply-maxwidth"
          sx={{py:"0",width:"100%"}}>
          
-          <img src={Logo} alt="img"  className='logo-pic' sx={{width: "100%", height: "100%" }} />
+          <img src={Logo} alt="img"  className='logo-pic' sx={{width:{xs:'190px',sm:'200px',md:'250px'}, height:{xs:'190px',sm:'200px',md:'250px'} }} />
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -131,10 +131,12 @@ const drawerWidth=350;
                      fontWeight:600,
                      display: 'flex',
                      fontFamily: "Roboto Serif",
+                     padding:'10px',
+                     letterSpacing:'0.1rem'
                     }}
                 
               >
-               <Typography className='responsive_fontsize24' sx={{fontWeight:'600'}}> 
+               <Typography className='responsive_fontsize28' sx={{fontWeight:'600'}}> 
                 {item}
                 </Typography> 
               </Button>
