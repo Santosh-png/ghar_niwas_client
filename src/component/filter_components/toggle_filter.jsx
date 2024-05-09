@@ -13,8 +13,9 @@ function ToggleFilter() {
       setAlignment(newAlignment);
   };
 
-  const handleAllStatusClick = () => {
+  const handleAllStatusClick = (e) => {
     setAlignment(prevAlignment => prevAlignment === 'all status' ? null : 'all status'); 
+    setAnchorEl(e.currentTarget)
   };
   
 
@@ -36,7 +37,7 @@ function ToggleFilter() {
             sx={{
                 background: "#656A29",
                 mt: "9rem",
-                gap: "1rem",
+                // gap: "1rem", 
                 opacity: "80%"
             }}
             >
@@ -68,9 +69,7 @@ function ToggleFilter() {
                 }
               }}
             >
-                  <Box>
-                    <CustomFilterPanelContent/>
-                  </Box>
+              <CustomFilterPanelContent/>
             </Popover>
 
             <ToggleButton value="for sale" sx={{color: "white"}}>For Sale</ToggleButton>

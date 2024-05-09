@@ -47,6 +47,8 @@ function FirstSection() {
                  A place of recognizing your style of living a life.
               </Typography>
 
+
+            {/* search for properties based on keyword like house, land, flat, apartment, room, studio, studio apartment, 1BHK, 2BHK, 3BHK, single, double and so on  */}
             <Box className= "search_bar">
             <SearchIcon style={{marginTop: '0.2rem', opacity: "50%"}}/>
             <Typography>
