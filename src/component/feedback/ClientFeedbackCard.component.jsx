@@ -9,12 +9,12 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 const ClientFeedbackCard = () => {
   return (
     <Card style={{margin:"0px 20px"}}>
+    {/* <Card style={{margin:"buttom"}}> */}
       <Box sx={{ maxWidth: 345 , backgroundColor: "primary.main" }}>
       <CardContent>
         <Typography variant="body2" color= "accent.white">
-          "This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the mussels,
-          if you like."
+          " Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
         </Typography>
       </CardContent>
         </Box>
