@@ -26,9 +26,9 @@ function Contact(){
     }}>
      <Box sx={{paddingLeft:'50px'}}>
         <Box className='itemTitle' >
-            <Typography className='responsive_fontsize24'>Quick Links</Typography>
+            <Typography  variant="h1" sx={{fontWeight:'600'}} className='responsive_fontsize24'>Quick Links</Typography>
         </Box>    
-            <List className='responsive_fontsize18'>
+            <ul className='responsive_fontsize18'>
                 <a href="#"><ListItem>Home</ListItem></a>
                 <a href="#"><ListItem>FAQs</ListItem></a>
                 <a href="#"><ListItem>Land for Sale</ListItem></a>
@@ -71,11 +71,11 @@ function Contact(){
             </Box> 
         </Box> 
         <Divider orientation="horizontal" flexItem sx={{margin:'20px',display: { xs: 'flex', md: 'none' }}}/>
-        <Divider orientation="vertical" variant="middle"  flexItem sx={{margin:'20px 20px 200px 20px', backgroundColor:'accent.black'}}/>
+        <Divider orientation="vertical" variant="middle"  flexItem sx={{margin:'20px 20px 200px 20px', backgroundColor:'accent.black',display:{xs:'none',md:'flex'}}}/>
        
         <Box sx={{paddingLeft:'50px'}} >
             <Box className='itemTitle'>
-            <Typography variant='' className='responsive_fontsize24'>Properties</Typography>
+            <Typography  variant="h1" sx={{fontWeight:'600'}} className='responsive_fontsize24'>Properties</Typography>
             </Box>
             <List className='responsive_fontsize18'>
                 <a href="#"><ListItem>House for Sale/Rent</ListItem></a>
@@ -91,7 +91,7 @@ function Contact(){
 
         <Box sx={{padding:'0 50px',overflow:'hidden'}}>
             <Box className='itemTitle'>
-            <Typography className='responsive_fontsize24'>Contact Info</Typography>
+            <Typography  variant="h1" sx={{fontWeight:'600'}} className='responsive_fontsize24'>Contact Info</Typography>
             </Box>
             <List className='responsive_fontsize18'>
                
@@ -118,7 +118,7 @@ function Contact(){
         </Box> 
        
 
-    </Box>
+   
     </>
  );
 
