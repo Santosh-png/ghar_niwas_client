@@ -4,10 +4,11 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import featureListItems from "./featureListItems";
 function PremiumList() {
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -42,14 +43,22 @@ function PremiumList() {
       ]
   };
  return(
-  <div className="center__carousel">
+  <div className="center__carousel"
+  style={{ display: "flex", flexDirection: "column", width: "100%" }}
+  >
     <Slider {...settings}>
-      <FeaturedCard/>
-      <FeaturedCard/>
-      <FeaturedCard/>
-      <FeaturedCard/>
-      <FeaturedCard/>
-      <FeaturedCard/>
+    {featureListItems.map((item) => (
+          <div key={item.id} className="top-card-wrapper">
+     <FeaturedCard 
+        imageUrl={item.imageUrl}
+        location={item.location}
+        price={item.price}
+        title={item.title}
+        name={item.name}
+        date={item.date}
+     />
+    </div>
+  ))}
     </Slider>
   </div>
   

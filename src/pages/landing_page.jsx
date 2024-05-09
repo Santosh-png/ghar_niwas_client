@@ -8,7 +8,7 @@ import TopSection from '../component/topListing/topListingSection';
 import FeaturedSection from '../component/featuredListing/featuredSection';
 import UploadedSection from '../component/recentlyUploaded/uploadedSection';
 import AboutSection from './AboutSection';
-import ClientFeedback from '../component/feedback/clientFeedbackList';
+import ClientFeedback from '../component/feedback/ClientFeedback.component';
 
 
 function LandingPage() {
