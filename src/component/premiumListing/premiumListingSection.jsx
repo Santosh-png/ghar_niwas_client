@@ -1,12 +1,10 @@
 import React from "react";
-import Divider from '@mui/material/Divider';
 import {
     Box,
     Typography
 } from "@mui/material";
-import PremiumList from "./premiumListingService";
+import PremiumList from "../card/cardServices";
 import HorizontalDivider from "../ui/HorizontalDivider";
-// import PremiumCard from "./PremiumCard";
 function PremiumSection() {
     return (
         <Box sx={{marginTop:"0px",border:'1px solid blue'}}>

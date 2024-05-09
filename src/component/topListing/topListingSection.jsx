@@ -5,7 +5,7 @@ import {
     Box,
     Typography
 } from "@mui/material";
-import TopList from "./TopListingService";
+import TopList from "../card/cardServices";
 import HorizontalDivider from "../ui/HorizontalDivider";
 function TopSection(){
     return(

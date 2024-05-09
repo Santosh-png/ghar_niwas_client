@@ -5,14 +5,16 @@ import {
     Box,
     Typography
 } from "@mui/material";
-import FeaturedList from './featuredListingService';
+import FeaturedList from '../card/cardServices';
 import HorizontalDivider from "../ui/HorizontalDivider";
 function FeaturedSection(){
     return(
-        <Box sx={{marginTop:"20px",border:'1px solid red'}}>
+        <Box sx={{marginTop:"20px",border:'1px solid red',
+          backgroundColor:'greenyellow'
+        }}>
       {/* first box */}
 
-      <Box
+      {/* <Box
         sx={{
           // backgroundColor: "green",
           display: "flex",
@@ -21,8 +23,10 @@ function FeaturedSection(){
           alignItems: "center",
           marginTop: "30px",
         }}
-      >
-        <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center",marginBottom:'1rem'}}>
+      > */}
+        <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center",marginBottom:'1rem', marginTop:'30px',
+          backgroundColor:"palegreen"
+        }}>
         <HorizontalDivider />
         <Typography className="responsive_fontsize32"
           sx={{
@@ -31,18 +35,18 @@ function FeaturedSection(){
             padding:"10px",
             textAlign:"center",
             letterSpacing:"1px",
-            color:'primary.main'
+            color:'primary.main',
+           
           }}
         >
           Featured Listing
         </Typography>
         <HorizontalDivider />
-        </Box>
+        {/* </Box> */}
       </Box>
       {/* second Box */}
       <Box sx={{ display: "flex", width: "100%", flexDirection: "row" }}>
         <FeaturedList/>
-
       </Box>
     </Box>
     )
