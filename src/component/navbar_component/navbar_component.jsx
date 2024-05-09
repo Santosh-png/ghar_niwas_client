@@ -131,13 +131,17 @@ const drawerWidth=350;
                 className='itemList responsive_fontsize20'
                 key={item}
                 onClick={handleCloseNavMenu}
-                sx={{ marginX:3,
-                     color:'292c6a',
-                     fontWeight:600,
-                     display: 'flex',
-                     fontFamily: "Roboto Serif",
-                     padding:'5px',
-                     letterSpacing:'0.25rem'
+                sx={{
+                 
+                      color:'292c6a',
+                      fontWeight:600,
+                      display: 'flex',
+                      fontFamily: "Roboto Serif",
+                      padding:'30px',
+                      gap:'30px',
+                      left:'10%'
+                    
+                    
                     }}
                 
               >
@@ -165,7 +169,7 @@ const drawerWidth=350;
               }}
             />
             <Box sx={{ mx: "0.2rem", display: "flex", alignItems: "center"}} >
-            <IconButton 
+            <IconButton className="icons" 
                     sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",marginX:1}}
                 >
               <InstagramIcon sx={{color:"orange"}}  />
