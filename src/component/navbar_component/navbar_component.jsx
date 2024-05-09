@@ -24,16 +24,18 @@ function NavBar() {
     setAnchorElNav(null);
   };
  
-const drawerWidth=350;
+const drawerWidth=250;
   return (
     <AppBar position="static"  sx={{background:'#FFFFFF'}}>
       <Container maxWidth="xl" >
-        <Toolbar disableGutters  className="apply-maxwidth"
-         sx={{py:"0",width:"100%"}}>
+        <Toolbar disableGutters  
+        className="apply-maxwidth"
+         sx={{
+          width:"auto", display: "flex", justifyContent: 'flex-end'}}>
          
           <img src={Logo} alt="img"  className='logo-pic' 
             sx={{width:{xs:'190px',sm:'200px',md:'250px'}, 
-                height:{xs:'190px',sm:'200px',md:'250px'} 
+                height:{xs:'190px',sm:'200px',md:'250px'} ,
                 }} />
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -45,7 +47,7 @@ const drawerWidth=350;
               onClick={handleOpenNavMenu}
               color="#000000"
               edge="end"
-              sx={{ ...(open && { display: 'flex', left:'80%'}) }}             
+              sx={{ ...(open && { display: 'flex', left:'89%'}) }}             
             >
               <MenuIcon sx={{fontSize:'40px'}}/>
             </IconButton>
@@ -78,44 +80,47 @@ const drawerWidth=350;
                 <MenuItem key={item} onClick={handleCloseNavMenu} >
 
                   <Typography textAlign="center" className='itemList'>
-                  <Typography className='responsive_fontsize20' sx={{ fontSize:'30px', fontFamily:'Roboto Serif',margin:'20px 20px'}}>  
+                  <Typography className='responsive_fontsize18' 
+                    sx={{ fontFamily:'Roboto Serif',margin:'0px 20px',fontWeight:'600',textAlign:'center' 
+                  }}>  
                     {item}
                   </Typography>  
                   </Typography>
                 </MenuItem>
               ))}
-             <hr></hr>
+             <hr style={{margin:'20px 0px '}}></hr>
               {/* social media icons for the mobile view */}
               <Box 
                 sx={{
-                  display: 'flex'
+                  display: 'flex',
+                  padding:'0px 20px'
                                  
                   }}>
                <IconButton 
                     sx={{backgroundColor:"white"}}
                 >
-                    <FacebookIcon sx={{color:"blue",fontSize:"40px"}}/>
-                </IconButton>
-                <IconButton 
-                    sx={{backgroundColor:"white",margin:1}}
-                >
-                    <YouTubeIcon sx={{color:"red",fontSize:"40px"}}/>
+                    <FacebookIcon sx={{color:"blue",fontSize:"30px"}}/>
                 </IconButton>
                 <IconButton 
                     sx={{backgroundColor:"white"}}
                 >
-                    <PinterestIcon sx={{color:"#E60023",fontSize:"40px"}}/>
+                    <YouTubeIcon sx={{color:"red",fontSize:"30px"}}/>
+                </IconButton>
+                <IconButton 
+                    sx={{backgroundColor:"white"}}
+                >
+                    <PinterestIcon sx={{color:"#E60023",fontSize:"30px"}}/>
 
                 </IconButton>
                 <IconButton 
                     sx={{backgroundColor:"white"}}
                 >
-                    <InstagramIcon sx={{color:"#ffc273cd",fontSize:"40px"}}/>
+                    <InstagramIcon sx={{color:"#ffc273cd",fontSize:"30px"}}/>
                 </IconButton>
                 <IconButton 
-                    sx={{backgroundColor:"white",margin:1}}
+                    sx={{backgroundColor:"white"}}
                 >
-                    <LinkedInIcon sx={{color:" #0077b5",fontSize:"40px"}}/>
+                    <LinkedInIcon sx={{color:" #0077b5",fontSize:"30px"}}/>
                 </IconButton>
                 </Box>
             </Drawer>
@@ -128,24 +133,21 @@ const drawerWidth=350;
             {itemList.map((item) => (
               
               <Button
-                className='itemList responsive_fontsize20'
+                className='responsive_fontsize20'
                 key={item}
                 onClick={handleCloseNavMenu}
                 sx={{
-                 
+                      // mx:1,
                       color:'292c6a',
                       fontWeight:600,
                       display: 'flex',
                       fontFamily: "Roboto Serif",
-                      padding:'30px',
-                      gap:'30px',
-                      left:'10%'
-                    
-                    
+                      padding:'20px',
+                      left:'5%'
                     }}
                 
               >
-               <Typography className='responsive_fontsize28' sx={{fontWeight:'600'}}> 
+               <Typography className='itemList  responsive_fontsize20' sx={{fontWeight:'600',}}> 
                 {item}
                 </Typography> 
               </Button>
@@ -155,7 +157,7 @@ const drawerWidth=350;
          {/* for the desktop view  */}
           <Box sx={{ flexGrow: 0 }}>
           
-          <Box sx={{ display: { xs: 'none', md: 'flex' }}}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
           <Divider
                className='responsive_fontsize18'
               orientation="vertical"
@@ -164,33 +166,37 @@ const drawerWidth=350;
               sx={{
                 borderLeftWidth: 1.5,
                 borderColor: "#232323",
-                height: "30px",
+                height: "35px",
+                mx:1
+              
                 
               }}
             />
-            <Box sx={{ mx: "0.2rem", display: "flex", alignItems: "center"}} >
-            <IconButton className="icons" 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",marginX:1}}
+            <Box sx={{ mx: "0rem", display: "flex", alignItems: "center", gap: "0.5rem"}} >
+            <IconButton 
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A"
+                    
+                  }}
                 >
               <InstagramIcon sx={{color:"orange"}}  />
             </IconButton> 
             <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",marginX:1}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",}}
                 >
               <FacebookIcon sx={{color:"blue"}}/>
             </IconButton>
             <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",marginX:1}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",}}
                 >  
               <YouTubeIcon sx={{color:"#FA0505"}} />
             </IconButton>
             <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",marginX:1}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",}}
                 >  
               <LinkedInIcon sx={{color:"#78A1DE"}}/>
             </IconButton>
             <IconButton 
-                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",marginX:1}}
+                    sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",}}
                 >  
               <PinterestIcon sx={{color:"red"}} />
             </IconButton>  
@@ -204,7 +210,9 @@ const drawerWidth=350;
               sx={{
                 borderLeftWidth: 1.5,
                 borderColor: "#232323",
-                height: "25px",
+                height: "35px",
+                mx: 1
+                
               }}
             />
            
