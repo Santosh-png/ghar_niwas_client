@@ -48,8 +48,8 @@ function NavBar() {
 
             <Drawer
               id="menu-appbar"
-              anchorel={anchorElNav}
-              anchororigin={{
+              // anchorEl={anchorElNav}
+              anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'left',
               }}
@@ -74,9 +74,7 @@ function NavBar() {
               <Box 
                 sx={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(2,1fr)'
-                  
-                 
+                  gridTemplateColumns: 'repeat(2,1fr)'   
                   }}>
                <IconButton 
                     sx={{backgroundColor:"white"}}
