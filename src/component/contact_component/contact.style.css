@@ -7,14 +7,14 @@
     padding-top: 10px;
 }
 .itemTitle{ 
-    font-weight: 600;
+   
     display: flex;
 }
-.responsive_fontsize24{
+.itemTitle{
     position: relative;
-    /* background-color: #edab03; */
+    
 }
-.responsive_fontsize24::after{
+.itemTitle::after{
     content: '';
     width:0;
     height: 3px;
@@ -26,8 +26,9 @@
 .map{
     margin:5px 0px 20px 0px
 }
-.responsive_fontsize24:hover::after{
+.itemTitle:hover::after{
     width: 100%;
+    transition: 2s ease;
 }
 .responsive_fontsize18 a{
     text-decoration: none;
