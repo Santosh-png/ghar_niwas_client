@@ -1,8 +1,8 @@
 import { Box, Typography } from '@mui/material'
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
-
+import { motion } from 'framer-motion';
 
 import './first_section.css';
 import PropertyFilter from '../filter_components/property_filter';
@@ -11,21 +11,52 @@ function FirstSection() {
 
   const ariaLabel = { 'aria-label': 'description' };
 
+  const [scrollY, setScrollY] = useState(0);
+  const [textColor, setTextColor] = useState("#ffffff"); 
+
+  const text = "SELL, BUY, AND RENT YOUR PROPERTIES".split("")
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const backgroundPositionY = `${-scrollY / 6.5 }px`;
+
   return (
     <>
-        <Box className="HeroSection">
-            <Box className= "header-line">
-              <Typography
-              variant='h1'
-              className='responsive_fontsize64'
-                sx={{
-                  fontFamily: "Roboto Slab",
-                  color: "secondary.main",
-                  fontWeight: "bold", 
-                }}
-              >
-                SELL, BUY, RENT YOUR PROPERTIES
-              </Typography>
+        <Box className="HeroSection" style={{ backgroundPositionY }}>
+        <Box className="header-content">
+            <Typography
+              variant="h1"
+              className='responsive_fontsize64' 
+              sx={{
+                fontFamily: "Roboto Slab",
+                fontWeight: 'bold',
+                color: "#fbaf1a"
+              }}
+            >
+              {
+                text.map((el, i) => (
+                  <motion.span
+                  initial={{ opacity: 0, color: "#ffffff" }} // Initial color set to white
+                  animate={{ opacity: 1, color: "#fbaf1a" }} // Animate color change
+                  transition={{
+                    duration: 0.5,
+                    delay: i/10,
+                  }}
+                  key={i}
+                  >{el}{""}</motion.span>
+                ))
+              }
+            </Typography>
               <Typography
               className='responsive_fontsize32'
                 sx={{
