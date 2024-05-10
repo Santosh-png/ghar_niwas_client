@@ -74,4 +74,3 @@ export default function CenteredCarousel(props) {
     </div>
   );
 }
-
