@@ -14,7 +14,7 @@ function CommonCard({price, title, name,location, date,imageUrl}) {
       <div style={{position:'relative'}}>
         <LocationOnIcon style={{
           position:"absolute",
-          top:"90%",
+          top:"89%",
           color:"#ffffff"}}/>
 
         <Typography style={{
