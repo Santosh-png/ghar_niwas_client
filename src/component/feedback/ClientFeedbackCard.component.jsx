@@ -9,14 +9,17 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 const ClientFeedbackCard = () => {
   return (
     <Card style={{
-        margin:"0px 20px",
+        margin:"30px 30px",
         marginTop:"2rem",
+        marginLeft:"3.5rem",
         // marginTop:"3rem",
+        
+        maxWidth: 345 ,
        }}>
     {/* <Card style={{margin:"buttom"}}> */}
       <Box sx={{ 
-        // maxWidth: 345 ,
         
+       
          backgroundColor: "primary.main" }}>
       <CardContent>
         <Typography variant="body2" color= "accent.white" >
