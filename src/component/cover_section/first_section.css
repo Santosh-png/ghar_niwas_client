@@ -1,9 +1,11 @@
 .HeroSection{
-    height: fit-content;
+    height: fit-content auto;
+    position: relative;
     max-width: 100%;
     background-image: url('../../assets/heroImage.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -17,6 +19,14 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    z-index: inherit;
+    margin-bottom: 2rem;
+
+}
+
+.header-line .header-text{
+    display: flex;
 }
 
 .search_bar{
@@ -30,8 +40,20 @@
     padding: 0.2rem 1rem 0.25rem 1rem;
     border-radius: 10px;
     margin-top: 2rem;
+    position: relative; /* Position relative to its container */
+    z-index: inherit; /* Ensure it stays above the background */
 }
 
-.header-line{
-    margin-bottom: 2rem;
+.header-content{
+    position: relative;
+    z-index: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.PropertyFilter{
+    position: absolute;
+    z-index: inherit;
 }

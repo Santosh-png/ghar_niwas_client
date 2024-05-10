@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button} from '@mui/material';
 
-function ButtonComponent() {
+function ButtonComponent({ children, ...props }) {
   return (
     <div>
         <Button variant="contained" 
@@ -9,11 +9,11 @@ function ButtonComponent() {
                     backgroundColor: "primary.main",
                     color: "white",
                     minWidth: 150,
-                    fontStyle:"inherit",
+                    fontFamily: 'Roboto Serif',
                     mt: "2rem"
                 }}
             >
-                Filter
+                      {children}
             </Button>
     </div>
   )

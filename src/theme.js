@@ -24,7 +24,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Roboto Serif",
+    fontFamily: "Roboto Slab",
     fontWeightRegular:"400",
     fontWeightMedium:"500",
     fontWeightSemiBold:"600",
