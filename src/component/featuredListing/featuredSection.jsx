@@ -10,7 +10,6 @@ import HorizontalDivider from "../ui/HorizontalDivider";
 function FeaturedSection(){
     return(
         <Box sx={{marginTop:"20px",border:'1px solid red',
-          backgroundColor:'greenyellow'
         }}>
       {/* first box */}
 
@@ -25,7 +24,6 @@ function FeaturedSection(){
         }}
       > */}
         <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center",marginBottom:'1rem', marginTop:'30px',
-          backgroundColor:"palegreen"
         }}>
         <HorizontalDivider />
         <Typography className="responsive_fontsize32"

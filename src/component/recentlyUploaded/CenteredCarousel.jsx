@@ -16,9 +16,10 @@ export default function CenteredCarousel(props) {
       <ResponsiveContainer
         carouselRef={ref}
         render={(parentWidth, carouselRef) => {
-          let currentVisibleSlide = 3;
-          if (parentWidth <= 1240) currentVisibleSlide = 3;
-          if (parentWidth <= 900) currentVisibleSlide = 1;
+          let currentVisibleSlide = 5;
+          if (parentWidth <= 1240) currentVisibleSlide = 5;
+          if (parentWidth <= 1020) currentVisibleSlide = 3;
+          if (parentWidth <= 760) currentVisibleSlide = 1;
           return (          
             <StackedCarousel
               ref={carouselRef}
