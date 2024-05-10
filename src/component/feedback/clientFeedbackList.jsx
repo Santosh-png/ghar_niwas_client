@@ -1,5 +1,4 @@
 import React from 'react';
-import { Box } from '@mui/material';
 import Slider from 'react-slick';
 import ClientFeedbackCard from './ClientFeedbackCard.component'; 
 // import ClientAvatarList from './clientAvatarList'; 
@@ -48,7 +47,7 @@ function ClientFeedbackList() {
           ]
     };
     return (
-        <div className="center__carousel" sx={{ padding: "47px" , color:"primary.main" }}>
+        <div className="center__carousel" sx={{ color:"primary.main" }}>
             <Slider {...settings}>
                 {/* <ClientFeedbackCard />
                 <ClientFeedbackCard />
