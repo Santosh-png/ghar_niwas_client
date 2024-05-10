@@ -5,10 +5,27 @@ import HorizontalDivider from "../ui/HorizontalDivider";
 const ClientFeedback= () => {
   return (
     <>
-    <Box>
-        <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", margin: "3rem 0 2rem 0", gap: "1rem"}}>
-          <HorizontalDivider />
-            <Typography 
+    <Box 
+    // sx={{ border:"1px solid yellow"}}
+    >
+        
+        
+        <Box 
+          sx={{
+           display: "flex",
+           flexDirection: "row", 
+           alignItems: "center", 
+           justifyContent: "center", 
+          //  marginTop: "2rem",
+          // marginBottom: "1rem",
+           marginTop:"2 0 3 0", 
+           gap: "1rem",
+          
+          }}
+         >  
+          {/* <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center"}}></Box> */}
+              <HorizontalDivider />
+               <Typography 
                 variant="h4"
                 className='responsive_fontsize32'
                 sx={{
@@ -19,18 +36,17 @@ const ClientFeedback= () => {
                   display:"flex",
                   flexDirection:"column",
                   textAlign:"center",
-                  letterSpacing:"1px"
-                  
-    
+                  letterSpacing:"1px",
+                  // padding:"10px"
+                  // marginTop:"2rem"
                 }}
-              
-            >
-            Clients Feedback
-            </Typography>
-        <HorizontalDivider/>
-    </Box>
-
-        <Box>
+              >
+           Clients Feedback
+          </Typography>
+          <HorizontalDivider/>
+        </Box>
+       
+        <Box >
             <ClientFeedbackList />
         </Box>
         </Box>
