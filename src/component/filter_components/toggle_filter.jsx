@@ -3,7 +3,7 @@ import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import Popover from '@mui/material/Popover';
 import CustomFilterPanelContent from './filter_panel_content';
-import { Typography } from '@mui/material';
+import { Modal, Typography } from '@mui/material';
 
 function ToggleFilter() {
   const [alignment, setAlignment] = useState(null);
@@ -52,7 +52,7 @@ function ToggleFilter() {
       </ToggleButtonGroup>
 
       {/* Popover */}
-      <Popover
+      <Modal
         id={id}
         open={open}
         anchorEl={anchorEl}
@@ -73,7 +73,7 @@ function ToggleFilter() {
         }}
       >
         <CustomFilterPanelContent />
-      </Popover>
+      </Modal>
     </>
   );
 }

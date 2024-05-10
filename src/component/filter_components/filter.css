@@ -9,13 +9,10 @@
     height: auto;
     width: auto ;
     background-color: white;
-    margin-top: 0rem;
     padding: 2rem 3rem 2rem 3rem;
     align-items: center;
     justify-content: center;    
 }
-
-
 
 .select{
     display: flex;
@@ -26,3 +23,19 @@
 .filtering.filter-open .filter_section {
     display: flex;
 }
+
+/* CSS animation for text fade-in */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .header-line .fade-in-text {
+    opacity: 0; /* Initially set to transparent */
+    animation: fadeIn 1s ease forwards; /* Apply animation */
+  }
+  
