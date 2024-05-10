@@ -41,9 +41,7 @@ export default function CenteredCarousel(props) {
               currentVisibleSlide={currentVisibleSlide}
               maxVisibleSlide={5}
               useGrabCursor
-             
-            />
-             
+            /> 
           );
         }}
       />
