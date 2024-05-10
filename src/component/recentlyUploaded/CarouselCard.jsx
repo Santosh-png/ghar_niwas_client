@@ -19,7 +19,8 @@ const Card = React.memo(function (props) {
         display:'flex',
         justifyContent:'center',
         left:{sm:'6%',md:'18%'},
-        position:'relative'
+        position:'relative',
+        // backgroundColor:"yellow"
       }}
       className="my-slide-component"
     >
@@ -28,7 +29,7 @@ const Card = React.memo(function (props) {
 
       <img
         style={{
-          height: "80%",
+          height: "100%",
           width: '100%',
           objectFit: "fill",
           borderRadius: 0,
@@ -38,22 +39,23 @@ const Card = React.memo(function (props) {
         alt='image'
       />
   {isCenterCard && ( 
-        <div style={{ position: 'absolute', width: "100%", bottom: 0, background: 'rgba(255,255,255,1)',padding:"0 5px"}}>
-          <Typography gutterBottom variant="h5" component="div" sx={{ color: 'primary.main' }}>
+   
+        <div style={{ position: 'absolute', width: "100%", bottom: 0,background:'rgba(28, 62, 10,0.7)',padding:"0 5px"}}>
+          <Typography gutterBottom variant="h5" component="div" sx={{ color: 'accent.white' }}>
             {price}
           </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ color: 'primary.main' }}>
+          <Typography variant="body2" color="text.secondary" sx={{ color: 'accent.white' }}>
             {title}
           </Typography>
-          <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: "space-between", color: 'primary.main' }}>
-            <Typography variant="body2" sx={{ color: 'primary.main' }} >
+          <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: "space-between", color: 'accent.white' }}>
+            <Typography variant="body2" sx={{ color: 'accent.white' }} >
               posted by: {name}
             </Typography>
-            <Typography variant="body2" sx={{ color: 'primary.main' }}>
+            <Typography variant="body2" sx={{ color: 'accent.white' }}>
               {date}
             </Typography>
           </Box>
-        </div>
+          </div>
       )}
     </Box>
   );
