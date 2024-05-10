@@ -12,17 +12,27 @@ function CommonCard({price, title, name,location, date,imageUrl}) {
     <Card>
       <CardActionArea>
       <div style={{position:'relative'}}>
-        <LocationOnIcon style={{position:"absolute",top:"90%",color:"#ffffff"}}/>
-      <Typography style={{position:"absolute",top:"90%",color:"#FFFFFF",marginLeft:"30px"}}variant='body2' color="textSecondary" component="p">{location}</Typography>
+        <LocationOnIcon style={{
+          position:"absolute",
+          top:"89%",
+          color:"#ffffff"}}/>
+
+        <Typography style={{
+          position:"absolute",
+          top:"90%",
+          color:"#FFFFFF",
+          marginLeft:"30px"
+          }}  variant='body2' color="textSecondary" component="p">{location}</Typography>
         <CardMedia
           component="img"
           image={imageUrl}
           sx={{
-            height:{xs:"150px",md:"220px",lg:'270px'},width:{xs:"220px",md:"320px",lg:'380px'}
+            height:{xs:"170px",md:"220px",lg:'270px'},width:{xs:"220px",md:"320px",lg:'380px'}
           }}
         />
         </div>
         <CardContent>
+          <div >
         <Typography className="responsive_fontsize24" sx={{color:'primary.main'}} gutterBottom variant="h5" component="div">
           {price}
         </Typography>
@@ -37,6 +47,7 @@ function CommonCard({price, title, name,location, date,imageUrl}) {
          {date}
         </Typography>
         </Box>
+        </div>
         </CardContent>
       </CardActionArea>
     </Card>
