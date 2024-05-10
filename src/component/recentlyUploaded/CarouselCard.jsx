@@ -18,9 +18,10 @@ const Card = React.memo(function (props) {
         position: 'relative',
         display:'flex',
         justifyContent:'center',
+        alignItems: "center",
         left:{sm:'6%',md:'18%'},
-        position:'relative',
-        // backgroundColor:"yellow"
+        backgroundColor:"yellow",
+        border: "1px solid blue"
       }}
       className="my-slide-component"
     >
