@@ -100,7 +100,7 @@ function CustomFilterPanelContent() {
             </Select>
             </FormControl>
         </Box>
-          <ButtonComponent/>
+          <ButtonComponent>Filter</ButtonComponent>
       </Box>
     </div>
   );

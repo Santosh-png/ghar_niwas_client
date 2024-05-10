@@ -28,7 +28,7 @@ function FirstSection() {
     };
   }, []);
 
-  const backgroundPositionY = `${-scrollY / 2}px`;
+  const backgroundPositionY = `${-scrollY / 6.5 }px`;
 
   return (
     <>
@@ -50,7 +50,7 @@ function FirstSection() {
                   animate={{ opacity: 1, color: "#fbaf1a" }} // Animate color change
                   transition={{
                     duration: 0.5,
-                    delay: i/8,
+                    delay: i/10,
                   }}
                   key={i}
                   >{el}{""}</motion.span>

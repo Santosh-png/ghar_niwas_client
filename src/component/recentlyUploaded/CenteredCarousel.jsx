@@ -8,7 +8,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import data from "../card/cardItems";
 import Card from "./CarouselCard";
-// import './rs.css'
+
 export default function CenteredCarousel(props) {
   const ref = React.useRef();
   return (
@@ -19,11 +19,6 @@ export default function CenteredCarousel(props) {
         border:'1px solid red',
         paddingBottom:'50px',
         marginTop:'20px',
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        textAlign: "center",
-        backgroundColor: "gray"
         }}>
       <ResponsiveContainer
         carouselRef={ref}
