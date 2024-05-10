@@ -8,11 +8,18 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 const ClientFeedbackCard = () => {
   return (
-    <Card style={{margin:"0px 20px"}}>
+    <Card style={{
+        margin:"0px 20px",
+        marginTop:"2rem",
+        // marginTop:"3rem",
+       }}>
     {/* <Card style={{margin:"buttom"}}> */}
-      <Box sx={{ maxWidth: 345 , backgroundColor: "primary.main" }}>
+      <Box sx={{ 
+        // maxWidth: 345 ,
+        
+         backgroundColor: "primary.main" }}>
       <CardContent>
-        <Typography variant="body2" color= "accent.white">
+        <Typography variant="body2" color= "accent.white" >
           " Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
         </Typography>
