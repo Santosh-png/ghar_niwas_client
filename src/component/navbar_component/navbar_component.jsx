@@ -10,17 +10,13 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import './navbar.style.css'
 import DetailForm from '../form_components/detail_form';
-
-// import VerticalDivider from '../ui/divider'
+import PropoertyRequest from '../form_components/request_property'
 const itemList = ['Home', 'Add Property', 'Sale','Rent','Request Property'];
-// const Transition = React.forwardRef(function Transition(props, ref) {
-//   return <Slide direction="up" ref={ref} {...props} />;
-// });
+
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  // this is for the request property menuitem
-  // const [anchorElSubmenu, setAnchorElSubmenu] = React.useState(null);
+ 
  
   const [opendetailDialog, setOpendetailDialog] = useState(false)
 
@@ -33,14 +29,6 @@ function NavBar() {
     setAnchorElNav(null);
   };
 
-  // const handleOpenSubmenu = (event) => {
-  //   setAnchorElSubmenu(event.currentTarget);
-  // };
-  
-  // const handleCloseSubmenu = () => {
-  //   setAnchorElSubmenu(null);
-  //   handleCloseNavMenu(); // Also close the main menu
-  // };
   const handleOpenForm = () => {
     setOpendetailDialog(true);
     handleCloseNavMenu(); // Close the menu after opening the form
@@ -61,6 +49,7 @@ const drawerWidth=250;
                 height:{xs:'190px',sm:'200px',md:'250px'} ,
                 }} />
 
+          {/* <PropoertyRequest/> */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -100,18 +89,36 @@ const drawerWidth=250;
               
             >
               {itemList.map((item) => (
-                
-                <MenuItem key={item} onClick={handleCloseNavMenu} >
-
-                  <Typography textAlign="center" className='itemList'>
-                  <Typography className='responsive_fontsize18' 
-                    sx={{ fontFamily:'Roboto Serif',margin:'0px 20px',fontWeight:'600',textAlign:'center' 
-                  }}>  
+              item === "Request Property" ? (
+                <MenuItem key={item} onClick={handleOpenForm}> 
+                  <Typography                 className='responsive_fontsize18' 
+                    sx={{ fontFamily: 'Roboto Serif', margin: '0px    20px', fontWeight: '600', textAlign: 'center',color:'primary.main' }}>
                     {item}
-                  </Typography>  
                   </Typography>
                 </MenuItem>
-              ))}
+      ) : (
+        <MenuItem key={item} onClick={handleCloseNavMenu}>
+          <Typography textAlign="center" className='itemList'>
+            <Typography className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', margin: '0px 20px', fontWeight: '600', textAlign: 'center' ,color:'primary.main'}}>
+              {item}
+            </Typography>
+          </Typography>
+        </MenuItem>
+      )
+    ))}
+
+    {/* Your Drawer and other components... */}
+
+    <Dialog
+      open={opendetailDialog}
+      onClose={() => setOpendetailDialog(false)}
+      aria-labelledby="alert-dialog-title"
+      aria-describedby="alert-dialog-description"
+    >
+      <DialogContent>
+        <DetailForm /> {/* Render the form component */}
+      </DialogContent>
+    </Dialog>
              <hr style={{margin:'20px 0px '}}></hr>
               {/* social media icons for the mobile view */}
               <Box 
@@ -188,77 +195,11 @@ const drawerWidth=250;
     </Dialog>
 
             
-            {/* {itemList.map((item) => (
-              
-              
-              <Button
-                className='responsive_fontsize20'
-                key={item}
-                onClick={handleCloseNavMenu}
-                sx={{
-                     
-                      color:'292c6a',
-                      fontWeight:600,
-                      display: 'flex',
-                      fontFamily: "Roboto Serif",
-                      padding:'20px',
-                      left:'5%'
-                    }}
-                
-              >
-               <Typography className='itemList  responsive_fontsize20' sx={{fontWeight:'600',}}> 
-                {item}
-                </Typography> 
-              </Button>
-            ))} */}
-            {/* <DetailForm/> */}
-
-            {/* for the onclick event */}
-            {/* {itemList.map((item) => (
-                item === "Request Property" ? (
-                  <MenuItem key={item} onClick={handleOpenSubmenu}>
-                   <Typography textAlign="center" className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', margin: '0px 20px', fontWeight: '600', textAlign: 'center' }}>
-                        {item}
-                  </Typography>
-                </MenuItem>
-            ) : (
-              <MenuItem key={item} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" className='itemList'>
-                  <Typography className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', margin: '0px 20px', fontWeight: '600', textAlign: 'center' }}>
-                          {item}
-                </Typography>
-                </Typography>
-              </MenuItem>
-    
-                )
-            ))}
-      <Menu
-        id="submenu-appbar"
-        anchorEl={anchorElSubmenu}
-        open={Boolean(anchorElSubmenu)}
-        onClose={handleCloseSubmenu}
-        MenuListProps={{
-          'aria-labelledby': 'request-property-button',
-        }}
-      >
-      <MenuItem onClick={handleCloseSubmenu}>sale</MenuItem>
-      <MenuItem onClick={handleCloseSubmenu}>Rent</MenuItem>
-      
-    </Menu> */}
+          
 
 
           </Box>
-          {/* <Dialog
-          open={openFreeBookDialog}
-          TransitionComponent={Transition}
-          keepMounted
-          onClose={() => setOpenFreeBookDialog(false)}
-          aria-describedby="alert-dialog-slide-description"
-      >
-        <DialogContent>
-          <DetailForm />
-        </DialogContent>
-      </Dialog> */}
+         
 
          {/* for the desktop view  */}
           <Box sx={{ flexGrow: 0 }}>

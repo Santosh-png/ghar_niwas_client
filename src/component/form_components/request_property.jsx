@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import React  from "react";
 
 import {
@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 
 
-function RegistrationFormPopup() {
+function PropertyRequest() {
 
   return (
     <div>
@@ -37,22 +37,13 @@ function RegistrationFormPopup() {
           >
             Request Property
           </Typography>
-          {/* <Typography
-            sx={{
-              fontWeight: "300",
-              color: "secondary.secondary_600",
-              mt: "7px",
-            }}
-            className="responsive__fontsize14"
-          >
-            Registration Form
-          </Typography> */}
+          
         </Box>
        
       </Box>
       {/* Actual Form */}
       <Box sx={{ mt: "1rem" }}>
-        <form onSubmit={handleSubmit}>
+        <form >
          
             <Grid item xs={12} md={6}>
               <FormControl
@@ -65,8 +56,7 @@ function RegistrationFormPopup() {
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  value={requestType}
-                  onChange={(e)=>setGender(e.target.value)}
+                //   value={requestType}
                   label="Request Type"
 
                   // onChange={handleChange}
@@ -81,32 +71,30 @@ function RegistrationFormPopup() {
               <FormControl
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "14rem" } }}
+                sx={{ maxWidth: { xs: "100%", md: "14rem" },display:'flex',margin:'20px 0px' }}
                 
               >
                 <InputLabel id="demo-simple-select-label">Location</InputLabel>
-                <Select
+                {/* <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  value={province}
-                //   onChange={(e)=>setGender(e.target.value)}
-                  label="Province"
+                //   value={province}
+                  label="Location"
 
                   // onChange={handleChange}
                 >
-                  <MenuItem value="">Buy</MenuItem>
-                  <MenuItem value="">Rent</MenuItem>
+                  <MenuItem value="">Lalitpur,kusunti</MenuItem>
+                  <MenuItem value="">Kathmandu,kalanki</MenuItem>
                   
-                </Select>
+                </Select> */}
+               
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  value={requestType}
-                //   onChange={(e)=>setGender(e.target.value)}
-                  label="Gender"
+                //   value={requestType}
+                  label="province"
                   type="number"
 
-                  // onChange={handleChange}
                 >
                   <MenuItem value="">1</MenuItem>
                   <MenuItem value="">2</MenuItem>
@@ -120,11 +108,9 @@ function RegistrationFormPopup() {
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  value={district}
-                //   onChange={(e)=>setGender(e.target.value)}
+                //   value={district}
                   label="District"
 
-                  // onChange={handleChange}
                 >
                   <MenuItem value="">Lalitpur</MenuItem>
                   <MenuItem value="">Bardiya</MenuItem>
@@ -136,11 +122,10 @@ function RegistrationFormPopup() {
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  value={municipality}
-                //   onChange={(e)=>setGender(e.target.value)}
+                //   value={municipality}
                   label="Municipality"
-
-                  // onChange={handleChange}
+                   
+                
                 >
                   <MenuItem value="">Madhyabindu</MenuItem>
                   <MenuItem value="">Bharatpur</MenuItem>
@@ -150,12 +135,9 @@ function RegistrationFormPopup() {
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  value={WardNumber}
-                //   onChange={(e)=>setGender(e.target.value)}
+                //   value={WardNumber}
                   label="Ward No."
                   type="number"
-
-                  // onChange={handleChange}
                 >
                   <MenuItem value="">1</MenuItem>
                   <MenuItem value="">2</MenuItem>
@@ -167,13 +149,13 @@ function RegistrationFormPopup() {
               </FormControl>
             </Grid>
             <Grid>
-                <FormControl>
+                <FormControl sx={{ maxWidth: { xs: "100%", md: "14rem" },display:'flex',margin:'20px 0px' }}>
                 <InputLabel id="demo-simple-select-label">Property Type</InputLabel>
                 <Select
+                fullWidth
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  value={PropertyType}
-                //   onChange={(e)=>setGender(e.target.value)}
+                //   value={PropertyType}
                   label="Property Type"
                   type="text"
                 >
@@ -186,12 +168,12 @@ function RegistrationFormPopup() {
                 </FormControl>
             </Grid>
            <Grid>
-            <FormControl>
+            <FormControl  sx={{ maxWidth: { xs: "100%", md: "14rem" },display:'flex',margin:'20px 0px' }}>
                 <InputLabel>Urgency</InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  value={urgency}
+                //   value={urgency}
                   label="Urgency"
                   type="text"
                 >
@@ -204,9 +186,9 @@ function RegistrationFormPopup() {
            </Grid>            
             <Grid item xs={12} md={6}>
               <InputLabel>Price Range</InputLabel>
-              <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+              <TextField id="outlined-basic" variant="outlined" />
               <InputLabel>to</InputLabel>
-              <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+              <TextField id="outlined-basic"  variant="outlined" />
             </Grid>
 
 
@@ -214,18 +196,17 @@ function RegistrationFormPopup() {
               <FormControl
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "14rem" } }}
+                sx={{ maxWidth: { xs: "100%", md: "14rem" } ,margin:'10px 0px'}}
               >
                 <InputLabel id="demo-simple-select-label">
                   Description
                 </InputLabel>
                 <TextField
-                    id="standard-multiline-static"
-                    label="Multiline"
+                    id="standard-multiline-static"                  
                     multiline
                     rows={4}
-                    defaultValue="Default Value"
-                    variant="standard"
+                 
+                    variant="outlined"
         />
                
               </FormControl>
@@ -255,4 +236,4 @@ function RegistrationFormPopup() {
   );
 }
 
-export default RegistrationFormPopup;
+export default PropertyRequest;
