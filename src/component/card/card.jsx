@@ -32,7 +32,7 @@ function CommonCard({price, title, name,location, date,imageUrl}) {
         />
         </div>
         <CardContent>
-          <div >
+        <Box sx={{height:{xs:"30px",md:"50px",lg:"80px"}}}>
         <Typography className="responsive_fontsize24" sx={{color:'primary.main'}} gutterBottom variant="h5" component="div">
           {price}
         </Typography>
@@ -47,7 +47,7 @@ function CommonCard({price, title, name,location, date,imageUrl}) {
          {date}
         </Typography>
         </Box>
-        </div>
+        </Box>
         </CardContent>
       </CardActionArea>
     </Card>
