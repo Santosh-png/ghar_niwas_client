@@ -22,7 +22,7 @@ function ClientFeedbackList() {
               breakpoint: 1024,
               settings: {
                 slidesToShow: 2,
-                slidesToScroll: 3,
+                slidesToScroll: 2,
                 infinite: true,
                 dots: true
               }
@@ -31,9 +31,9 @@ function ClientFeedbackList() {
               breakpoint: 600,
               settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1,
+                slidesToScroll: 2,
                 centerMode: true,
-                centerPadding:"20px",
+                // centerPadding:"20px",
                 initialSlide: 2
               }
             },
