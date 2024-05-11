@@ -17,7 +17,6 @@ const itemList = ['Home', 'Add Property', 'Sale','Rent','Request Property'];
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
  
- 
   const [opendetailDialog, setOpendetailDialog] = useState(false)
 
   
@@ -49,7 +48,7 @@ const drawerWidth=250;
                 height:{xs:'190px',sm:'200px',md:'250px'} ,
                 }} />
 
-          {/* <PropoertyRequest/> */}
+          
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -63,6 +62,7 @@ const drawerWidth=250;
             >
               <MenuIcon sx={{fontSize:'40px'}}/>
             </IconButton>
+            
            
             {/* mobile view  */}
 
@@ -106,6 +106,7 @@ const drawerWidth=250;
         </MenuItem>
       )
     ))}
+    
 
     {/* Your Drawer and other components... */}
 
@@ -180,7 +181,7 @@ const drawerWidth=250;
         </MenuItem>
       )
     ))}
-
+{/* <PropoertyRequest/> */}
     {/* Your Drawer and other components... */}
 
     <Dialog
