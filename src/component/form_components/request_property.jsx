@@ -1,6 +1,7 @@
-// import { useState } from "react";
-import { useState } from "react";
-import React  from "react";
+import React, { useState }  from "react";
+import HouseIcon from '@mui/icons-material/House';
+import ApartmentIcon from '@mui/icons-material/Apartment';
+import LandscapeIcon from '@mui/icons-material/Landscape';
 
 import {
   Box,
@@ -12,18 +13,24 @@ import {
   InputLabel,
   Button,
   Grid,
+  IconButton,
 } from "@mui/material";
 
 
-function RegistrationFormPopup() {
+
+
+function PropertyRequest() {
 
   return (
-    <div>
+    <Box sx={{
+      textAlign:"center",
+      border:'1px solid black',
+      padding:'10px'
+
+    }}>
       {/* Heading */}
       <Box
-        sx={{
-          textAlign:"center"
-        }}
+        
       >
         <Box>
           <Typography
@@ -37,161 +44,146 @@ function RegistrationFormPopup() {
           >
             Request Property
           </Typography>
-          {/* <Typography
-            sx={{
-              fontWeight: "300",
-              color: "secondary.secondary_600",
-              mt: "7px",
-            }}
-            className="responsive__fontsize14"
-          >
-            Registration Form
-          </Typography> */}
+          
+        </Box>
+        <Box sx={{display:'flex',alignItems:'center',justifyContent:'center'}}>
+          <IconButton>           
+            <HouseIcon/>
+          </IconButton>
+          <IconButton>
+            <ApartmentIcon/>
+          </IconButton>
+          <IconButton>
+            <LandscapeIcon/>
+          </IconButton>
+  
         </Box>
        
       </Box>
       {/* Actual Form */}
       <Box sx={{ mt: "1rem" }}>
-        <form onSubmit={handleSubmit}>
+        <form >
          
             <Grid item xs={12} md={6}>
+            <InputLabel id="demo-simple-select-label">Location</InputLabel>
               <FormControl
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "14rem" } }}
+                sx={{ maxWidth: { xs: "100%", md: "14rem" },display: 'grid',
+                gridTemplateColumns: 'repeat(2,1fr)'
                 
-              >
-                <InputLabel id="demo-simple-select-label">Request Type</InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={requestType}
-                  onChange={(e)=>setGender(e.target.value)}
-                  label="Request Type"
+               }}
+                
+              >                
+                  <TextField
+                    required
+                    id="outlined-required"
+                    label="provinces"
+                    // defaultValue="Hello World"
+                 />
+                  <TextField
+                    required
+                    id="outlined-required"
+                    label="zone"
+                    // defaultValue="Hello World"
+                 />
+                  <TextField
+                    required
+                    id="outlined-required"
+                    label="District"
+                    // defaultValue="Hello World"
+                 />
+                  <TextField
+                    required
+                    id="outlined-required"
+                    label="Municipality"
+                    // defaultValue="Hello World"
+                 />
+                  <TextField
+                    required
+                    id="outlined-required"
+                    label="Ward"
+                    // defaultValue="Hello World"
+                 />
+                  <TextField
+                    required
+                    id="outlined-required"
+                    label="Landmark"
+                    // defaultValue="Hello World"
+                 />
 
-                  // onChange={handleChange}
-                >
-                  <MenuItem value="">Buy</MenuItem>
-                  <MenuItem value="female">Rent</MenuItem>
-                  
-                </Select>
               </FormControl>
             </Grid>
             <Grid item xs={12} md={6}>
+            <InputLabel id="demo-simple-select-label">Property Detail</InputLabel>
               <FormControl
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "14rem" } }}
+                sx={{ maxWidth: { xs: "100%", md: "14rem" }, display: 'grid',
+                gridTemplateColumns: 'repeat(2,1fr)'}}
                 
               >
-                <InputLabel id="demo-simple-select-label">Location</InputLabel>
+                
+                
+               
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  value={province}
-                //   onChange={(e)=>setGender(e.target.value)}
-                  label="Province"
+                //   value={requestType}
+                  label="Type"
+                  type="text"
 
-                  // onChange={handleChange}
                 >
-                  <MenuItem value="">Buy</MenuItem>
-                  <MenuItem value="">Rent</MenuItem>
-                  
+                  <MenuItem value="">commercial</MenuItem>
+                  <MenuItem value="">2</MenuItem>               
                 </Select>
+                <TextField>Total Floor</TextField>
+                <TextField>Property Area(sq.ft)</TextField>
+                <TextField>BHK</TextField>
+               
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  value={requestType}
-                //   onChange={(e)=>setGender(e.target.value)}
-                  label="Gender"
-                  type="number"
-
-                  // onChange={handleChange}
+                //   value={municipality}
+                  label="Facing"
+                   
+                
                 >
-                  <MenuItem value="">1</MenuItem>
-                  <MenuItem value="">2</MenuItem>
-                  <MenuItem value="">3</MenuItem>
-                  <MenuItem value="">4</MenuItem>
-                  <MenuItem value="">5</MenuItem>
-                  <MenuItem value="">6</MenuItem>
-                  <MenuItem value="">7</MenuItem>
-                  
-                </Select>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={district}
-                //   onChange={(e)=>setGender(e.target.value)}
-                  label="District"
-
-                  // onChange={handleChange}
-                >
-                  <MenuItem value="">Lalitpur</MenuItem>
-                  <MenuItem value="">Bardiya</MenuItem>
-                  <MenuItem value="">Kaski</MenuItem>
-                  <MenuItem value="">Baglung</MenuItem>
-                  <MenuItem value="">Chitwan</MenuItem>
-                  
-                </Select>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={municipality}
-                //   onChange={(e)=>setGender(e.target.value)}
-                  label="Municipality"
-
-                  // onChange={handleChange}
-                >
-                  <MenuItem value="">Madhyabindu</MenuItem>
-                  <MenuItem value="">Bharatpur</MenuItem>
+                  <MenuItem value="">North</MenuItem>
+                  <MenuItem value="">South</MenuItem>
+                  <MenuItem value="">East</MenuItem>
+                  <MenuItem value="">West</MenuItem>
                  
                   
                 </Select>
+                <TextField required
+                    id="outlined-required"
+                    label="Property Age"/>
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  value={WardNumber}
-                //   onChange={(e)=>setGender(e.target.value)}
-                  label="Ward No."
-                  type="number"
-
-                  // onChange={handleChange}
+                //   value={WardNumber}
+                  label="Furnishing"
+                  type="text"
                 >
-                  <MenuItem value="">1</MenuItem>
-                  <MenuItem value="">2</MenuItem>
-                  <MenuItem value="">3</MenuItem>
-                  <MenuItem value="">4</MenuItem>
-                 
-                  
+                  <MenuItem value="">Non</MenuItem>
+                  <MenuItem value="">Full</MenuItem>                  
                 </Select>
               </FormControl>
             </Grid>
-            <Grid>
-                <FormControl>
-                <InputLabel id="demo-simple-select-label">Property Type</InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={PropertyType}
-                //   onChange={(e)=>setGender(e.target.value)}
-                  label="Property Type"
-                  type="text"
-                >
-                  <MenuItem value="">House</MenuItem>
-                  <MenuItem value="">Apartment</MenuItem>
-                  <MenuItem value="">Land</MenuItem>
-                                   
-                </Select>
+            <TextField
+            //  required
+                    id="outlined-required"
+                    label="Road Size"
+              />
 
-                </FormControl>
-            </Grid>
            <Grid>
-            <FormControl>
+            <FormControl  sx={{ maxWidth: { xs: "100%", md: "14rem" },display:'flex',margin:'20px 0px' }}>
                 <InputLabel>Urgency</InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  value={urgency}
+                //   value={urgency}
                   label="Urgency"
                   type="text"
                 >
@@ -204,9 +196,9 @@ function RegistrationFormPopup() {
            </Grid>            
             <Grid item xs={12} md={6}>
               <InputLabel>Price Range</InputLabel>
-              <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+              <TextField id="outlined-basic" variant="outlined" />
               <InputLabel>to</InputLabel>
-              <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+              <TextField id="outlined-basic"  variant="outlined" />
             </Grid>
 
 
@@ -214,18 +206,17 @@ function RegistrationFormPopup() {
               <FormControl
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "14rem" } }}
+                sx={{ maxWidth: { xs: "100%", md: "14rem" } ,margin:'10px 0px'}}
               >
                 <InputLabel id="demo-simple-select-label">
                   Description
                 </InputLabel>
                 <TextField
-                    id="standard-multiline-static"
-                    label="Multiline"
+                    id="standard-multiline-static"                  
                     multiline
                     rows={4}
-                    defaultValue="Default Value"
-                    variant="standard"
+                 
+                    variant="outlined"
         />
                
               </FormControl>
@@ -245,14 +236,14 @@ function RegistrationFormPopup() {
                 sx={{ backgroundColor: "secondary.main", color: "white" }}
 
               >
-                Request in
+                Request
               </Button>
             </Grid>
           
     </form>
     </Box>
-    </div>
+    </Box>
   );
 }
 
-export default RegistrationFormPopup;
+export default PropertyRequest;
