@@ -2,7 +2,7 @@ import React, { useState }  from "react";
 import HouseIcon from '@mui/icons-material/House';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import LandscapeIcon from '@mui/icons-material/Landscape';
-import ApartmentForm from "./property_request_apartment"
+import LandForm from './property_request_land'
 import {
   Box,
   Typography,
@@ -15,19 +15,19 @@ import {
   Grid,
   IconButton,
   Dialog,
-  DialogContent
+  DialogContent,
 } from "@mui/material";
 
 
 
 
 function PropertyRequest() {
-  const[openApartmentForm,setOpenApartmentForm]=useState(false)
+    const [openLandForm,setOpenLandForm]=useState(false)
+    const handleLandForm=(e)=>{
+        e.preventDefault();
+        setOpenLandForm(true)
 
-  const handleApartmentForm=(e)=>{
-    e.preventDefault();
-    setOpenApartmentForm(true)
-  }
+    }
 
   return (
     <Box sx={{
@@ -55,15 +55,15 @@ function PropertyRequest() {
           
         </Box>
         <Box sx={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-          <IconButton sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A"
-                    
-                  }}>           
+          <IconButton 
+           >           
             <HouseIcon  />
           </IconButton>
-          <IconButton onClick={handleApartmentForm}>
+          <IconButton  
+            sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A"}}>
             <ApartmentIcon/>
           </IconButton>
-          <IconButton>
+          <IconButton onClick={handleLandForm}>
             <LandscapeIcon/>
           </IconButton>
   
@@ -312,15 +312,10 @@ function PropertyRequest() {
             </Grid>
           
     </form>
-    <Dialog
-      open={openApartmentForm}
-      onClose={() => setOpenApartmentForm(false)}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
-    >
-      <DialogContent>
-        <ApartmentForm/> {/* Render the form component */}
-      </DialogContent>
+    <Dialog>
+        <DialogContent>
+            
+        </DialogContent>
     </Dialog>
     </Box>
     </Box>
