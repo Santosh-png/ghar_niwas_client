@@ -2,7 +2,7 @@ import React, { useState }  from "react";
 import HouseIcon from '@mui/icons-material/House';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import LandscapeIcon from '@mui/icons-material/Landscape';
-import ApartmentForm from "./property_request_apartment"
+
 import {
   Box,
   Typography,
@@ -14,20 +14,12 @@ import {
   Button,
   Grid,
   IconButton,
-  Dialog,
-  DialogContent
 } from "@mui/material";
 
 
 
 
 function PropertyRequest() {
-  const[openApartmentForm,setOpenApartmentForm]=useState(false)
-
-  const handleApartmentForm=(e)=>{
-    e.preventDefault();
-    setOpenApartmentForm(true)
-  }
 
   return (
     <Box sx={{
@@ -55,15 +47,16 @@ function PropertyRequest() {
           
         </Box>
         <Box sx={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-          <IconButton sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A"
-                    
-                  }}>           
+          <IconButton 
+           >           
             <HouseIcon  />
           </IconButton>
-          <IconButton onClick={handleApartmentForm}>
+          <IconButton  
+            >
             <ApartmentIcon/>
           </IconButton>
-          <IconButton>
+          <IconButton 
+           sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A"}}>
             <LandscapeIcon/>
           </IconButton>
   
@@ -165,7 +158,7 @@ function PropertyRequest() {
                     size="small"
                     id="outlined-required"
                     sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
-                    label="Total Floor"/>
+                    label="Road Size"/>
 
                 <TextField  
                   //  required
@@ -175,15 +168,7 @@ function PropertyRequest() {
                    type="text"
                    sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
                 />
-                <TextField 
-                // required
-                size="small"
-                id="outlined-required"
-                label="BHK"
-                type="text"
-                sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
-                />
-
+               
               <FormControl
                size="small"
                fullWidth
@@ -205,52 +190,93 @@ function PropertyRequest() {
                   
                 </Select>
                </FormControl> 
-                <TextField 
-                    size="small"
-                    id="outlined-required"
-                    sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
-                    label="Property Age"/>
-
-
+               <FormControl
+                size="small"
+                fullWidth
+                sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+              >
+                <InputLabel>Sewage</InputLabel>
+               <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                // value={age}
+                label="Sewage"
+                  // onChange={handleChange}
+                >
+                  <MenuItem value="">Yes</MenuItem>
+                  <MenuItem value="">No</MenuItem>
+                 
+                  
+                </Select>
+               </FormControl> 
+               <FormControl
+               size="small"
+               fullWidth
+               sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+              >
+                <InputLabel>Sewage</InputLabel>
+               <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                // value={age}
+               label="Sewage"
+                  // onChange={handleChange}
+                >
+                  <MenuItem value="">Yes</MenuItem>
+                  <MenuItem value="">No</MenuItem>
+                 
+                  
+                </Select>
+               </FormControl> 
                 <FormControl  
                 size="small"
                 fullWidth
                 sx={{ maxWidth: { xs: "100%", md: "14rem" }}}>   
 
-                <InputLabel>Furnishing</InputLabel>
+                <InputLabel>Electricity</InputLabel>
                 <Select
                 fullWidth
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                 //   value={WardNumber}
-                  label="Furnishing"
+                  label="Electricity"
                   type="text"
                 >
-                  <MenuItem value="">Non</MenuItem>
-                  <MenuItem value="">Full</MenuItem>                  
+                  <MenuItem value="">Yes</MenuItem>
+                  <MenuItem value="">No</MenuItem>                  
+                </Select>
+              </FormControl>
+              <FormControl  
+                size="small"
+                fullWidth
+                sx={{ maxWidth: { xs: "100%", md: "14rem" }}}>   
+
+                <InputLabel>Drinking Water</InputLabel>
+                <Select
+                fullWidth
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                //   value={WardNumber}
+                  label="Drinking Water"
+                  type="text"
+                >
+                  <MenuItem value="">Yes</MenuItem>
+                  <MenuItem value="">No</MenuItem>                  
                 </Select>
               </FormControl>
            
-
-            <TextField
-            //  required
-                    size="small"
-                    id="outlined-required"
-                    label="Road Size"
-                    sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
-              />
 
           
             <FormControl   
                 size="small"
                 fullWidth
                 sx={{ maxWidth: { xs: "100%", md: "14rem" }}}>
-                <InputLabel>Urgency</InputLabel>
+                <InputLabel>Urgent</InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                 //   value={urgency}
-                  label="Urgency"
+                  label="Urgent"
                   type="text"
                 >
                   <MenuItem value="">Very Urgent</MenuItem>
@@ -312,16 +338,6 @@ function PropertyRequest() {
             </Grid>
           
     </form>
-    <Dialog
-      open={openApartmentForm}
-      onClose={() => setOpenApartmentForm(false)}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
-    >
-      <DialogContent>
-        <ApartmentForm/> {/* Render the form component */}
-      </DialogContent>
-    </Dialog>
     </Box>
     </Box>
   );
