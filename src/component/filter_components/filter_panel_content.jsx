@@ -100,7 +100,11 @@ function CustomFilterPanelContent() {
             </Select>
             </FormControl>
         </Box>
-          <ButtonComponent>Filter</ButtonComponent>
+          <Box sx={{
+            mt: "2rem"
+          }}>
+            <ButtonComponent>Filter</ButtonComponent>
+          </Box>
       </Box>
     </div>
   );
