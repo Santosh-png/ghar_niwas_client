@@ -1,5 +1,4 @@
 import React from 'react';
-import { Box } from '@mui/material';
 import Slider from 'react-slick';
 import ClientFeedbackCard from './ClientFeedbackCard.component'; 
 // import ClientAvatarList from './clientAvatarList'; 
@@ -10,7 +9,7 @@ import ClientFeedbackItems from './ClientFeedbackItems';
 function ClientFeedbackList() {
     const settings = {
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -23,7 +22,7 @@ function ClientFeedbackList() {
               breakpoint: 1024,
               settings: {
                 slidesToShow: 2,
-                slidesToScroll: 3,
+                slidesToScroll: 2,
                 infinite: true,
                 dots: true
               }
@@ -32,9 +31,9 @@ function ClientFeedbackList() {
               breakpoint: 600,
               settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1,
+                slidesToScroll: 2,
                 centerMode: true,
-                centerPadding:"20px",
+                // centerPadding:"20px",
                 initialSlide: 2
               }
             },
@@ -48,7 +47,7 @@ function ClientFeedbackList() {
           ]
     };
     return (
-        <div className="center__carousel" sx={{ padding: "47px" , color:"primary.main" }}>
+        <div className="center__carousel" sx={{ color:"primary.main"}}>
             <Slider {...settings}>
                 {/* <ClientFeedbackCard />
                 <ClientFeedbackCard />
