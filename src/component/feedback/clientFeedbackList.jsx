@@ -47,7 +47,7 @@ function ClientFeedbackList() {
           ]
     };
     return (
-        <div className="center__carousel" sx={{ color:"primary.main" }}>
+        <div className="center__carousel" sx={{ color:"primary.main"}}>
             <Slider {...settings}>
                 {/* <ClientFeedbackCard />
                 <ClientFeedbackCard />

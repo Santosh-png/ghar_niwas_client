@@ -1,5 +1,6 @@
-import * as React from 'react';
-import {AppBar,Box,Toolbar,IconButton,Typography,Menu ,Container,Button,MenuItem, Drawer,Divider}from '@mui/material';
+// import * as React from 'react';
+import React, { useState } from "react";
+import {AppBar,Box,Toolbar,IconButton,Typography,Menu ,Container,Button,MenuItem, Drawer,Divider,Dialog,DialogContent}from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Logo from '../../assets/image/logo.png'
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -8,13 +9,21 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import './navbar.style.css'
+import DetailForm from '../form_components/detail_form';
 
 // import VerticalDivider from '../ui/divider'
 const itemList = ['Home', 'Add Property', 'Sale','Rent','Request Property'];
-
+// const Transition = React.forwardRef(function Transition(props, ref) {
+//   return <Slide direction="up" ref={ref} {...props} />;
+// });
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  // this is for the request property menuitem
+  // const [anchorElSubmenu, setAnchorElSubmenu] = React.useState(null);
+ 
+  const [opendetailDialog, setOpendetailDialog] = useState(false)
+
   
 
   const handleOpenNavMenu = (event) => {
@@ -23,6 +32,20 @@ function NavBar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  // const handleOpenSubmenu = (event) => {
+  //   setAnchorElSubmenu(event.currentTarget);
+  // };
+  
+  // const handleCloseSubmenu = () => {
+  //   setAnchorElSubmenu(null);
+  //   handleCloseNavMenu(); // Also close the main menu
+  // };
+  const handleOpenForm = () => {
+    setOpendetailDialog(true);
+    handleCloseNavMenu(); // Close the menu after opening the form
+  };
+ 
  
 const drawerWidth=250;
   return (
@@ -77,6 +100,7 @@ const drawerWidth=250;
               
             >
               {itemList.map((item) => (
+                
                 <MenuItem key={item} onClick={handleCloseNavMenu} >
 
                   <Typography textAlign="center" className='itemList'>
@@ -130,14 +154,49 @@ const drawerWidth=250;
           {/* desktop view  */}  
                   
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'} }} >
-            {itemList.map((item) => (
+          
+          {itemList.map((item) => (
+              item === "Request Property" ? (
+                <MenuItem key={item} onClick={handleOpenForm}> 
+                  <Typography                 className='responsive_fontsize18' 
+                    sx={{ fontFamily: 'Roboto Serif', margin: '0px    20px', fontWeight: '600', textAlign: 'center',color:'primary.main' }}>
+                    {item}
+                  </Typography>
+                </MenuItem>
+      ) : (
+        <MenuItem key={item} onClick={handleCloseNavMenu}>
+          <Typography textAlign="center" className='itemList'>
+            <Typography className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', margin: '0px 20px', fontWeight: '600', textAlign: 'center' ,color:'primary.main'}}>
+              {item}
+            </Typography>
+          </Typography>
+        </MenuItem>
+      )
+    ))}
+
+    {/* Your Drawer and other components... */}
+
+    <Dialog
+      open={opendetailDialog}
+      onClose={() => setOpendetailDialog(false)}
+      aria-labelledby="alert-dialog-title"
+      aria-describedby="alert-dialog-description"
+    >
+      <DialogContent>
+        <DetailForm /> {/* Render the form component */}
+      </DialogContent>
+    </Dialog>
+
+            
+            {/* {itemList.map((item) => (
+              
               
               <Button
                 className='responsive_fontsize20'
                 key={item}
                 onClick={handleCloseNavMenu}
                 sx={{
-                      // mx:1,
+                     
                       color:'292c6a',
                       fontWeight:600,
                       display: 'flex',
@@ -151,8 +210,55 @@ const drawerWidth=250;
                 {item}
                 </Typography> 
               </Button>
+            ))} */}
+            {/* <DetailForm/> */}
+
+            {/* for the onclick event */}
+            {/* {itemList.map((item) => (
+                item === "Request Property" ? (
+                  <MenuItem key={item} onClick={handleOpenSubmenu}>
+                   <Typography textAlign="center" className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', margin: '0px 20px', fontWeight: '600', textAlign: 'center' }}>
+                        {item}
+                  </Typography>
+                </MenuItem>
+            ) : (
+              <MenuItem key={item} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center" className='itemList'>
+                  <Typography className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', margin: '0px 20px', fontWeight: '600', textAlign: 'center' }}>
+                          {item}
+                </Typography>
+                </Typography>
+              </MenuItem>
+    
+                )
             ))}
+      <Menu
+        id="submenu-appbar"
+        anchorEl={anchorElSubmenu}
+        open={Boolean(anchorElSubmenu)}
+        onClose={handleCloseSubmenu}
+        MenuListProps={{
+          'aria-labelledby': 'request-property-button',
+        }}
+      >
+      <MenuItem onClick={handleCloseSubmenu}>sale</MenuItem>
+      <MenuItem onClick={handleCloseSubmenu}>Rent</MenuItem>
+      
+    </Menu> */}
+
+
           </Box>
+          {/* <Dialog
+          open={openFreeBookDialog}
+          TransitionComponent={Transition}
+          keepMounted
+          onClose={() => setOpenFreeBookDialog(false)}
+          aria-describedby="alert-dialog-slide-description"
+      >
+        <DialogContent>
+          <DetailForm />
+        </DialogContent>
+      </Dialog> */}
 
          {/* for the desktop view  */}
           <Box sx={{ flexGrow: 0 }}>
