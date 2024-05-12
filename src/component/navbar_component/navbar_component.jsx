@@ -30,7 +30,7 @@ function NavBar() {
 
   const handleOpenForm = () => {
     setOpendetailDialog(true);
-    handleCloseNavMenu(); // Close the menu after opening the form
+    handleCloseNavMenu();  // Close the menu after opening the form
   };
  
  

@@ -47,8 +47,10 @@ function PropertyRequest() {
           
         </Box>
         <Box sx={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-          <IconButton>           
-            <HouseIcon/>
+          <IconButton sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A"
+                    
+                  }}>           
+            <HouseIcon  />
           </IconButton>
           <IconButton>
             <ApartmentIcon/>
@@ -63,91 +65,129 @@ function PropertyRequest() {
       {/* Actual Form */}
       <Box sx={{ mt: "1rem" }}>
         <form >
-         
-            <Grid item xs={12} md={6}>
             <InputLabel id="demo-simple-select-label">Location</InputLabel>
+            <Grid item xs={12} md={6}>
+          
               <FormControl
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "14rem" },display: 'grid',
-                gridTemplateColumns: 'repeat(2,1fr)'
+                sx={{ maxWidth: { xs: "100%", md: "25rem" },display: 'grid',
+                gridTemplateColumns: 'repeat(2,1fr)',margin:'20px',gap:'10px'
                 
                }}
                 
               >                
                   <TextField
-                    required
+                   fullWidth
+                    // required
+                    size="small"
                     id="outlined-required"
                     label="provinces"
                     // defaultValue="Hello World"
                  />
                   <TextField
-                    required
+                    // required
+                    size="small"
                     id="outlined-required"
                     label="zone"
                     // defaultValue="Hello World"
                  />
                   <TextField
-                    required
+                    // required
+                    size="small"
                     id="outlined-required"
                     label="District"
                     // defaultValue="Hello World"
                  />
                   <TextField
-                    required
+                    // required
+                    size="small"
                     id="outlined-required"
                     label="Municipality"
                     // defaultValue="Hello World"
                  />
                   <TextField
-                    required
+                  size="small"
+                    // required
                     id="outlined-required"
                     label="Ward"
                     // defaultValue="Hello World"
                  />
                   <TextField
-                    required
+                    // required
+                    size="small"
                     id="outlined-required"
                     label="Landmark"
+                    
                     // defaultValue="Hello World"
                  />
 
               </FormControl>
             </Grid>
-            <Grid item xs={12} md={6}>
+          
+            
             <InputLabel id="demo-simple-select-label">Property Detail</InputLabel>
+            <Grid item xs={12} md={6} sx={{ display: 'grid',
+                gridTemplateColumns: 'repeat(2,1fr)',alignItems:'center',margin:'20px',gap:'10px'}}>
               <FormControl
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "14rem" }, display: 'grid',
-                gridTemplateColumns: 'repeat(2,1fr)'}}
+                sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
                 
-              >
-                
-                
-               
+              >      
+              <InputLabel id="demo-simple-select-label">Type</InputLabel>
+
                 <Select
+                fullWidth
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                 //   value={requestType}
-                  label="Type"
+                  label= "Type"
                   type="text"
+                  
 
                 >
                   <MenuItem value="">commercial</MenuItem>
-                  <MenuItem value="">2</MenuItem>               
+                  <MenuItem value="">non commercial</MenuItem>               
                 </Select>
-                <TextField>Total Floor</TextField>
-                <TextField>Property Area(sq.ft)</TextField>
-                <TextField>BHK</TextField>
-               
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                //   value={municipality}
-                  label="Facing"
-                   
-                
+             
+               </FormControl>
+                <TextField  
+                    // required
+                    size="small"
+                    id="outlined-required"
+                    sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+                    label="Total Floor"/>
+
+                <TextField  
+                  //  required
+                   size="small"
+                   id="outlined-required"
+                   label="Area(sq.ft)"
+                   type="text"
+                   sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+                />
+                <TextField 
+                // required
+                size="small"
+                id="outlined-required"
+                label="BHK"
+                type="text"
+                sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+                />
+
+              <FormControl
+               size="small"
+               fullWidth
+               sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+              >
+                <InputLabel>Facing</InputLabel>
+               <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                // value={age}
+               label="Facing"
+                  // onChange={handleChange}
                 >
                   <MenuItem value="">North</MenuItem>
                   <MenuItem value="">South</MenuItem>
@@ -156,10 +196,22 @@ function PropertyRequest() {
                  
                   
                 </Select>
-                <TextField required
+               </FormControl> 
+                <TextField 
+                    size="small"
                     id="outlined-required"
+                    sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
                     label="Property Age"/>
+
+
+                <FormControl  
+                size="small"
+                fullWidth
+                sx={{ maxWidth: { xs: "100%", md: "14rem" }}}>   
+
+                <InputLabel>Furnishing</InputLabel>
                 <Select
+                fullWidth
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                 //   value={WardNumber}
@@ -170,15 +222,21 @@ function PropertyRequest() {
                   <MenuItem value="">Full</MenuItem>                  
                 </Select>
               </FormControl>
-            </Grid>
+           
+
             <TextField
             //  required
+                    size="small"
                     id="outlined-required"
                     label="Road Size"
+                    sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
               />
 
-           <Grid>
-            <FormControl  sx={{ maxWidth: { xs: "100%", md: "14rem" },display:'flex',margin:'20px 0px' }}>
+          
+            <FormControl   
+                size="small"
+                fullWidth
+                sx={{ maxWidth: { xs: "100%", md: "14rem" }}}>
                 <InputLabel>Urgency</InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
@@ -193,30 +251,35 @@ function PropertyRequest() {
                 </Select>
 
             </FormControl>
-           </Grid>            
-            <Grid item xs={12} md={6}>
-              <InputLabel>Price Range</InputLabel>
-              <TextField id="outlined-basic" variant="outlined" />
-              <InputLabel>to</InputLabel>
-              <TextField id="outlined-basic"  variant="outlined" />
             </Grid>
+           
+            <Grid item xs={12} md={6} sx={{display:'flex',margin:'20px'}}>   
+            <InputLabel>Price Range</InputLabel>
+                <TextField 
+                  id="standard-basic" 
+                  size="small" 
+                  sx={{ maxWidth: { xs: "100%", md: "7rem" }}}
+                  variant="standard" />
+                <InputLabel>To</InputLabel>
+                <TextField 
+                  id="standard-basic" 
+                  size="small" 
+                  variant="standard"
+                  sx={{ maxWidth: { xs: "100%", md: "7rem" }}} />
 
-
+            </Grid>
             <Grid item xs={12} md={6}>
               <FormControl
                 size="small"
                 fullWidth
                 sx={{ maxWidth: { xs: "100%", md: "14rem" } ,margin:'10px 0px'}}
               >
-                <InputLabel id="demo-simple-select-label">
-                  Description
-                </InputLabel>
                 <TextField
                     id="standard-multiline-static"                  
                     multiline
-                    rows={4}
-                 
-                    variant="outlined"
+                    rows={3}
+                    // variant="outlined"
+                    placeholder="Description"
         />
                
               </FormControl>

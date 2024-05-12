@@ -10,9 +10,11 @@ function DetailForm() {
     setAnchorElNav(null);
   };
 
-  const handleRequestForm = () => {
+  const handleRequestForm = (e) => {
+    e.preventDefault();
     setOpenRequestForm(true);
     handleCloseNavMenu(); // Close the menu after opening the form
+    
   };
 
   return (
