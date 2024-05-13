@@ -10,7 +10,7 @@ import UploadedSection from '../component/recentlyUploaded/uploadedSection';
 import AboutSection from './AboutSection';
 import ClientFeedback from '../component/feedback/ClientFeedback.component';
 import ListSection from '../component/Listing/ListingSection';
-
+// import PropertyDetail from '../component/propertyDescription/propertyDetail';
 
 function LandingPage() {
   return (
@@ -25,7 +25,8 @@ function LandingPage() {
       <ClientFeedback/>
       <AboutSection/>
       <Contact />
-      <Footer />
+      <Footer /> 
+      {/* <PropertyDetail/> */}
     </div>
   )
 }

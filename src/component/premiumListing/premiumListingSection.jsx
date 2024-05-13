@@ -39,8 +39,7 @@ function PremiumSection() {
         </Box>
         {/* second Box */}
         <Box sx={{ display: "flex", width: "100%", flexDirection: "row" }}>
-          <PremiumList/>
-  
+          <PremiumList/> 
         </Box>
       </Box>
     );

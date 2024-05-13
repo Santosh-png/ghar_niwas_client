@@ -5,8 +5,14 @@ export default [
         location: "Bhaisepati",
         price: "$50000",
         title: "House for rent",
-        name: "SadoBato",
+        name: "Adil",
         date: "2 months ago",
+        propertyType:"Single Family Homes",
+        totalRooms:'10',
+        bedRooms:'4',
+        builtYear:'2000',
+        landArea:'3 aana',
+        map:'https://maps.app.goo.gl/dMZP4FEFEm5YT76t5'
     },
     {
         id: 2,
@@ -17,6 +23,12 @@ export default [
         name: "ashika",
         status: "rent",
         date: "4 weeks ago",
+        propertyType:"Rent",
+        totalRooms:'6',
+        bedRooms:'3',
+        builtYear:'2002',
+        landArea:'4 aana',
+        map:'https://maps.app.goo.gl/6LCunEXerNJ22HJ4A'
     },
     {
         id: 3,
@@ -27,6 +39,12 @@ export default [
         name: "samima",
         status: "sale",
         date: "1 months ago",
+        propertyType:"Apartments",
+        totalRooms:'7',
+        bedRooms:'4',
+        builtYear:'1999',
+        landArea:'2 aana',
+        map:'https://maps.app.goo.gl/XBU8ZBCTFafJZ5zb9'
     },
     {
         id: 4,
@@ -36,6 +54,12 @@ export default [
         title: "House for sale",
         name: "sam",
         date: "3 months ago",
+        propertyType:"Land",
+        totalRooms:'5',
+        bedRooms:'2',
+        builtYear:'2001',
+        landArea:'2 aana',
+        map:'https://maps.app.goo.gl/pB7gVnVEVqc2JTig7'
     },
     {
         id: 5,
@@ -45,6 +69,12 @@ export default [
         title: "land for rent",
         name: "praju",
         date: "7 months ago",
+        propertyType:"Land",
+        totalRooms:'8',
+        bedRooms:'3',
+        builtYear:'1998',
+        landArea:'5 aana',
+        map:'https://maps.app.goo.gl/DU9JzQWtXr7AW1eT7'
     },
     {
         id: 6,
@@ -54,6 +84,12 @@ export default [
         title: "land for sale",
         name: "ram",
         date: "9 months ago",
+        propertyType:"House",
+        totalRooms:'5',
+        bedRooms:'2',
+        builtYear:'2003',
+        landArea:'3 aana',
+        map:'https://maps.app.goo.gl/2KDCva8NY5T4SpQCA'
     },
     {
         id: 7,
@@ -63,6 +99,12 @@ export default [
         title: "House for rent",
         name: "sarita",
         date: "3 months ago",
+        propertyType:"Apartment",
+        totalRooms:'9',
+        bedRooms:'5',
+        builtYear:'2000',
+        landArea:'3 aana',
+        map:'https://maps.app.goo.gl/cMnyUfLizLHxgoxh9'
     },
     {
         id: 8,
@@ -72,6 +114,12 @@ export default [
         title: "House for rent",
         name: "rina",
         date: "10 months ago",
+        propertyType:"Other property Types",
+        totalRooms:'5',
+        bedRooms:'3',
+        builtYear:'2001',
+        landArea:'3 aana',
+        map:'https://maps.app.goo.gl/UNsK96zffxAaJ1LWA'
     },
 
 ] 
