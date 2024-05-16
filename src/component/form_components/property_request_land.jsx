@@ -163,8 +163,8 @@ function PropertyRequest() {
                   
 
                 >
-                  <MenuItem value="">commercial</MenuItem>
-                  <MenuItem value="">non commercial</MenuItem>               
+                  <MenuItem value="Commercial">commercial</MenuItem>
+                  <MenuItem value="Non Commercial">non commercial</MenuItem>               
                 </Select>
              
                </FormControl>
@@ -197,10 +197,10 @@ function PropertyRequest() {
                label="Facing"
                   // onChange={handleChange}
                 >
-                  <MenuItem value="">North</MenuItem>
-                  <MenuItem value="">South</MenuItem>
-                  <MenuItem value="">East</MenuItem>
-                  <MenuItem value="">West</MenuItem>
+                  <MenuItem value="North">North</MenuItem>
+                  <MenuItem value="South">South</MenuItem>
+                  <MenuItem value="East">East</MenuItem>
+                  <MenuItem value="West">West</MenuItem>
                  
                   
                 </Select>
@@ -218,8 +218,8 @@ function PropertyRequest() {
                 label="Sewage"
                   // onChange={handleChange}
                 >
-                  <MenuItem value="">Yes</MenuItem>
-                  <MenuItem value="">No</MenuItem>
+                  <MenuItem value="Yes">Yes</MenuItem>
+                  <MenuItem value="No">No</MenuItem>
                  
                   
                 </Select>
@@ -237,8 +237,8 @@ function PropertyRequest() {
                label="Sewage"
                   // onChange={handleChange}
                 >
-                  <MenuItem value="">Yes</MenuItem>
-                  <MenuItem value="">No</MenuItem>
+                  <MenuItem value="Yes">Yes</MenuItem>
+                  <MenuItem value="No">No</MenuItem>
                  
                   
                 </Select>
@@ -257,8 +257,8 @@ function PropertyRequest() {
                   label="Electricity"
                   type="text"
                 >
-                  <MenuItem value="">Yes</MenuItem>
-                  <MenuItem value="">No</MenuItem>                  
+                  <MenuItem value="Yes">Yes</MenuItem>
+                  <MenuItem value="No">No</MenuItem>                  
                 </Select>
               </FormControl>
               <FormControl  
@@ -275,8 +275,8 @@ function PropertyRequest() {
                   label="Drinking Water"
                   type="text"
                 >
-                  <MenuItem value="">Yes</MenuItem>
-                  <MenuItem value="">No</MenuItem>                  
+                  <MenuItem value="Yes">Yes</MenuItem>
+                  <MenuItem value="No">No</MenuItem>                  
                 </Select>
               </FormControl>
            
@@ -294,8 +294,8 @@ function PropertyRequest() {
                   label="Urgent"
                   type="text"
                 >
-                  <MenuItem value="">Very Urgent</MenuItem>
-                  <MenuItem value="">not Urgent</MenuItem>
+                  <MenuItem value="Very Urgent">Very Urgent</MenuItem>
+                  <MenuItem value="Not Urgent">not Urgent</MenuItem>
                                                     
                 </Select>
 
@@ -307,14 +307,14 @@ function PropertyRequest() {
                 <TextField 
                   id="standard-basic" 
                   size="small" 
-                  sx={{ maxWidth: { xs: "100%", md: "7rem" }}}
+                  sx={{ maxWidth: { xs: "100%", md: "7rem" },marginLeft:'10px'}}
                   variant="standard" />
                 <InputLabel>To</InputLabel>
                 <TextField 
                   id="standard-basic" 
                   size="small" 
                   variant="standard"
-                  sx={{ maxWidth: { xs: "100%", md: "7rem" }}} />
+                  sx={{ maxWidth: { xs: "100%", md: "7rem" },marginLeft:'10px'}} />
 
             </Grid>
             <Grid item xs={12} md={6}>

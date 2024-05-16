@@ -162,8 +162,8 @@ function PropertyRequest() {
                   
 
                 >
-                  <MenuItem value="">commercial</MenuItem>
-                  <MenuItem value="">non commercial</MenuItem>               
+                  <MenuItem value="commercial">commercial</MenuItem>
+                  <MenuItem value="non commercial">non commercial</MenuItem>               
                 </Select>
              
                </FormControl>
@@ -204,10 +204,10 @@ function PropertyRequest() {
                label="Facing"
                   // onChange={handleChange}
                 >
-                  <MenuItem value="">North</MenuItem>
-                  <MenuItem value="">South</MenuItem>
-                  <MenuItem value="">East</MenuItem>
-                  <MenuItem value="">West</MenuItem>
+                  <MenuItem value="North">North</MenuItem>
+                  <MenuItem value="South">South</MenuItem>
+                  <MenuItem value="East">East</MenuItem>
+                  <MenuItem value="West">West</MenuItem>
                  
                   
                 </Select>
@@ -233,8 +233,8 @@ function PropertyRequest() {
                   label="Furnishing"
                   type="text"
                 >
-                  <MenuItem value="">Non</MenuItem>
-                  <MenuItem value="">Full</MenuItem>                  
+                  <MenuItem value="Non">Non</MenuItem>
+                  <MenuItem value="Full">Full</MenuItem>                  
                 </Select>
               </FormControl>
            
@@ -260,8 +260,8 @@ function PropertyRequest() {
                   label="Urgency"
                   type="text"
                 >
-                  <MenuItem value="">Very Urgent</MenuItem>
-                  <MenuItem value="">not Urgent</MenuItem>
+                  <MenuItem value="Very Urgent">Very Urgent</MenuItem>
+                  <MenuItem value="not Urgent">not Urgent</MenuItem>
                                                     
                 </Select>
 
@@ -273,14 +273,14 @@ function PropertyRequest() {
                 <TextField 
                   id="standard-basic" 
                   size="small" 
-                  sx={{ maxWidth: { xs: "100%", md: "7rem" }}}
+                  sx={{ maxWidth: { xs: "100%", md: "7rem" },marginLeft:'10px'}}
                   variant="standard" />
                 <InputLabel>To</InputLabel>
                 <TextField 
                   id="standard-basic" 
                   size="small" 
                   variant="standard"
-                  sx={{ maxWidth: { xs: "100%", md: "7rem" }}} />
+                  sx={{ maxWidth: { xs: "100%", md: "7rem" },marginLeft:'10px'}} />
 
             </Grid>
             <Grid item xs={12} md={6}>
