@@ -12,7 +12,7 @@ function ListSection(){
         <Box sx={{
           marginTop:"80px", 
           width:"100%",
-          backgroundColor: "red",
+          // backgroundColor: "red",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -26,34 +26,36 @@ function ListSection(){
                 justifyContent: "center",
                 flexDirection: "column",
                 alignItems: "center",
-                marginTop: "68px",
+                // marginTop: "68px",
                 width:'100%'
               }}
             >
-              <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center"}}>
-                <HorizontalDivider />
-                <Typography
-                  sx={{
-                    fontSize: "32px",
-                    color: "secondary.secondary_600",
-                    fontFamily: "fontFamily",
-                    fontWeight:"bold",
-                    padding:"10px",
-                    textAlign:"center",
-                    letterSpacing:"1px",
-                  }}
-                >
-                  Listing
-                </Typography>
-                <HorizontalDivider />
-              </Box>
+              <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center",marginBottom:'1rem', 
+        }}>
+        <HorizontalDivider />
+        <Typography className="responsive_fontsize32"
+          sx={{
+            // color: "secondary.secondary_600",
+            fontWeight:"bold",
+            padding:"10px",
+            textAlign:"center",
+            letterSpacing:"1px",
+            color:'primary.main',
+           
+          }}
+        >
+          Listing
+        </Typography>
+        <HorizontalDivider />
+        {/* </Box> */}
+      </Box>
             </Box>
           {/* second Box */}
           <Box sx={{ 
             display: "flex", 
             width: "100%", 
             flexDirection: "row" ,
-            backgroundColor: "blue",
+            // backgroundColor: "blue",
             justifyContent: "center",
             alignItems: "center"
             }}>

@@ -25,12 +25,12 @@ const AdminLoginForm = () => {
     };
 
     return (
-        <div style={{ 
-            maxWidth: '400px', 
-            margin: '0 auto', 
-            padding: '20px', 
-            borderRadius: '10px', 
-            background: 'linear-gradient(to top, rgba(41, 44, 106, 0.8), rgba(41, 44, 106, 0.6), rgba(41, 44, 106, 0.3), rgba(44, 49, 79, 0.2))', 
+        <div style={{
+            maxWidth: '400px',
+            margin: '0 auto',
+            padding: '20px',
+            borderRadius: '10px',
+            background: 'linear-gradient(to top, rgba(41, 44, 106, 0.8), rgba(41, 44, 106, 0.6), rgba(41, 44, 106, 0.3), rgba(44, 49, 79, 0.2))',
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
             backdropFilter: 'blur(10px)',
             border: '1px solid #292C6A',
@@ -52,15 +52,15 @@ const AdminLoginForm = () => {
                     <input type="checkbox" id="rememberMe" checked={rememberMe} onChange={handleRememberMeChange} style={{ marginRight: '10px' }} />
                     <label htmlFor="rememberMe" style={{ fontWeight: 'semi-bold' }}>Remember me</label>
                 </div>
-            
-                <button type="submit" style={{ 
-                    width: '100%', 
-                    padding: '10px', 
-                    border: '1px solid #292C6A', 
-                    borderRadius: '5px', 
-                    backgroundColor: '#292C6A', 
-                    color: '#fff', 
-                    cursor: 'pointer', 
+
+                <button type="submit" style={{
+                    width: '100%',
+                    padding: '10px',
+                    border: '1px solid #292C6A',
+                    borderRadius: '5px',
+                    backgroundColor: '#292C6A',
+                    color: '#fff',
+                    cursor: 'pointer',
                     fontWeight: 'semi-bold',
                     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
                     transition: 'background-color 0.3s ease',
