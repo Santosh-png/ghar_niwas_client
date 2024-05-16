@@ -356,6 +356,8 @@ function PropertyRequest() {
     <Dialog
       open={OpenHomeForm}
       onClose={()=>setOpenHomeForm(false)}
+      aria-labelledby="alert-dialog-title"
+      aria-describedby="alert-dialog-description"
     >
       <DialogContent>
         <HomeForm/>
@@ -365,6 +367,8 @@ function PropertyRequest() {
     <Dialog
       open={openApartmentForm}
       onClose={()=>setOpenHomeForm(false)}
+      aria-labelledby="alert-dialog-title"
+      aria-describedby="alert-dialog-description"
     >
       <DialogContent>
         <ApartmentForm/>

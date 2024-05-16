@@ -24,10 +24,11 @@ import {
 
 function PropertyRequest() {
     const [openLandForm,setOpenLandForm]=useState(false);
-    const[openHomeForm,setOpenHomeForm]=useState(false)
+    const[openHomeForm,setOpenHomeForm]=useState(false);
+
     const handleLandForm=(e)=>{
         e.preventDefault();
-        setOpenLandForm(true)
+        setOpenLandForm(true);
 
     }
     const handleHomeForm=(e)=>{
@@ -319,7 +320,7 @@ function PropertyRequest() {
           
     </form>
     <Dialog 
-     open={openLandForm}
+      open={openLandForm}
       onClose={() => setOpenLandForm(false)}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description">
