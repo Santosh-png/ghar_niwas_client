@@ -2,7 +2,8 @@ import React, { useState }  from "react";
 import HouseIcon from '@mui/icons-material/House';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import LandscapeIcon from '@mui/icons-material/Landscape';
-
+import ApartmentForm from './property_request_apartment'
+import HomeForm from './request_property'
 import {
   Box,
   Typography,
@@ -14,12 +15,26 @@ import {
   Button,
   Grid,
   IconButton,
+  Dialog,
+  DialogContent,
 } from "@mui/material";
 
 
 
 
 function PropertyRequest() {
+  const[OpenHomeForm,setOpenHomeForm]=useState(false);
+  const[openApartmentForm,setOpenApartmentForm]=useState(false);
+
+  const handleApartmentForm=(e)=>{
+    e.preventDefault();
+    setOpenApartmentForm(true);
+   
+  }
+  const handleHomeForm=(e)=>{
+    e.preventDefault();
+    setOpenHomeForm(true);
+  }
 
   return (
     <Box sx={{
@@ -47,11 +62,11 @@ function PropertyRequest() {
           
         </Box>
         <Box sx={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-          <IconButton 
+          <IconButton onClick={handleHomeForm}
            >           
             <HouseIcon  />
-          </IconButton>
-          <IconButton  
+          </IconButton >
+          <IconButton onClick={handleApartmentForm} 
             >
             <ApartmentIcon/>
           </IconButton>
@@ -148,8 +163,8 @@ function PropertyRequest() {
                   
 
                 >
-                  <MenuItem value="">commercial</MenuItem>
-                  <MenuItem value="">non commercial</MenuItem>               
+                  <MenuItem value="Commercial">commercial</MenuItem>
+                  <MenuItem value="Non Commercial">non commercial</MenuItem>               
                 </Select>
              
                </FormControl>
@@ -182,10 +197,10 @@ function PropertyRequest() {
                label="Facing"
                   // onChange={handleChange}
                 >
-                  <MenuItem value="">North</MenuItem>
-                  <MenuItem value="">South</MenuItem>
-                  <MenuItem value="">East</MenuItem>
-                  <MenuItem value="">West</MenuItem>
+                  <MenuItem value="North">North</MenuItem>
+                  <MenuItem value="South">South</MenuItem>
+                  <MenuItem value="East">East</MenuItem>
+                  <MenuItem value="West">West</MenuItem>
                  
                   
                 </Select>
@@ -203,8 +218,8 @@ function PropertyRequest() {
                 label="Sewage"
                   // onChange={handleChange}
                 >
-                  <MenuItem value="">Yes</MenuItem>
-                  <MenuItem value="">No</MenuItem>
+                  <MenuItem value="Yes">Yes</MenuItem>
+                  <MenuItem value="No">No</MenuItem>
                  
                   
                 </Select>
@@ -222,8 +237,8 @@ function PropertyRequest() {
                label="Sewage"
                   // onChange={handleChange}
                 >
-                  <MenuItem value="">Yes</MenuItem>
-                  <MenuItem value="">No</MenuItem>
+                  <MenuItem value="Yes">Yes</MenuItem>
+                  <MenuItem value="No">No</MenuItem>
                  
                   
                 </Select>
@@ -242,8 +257,8 @@ function PropertyRequest() {
                   label="Electricity"
                   type="text"
                 >
-                  <MenuItem value="">Yes</MenuItem>
-                  <MenuItem value="">No</MenuItem>                  
+                  <MenuItem value="Yes">Yes</MenuItem>
+                  <MenuItem value="No">No</MenuItem>                  
                 </Select>
               </FormControl>
               <FormControl  
@@ -260,8 +275,8 @@ function PropertyRequest() {
                   label="Drinking Water"
                   type="text"
                 >
-                  <MenuItem value="">Yes</MenuItem>
-                  <MenuItem value="">No</MenuItem>                  
+                  <MenuItem value="Yes">Yes</MenuItem>
+                  <MenuItem value="No">No</MenuItem>                  
                 </Select>
               </FormControl>
            
@@ -279,8 +294,8 @@ function PropertyRequest() {
                   label="Urgent"
                   type="text"
                 >
-                  <MenuItem value="">Very Urgent</MenuItem>
-                  <MenuItem value="">not Urgent</MenuItem>
+                  <MenuItem value="Very Urgent">Very Urgent</MenuItem>
+                  <MenuItem value="Not Urgent">not Urgent</MenuItem>
                                                     
                 </Select>
 
@@ -292,14 +307,14 @@ function PropertyRequest() {
                 <TextField 
                   id="standard-basic" 
                   size="small" 
-                  sx={{ maxWidth: { xs: "100%", md: "7rem" }}}
+                  sx={{ maxWidth: { xs: "100%", md: "7rem" },marginLeft:'10px'}}
                   variant="standard" />
                 <InputLabel>To</InputLabel>
                 <TextField 
                   id="standard-basic" 
                   size="small" 
                   variant="standard"
-                  sx={{ maxWidth: { xs: "100%", md: "7rem" }}} />
+                  sx={{ maxWidth: { xs: "100%", md: "7rem" },marginLeft:'10px'}} />
 
             </Grid>
             <Grid item xs={12} md={6}>
@@ -338,6 +353,28 @@ function PropertyRequest() {
             </Grid>
           
     </form>
+    <Dialog
+      open={OpenHomeForm}
+      onClose={()=>setOpenHomeForm(false)}
+      aria-labelledby="alert-dialog-title"
+      aria-describedby="alert-dialog-description"
+    >
+      <DialogContent>
+        <HomeForm/>
+
+      </DialogContent>
+    </Dialog>
+    <Dialog
+      open={openApartmentForm}
+      onClose={()=>setOpenHomeForm(false)}
+      aria-labelledby="alert-dialog-title"
+      aria-describedby="alert-dialog-description"
+    >
+      <DialogContent>
+        <ApartmentForm/>
+
+      </DialogContent>
+    </Dialog>
     </Box>
     </Box>
   );
