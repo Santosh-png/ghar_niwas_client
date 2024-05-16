@@ -3,6 +3,7 @@ import HouseIcon from '@mui/icons-material/House';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import LandscapeIcon from '@mui/icons-material/Landscape';
 import LandForm from './property_request_land'
+import HomeForm from './request_property'
 import {
   Box,
   Typography,
@@ -22,11 +23,16 @@ import {
 
 
 function PropertyRequest() {
-    const [openLandForm,setOpenLandForm]=useState(false)
+    const [openLandForm,setOpenLandForm]=useState(false);
+    const[openHomeForm,setOpenHomeForm]=useState(false)
     const handleLandForm=(e)=>{
         e.preventDefault();
         setOpenLandForm(true)
 
+    }
+    const handleHomeForm=(e)=>{
+       e.preventDefault();
+       setOpenHomeForm(true);
     }
 
   return (
@@ -55,7 +61,7 @@ function PropertyRequest() {
           
         </Box>
         <Box sx={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-          <IconButton 
+          <IconButton onClick={handleHomeForm}
            >           
             <HouseIcon  />
           </IconButton>
@@ -312,10 +318,25 @@ function PropertyRequest() {
             </Grid>
           
     </form>
-    <Dialog>
+    <Dialog 
+     open={openLandForm}
+      onClose={() => setOpenLandForm(false)}
+      aria-labelledby="alert-dialog-title"
+      aria-describedby="alert-dialog-description">
         <DialogContent>
-            
+            <LandForm/>
         </DialogContent>
+    </Dialog>
+    {/* for the Home Form */}
+    <Dialog
+       open={openHomeForm}
+       onClose={()=>setOpenHomeForm(false)}
+       aria-labelledby="alert-dialog-title"
+       aria-describedby="alert-dialog-description"
+    >
+      <DialogContent>
+         <HomeForm/>
+      </DialogContent>
     </Dialog>
     </Box>
     </Box>

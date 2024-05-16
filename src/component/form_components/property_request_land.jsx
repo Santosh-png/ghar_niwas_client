@@ -2,7 +2,8 @@ import React, { useState }  from "react";
 import HouseIcon from '@mui/icons-material/House';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import LandscapeIcon from '@mui/icons-material/Landscape';
-
+import ApartmentForm from './property_request_apartment'
+import HomeForm from './request_property'
 import {
   Box,
   Typography,
@@ -14,12 +15,26 @@ import {
   Button,
   Grid,
   IconButton,
+  Dialog,
+  DialogContent,
 } from "@mui/material";
 
 
 
 
 function PropertyRequest() {
+  const[OpenHomeForm,setOpenHomeForm]=useState(false);
+  const[openApartmentForm,setOpenApartmentForm]=useState(false);
+
+  const handleApartmentForm=(e)=>{
+    e.preventDefault();
+    setOpenApartmentForm(true);
+   
+  }
+  const handleHomeForm=(e)=>{
+    e.preventDefault();
+    setOpenHomeForm(true);
+  }
 
   return (
     <Box sx={{
@@ -47,11 +62,11 @@ function PropertyRequest() {
           
         </Box>
         <Box sx={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-          <IconButton 
+          <IconButton onClick={handleHomeForm}
            >           
             <HouseIcon  />
-          </IconButton>
-          <IconButton  
+          </IconButton >
+          <IconButton onClick={handleApartmentForm} 
             >
             <ApartmentIcon/>
           </IconButton>
@@ -338,6 +353,24 @@ function PropertyRequest() {
             </Grid>
           
     </form>
+    <Dialog
+      open={OpenHomeForm}
+      onClose={()=>setOpenHomeForm(false)}
+    >
+      <DialogContent>
+        <HomeForm/>
+
+      </DialogContent>
+    </Dialog>
+    <Dialog
+      open={openApartmentForm}
+      onClose={()=>setOpenHomeForm(false)}
+    >
+      <DialogContent>
+        <ApartmentForm/>
+
+      </DialogContent>
+    </Dialog>
     </Box>
     </Box>
   );
