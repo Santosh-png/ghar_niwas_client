@@ -12,6 +12,7 @@ import AboutSection from './AboutSection';
 import ClientFeedback from '../component/feedback/ClientFeedback.component';
 import ListSection from '../component/Listing/ListingSection';
 
+
 function LandingPage() {
   return (
     <div style={{ backgroundColor:'#FBAF1A'}}>
@@ -40,10 +41,8 @@ function LandingPage() {
       </div>
       <div style={{backgroundColor: 'white'}}>
       <Contact />
-      </div>
-      <div style={{backgroundColor: 'white' }}>
       <Footer />
-      </div>
+    </div>
     </div>
   );
 }
