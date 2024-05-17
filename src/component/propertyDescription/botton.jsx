@@ -7,8 +7,8 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 
 function ButtonShare() {
   return (
-    <div style={{display:'flex',justifyContent:'flex-end',border:'2px solid blue'}}>
-    <Stack direction="row" spacing={2} style={{border:'1px solid red'}}>   
+    <div style={{display:'flex',marginLeft:"77%",marginTop:'20px'}}>
+    <Stack direction="row" spacing={2} >   
       <Button variant="outlined" startIcon={<ShareIcon />}>
         Share
       </Button>

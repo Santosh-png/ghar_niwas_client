@@ -7,16 +7,17 @@ function PropertyDetail() {
   const [updateCount, setUpdateCount] = useState(0);
   let sliderRef = useRef(null);
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
+    arrows:true,
     slidesToScroll: 1,
     afterChange: () => setUpdateCount(updateCount + 1),
     beforeChange: (current, next) => setSlideIndex(next)
   };
   return (
-    <div className="slider-container">
+    <div className="slider-container" style={{backgroundColor:'blue'}}>
       <Slider
         ref={slider => {
           sliderRef = slider;

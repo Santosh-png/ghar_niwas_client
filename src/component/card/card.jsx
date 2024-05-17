@@ -6,17 +6,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea ,Box} from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-
-import PropertyDetail from '../propertyDescription/propertyDetail';
 function CommonCard({price, title, name,location, date,imageUrl}) {
-
-  // const [propertyDetail,setPropertyDetail]=useState(false);
-  // function handleDescription(e){
-  //   e.preventDefault();
-  //   setPropertyDetail(true);
-  // }
 
   return (
     <div style={{marginBottom:'1rem',display:"flex",alignItems:"center",justifyContent:"center"}}>

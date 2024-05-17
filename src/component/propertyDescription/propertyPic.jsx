@@ -5,9 +5,9 @@ import { CardActionArea } from '@mui/material';
 
 function PropertyCard({imageUrl}) {
   return (
-    <Card sx={{ maxWidth:'100%',margin:'0 35px'}}>
-      <CardActionArea>
-        <CardMedia
+    <Card sx={{margin:'0 15px'}}>
+      <CardActionArea sx={{display:"flex",justifyContent:"center"}}>
+        <CardMedia sx={{  height:{xs:"300px",md:"360px",lg:'480px'},width:{xs:"80%",md:"80%",lg:'100%'}}}
           component="img"
           height="400"
           
