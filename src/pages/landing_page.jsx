@@ -14,7 +14,7 @@ import ListSection from '../component/Listing/ListingSection';
 
 function LandingPage() {
   return (
-    <div style={{ backgroundColor:'#FBAF1A'}}>
+    <div className="gradient-background">
       <NavBar />
       <FirstSection />
       <div style={{ marginBottom:'20px',marginLeft:'25px', marginRight:'25px',backgroundColor: 'white' }}>
@@ -50,6 +50,9 @@ function LandingPage() {
 
 export default LandingPage;
 
+
+
+
 // import './backgroundcolor.css';
 // import FirstSection from '../component/cover_section/first_section';
 // import NavBar from '../component/navbar_component/navbar_component';
@@ -65,24 +68,36 @@ export default LandingPage;
 
 // function LandingPage() {
 //   return (
-//     <div style={{ backgroundColor: 'gray' }}>
+//     <div style={{ backgroundColor:' #57618A'}}>
 //       <NavBar />
 //       <FirstSection />
-//       <div style={{ padding: '20px', backgroundColor: 'white' }}>
+//       <div style={{ marginBottom:'20px',marginLeft:'25px', marginRight:'25px',backgroundColor: 'white' }}>
 //         <ListSection />
 //       </div>
-//       <div style={{ padding: '20px', backgroundColor: 'transparent' }}>
+//       <div style={{ marginBottom: '20px', marginLeft:'25px', marginRight:'25px', backgroundColor: 'white' }}>
 //         <PremiumSection />
 //       </div>
-//       <div style={{ padding: '20px', backgroundColor: 'transparent' }}>
+//       <div style={{ marginBottom: '20px', marginLeft:'25px', marginRight:'25px', backgroundColor: 'white' }}>
 //         <TopSection />
 //       </div>
+//       <div style={{ marginBottom: '20px', marginLeft:'25px', marginRight:'25px',  backgroundColor: 'white' }}>
 //       <FeaturedSection />
+//       </div>
+//       <div style={{ marginBottom: '20px', marginLeft:'25px', marginRight:'25px', backgroundColor: 'white' }}>
 //       <UploadedSection />
+//       </div>
+//       <div style={{ marginBottom: '20px', marginLeft:'25px', marginRight:'25px', backgroundColor: 'white' }}>
 //       <ClientFeedback />
+//       </div>
+//       <div style={{ marginBottom: '20px', marginLeft:'25px', marginRight:'25px', backgroundColor: 'white' }}>
 //       <AboutSection />
+//       </div>
+//       <div style={{backgroundColor: 'white'}}>
 //       <Contact />
+//       </div>
+//       <div style={{backgroundColor: 'white' }}>
 //       <Footer />
+//       </div>
 //     </div>
 //   );
 // }
