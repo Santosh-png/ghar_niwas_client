@@ -4,7 +4,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CardListServices from "./cardItems";
-import { BrowserRouter as Router } from 'react-router-dom';
 
 function PremiumList() {
   const settings = {
@@ -60,8 +59,6 @@ function PremiumList() {
     <Slider {...settings}>
     {CardListServices.map((item) => (
           <div key={item.id} className="top-card-wrapper">
-    <Router>
-
      <CommonCard 
         imageUrl={item.imageUrl}
         location={item.location}
@@ -70,8 +67,6 @@ function PremiumList() {
         name={item.name}
         date={item.date}
      />
-    </Router>
-
     </div>
   ))}
     </Slider>

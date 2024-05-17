@@ -1,20 +1,26 @@
-import * as React from 'react';
+import  {React,useState} from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea ,Box} from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import { useNavigate } from "react-router-dom";
 
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+
+import PropertyDetail from '../propertyDescription/propertyDetail';
 function CommonCard({price, title, name,location, date,imageUrl}) {
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("/propertyDetail");
-};
+
+  // const [propertyDetail,setPropertyDetail]=useState(false);
+  // function handleDescription(e){
+  //   e.preventDefault();
+  //   setPropertyDetail(true);
+  // }
+
   return (
     <div style={{marginBottom:'1rem',display:"flex",alignItems:"center",justifyContent:"center"}}>
-    <Card onClick={handleClick}>
+    <Card>
       <CardActionArea>
       <div style={{position:'relative'}}>
         <Box sx={{display:'flex', gap:'10px'}}>
@@ -66,6 +72,15 @@ function CommonCard({price, title, name,location, date,imageUrl}) {
         </CardContent>
       </CardActionArea>
     </Card>
+      {/* <Box sx={{width:"100%"}}>
+        <Tabs onClick={handleDescription} aria-label="basic tabs example">
+          <Tab>
+            <PropertyDetail/>
+          </Tab>
+        </Tabs>
+      </Box> */}
+    
+
     </div>
   );
 }
