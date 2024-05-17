@@ -19,28 +19,51 @@ function DetailForm() {
 
   return (
     <>
-      <Box sx={{ margin: '10px' }}>
-        <form style={{ padding: '20px', borderRadius: '20px' }}>
+      <Box sx={{ margin: '20px' }}>
+        <form style={{ borderRadius: '20px' }}>
 
           <Grid>
+            <FormControl 
+              size="small"
+              fullWidth
+              sx={{ maxWidth: { xs: "100%", md: "18rem" },margin:'10px 0px'}}>
+
+              <TextField 
+                size="small"
+                id="outlined-basic" 
+                label="Full Name" 
+                variant="outlined" 
+                sx={{ maxWidth: { xs: "1000%", md: "18rem" }}}
+                />
+                
+            </FormControl>
+          </Grid>
+          <Grid>
             <FormControl size="small"
               fullWidth
-              sx={{ maxWidth: { xs: "100%", md: "15rem" }, margin: '10px 0px' }}>
-              <TextField id="outlined-basic" label="Full Name" variant="outlined" />
+              sx={{ maxWidth: { xs: "100%", md: "18rem" }, margin: '10px 0px' }}>
+              <TextField 
+                  size="small"
+                  id="outlined-basic" 
+                  type="email" 
+                  label="Email Address" 
+                  variant="outlined" 
+                  sx={{ maxWidth: { xs: "100%", md: "19rem" }}}
+                />
             </FormControl>
           </Grid>
           <Grid>
             <FormControl size="small"
               fullWidth
               sx={{ maxWidth: { xs: "100%", md: "14rem" }, margin: '10px 0px' }}>
-              <TextField id="outlined-basic" type="email" label="Email Address" variant="outlined" />
-            </FormControl>
-          </Grid>
-          <Grid>
-            <FormControl size="small"
-              fullWidth
-              sx={{ maxWidth: { xs: "100%", md: "14rem" }, margin: '10px 0px' }}>
-              <TextField id="outlined-basic" label="Phone No" type="number" variant="outlined" />
+              <TextField 
+                size="small"
+                id="outlined-basic" 
+                label="Phone No" 
+                type="number" 
+                variant="outlined" 
+                sx={{ maxWidth: { xs: "1000%", md: "18rem" }}}
+                />
             </FormControl>
           </Grid>
           <Grid
@@ -50,7 +73,7 @@ function DetailForm() {
               display: "flex",
               justifyContent: "center",
             }}
-            // onClick={handleCloseNavMenu}
+            
           >
             <Button
               type="submit"

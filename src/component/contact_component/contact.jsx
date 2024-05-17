@@ -24,7 +24,7 @@ function Contact(){
         marginTop:'30px',
         textAlign:'center'
     }}>
-     <Box sx={{paddingLeft:'50px'}}>
+     <Box sx={{paddingLeft:'50px',marginTop:'20px'}}>
        
             <Typography   className='itemTitle'>
                <Typography className='responsive_fontsize26' variant="h3" sx={{fontWeight:'600'}}>
