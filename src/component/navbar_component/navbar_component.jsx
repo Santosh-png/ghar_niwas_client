@@ -44,9 +44,8 @@ const drawerWidth=250;
             >
          
           <img src={Logo} alt="img"  className='logo-pic' 
-            sx={{width:{xs:'100px',sm:'150px',md:'200px'}, 
-                height:{xs:'100px',sm:'150px',md:'200px'}
-                }} />
+            
+                 />
 
           
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -100,7 +99,7 @@ const drawerWidth=250;
       ) : (
         <MenuItem key={item} onClick={handleCloseNavMenu}>
           <Typography textAlign="center" className='itemList'>
-            <Typography className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', margin: '0px 10px', fontWeight: '600', textAlign: 'center' ,color:'primary.main'}}>
+            <Typography className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', margin: '0px 20px', fontWeight: '600', textAlign: 'center' ,color:'primary.main'}}>
               {item}
             </Typography>
           </Typography>
@@ -162,18 +161,18 @@ const drawerWidth=250;
 
           {/* desktop view  */}  
                   
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'},margin:'0 1px'}} >
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'},margin:'0 0px'}} >
           
           {itemList.map((item) => (
               item === "Request Property" ? (
-                <MenuItem key={item} onClick={handleOpenForm} sx={{ '&:hover': { backgroundColor: '#ffffff' } }}> 
+                <MenuItem key={item} onClick={handleOpenForm} sx={{padding:'0 30px', '&:hover': { backgroundColor: '#ffffff' } }}> 
                   <Typography className='responsive_fontsize18 itemList' 
-                    sx={{ fontFamily: 'Roboto Serif', margin: '0px 20px', fontWeight: '600', textAlign: 'center',color:'primary.main' }}>
+                    sx={{ fontFamily: 'Roboto Serif', margin: '0px 0px', fontWeight: '600', textAlign: 'center',color:'primary.main' }}>
                     {item}
                   </Typography>
                 </MenuItem>
       ) : (
-        <MenuItem key={item} onClick={handleCloseNavMenu} sx={{ '&:hover': { backgroundColor: '#ffffff' } }}>
+        <MenuItem key={item} onClick={handleCloseNavMenu} sx={{padding:'0 20px', '&:hover': { backgroundColor: '#ffffff' } }}>
           <Typography textAlign="center" className='itemList'>
             <Typography className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', margin: '0px 0px', fontWeight: '600', textAlign: 'center',color:'primary.main'}}>
               {item}
