@@ -2,8 +2,8 @@ import React, { useState }  from "react";
 import HouseIcon from '@mui/icons-material/House';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import LandscapeIcon from '@mui/icons-material/Landscape';
-import ApartmentForm from "./property_request_apartment"
 import LandForm from './property_request_land'
+import HomeForm from './request_property'
 import {
   Box,
   Typography,
@@ -16,26 +16,25 @@ import {
   Grid,
   IconButton,
   Dialog,
-  DialogContent
+  DialogContent,
 } from "@mui/material";
 
 
 
 
 function PropertyRequest() {
-  const[openApartmentForm,setOpenApartmentForm]=useState(false);
-  const[OpenLandForm,setOpenLandForm]=useState(false)
+    const [openLandForm,setOpenLandForm]=useState(false);
+    const[openHomeForm,setOpenHomeForm]=useState(false);
 
-  const handleApartmentForm=(e)=>{
-    e.preventDefault();
-    setOpenApartmentForm(true)
-   
-  }
- 
-  const handleLandForm=(e)=>{
-    e.preventDefault();
-    setOpenLandForm(true)
-  }
+    const handleLandForm=(e)=>{
+        e.preventDefault();
+        setOpenLandForm(true);
+
+    }
+    const handleHomeForm=(e)=>{
+       e.preventDefault();
+       setOpenHomeForm(true);
+    }
 
   return (
     <Box sx={{
@@ -63,12 +62,12 @@ function PropertyRequest() {
           
         </Box>
         <Box sx={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-          <IconButton sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A"
-                    
-                  }}>           
+          <IconButton onClick={handleHomeForm}
+           >           
             <HouseIcon  />
           </IconButton>
-          <IconButton onClick={handleApartmentForm}>
+          <IconButton  
+            sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A"}}>
             <ApartmentIcon/>
           </IconButton>
           <IconButton onClick={handleLandForm}>
@@ -163,8 +162,8 @@ function PropertyRequest() {
                   
 
                 >
-                  <MenuItem value="Commercial">commercial</MenuItem>
-                  <MenuItem value="Non Commercial">non commercial</MenuItem>               
+                  <MenuItem value="commercial">commercial</MenuItem>
+                  <MenuItem value="non commercial">non commercial</MenuItem>               
                 </Select>
              
                </FormControl>
@@ -320,25 +319,24 @@ function PropertyRequest() {
             </Grid>
           
     </form>
-    <Dialog
-      open={openApartmentForm}
-      onClose={() => setOpenApartmentForm(false)}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
-    >
-      <DialogContent>
-        <ApartmentForm/> {/* Render the form component */}
-      </DialogContent>
-    </Dialog>
-
-    <Dialog
-      open={OpenLandForm}
+    <Dialog 
+      open={openLandForm}
       onClose={() => setOpenLandForm(false)}
       aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
+      aria-describedby="alert-dialog-description">
+        <DialogContent>
+            <LandForm/>
+        </DialogContent>
+    </Dialog>
+    {/* for the Home Form */}
+    <Dialog
+       open={openHomeForm}
+       onClose={()=>setOpenHomeForm(false)}
+       aria-labelledby="alert-dialog-title"
+       aria-describedby="alert-dialog-description"
     >
       <DialogContent>
-        <LandForm/> {/* Render the form component */}
+         <HomeForm/>
       </DialogContent>
     </Dialog>
     </Box>
