@@ -98,6 +98,7 @@ function PropertyRequest() {
                     size="small"
                     id="outlined-required"
                     label="provinces"
+                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
                     // defaultValue="Hello World"
                  />
                   <TextField
@@ -105,6 +106,7 @@ function PropertyRequest() {
                     size="small"
                     id="outlined-required"
                     label="zone"
+                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
                     // defaultValue="Hello World"
                  />
                   <TextField
@@ -112,6 +114,7 @@ function PropertyRequest() {
                     size="small"
                     id="outlined-required"
                     label="District"
+                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
                     // defaultValue="Hello World"
                  />
                   <TextField
@@ -119,6 +122,7 @@ function PropertyRequest() {
                     size="small"
                     id="outlined-required"
                     label="Municipality"
+                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
                     // defaultValue="Hello World"
                  />
                   <TextField
@@ -126,6 +130,7 @@ function PropertyRequest() {
                     // required
                     id="outlined-required"
                     label="Ward"
+                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
                     // defaultValue="Hello World"
                  />
                   <TextField
@@ -133,7 +138,7 @@ function PropertyRequest() {
                     size="small"
                     id="outlined-required"
                     label="Landmark"
-                    
+                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
                     // defaultValue="Hello World"
                  />
 
@@ -267,20 +272,21 @@ function PropertyRequest() {
 
             </FormControl>
             </Grid>
-           
-            <Grid item xs={12} md={6} sx={{display:'flex',margin:'20px'}}>   
+
             <InputLabel>Price Range</InputLabel>
+            <Grid item xs={12} md={6} sx={{display:'flex',textAlign:'center' ,alignItems:'center',justifyContent:'center',margin:'20px'}}>   
+            
                 <TextField 
                   id="standard-basic" 
                   size="small" 
-                  sx={{ maxWidth: { xs: "100%", md: "7rem" },marginLeft:'10px'}}
+                  sx={{ maxWidth: { xs: "40%", md: "7rem" },margin:'0 10px'}}
                   variant="standard" />
                 <InputLabel>To</InputLabel>
                 <TextField 
                   id="standard-basic" 
                   size="small" 
                   variant="standard"
-                  sx={{ maxWidth: { xs: "100%", md: "7rem" },marginLeft:'10px'}} />
+                  sx={{ maxWidth: { xs: "40%", md: "7rem" },margin:'0 10px'}} />
 
             </Grid>
             <Grid item xs={12} md={6}>

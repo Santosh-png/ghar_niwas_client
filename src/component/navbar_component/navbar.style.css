@@ -4,14 +4,9 @@
     border: 1px solid red;
   
 }
-.logo-pic{
-    /* border: 2px solid black; */
-    /* margin: 0 10px; */
-}
 
 .itemList{
     position: relative;
-    background-color: #ffffff;
 }
 
 .itemList::after{

@@ -162,18 +162,18 @@ const drawerWidth=250;
 
           {/* desktop view  */}  
                   
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'},margin:'0 10px' ,gap:'5px',backgroundColor:'#ffffff'}} >
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'},margin:'0 1px'}} >
           
           {itemList.map((item) => (
               item === "Request Property" ? (
-                <MenuItem key={item} onClick={handleOpenForm}> 
+                <MenuItem key={item} onClick={handleOpenForm} sx={{ '&:hover': { backgroundColor: '#ffffff' } }}> 
                   <Typography className='responsive_fontsize18 itemList' 
                     sx={{ fontFamily: 'Roboto Serif', margin: '0px 20px', fontWeight: '600', textAlign: 'center',color:'primary.main' }}>
                     {item}
                   </Typography>
                 </MenuItem>
       ) : (
-        <MenuItem key={item} onClick={handleCloseNavMenu}>
+        <MenuItem key={item} onClick={handleCloseNavMenu} sx={{ '&:hover': { backgroundColor: '#ffffff' } }}>
           <Typography textAlign="center" className='itemList'>
             <Typography className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', margin: '0px 0px', fontWeight: '600', textAlign: 'center',color:'primary.main'}}>
               {item}
