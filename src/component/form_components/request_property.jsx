@@ -3,6 +3,7 @@ import HouseIcon from '@mui/icons-material/House';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import LandscapeIcon from '@mui/icons-material/Landscape';
 import ApartmentForm from "./property_request_apartment"
+import LandForm from './property_request_land'
 import {
   Box,
   Typography,
@@ -22,11 +23,18 @@ import {
 
 
 function PropertyRequest() {
-  const[openApartmentForm,setOpenApartmentForm]=useState(false)
+  const[openApartmentForm,setOpenApartmentForm]=useState(false);
+  const[OpenLandForm,setOpenLandForm]=useState(false)
 
   const handleApartmentForm=(e)=>{
     e.preventDefault();
     setOpenApartmentForm(true)
+   
+  }
+ 
+  const handleLandForm=(e)=>{
+    e.preventDefault();
+    setOpenLandForm(true)
   }
 
   return (
@@ -63,7 +71,7 @@ function PropertyRequest() {
           <IconButton onClick={handleApartmentForm}>
             <ApartmentIcon/>
           </IconButton>
-          <IconButton>
+          <IconButton onClick={handleLandForm}>
             <LandscapeIcon/>
           </IconButton>
   
@@ -91,6 +99,7 @@ function PropertyRequest() {
                     size="small"
                     id="outlined-required"
                     label="provinces"
+                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
                     // defaultValue="Hello World"
                  />
                   <TextField
@@ -98,6 +107,7 @@ function PropertyRequest() {
                     size="small"
                     id="outlined-required"
                     label="zone"
+                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
                     // defaultValue="Hello World"
                  />
                   <TextField
@@ -105,6 +115,7 @@ function PropertyRequest() {
                     size="small"
                     id="outlined-required"
                     label="District"
+                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
                     // defaultValue="Hello World"
                  />
                   <TextField
@@ -112,6 +123,7 @@ function PropertyRequest() {
                     size="small"
                     id="outlined-required"
                     label="Municipality"
+                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
                     // defaultValue="Hello World"
                  />
                   <TextField
@@ -119,6 +131,7 @@ function PropertyRequest() {
                     // required
                     id="outlined-required"
                     label="Ward"
+                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
                     // defaultValue="Hello World"
                  />
                   <TextField
@@ -126,7 +139,7 @@ function PropertyRequest() {
                     size="small"
                     id="outlined-required"
                     label="Landmark"
-                    
+                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
                     // defaultValue="Hello World"
                  />
 
@@ -155,8 +168,8 @@ function PropertyRequest() {
                   
 
                 >
-                  <MenuItem value="">commercial</MenuItem>
-                  <MenuItem value="">non commercial</MenuItem>               
+                  <MenuItem value="Commercial">commercial</MenuItem>
+                  <MenuItem value="Non Commercial">non commercial</MenuItem>               
                 </Select>
              
                </FormControl>
@@ -197,10 +210,10 @@ function PropertyRequest() {
                label="Facing"
                   // onChange={handleChange}
                 >
-                  <MenuItem value="">North</MenuItem>
-                  <MenuItem value="">South</MenuItem>
-                  <MenuItem value="">East</MenuItem>
-                  <MenuItem value="">West</MenuItem>
+                  <MenuItem value="North">North</MenuItem>
+                  <MenuItem value="South">South</MenuItem>
+                  <MenuItem value="East">East</MenuItem>
+                  <MenuItem value="West">West</MenuItem>
                  
                   
                 </Select>
@@ -226,8 +239,8 @@ function PropertyRequest() {
                   label="Furnishing"
                   type="text"
                 >
-                  <MenuItem value="">Non</MenuItem>
-                  <MenuItem value="">Full</MenuItem>                  
+                  <MenuItem value="Non">Non</MenuItem>
+                  <MenuItem value="Full">Full</MenuItem>                  
                 </Select>
               </FormControl>
            
@@ -253,27 +266,27 @@ function PropertyRequest() {
                   label="Urgency"
                   type="text"
                 >
-                  <MenuItem value="">Very Urgent</MenuItem>
-                  <MenuItem value="">not Urgent</MenuItem>
+                  <MenuItem value="Very Urgent">Very Urgent</MenuItem>
+                  <MenuItem value="not Urgent">not Urgent</MenuItem>
                                                     
                 </Select>
 
             </FormControl>
             </Grid>
-           
-            <Grid item xs={12} md={6} sx={{display:'flex',margin:'20px'}}>   
             <InputLabel>Price Range</InputLabel>
+            <Grid item xs={12} md={6} sx={{display:'flex', textAlign:'center' ,alignItems:'center',justifyContent:'center',margin:'20px'}}>   
+            
                 <TextField 
                   id="standard-basic" 
                   size="small" 
-                  sx={{ maxWidth: { xs: "100%", md: "7rem" }}}
+                  sx={{ maxWidth: { xs: "40%", md: "7rem" },margin:'0 10px'}}
                   variant="standard" />
                 <InputLabel>To</InputLabel>
                 <TextField 
                   id="standard-basic" 
                   size="small" 
                   variant="standard"
-                  sx={{ maxWidth: { xs: "100%", md: "7rem" }}} />
+                  sx={{ maxWidth: { xs: "40%", md: "7rem" },margin:'0 10px'}} />
 
             </Grid>
             <Grid item xs={12} md={6}>
@@ -320,6 +333,17 @@ function PropertyRequest() {
     >
       <DialogContent>
         <ApartmentForm/> {/* Render the form component */}
+      </DialogContent>
+    </Dialog>
+
+    <Dialog
+      open={OpenLandForm}
+      onClose={() => setOpenLandForm(false)}
+      aria-labelledby="alert-dialog-title"
+      aria-describedby="alert-dialog-description"
+    >
+      <DialogContent>
+        <LandForm/> {/* Render the form component */}
       </DialogContent>
     </Dialog>
     </Box>

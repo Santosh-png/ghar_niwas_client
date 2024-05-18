@@ -5,7 +5,7 @@ import { CardActionArea } from '@mui/material';
 import {Box} from '@mui/material';
 function PropertyCard({imageUrl}) {
   return (
-    <Card sx={{backgroundColor:"red",display:"flex",justifyContent:"center"}} >
+    <Card sx={{display:"flex",justifyContent:"center"}} >
       <CardActionArea>
         <CardMedia
           component="img"

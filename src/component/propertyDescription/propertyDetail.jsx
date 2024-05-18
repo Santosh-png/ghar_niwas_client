@@ -1,5 +1,6 @@
 import { Typography } from "@mui/material";
 import PropertyPicList from './propertyPicList';
+import SearchBar from './searchBar';
 import CardService from '../card/cardServices';
 import {Box} from '@mui/material';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
@@ -16,6 +17,7 @@ function PropertyDetail(){
     return(
         // main div
         <div>
+            <SearchBar/>
             <Typography className="responsive_fontsize32" sx={{textAlign:"center",margin:'0px',fontWeight:'600',color:'primary.main'}}>$12000 House for Sale in Lalitpur</Typography>
             <div>
                 <div style={{display:"grid",justifyContent:"end",marginRight:{xs:'30px',md:'50px'}}}>

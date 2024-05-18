@@ -24,7 +24,7 @@ function Contact(){
         marginTop:'30px',
         textAlign:'center'
     }}>
-     <Box sx={{paddingLeft:'50px'}}>
+     <Box sx={{paddingLeft:'50px',marginTop:'20px'}}>
        
             <Typography   className='itemTitle'>
                <Typography className='responsive_fontsize26' variant="h3" sx={{fontWeight:'600'}}>
@@ -78,7 +78,7 @@ function Contact(){
 
         <Divider orientation="vertical" variant="middle"  flexItem sx={{margin:'20px 20px 200px 20px', backgroundColor:'accent.black',display:{xs:'none',md:'flex'}}}/>
        
-        <Box sx={{paddingLeft:'50px'}} >
+        <Box sx={{paddingLeft:'50px',marginTop:'20px'}} >
             
             <Typography  className='itemTitle'>
                <Typography variant="h3" sx={{fontWeight:'600'}} className='responsive_fontsize26' >
@@ -100,7 +100,7 @@ function Contact(){
             sx={{margin:'15px 0px 200px 0px', backgroundColor:'accent.black',display:{xs:'none',md:'flex'}}}/>
 
 
-        <Box sx={{padding:'0 50px',overflow:'hidden'}}>
+        <Box sx={{padding:'0 50px',overflow:'hidden',marginTop:'20px'}}>
             
             <Typography  className='itemTitle '>
             <Typography variant="h3" sx={{fontWeight:'600'}} className='responsive_fontsize26'>
