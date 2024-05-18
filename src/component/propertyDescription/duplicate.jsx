@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import { Box } from '@mui/material'
 import PropertyList from '../card/cardItems';
 import Pic from './propertyPic';
+import SearchBar from './searchBar';
+// import SearchIcon from '@mui/icons-material/Search';
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -11,8 +13,8 @@ function SampleNextArrow(props) {
         className={'slick-next'}
         style={{
           ...style,
-          backgroundColor: "#743d72",
-          display: "flex",
+          // style for arrow in right
+          backgroundColor:"#743d72",   
           flexDirection: "column",
           justifyContent: "center",
           alignItems:"center",
@@ -30,7 +32,7 @@ function SampleNextArrow(props) {
       <div
         className={className}
         style={{ ...style, 
-          
+          // style for arrow in left
           backgroundColor: "#743d72",
           display: "flex",
           flexDirection: "column",
@@ -85,7 +87,9 @@ function Duplicate() {
           ]
     };
   return (
-    <Box className="center-carousel" sx={{padding:'10px 30px',justifyContent:"center"}}>
+    <Box className="center-carousel" sx={{padding:'10px 50px',
+    justifyContent:"center"}}>
+      <SearchBar/>
       <Slider {...settings}>
       {PropertyList.map((item)=>(
               <div key={item.id}>
@@ -95,6 +99,7 @@ function Duplicate() {
               </div>
           ))}
       </Slider>
+      
     </Box>
   );
 }
