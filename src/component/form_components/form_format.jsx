@@ -6,26 +6,8 @@ function FormFormat() {
   return (
     <div>
       <Box>
-    <Box
-        sx={{
-            Padding: "2rem"
-        }}
-    >
-        <Typography variant='h2' 
-            fontWeight='bold'
-            textAlign='center'
-            color='primary.main'
-            className='responsive_fontsize26'
-            sx={{
-                backgroundColor:"white",
-            }}
-        >
-            Add Your Property
-        </Typography>
-    </Box>
-
-    <IconComponents/>
-    </Box>
+        <IconComponents/>
+      </Box>
     </div>
   )
 }
