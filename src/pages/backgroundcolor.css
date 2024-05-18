@@ -1,62 +1,11 @@
-/* .header {
-    background-color: linear-gradient(#082D83);
-    /* color: #fff;
-    padding: 20px;
-    text-align: center; */
-    
-/* } */
 
-/* .grad {
-    background-image: linear-gradient(red, yellow);
-  } */
-  /* .firstsection {
-    background-color:#D59B28;
-    background-image: linear-gradient(orange,yellow,) ;
-  } */ 
-
-/*  
-  import LinearGradient from 'react-native-linear-gradient';
-
-// Within your render function
-<LinearGradient colors={['#4c669f', '#3b5998', '#192f6a']} style={styles.linearGradient}>
-  <Text style={styles.buttonText}>
-    Sign in with Facebook
-  </Text>
-</LinearGradient> */
-
-/* import React from 'react';
-import { View, StyleSheet } from 'react-native';
-const App = () => {
-  return (
-    <View style={styles.container}>
-      <View style={styles.gradient} />
-    </View>
-  );
-};
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  gradient: {
-    flex: 1,
-    width: '100%',
-    backgroundImage: 'linear-gradient(45deg, #ff0000, #0000ff)',
-  },
-});
-export default App; */
-
-
-
-
-/* .red-background {
-  background-color:#D5AF2B;
-  height: auto;
-  width: 100%;
+.gradient-background {
+  /* Linear gradient */
+  background: linear-gradient(to right, #57618A, #C77F05);
+  /* For webkit (Safari, Chrome) */
+  background: -webkit-linear-gradient(to right, #57618A, #C77F05);
+  /* For Firefox */
+  background: -moz-linear-gradient(to right, #57618A, #C77F05);
+  /* For Opera */
+  background: -o-linear-gradient(to right, #57618A, #C77F05);
 }
-
-.transparent-background {
-  background-color: transparent;
-  padding: '20px';
-} */
