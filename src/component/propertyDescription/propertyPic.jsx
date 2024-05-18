@@ -2,17 +2,17 @@ import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
-
+import {Box} from '@mui/material';
 function PropertyCard({imageUrl}) {
   return (
-    <Card sx={{margin:'0 15px'}}>
-      <CardActionArea sx={{display:"flex",justifyContent:"center"}}>
-        <CardMedia sx={{  height:{xs:"300px",md:"360px",lg:'480px'},width:{xs:"80%",md:"80%",lg:'100%'}}}
+    <Card sx={{backgroundColor:"red",display:"flex",justifyContent:"center"}} >
+      <CardActionArea>
+        <CardMedia
           component="img"
           height="400"
-          
           image={imageUrl}
           alt="Property Image"
+          sx={{height:{xs:'250px',sm:'300px',md:'350px',lg:'400px'}}}
         />
       </CardActionArea>
     </Card>

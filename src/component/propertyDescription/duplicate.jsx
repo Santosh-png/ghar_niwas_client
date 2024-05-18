@@ -85,7 +85,7 @@ function Duplicate() {
           ]
     };
   return (
-    <Box className="center-carousel" sx={{padding:'50px'}}>
+    <Box className="center-carousel" sx={{padding:'10px 30px',justifyContent:"center"}}>
       <Slider {...settings}>
       {PropertyList.map((item)=>(
               <div key={item.id}>

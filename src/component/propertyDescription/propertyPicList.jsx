@@ -17,7 +17,7 @@ function PropertyDetail() {
     beforeChange: (current, next) => setSlideIndex(next)
   };
   return (
-    <div className="slider-container" style={{backgroundColor:'blue'}}>
+    <div className="slider-container">
       <Slider
         ref={slider => {
           sliderRef = slider;
