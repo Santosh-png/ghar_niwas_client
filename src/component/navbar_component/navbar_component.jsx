@@ -10,13 +10,12 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import './navbar.style.css'
 import DetailForm from '../form_components/detail_form';
-import PropoertyRequest from '../form_components/request_property'
+
 const itemList = ['Home', 'Add Property', 'Sale','Rent','Request Property'];
 
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
- 
   const [opendetailDialog, setOpendetailDialog] = useState(false)
 
   
@@ -35,18 +34,18 @@ function NavBar() {
  
  
 const drawerWidth=250;
+
   return (
     <AppBar position="static"  sx={{background:'#FFFFFF'}}>
       <Container maxWidth="xl" >
         <Toolbar disableGutters  
-        className="apply-maxwidth"
-         sx={{
-          width:"auto", display: "flex", justifyContent: 'flex-end'}}>
+                sx={{
+                width:"auto", display: "flex", justifyContent: 'flex-end',backgroundColor:'#ffffff'}}
+            >
          
           <img src={Logo} alt="img"  className='logo-pic' 
-            sx={{width:{xs:'190px',sm:'200px',md:'250px'}, 
-                height:{xs:'190px',sm:'200px',md:'250px'} ,
-                }} />
+            
+                 />
 
           
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -90,9 +89,10 @@ const drawerWidth=250;
             >
               {itemList.map((item) => (
               item === "Request Property" ? (
-                <MenuItem key={item} onClick={handleOpenForm}> 
-                  <Typography                 className='responsive_fontsize18' 
-                    sx={{ fontFamily: 'Roboto Serif', margin: '0px    20px', fontWeight: '600', textAlign: 'center',color:'primary.main' }}>
+                <MenuItem key={item} onClick={handleOpenForm} > 
+                
+                  <Typography className='responsive_fontsize18' 
+                    sx={{ fontFamily: 'Roboto Serif', margin: '0px 20px', fontWeight: '600', textAlign: 'center',color:'primary.main'}}>                
                     {item}
                   </Typography>
                 </MenuItem>
@@ -161,20 +161,20 @@ const drawerWidth=250;
 
           {/* desktop view  */}  
                   
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'} }} >
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'},margin:'0 0px'}} >
           
           {itemList.map((item) => (
               item === "Request Property" ? (
-                <MenuItem key={item} onClick={handleOpenForm}> 
-                  <Typography                 className='responsive_fontsize18' 
-                    sx={{ fontFamily: 'Roboto Serif', margin: '0px    20px', fontWeight: '600', textAlign: 'center',color:'primary.main' }}>
+                <MenuItem key={item} onClick={handleOpenForm} sx={{padding:'0 30px', '&:hover': { backgroundColor: '#ffffff' } }}> 
+                  <Typography className='responsive_fontsize18 itemList' 
+                    sx={{ fontFamily: 'Roboto Serif', margin: '0px 0px', fontWeight: '600', textAlign: 'center',color:'primary.main' }}>
                     {item}
                   </Typography>
                 </MenuItem>
       ) : (
-        <MenuItem key={item} onClick={handleCloseNavMenu}>
+        <MenuItem key={item} onClick={handleCloseNavMenu} sx={{padding:'0 20px', '&:hover': { backgroundColor: '#ffffff' } }}>
           <Typography textAlign="center" className='itemList'>
-            <Typography className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', margin: '0px 20px', fontWeight: '600', textAlign: 'center' ,color:'primary.main'}}>
+            <Typography className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', margin: '0px 0px', fontWeight: '600', textAlign: 'center',color:'primary.main'}}>
               {item}
             </Typography>
           </Typography>

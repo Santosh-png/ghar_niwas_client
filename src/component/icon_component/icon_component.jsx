@@ -27,13 +27,13 @@ function IconComponents() {
             sx={{
                 display :"flex",
                 flexDirection: "column",
-                gap: "2rem",
-                backgroundColor: "secondary.main",
-                p: "2rem"
+                gap: "0.5rem",
+                p: "2rem 2rem 0.5rem 2rem",
+                borderBottomColor: ' 1px solid black'
             }}
         >
 
-            <Typography variant='h2'
+            <Typography variant='h3'
                 className='responsive_fontsize64'
                 sx={{
                     color:'primary.main',
@@ -43,12 +43,14 @@ function IconComponents() {
             >
                     Add Your Property
             </Typography>
+
+            {/* icons */}
             <Box sx={{
                 display: {
                     sm: 'flex', xs: 'column'
                 },
                 padding: "1rem",
-                gap: "3rem",
+                gap: "1.5rem",
                 alignItems : 'center',
                 justifyContent: "center"
             }}> 
@@ -64,7 +66,7 @@ function IconComponents() {
                     sx={{
                         height: {xs: "35px", md: "60px", lg: "70px"},
                         width: {xs: "40px", md: "60px", lg: "80px"},
-                        color: "primary.main",
+                        color: "secondary.main",
                         }}/>
                     {/* <ButtonComponent className='responsive_fontsize24' */}
                       <Button onClick={clickAddOpen}
@@ -96,12 +98,22 @@ function IconComponents() {
                     justifyContent: "center",
                     alignItems: 'center'
                 }}>
-                    <ApartmentIcon sx={{
-                        height: {xs: "40px", md: "60px", lg: "80px"},
+                    <ApartmentIcon 
+                       sx={{
+                        height: {xs: "35px", md: "60px", lg: "70px"},
                         width: {xs: "40px", md: "60px", lg: "80px"},
-                        color: "primary.main"
-                        }}/>
-                    <ButtonComponent  className='responsive_fontsize24 button'>APARTMENT</ButtonComponent>
+                        color: "secondary.main",
+                        }} 
+                    />
+                    <Button
+                        sx={{
+                            display: "flex",
+                            justifyContent :"center",
+                            alignItems: 'center'
+                        }}
+                    >
+                        <ButtonComponent  className='responsive_fontsize20'>APARTMENT</ButtonComponent>
+                    </Button>
                 </Box>
                 
                 {/* land */}
@@ -111,12 +123,13 @@ function IconComponents() {
                     justifyContent: "center",
                     alignItems: 'center'
                 }}>
-                    <LandscapeIcon sx={{
-                        height: {xs: "40px", md: "60px", lg: "80px"},
+                    <LandscapeIcon 
+                    sx={{
+                        height: {xs: "35px", md: "60px", lg: "70px"},
                         width: {xs: "40px", md: "60px", lg: "80px"},
-                        color: "primary.main"
+                        color: "secondary.main",
                     }}/>
-                    <ButtonComponent className='responsive_fontsize24 button'>LAND</ButtonComponent>
+                    <ButtonComponent className='responsive_fontsize20 button'>LAND</ButtonComponent>
                 </Box>
                 </Box>
         </Box>

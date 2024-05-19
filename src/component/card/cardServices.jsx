@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CardListServices from "./cardItems";
+
 function PremiumList() {
   const settings = {
     dots: true,
@@ -69,9 +70,7 @@ function PremiumList() {
     </div>
   ))}
     </Slider>
-  </div>
-  
+  </div> 
  )
 }
-
 export default PremiumList;
