@@ -42,11 +42,9 @@ const drawerWidth=250;
                 sx={{
                 width:"auto", display: "flex", justifyContent: 'flex-end',backgroundColor:'#ffffff'}}
             >
-         
-          <img src={Logo} alt="img"  className='logo-pic' 
-            
-                 />
-
+         <Typography sx={{height:{xs:'90px',md:'100px'},width:{xs:'100px',md:'130px'}}}>
+          <img src={Logo} alt="img" height="auto" width="auto" className='logo-pic' />
+          </Typography>
           
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -161,20 +159,20 @@ const drawerWidth=250;
 
           {/* desktop view  */}  
                   
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'},margin:'0 0px'}} >
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex'}}} >
           
           {itemList.map((item) => (
               item === "Request Property" ? (
-                <MenuItem key={item} onClick={handleOpenForm} sx={{padding:'0 30px', '&:hover': { backgroundColor: '#ffffff' } }}> 
+                <MenuItem key={item} onClick={handleOpenForm} sx={{padding:'0 0px', '&:hover': { backgroundColor: '#ffffff' } }}> 
                   <Typography className='responsive_fontsize18 itemList' 
-                    sx={{ fontFamily: 'Roboto Serif', margin: '0px 0px', fontWeight: '600', textAlign: 'center',color:'primary.main' }}>
+                    sx={{ fontFamily: 'Roboto Serif',fontWeight: '600',margin:'0 10px', textAlign: 'center',color:"primary.main" }}>
                     {item}
                   </Typography>
                 </MenuItem>
       ) : (
-        <MenuItem key={item} onClick={handleCloseNavMenu} sx={{padding:'0 20px', '&:hover': { backgroundColor: '#ffffff' } }}>
+        <MenuItem key={item} onClick={handleCloseNavMenu} sx={{padding:'0 10px', '&:hover': { backgroundColor: '#ffffff' } }}>
           <Typography textAlign="center" className='itemList'>
-            <Typography className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', margin: '0px 0px', fontWeight: '600', textAlign: 'center',color:'primary.main'}}>
+            <Typography className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', fontWeight: '600',margin:'0 10px ', textAlign: 'center',color:"primary.main"}}>
               {item}
             </Typography>
           </Typography>
