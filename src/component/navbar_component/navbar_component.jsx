@@ -165,7 +165,7 @@ const drawerWidth=250;
               item === "Request Property" ? (
                 <MenuItem key={item} onClick={handleOpenForm} sx={{padding:'0 10px', 
                 marginLeft:'25px','&:hover': { backgroundColor: '#ffffff' } }}> 
-                  <Typography className='responsive_fontsize18 itemList' 
+                  <Typography className='responsive_fontsize24 itemList' 
                     sx={{ fontFamily: 'Roboto Serif',fontWeight: '600', textAlign: 'center',color:"primary.main" }}>
                     {item}
                   </Typography>
@@ -173,7 +173,7 @@ const drawerWidth=250;
       ) : (
         <MenuItem key={item} onClick={handleCloseNavMenu} sx={{padding:'0 9px', marginLeft:'25px','&:hover': { backgroundColor: '#ffffff' } }}>
           <Typography textAlign="center" className='itemList'>
-            <Typography className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', fontWeight: '600', textAlign: 'center',color:"primary.main"}}>
+            <Typography className='responsive_fontsize24' sx={{ fontFamily: 'Roboto Serif', fontWeight: '600', textAlign: 'center',color:"primary.main"}}>
               {item}
             </Typography>
           </Typography>
