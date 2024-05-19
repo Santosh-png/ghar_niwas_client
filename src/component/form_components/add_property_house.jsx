@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Typography,Box, Grid, TextField, Button,} from '@mui/material';
+import { Typography,Box, Grid, TextField, Button, IconButton,} from '@mui/material';
 import IconComponents from '../icon_component/icon_component';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -7,6 +7,16 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import ButtonComponent from '../button_components/button';
+import FormatBoldIcon from '@mui/icons-material/FormatBold';
+import FormatItalicIcon from '@mui/icons-material/FormatItalic';
+import Divider from '@mui/material/Divider';
+import Input from '@mui/material/Input';
+import InputLabel from '@mui/material/InputLabel';
+import InputAdornment from '@mui/material/InputAdornment';
+import VideoCallIcon from '@mui/icons-material/VideoCall';
+import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
+import VerticalDivider from '../ui/divider';
+import { Height } from '@mui/icons-material';
 
 function AddPropertyHome() {
 
@@ -63,7 +73,7 @@ function AddPropertyHome() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            padding: "2rem 2rem"
+            padding: "2rem 1rem"
 
         }}>
 
@@ -449,8 +459,7 @@ function AddPropertyHome() {
         </Box>
 
         {/* description box */}
-        <Box
-        >
+        <Box>
           <Typography variant='h4'
               className='responsive_fontsize24'
               fontWeight='bold'
@@ -467,16 +476,140 @@ function AddPropertyHome() {
                 fullWidth
               >
 
-                  <TextField
-                    fullWidth
-                    size='small'
-                    id='outlined-required'
-                    label='If any more details'
-                  />
+            <TextField
+              id="outlined-multiline-static"
+              label="Description"
+              multiline
+              rows={4}
+              defaultValue="Write any additional information."
+            /> 
                 </FormControl>
             </Grid>
         </Box>
-          <ButtonComponent >Submit</ButtonComponent>
+
+
+         {/* file upload gallery and map */}
+         <Box sx={{
+          display: {xs: "Column",sm: 'flex', md: "flex", lg: "flex"}
+         }}
+         
+         >
+          {/* gallery */}
+          <Box sx={{mb: "1rem"}}>
+            <Typography variant='h6'
+                className='responsive_fontsize20'
+                fontWeight='bold'
+                marginBottom='12px'
+                sx={{
+                  opacity: "70%"
+                }}
+              >
+                  Gallery
+              </Typography>
+              <Grid item xs={12} md={6} lg={3}>
+                <FormControl
+                  size="small"
+                  fullWidth>
+                  <Box
+                  sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
+                  gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
+                    }}
+                  >
+                  <Box sx={{
+                    display: 'flex',
+                    justifyContent: "center",
+                    padding: "0.5rem",
+                    ml: "0.5rem",
+                    border: "1px solid black",
+                    borderRadius: "5px",
+                    opacity: "70%"
+                  }}
+                  > 
+                        <Button component="label"
+                          >
+                            <AddToPhotosIcon className='gallery'
+                              sx={{
+                                height: "60px",
+                                width: "60px",
+                                mr: '0.8rem'
+                              }}
+                            />
+                            <input
+                              type="file"
+                              hidden
+                            />
+                        </Button>
+                        
+                      <VerticalDivider/>
+
+                      <Button component="label">
+                            <VideoCallIcon className='gallery' sx={{
+                                height: "60px",
+                                width: "60px"
+                              }}/>
+                            <input
+                              type="file"
+                              hidden
+                            />
+                        </Button>
+                    </Box>
+                  </Box>
+                  </FormControl>      
+              </Grid>
+          </Box>
+
+          {/* map */}
+          <Box
+          >
+          <Typography variant='h6'
+              className='responsive_fontsize20'
+              fontWeight='bold'
+              marginBottom='12px'
+              sx={{
+                opacity: "70%"
+              }}
+            >
+                Map
+            </Typography>
+            <Grid item xs={12} md={6} lg={3}>
+              <FormControl
+                size="small"
+                fullWidth>
+                <Box
+                 sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
+                 gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
+                  }}
+                >
+                <Box sx={{
+                  display: 'flex',
+                  border: "1px solid black",
+                  borderRadius: "5px",
+                  opacity: "70%",
+                  height:"auto",
+                  width: "auto"
+                }}
+                >
+                    {/* <Button component="label"> */}
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28271.991916311705!2d85.29495851139528!3d27.655502971182738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb177f078f1cd9%3A0xb514415c5a76afb3!2sKusunti%2C%20Lalitpur%2044700!5e0!3m2!1sen!2snp!4v1715060575540!5m2!1sen!2snp" 
+                            // width="100%"
+                            // height="200" 
+                            style={{ border: "0" }} 
+                            allowFullScreen="" 
+                            loading="lazy" 
+                            referrerPolicy="no-referrer-when-downgrade"></iframe>
+                      {/* </Button> */}
+                  </Box>
+                </Box>
+                </FormControl>      
+            </Grid>
+        </Box>
+         </Box>
+          <Box sx={{
+            display: "flex",
+            justifyContent: "center"
+          }}>
+          <ButtonComponent >Add Property</ButtonComponent>
+          </Box>
       </Box>
     </div>
   )

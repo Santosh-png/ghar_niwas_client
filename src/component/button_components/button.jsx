@@ -5,6 +5,7 @@ function ButtonComponent({ children, ...props }) {
   return (
     <div>
         <Button variant="contained" 
+        className='responsive_fontsize20'
                 sx={{
                     backgroundColor: "primary.main",
                     color: "white",

@@ -129,7 +129,7 @@ function IconComponents() {
                         width: {xs: "40px", md: "60px", lg: "80px"},
                         color: "secondary.main",
                     }}/>
-                    <ButtonComponent className='responsive_fontsize20 button'>LAND</ButtonComponent>
+                    <ButtonComponent className='responsive_fontsize20'>LAND</ButtonComponent>
                 </Box>
                 </Box>
         </Box>
