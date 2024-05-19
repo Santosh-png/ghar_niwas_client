@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import "../../theme.js"
-import "../../global.css"
+// import "../../theme.js"
+// import "../../global.css"
 
 const AdminLoginForm = () => {
     const [username, setUsername] = useState('');

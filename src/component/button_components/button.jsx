@@ -10,7 +10,7 @@ function ButtonComponent({ children, ...props }) {
                     color: "white",
                     minWidth: 150,
                     fontFamily: 'Roboto Serif',
-                    mt: "2rem"
+                    // mt: "2rem"
                 }}
             >
                       {children}
