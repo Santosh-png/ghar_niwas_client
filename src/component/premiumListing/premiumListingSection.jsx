@@ -7,7 +7,7 @@ import PremiumList from "../card/cardServices";
 import HorizontalDivider from "../ui/HorizontalDivider";
 function PremiumSection() {
     return (
-        <Box sx={{marginTop:"0px",border:'1px solid blue',height:"auto"}}>
+        <Box sx={{marginTop:"0px",height:"auto",paddingBottom:'40px'}}>
         {/* first box */}
   
         <Box
