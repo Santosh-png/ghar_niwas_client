@@ -17,13 +17,12 @@ function PropertyDetail(){
     return(
         // main div
         <div>
-            <SearchBar/>
             <Typography className="responsive_fontsize32" sx={{textAlign:"center",margin:'0px',fontWeight:'600',color:'primary.main'}}>$12000 House for Sale in Lalitpur</Typography>
             <div>
                 <div style={{display:"grid",justifyContent:"end",marginRight:{xs:'30px',md:'50px'}}}>
                     <ButtonShare/>
                 </div>
-                <div style={{marginTop:"0px"}}>
+                <div style={{marginTop:"10px"}}>
                     <Duplicate/>
                 </div>
                 
@@ -70,7 +69,6 @@ function PropertyDetail(){
 
             {/* Property List */}
             <Box sx={{ display: "flex", 
-           
             width: "100%", flexDirection: "row",margin:"10px 0 25px 0",
             paddingBottom:'40px' }}>
                 <CardService/>

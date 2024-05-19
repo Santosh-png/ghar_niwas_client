@@ -88,7 +88,7 @@ function Duplicate() {
     };
   return (
     <Box className="center-carousel" sx={{padding:'10px 50px',
-    border:"1px solid red",justifyContent:"center"}}>
+    justifyContent:"center"}}>
       <SearchBar/>
       <Slider {...settings}>
       {PropertyList.map((item)=>(
