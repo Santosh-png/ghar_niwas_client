@@ -9,7 +9,7 @@ import TopList from "../card/cardServices";
 import HorizontalDivider from "../ui/HorizontalDivider";
 function TopSection(){
     return(
-        <Box sx={{marginTop:"20px",border:'1px solid red'}}>
+        <Box sx={{marginTop:"20px",paddingBottom:"40px"}}>
         {/* first box */}
   
         <Box

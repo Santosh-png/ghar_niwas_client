@@ -21,7 +21,7 @@ const Card = React.memo(function (props) {
         alignItems: "center",
         left:{sm:'6%',md:'18%'},
         backgroundColor:"yellow",
-        border: "1px solid blue"
+        // border: "1px solid blue"
       }}
       className="my-slide-component"
     >

@@ -69,13 +69,16 @@ function PropertyDetail(){
             Continue Your Search </Typography>
 
             {/* Property List */}
-            <Box sx={{ display: "flex", width: "100%", flexDirection: "row",marginBottom:"25px" }}>
+            <Box sx={{ display: "flex", 
+           
+            width: "100%", flexDirection: "row",margin:"10px 0 25px 0",
+            paddingBottom:'40px' }}>
                 <CardService/>
             </Box>
 
             </Box>
             
-            <Box>
+            <Box sx={{marginTop:'20px'}}>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56542.93101036504!2d85.28195198644501!3d27.657538735483342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19d3cf18ca51%3A0xd10ec3d53656e18f!2sLalitpur!5e0!3m2!1sen!2snp!4v1715996525170!5m2!1sen!2snp" width="100%" height="350" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </Box>
 

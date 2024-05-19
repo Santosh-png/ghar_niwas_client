@@ -16,8 +16,8 @@ export default function CenteredCarousel(props) {
       style={{ 
         width: "100%", 
         position: "relative",
-        border:'1px solid red',
-        paddingBottom:'50px',
+        // border:'1px solid red',
+        paddingBottom:'30px',
         marginTop:'20px',
         
         }}>
