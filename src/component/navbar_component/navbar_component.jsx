@@ -42,9 +42,9 @@ const drawerWidth=250;
                 sx={{
                 width:"auto", display: "flex", justifyContent: 'flex-end',backgroundColor:'#ffffff'}}
             >
-         <Typography sx={{height:{xs:'90px',md:'100px'},width:{xs:'100px',md:'130px'}}}>
-          <img src={Logo} alt="img" height="auto" width="auto" className='logo-pic' />
-          </Typography>
+         
+          <img src={Logo} alt="img"  className='responsive_fontsize16' />
+          
           
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton

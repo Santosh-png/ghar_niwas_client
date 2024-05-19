@@ -62,7 +62,7 @@ function DetailForm() {
                 label="Phone No" 
                 type="number" 
                 variant="outlined" 
-                sx={{ maxWidth: { xs: "1000%", md: "18rem" }}}
+                sx={{ maxWidth: { xs: "100%", md: "18rem" }}}
                 />
             </FormControl>
           </Grid>
