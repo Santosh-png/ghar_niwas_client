@@ -43,7 +43,7 @@ const drawerWidth=250;
                 width:"auto", display: "flex", justifyContent: 'flex-end',backgroundColor:'#ffffff'}}
             >
          
-          <img src={Logo} alt="img"  className='responsive_fontsize16' />
+          <img src={Logo} alt="img"  className='responsive_fontsize14' />
           
           
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -57,7 +57,7 @@ const drawerWidth=250;
               edge="end"
               sx={{ ...(open && { display: 'flex', left:'89%'}) }}             
             >
-              <MenuIcon sx={{fontSize:'40px'}}/>
+              <MenuIcon className="responsive_fontsize28"/>
             </IconButton>
             
            
@@ -163,16 +163,17 @@ const drawerWidth=250;
           
           {itemList.map((item) => (
               item === "Request Property" ? (
-                <MenuItem key={item} onClick={handleOpenForm} sx={{padding:'0 0px', '&:hover': { backgroundColor: '#ffffff' } }}> 
+                <MenuItem key={item} onClick={handleOpenForm} sx={{padding:'0 10px', 
+                marginLeft:'25px','&:hover': { backgroundColor: '#ffffff' } }}> 
                   <Typography className='responsive_fontsize18 itemList' 
-                    sx={{ fontFamily: 'Roboto Serif',fontWeight: '600',margin:'0 10px', textAlign: 'center',color:"primary.main" }}>
+                    sx={{ fontFamily: 'Roboto Serif',fontWeight: '600', textAlign: 'center',color:"primary.main" }}>
                     {item}
                   </Typography>
                 </MenuItem>
       ) : (
-        <MenuItem key={item} onClick={handleCloseNavMenu} sx={{padding:'0 10px', '&:hover': { backgroundColor: '#ffffff' } }}>
+        <MenuItem key={item} onClick={handleCloseNavMenu} sx={{padding:'0 9px', marginLeft:'25px','&:hover': { backgroundColor: '#ffffff' } }}>
           <Typography textAlign="center" className='itemList'>
-            <Typography className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', fontWeight: '600',margin:'0 10px ', textAlign: 'center',color:"primary.main"}}>
+            <Typography className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', fontWeight: '600', textAlign: 'center',color:"primary.main"}}>
               {item}
             </Typography>
           </Typography>
@@ -224,27 +225,32 @@ const drawerWidth=250;
                     
                   }}
                 >
-              <InstagramIcon sx={{color:"orange"}}  />
+              <InstagramIcon  className="responsive_fontsize24" 
+                              sx={{color:"orange"}}  />
             </IconButton> 
             <IconButton 
                     sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",}}
                 >
-              <FacebookIcon sx={{color:"blue"}}/>
+              <FacebookIcon  className="responsive_fontsize24" 
+                            sx={{color:"blue"}}/>
             </IconButton>
             <IconButton 
                     sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",}}
                 >  
-              <YouTubeIcon sx={{color:"#FA0505"}} />
+              <YouTubeIcon  className="responsive_fontsize24" 
+                            sx={{color:"#FA0505"}} />
             </IconButton>
             <IconButton 
                     sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",}}
                 >  
-              <LinkedInIcon sx={{color:"#78A1DE"}}/>
+              <LinkedInIcon  className="responsive_fontsize24"
+                            sx={{color:"#78A1DE"}}/>
             </IconButton>
             <IconButton 
                     sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A",}}
                 >  
-              <PinterestIcon sx={{color:"red"}} />
+              <PinterestIcon  className="responsive_fontsize24"
+                              sx={{color:"red"}} />
             </IconButton>  
                 
              
