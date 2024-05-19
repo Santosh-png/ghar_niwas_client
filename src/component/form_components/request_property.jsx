@@ -79,7 +79,7 @@ function PropertyRequest() {
        
       </Box>
       {/* Actual Form */}
-      <Box sx={{ mt: "1rem" }}>
+      <Box sx={{ mt: "1rem" }} className="responsive_fontsize16">
         <form >
             <InputLabel id="demo-simple-select-label">Location</InputLabel>
             <Grid item xs={12} md={6}>
@@ -87,7 +87,8 @@ function PropertyRequest() {
               <FormControl
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "25rem" },display: 'grid',
+                
+                sx={{ maxWidth: { xs: "90%", md: "25rem" },display: 'grid',
                 gridTemplateColumns: 'repeat(2,1fr)',margin:'20px',gap:'10px'
                 
                }}
