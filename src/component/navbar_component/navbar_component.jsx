@@ -10,7 +10,8 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import './navbar.style.css'
 import DetailForm from '../form_components/detail_form';
-import AddPropertyHome from "../form_components/add_property_house";
+import FormFormat from "../form_components/form_format";
+import IconComponents from "../icon_component/icon_component";
 
 const itemList = ['Home', 'Add Property', 'Sale','Rent','Request Property'];
 
@@ -292,7 +293,8 @@ const drawerWidth=250;
         aria-describedby="alert-dialog-description"
       >
         <DialogContent>
-          <AddPropertyHome />
+          {/* <FormFormat/> */}
+          <IconComponents/>
         </DialogContent>
       </Dialog>
     </AppBar>

@@ -4,6 +4,7 @@ import { IconButton, Box, TextField } from "@mui/material";
 import { Clear } from "@mui/icons-material";
 import { motion } from "framer-motion";
 // import "./search_bar.css";
+
 function SearchBar() {
   const [isGrowing, setIsGrowing] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
@@ -40,8 +41,8 @@ function SearchBar() {
     <Box
       sx={{
         position: "fixed",
-        top: "14%",
-        left: "10px",
+        bottom: "50%",
+        left: "0",
         zIndex: "100",
         transform: "translate(0, 50%)",
       }}

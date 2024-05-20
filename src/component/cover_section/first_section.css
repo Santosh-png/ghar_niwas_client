@@ -40,8 +40,8 @@
     padding: 0.2rem 1rem 0.25rem 1rem;
     border-radius: 10px;
     margin-top: 2rem;
-    position: relative; /* Position relative to its container */
-    z-index: inherit; /* Ensure it stays above the background */
+    position: relative; 
+    z-index: inherit; 
 }
 
 .header-content{

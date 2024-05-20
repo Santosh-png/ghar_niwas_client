@@ -4,7 +4,6 @@ import { Box } from '@mui/material'
 import PropertyList from '../card/cardItems';
 import Pic from './propertyPic';
 import SearchBar from './searchBar';
-// import SearchIcon from '@mui/icons-material/Search';
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -14,7 +13,7 @@ function SampleNextArrow(props) {
         style={{
           ...style,
           // style for arrow in right
-          backgroundColor:"#743d72",   
+          backgroundColor:"#292C6A",   
           flexDirection: "column",
           justifyContent: "center",
           alignItems:"center",
@@ -33,7 +32,7 @@ function SampleNextArrow(props) {
         className={className}
         style={{ ...style, 
           // style for arrow in left
-          backgroundColor: "#743d72",
+          backgroundColor: "#292C6A",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -88,8 +87,7 @@ function Duplicate() {
     };
   return (
     <Box className="center-carousel" sx={{padding:'10px 50px',
-    justifyContent:"center"}}>
-      <SearchBar/>
+    justifyContent:"center"}}>   
       <Slider {...settings}>
       {PropertyList.map((item)=>(
               <div key={item.id}>
@@ -100,6 +98,8 @@ function Duplicate() {
           ))}
       </Slider>
       
+       <SearchBar/> 
+    
     </Box>
   );
 }
