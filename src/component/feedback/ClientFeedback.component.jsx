@@ -6,7 +6,7 @@ const ClientFeedback= () => {
   return (
     <>
     <Box 
-    // sx={{ border:"1px solid yellow"}}
+    sx={{padding:"2rem"}}
     >
         
         
@@ -16,17 +16,20 @@ const ClientFeedback= () => {
            flexDirection: "row", 
            alignItems: "center", 
            justifyContent: "center", 
-          //  marginTop: "2rem",
-          // marginBottom: "1rem",
-           marginTop:"2 0 3 0", 
+          //  marginTop: "30px",
+          // marginBottom: "4rem",
+           marginTop:"-30px", 
            gap: "1rem",
+           
+
+          
           
           }}
          >  
           {/* <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center"}}></Box> */}
               <HorizontalDivider />
                <Typography 
-                variant="h4"
+                // variant="h4"
                 className='responsive_fontsize32'
                 sx={{
                  
@@ -37,8 +40,10 @@ const ClientFeedback= () => {
                   flexDirection:"column",
                   textAlign:"center",
                   letterSpacing:"1px",
-                  // padding:"10px"
-                  // marginTop:"2rem"
+                  padding:"0px",
+                  // marginTop:"9rem"
+                  // marginBottom:"2rem"
+                 
                 }}
               >
            Clients Feedback
@@ -46,7 +51,9 @@ const ClientFeedback= () => {
           <HorizontalDivider/>
         </Box>
        
-        <Box >
+        <Box
+          // sx={{ display: "flex", width: "100%", flexDirection: "row" }}
+          >
             <ClientFeedbackList />
         </Box>
         </Box>
