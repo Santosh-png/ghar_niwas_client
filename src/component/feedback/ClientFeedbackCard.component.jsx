@@ -15,14 +15,11 @@ const ClientFeedbackCard = () => {
       padding:"1rem",
       borderRadius: 5,
        }}>
-    <Card  sx={{
-            height:{xs:"180px",md:"230px",lg:'280px'},width:{xs:"220px",md:"320px",lg:'380px'}
-          }}>
-    {/* <Card style={{margin:"buttom"}}> */}
+    <Card   >   {/* <Card style={{margin:"buttom"}}> */}
       <Box sx={{ 
          backgroundColor: "primary.main" }}>
       <CardContent>
-        <Typography variant="body2" color= "accent.white" padding= "1.5rem" >
+        <Typography className='responsive_fontsize20' variant="body2" color= "accent.white" padding= "0.8rem" >
           " Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
         </Typography>
@@ -30,6 +27,7 @@ const ClientFeedbackCard = () => {
         </Box>
         <Box>
       <CardHeader
+      className='responsive_fontsize20'
         avatar={
           <Avatar sx={{backgroundColor:"#C77F05"}}>
             A
