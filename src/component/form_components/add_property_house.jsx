@@ -1,22 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Typography,Box, Grid, TextField, Button, IconButton,} from '@mui/material';
-import IconComponents from '../icon_component/icon_component';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
-import ButtonComponent from '../button_components/button';
-import FormatBoldIcon from '@mui/icons-material/FormatBold';
-import FormatItalicIcon from '@mui/icons-material/FormatItalic';
-import Divider from '@mui/material/Divider';
-import Input from '@mui/material/Input';
-import InputLabel from '@mui/material/InputLabel';
-import InputAdornment from '@mui/material/InputAdornment';
 import VideoCallIcon from '@mui/icons-material/VideoCall';
 import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
+
+// files
+import ButtonComponent from '../button_components/button';
 import VerticalDivider from '../ui/divider';
-import { Height } from '@mui/icons-material';
 
 function AddPropertyHome() {
 
@@ -64,8 +57,6 @@ function AddPropertyHome() {
   
   return (
     <div>
-      <IconComponents/>
-
       {/* Actual form */}
         <Box sx={{
             backgroundColor: 'accent.white',
@@ -79,17 +70,15 @@ function AddPropertyHome() {
 
 
           {/* Location */}
-        <Box>
-          <Typography variant='h4'
-            className='responsive_fontsize26'
-            fontWeight='bold'
-            marginBottom='12px'
-            
-          >
+          <Box>
+            <Typography variant='h4'
+              className='responsive_fontsize26'
+              fontWeight='bold'
+              marginBottom='12px'
+            >
               Location/Address
-          </Typography>
-          <Grid item xs={12} md={6} lg={3}
-          >
+            </Typography>
+            <Grid item xs={12} md={6} lg={3}>
             <FormControl
               size="small"
               fullWidth
@@ -99,47 +88,47 @@ function AddPropertyHome() {
                  gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
                 }}
                 >
-                <TextField
-                  fullWidth
-                  size='small'
-                  id='outlined-required'
-                  label='Province'
-                />
-                
-                <TextField
-                  fullWidth
-                  size='small'
-                  id='outlined-required'
-                  label='Zone'
-                />
-                
-                <TextField
-                  fullWidth
-                  size='small'
-                  id='outlined-required'
-                  label='District'
-                />
+                  <TextField
+                    fullWidth
+                    size='small'
+                    id='outlined-required'
+                    label='Province'
+                  />
+                  
+                  <TextField
+                    fullWidth
+                    size='small'
+                    id='outlined-required'
+                    label='Zone'
+                  />
+                  
+                  <TextField
+                    fullWidth
+                    size='small'
+                    id='outlined-required'
+                    label='District'
+                  />
 
-                <TextField
-                  fullWidth
-                  size='small'
-                  id='outlined-required'
-                  label='Municipality'
-                />
+                  <TextField
+                    fullWidth
+                    size='small'
+                    id='outlined-required'
+                    label='Municipality'
+                  />
 
-                <TextField
-                  fullWidth
-                  size='small'
-                  id='outlined-required'
-                  label='Ward'
-                />
+                  <TextField
+                    fullWidth
+                    size='small'
+                    id='outlined-required'
+                    label='Ward'
+                  />
 
-                <TextField
-                  fullWidth
-                  size='small'
-                  id='outlined-required'
-                  label='Landmark'
-                />
+                  <TextField
+                    fullWidth
+                    size='small'
+                    id='outlined-required'
+                    label='Landmark'
+                  />
                 </Box>
               </FormControl>
           </Grid>
@@ -604,12 +593,7 @@ function AddPropertyHome() {
             </Grid>
         </Box>
          </Box>
-          <Box sx={{
-            display: "flex",
-            justifyContent: "center"
-          }}>
-          <ButtonComponent >Add Property</ButtonComponent>
-          </Box>
+         
       </Box>
     </div>
   )

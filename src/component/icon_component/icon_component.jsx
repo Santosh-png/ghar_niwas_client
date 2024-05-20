@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Button, Dialog, Typography } from '@mui/material';
+import { useState } from 'react';
+import { Box, Button, Typography} from '@mui/material';
 
 // material icons
 import HomeWorkIcon from '@mui/icons-material/HomeWork';
@@ -8,17 +9,47 @@ import LandscapeIcon from '@mui/icons-material/Landscape';
 
 // button component 
 import ButtonComponent from '../button_components/button';
+import AddPropertyHome from '../form_components/add_property_house';
+import AddPropertyApartment from '../form_components/add_property_apartment';
+import AddPropertyLand from '../form_components/add_property_land';
 
 
 function IconComponents() {
+        const [selectedForm, setSelectedForm] = useState('home');
+
+        const handleClickOpen = (form) => {
+            setSelectedForm(form);
+        };
+
+        const handleClose = () => {
+            setOpen(false);
+            setSelectedForm(null);
+        };
+
+        const renderForm = () => {
+            switch (selectedForm) {
+            case 'home':
+                return <Box>
+                    <AddPropertyHome/>
+                </Box>;
+            case 'apartment':
+                return <Box>
+                    <AddPropertyApartment/>
+                </Box>;
+            case 'land':
+                return <Box>
+                    <AddPropertyLand/>
+                </Box>;
+            default:
+                return null;
+            }
+        };
   return (
     <>    
         <Box
             sx={{
                 display :"flex",
                 flexDirection: "column",
-                gap: "0.5rem",
-                p: "2rem 2rem 0.5rem 2rem",
                 borderBottomColor: ' 1px solid black'
             }}
         >
@@ -60,6 +91,7 @@ function IconComponents() {
                         }}/>
                     {/* <ButtonComponent className='responsive_fontsize24' */}
                       <Button
+                        onClick={() => handleClickOpen('home')}
                         sx={{
                             display: "flex",
                             justifyContent :"center",
@@ -67,7 +99,7 @@ function IconComponents() {
                         }}
                       >
                         <ButtonComponent>
-                        HOME
+                            HOME
                         </ButtonComponent>
                         </Button>
                 </Box>  
@@ -87,12 +119,13 @@ function IconComponents() {
                         }} 
                     />
                     <Button
+                        onClick={() => handleClickOpen('apartment')}
                         sx={{
                             display: "flex",
                             justifyContent :"center",
                             alignItems: 'center'
                         }}
-                    >
+                        >
                         <ButtonComponent>APARTMENT</ButtonComponent>
                     </Button>
                 </Box>
@@ -110,9 +143,30 @@ function IconComponents() {
                         width: {xs: "40px", md: "60px", lg: "80px"},
                         color: "secondary.main",
                     }}/>
-                    <ButtonComponent>LAND</ButtonComponent>
+                    <Button
+                        onClick={() => handleClickOpen('land')}
+                        sx={{
+                            display: "flex",
+                            justifyContent :"center",
+                            alignItems: 'center'
+                        }}
+                        >
+                        <ButtonComponent>LAND</ButtonComponent>
+                    </Button>
                 </Box>
                 </Box>
+
+                {/* Render form based on selected icon */}
+                <Box >
+                    {renderForm()}
+                </Box>
+                <Box sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        marginTop: "1rem"
+                    }}>
+                    <ButtonComponent >Add Property</ButtonComponent>
+                    </Box>
         </Box>
     </>
   )
