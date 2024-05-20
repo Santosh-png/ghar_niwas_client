@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Box, FormControl, Grid, TextField, Button, Dialog, DialogContent } from "@mui/material";
-import RequestForm from "./request_property";
+import RequestIcon from "../icon_component/request_icon";
 
 function DetailForm() {
-  const [openRequestForm, setOpenRequestForm] = useState(false);
+  const [openRequestIcon, setOpenRequestIcon] = useState(false);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleCloseNavMenu = () => {
@@ -12,7 +12,7 @@ function DetailForm() {
 
   const handleRequestForm = (e) => {
     e.preventDefault();
-    setOpenRequestForm(true);
+    setOpenRequestIcon(true);
     handleCloseNavMenu(); // Close the menu after opening the form
   };
 
@@ -89,13 +89,13 @@ function DetailForm() {
         </form>
       </Box>
       <Dialog
-        open={openRequestForm}
-        onClose={() => { setOpenRequestForm(false); handleCloseNavMenu() }}
+        open={openRequestIcon}
+        onClose={() => { setOpenRequestIcon(false); handleCloseNavMenu() }}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
         <DialogContent sx={{ backgroundColor: "transparent" }}>
-          <RequestForm /> {/* Render the form component */}
+          <RequestIcon /> {/* Render the form component */}
         </DialogContent>
       </Dialog>
     </>

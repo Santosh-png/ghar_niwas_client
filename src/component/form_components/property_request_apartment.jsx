@@ -2,8 +2,8 @@ import React, { useState }  from "react";
 import HouseIcon from '@mui/icons-material/House';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import LandscapeIcon from '@mui/icons-material/Landscape';
+import ApartmentForm from "./property_request_apartment"
 import LandForm from './property_request_land'
-import HomeForm from './request_property'
 import {
   Box,
   Typography,
@@ -16,77 +16,48 @@ import {
   Grid,
   IconButton,
   Dialog,
-  DialogContent,
+  DialogContent
 } from "@mui/material";
 
 
 
 
 function PropertyRequest() {
-    const [openLandForm,setOpenLandForm]=useState(false);
-    const[openHomeForm,setOpenHomeForm]=useState(false);
+  const[openApartmentForm,setOpenApartmentForm]=useState(false);
+  const[OpenLandForm,setOpenLandForm]=useState(false)
 
-    const handleLandForm=(e)=>{
-        e.preventDefault();
-        setOpenLandForm(true);
-
-    }
-    const handleHomeForm=(e)=>{
-       e.preventDefault();
-       setOpenHomeForm(true);
-    }
+  const handleApartmentForm=(e)=>{
+    e.preventDefault();
+    setOpenApartmentForm(true)
+   
+  }
+ 
+  const handleLandForm=(e)=>{
+    e.preventDefault();
+    setOpenLandForm(true)
+  }
 
   return (
     <Box sx={{
-      textAlign:"center",
-      border:'1px solid black',
+      // textAlign:"center",
       padding:'10px'
 
     }}>
       {/* Heading */}
-      <Box
-        
-      >
-        <Box>
-          <Typography
-            className="responsive__fontsize18"
-            sx={{
-              fontWeight: "600",
-              lineHeight: "21px",
-              color: "primary.main",
-              textTransform: "uppercase",
-            }}
-          >
-            Request Property
-          </Typography>
-          
-        </Box>
-        <Box sx={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-          <IconButton onClick={handleHomeForm}
-           >           
-            <HouseIcon  />
-          </IconButton>
-          <IconButton  
-            sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A"}}>
-            <ApartmentIcon/>
-          </IconButton>
-          <IconButton onClick={handleLandForm}>
-            <LandscapeIcon/>
-          </IconButton>
-  
-        </Box>
-       
-      </Box>
+     
       {/* Actual Form */}
-      <Box sx={{ mt: "1rem" }}>
+      <Box sx={{ mt: "1rem" }} className="responsive_fontsize16">
         <form >
-            <InputLabel id="demo-simple-select-label">Location</InputLabel>
-            <Grid item xs={12} md={6}>
+            {/* <InputLabel id="demo-simple-select-label">Location</InputLabel>
+
+            <Grid item xs={12} md={6} 
+                  sx={{ maxWidth: { xs: "90%", md: "55rem" },margin:' 0 25px', display:'flex'}}>
           
               <FormControl
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "25rem" },display: 'grid',
+                
+                sx={{ maxWidth: { xs: "90%", md: "25rem" },display: 'grid',
                 gridTemplateColumns: 'repeat(2,1fr)',margin:'20px',gap:'10px'
                 
                }}
@@ -98,23 +69,21 @@ function PropertyRequest() {
                     size="small"
                     id="outlined-required"
                     label="provinces"
-                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
-                    // defaultValue="Hello World"
+                  
                  />
                   <TextField
                     // required
                     size="small"
                     id="outlined-required"
                     label="zone"
-                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
-                    // defaultValue="Hello World"
+                  
                  />
                   <TextField
                     // required
                     size="small"
                     id="outlined-required"
                     label="District"
-                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
+                    // sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
                     // defaultValue="Hello World"
                  />
                   <TextField
@@ -122,7 +91,7 @@ function PropertyRequest() {
                     size="small"
                     id="outlined-required"
                     label="Municipality"
-                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
+                    // sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
                     // defaultValue="Hello World"
                  />
                   <TextField
@@ -130,7 +99,7 @@ function PropertyRequest() {
                     // required
                     id="outlined-required"
                     label="Ward"
-                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
+                    // sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
                     // defaultValue="Hello World"
                  />
                   <TextField
@@ -138,21 +107,83 @@ function PropertyRequest() {
                     size="small"
                     id="outlined-required"
                     label="Landmark"
-                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
+                    // sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
                     // defaultValue="Hello World"
                  />
 
               </FormControl>
-            </Grid>
-          
+            </Grid> */}
+           <Box>
+            <Typography variant='h3'
+              className='responsive_fontsize26'
+              marginBottom='12px'
+            > Location </Typography>
+            <Grid item xs={12} md={6} lg={3}>
+            <FormControl size="small" fullWidth>
+                <Box
+                 sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
+                 gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
+                }}
+                >
+                  <TextField
+                    fullWidth
+                    size='small'
+                    id='outlined-required'
+                    label='Province'
+                  />
+                  
+                  <TextField
+                    fullWidth
+                    size='small'
+                    id='outlined-required'
+                    label='Zone'
+                  />
+                  
+                  <TextField
+                    fullWidth
+                    size='small'
+                    id='outlined-required'
+                    label='District'
+                  />
+
+                  <TextField
+                    fullWidth
+                    size='small'
+                    id='outlined-required'
+                    label='Municipality'
+                  />
+
+                  <TextField
+                    fullWidth
+                    size='small'
+                    id='outlined-required'
+                    label='Ward'
+                  />
+
+                  <TextField
+                    fullWidth
+                    size='small'
+                    id='outlined-required'
+                    label='Landmark'
+                  />
+                </Box>
+              </FormControl>
+          </Grid>
+        </Box>
             
-            <InputLabel id="demo-simple-select-label">Property Detail</InputLabel>
-            <Grid item xs={12} md={6} sx={{ display: 'grid',
-                gridTemplateColumns: 'repeat(2,1fr)',alignItems:'center',margin:'20px',gap:'10px'}}>
+        <Typography variant='h3'
+              className='responsive_fontsize26'
+              // fontWeight='bold'
+              margin='12px'
+            > Property Detail
+          </Typography>
+            <Grid item xs={12} md={6} 
+                sx={{  maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
+                gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'}}>
               <FormControl
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+                sx={{ maxWidth: { xs: "100%", md: "100%" }}}
                 
               >      
               <InputLabel id="demo-simple-select-label">Type</InputLabel>
@@ -167,8 +198,8 @@ function PropertyRequest() {
                   
 
                 >
-                  <MenuItem value="commercial">commercial</MenuItem>
-                  <MenuItem value="non commercial">non commercial</MenuItem>               
+                  <MenuItem value="Commercial">commercial</MenuItem>
+                  <MenuItem value="Non Commercial">non commercial</MenuItem>               
                 </Select>
              
                </FormControl>
@@ -176,7 +207,7 @@ function PropertyRequest() {
                     // required
                     size="small"
                     id="outlined-required"
-                    sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+                    sx={{ maxWidth: { xs: "100%", md: "100%" }}}
                     label="Total Floor"/>
 
                 <TextField  
@@ -193,13 +224,13 @@ function PropertyRequest() {
                 id="outlined-required"
                 label="BHK"
                 type="text"
-                sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+                sx={{ maxWidth: { xs: "100%", md: "100%" }}}
                 />
 
               <FormControl
                size="small"
                fullWidth
-               sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+               sx={{ maxWidth: { xs: "100%", md: "100%" }}}
               >
                 <InputLabel>Facing</InputLabel>
                <Select
@@ -220,14 +251,14 @@ function PropertyRequest() {
                 <TextField 
                     size="small"
                     id="outlined-required"
-                    sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+                    sx={{ maxWidth: { xs: "100%", md: "100%" }}}
                     label="Property Age"/>
 
 
                 <FormControl  
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "14rem" }}}>   
+                sx={{ maxWidth: { xs: "100%", md: "100%" }}}>   
 
                 <InputLabel>Furnishing</InputLabel>
                 <Select
@@ -236,6 +267,7 @@ function PropertyRequest() {
                   id="demo-simple-select"
                 //   value={WardNumber}
                   label="Furnishing"
+                  sx={{ maxWidth: { xs: "100%", md: "100%" }}}
                   type="text"
                 >
                   <MenuItem value="Non">Non</MenuItem>
@@ -249,20 +281,21 @@ function PropertyRequest() {
                     size="small"
                     id="outlined-required"
                     label="Road Size"
-                    sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+                    sx={{ maxWidth: { xs: "100%", md: "100%" }}}
               />
 
           
             <FormControl   
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "14rem" }}}>
+                sx={{ maxWidth: { xs: "100%", md: "100%" }}}>
                 <InputLabel>Urgency</InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                 //   value={urgency}
                   label="Urgency"
+                  sx={{ maxWidth: { xs: "100%", md: "100%" }}}
                   type="text"
                 >
                   <MenuItem value="Very Urgent">Very Urgent</MenuItem>
@@ -272,10 +305,13 @@ function PropertyRequest() {
 
             </FormControl>
             </Grid>
-
-            <InputLabel>Price Range</InputLabel>
-            <Grid item xs={12} md={6} sx={{display:'flex',textAlign:'center' ,alignItems:'center',justifyContent:'center',margin:'20px'}}>   
-            
+            <Typography variant='h2'
+              className='responsive_fontsize18'
+              margin='12px'
+            > Price Range </Typography>
+          
+            <Grid item xs={12} md={6} sx={{display:'flex', textAlign:'center' ,alignItems:'center',justifyContent:'center',margin:'20px'}}>   
+             
                 <TextField 
                   id="standard-basic" 
                   size="small" 
@@ -289,11 +325,12 @@ function PropertyRequest() {
                   sx={{ maxWidth: { xs: "40%", md: "7rem" },margin:'0 10px'}} />
 
             </Grid>
+           
             <Grid item xs={12} md={6}>
               <FormControl
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "14rem" } ,margin:'10px 0px'}}
+                sx={{ maxWidth: { xs: "100%", md: "50%" } ,margin:'10px 0px'}}
               >
                 <TextField
                     id="standard-multiline-static"                  
@@ -305,44 +342,27 @@ function PropertyRequest() {
                
               </FormControl>
             </Grid>
-           
-            <Grid
-              item
-              xs={12}
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <Button
-                type="submit"
-                variant="contained"
-                sx={{ backgroundColor: "secondary.main", color: "white" }}
-
-              >
-                Request
-              </Button>
-            </Grid>
           
     </form>
-    <Dialog 
-      open={openLandForm}
-      onClose={() => setOpenLandForm(false)}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description">
-        <DialogContent>
-            <LandForm/>
-        </DialogContent>
-    </Dialog>
-    {/* for the Home Form */}
     <Dialog
-       open={openHomeForm}
-       onClose={()=>setOpenHomeForm(false)}
-       aria-labelledby="alert-dialog-title"
-       aria-describedby="alert-dialog-description"
+      open={openApartmentForm}
+      onClose={() => setOpenApartmentForm(false)}
+      aria-labelledby="alert-dialog-title"
+      aria-describedby="alert-dialog-description"
     >
       <DialogContent>
-         <HomeForm/>
+        <ApartmentForm/> {/* Render the form component */}
+      </DialogContent>
+    </Dialog>
+
+    <Dialog
+      open={OpenLandForm}
+      onClose={() => setOpenLandForm(false)}
+      aria-labelledby="alert-dialog-title"
+      aria-describedby="alert-dialog-description"
+    >
+      <DialogContent>
+        <LandForm/> {/* Render the form component */}
       </DialogContent>
     </Dialog>
     </Box>
