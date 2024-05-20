@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import PropertyPicList from './propertyPicList';
 import SearchBar from './searchBar';
 import CardService from '../card/cardServices';
@@ -19,34 +19,34 @@ function PropertyDetail(){
         <div>
             <Typography className="responsive_fontsize32" sx={{textAlign:"center",margin:'0px',fontWeight:'600',color:'primary.main'}}>$12000 House for Sale in Lalitpur</Typography>
             <div>
-                <div style={{display:"grid",justifyContent:"end",marginRight:{xs:'30px',md:'50px'}}}>
+                <Box sx={{display:"grid",justifyContent:"end",marginRight:'50px'}}>
                     <ButtonShare/>
-                </div>
+                </Box>
                 <div style={{marginTop:"10px"}}>
                     <Duplicate/>
                 </div>
                 
             <div style={{display:'flex',justifyContent:'space-between',margin:'0 10px 0 20px'}}>
-                <div>
+                <Grid>
                     <BottomNavigationAction label="Bed" icon={<BedIcon/>} />
-                    <Typography className="responsive_fontsize16" sx={{marginLeft:'25px',color:'primary.main'}}>Bed</Typography>
-                </div>
-                <div>
+                    <Typography className="responsive_fontsize16" sx={{textAlign:"center",color:'primary.main'}}>Bed</Typography>
+                </Grid>
+                <Grid>
                     <BottomNavigationAction label="WashRoom" icon={<ShowerIcon />} />
-                    <Typography className="responsive_fontsize16" sx={{color:'primary.main'}}>WashRoom</Typography>
-                </div>
-                <div>
+                    <Typography className="responsive_fontsize16" sx={{color:'primary.main',textAlign:"center"}}>WashRoom</Typography>
+                </Grid>
+                <Grid>
                     <BottomNavigationAction label="Kitchen" icon={<SoupKitchenIcon />} />
-                    <Typography className="responsive_fontsize16" sx={{color:'primary.main'}}>Kitchen</Typography>
-                </div>
-                <div>
+                    <Typography className="responsive_fontsize16" sx={{color:'primary.main',textAlign:"center"}}>Kitchen</Typography>
+                </Grid>
+                <Grid>
                     <BottomNavigationAction label="CarParking" icon={<TimeToLeaveIcon />} />
-                    <Typography className="responsive_fontsize16" sx={{color:'primary.main'}}>CarParking</Typography>
-                </div>
-                <div>
+                    <Typography className="responsive_fontsize16" sx={{color:'primary.main',textAlign:"center"}}>CarParking</Typography>
+                </Grid>
+                <Grid sx={{}}>
                     <BottomNavigationAction style={{marginRight:'20px'}} label="Aanas" icon={<ScaleIcon />} />
-                    <Typography className="responsive_fontsize16" sx={{color:'primary.main'}}>Aanas</Typography>
-                </div>
+                    <Typography className="responsive_fontsize16" sx={{color:'primary.main',marginRight:'20px',textAlign:"center"}}>Aanas</Typography>
+                </Grid>
             </div>
             </div>
             <div>

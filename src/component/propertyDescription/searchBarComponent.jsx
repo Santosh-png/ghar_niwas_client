@@ -1,11 +1,8 @@
-import React from "react";
-import Slider from "react-slick";
+import React from 'react'
 import { Box } from '@mui/material'
-import PropertyList from '../card/cardItems';
-import Pic from './propertyPic';
-// import SearchBar from './searchBar';
-// import SearchIcon from '@mui/icons-material/Search';
-
+import Slider from 'react-slick';
+import EventCard from './EventCard';
+import eventsList from './events_list_items';
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -13,8 +10,8 @@ function SampleNextArrow(props) {
         className={'slick-next'}
         style={{
           ...style,
-          // style for arrow in right
-          backgroundColor:"#292C6A",   
+          backgroundColor: "#743d72",
+          display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems:"center",
@@ -32,8 +29,8 @@ function SampleNextArrow(props) {
       <div
         className={className}
         style={{ ...style, 
-          // style for arrow in left
-          backgroundColor: "#292C6A",
+          
+          backgroundColor: "#743d72",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -45,13 +42,13 @@ function SampleNextArrow(props) {
       />
     );
   }
-
-function Duplicate() {
-    const settings = { 
-        dots: false,
+function EventList() {
+    const settings = {
+        
+        dots: true,
         infinite: true,
         // speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         arrows: true,
@@ -63,18 +60,18 @@ function Duplicate() {
             {
               breakpoint: 1300,
               settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
+                slidesToShow: 3,
+                slidesToScroll: 3,
                 infinite: true,
-                dots: false
+                dots: true
               }
             },
             {
               breakpoint: 1050,
               settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                initialSlide: 1
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
               }
             },
             {
@@ -86,21 +83,16 @@ function Duplicate() {
             }
           ]
     };
-  return (
-    <Box className="center-carousel" sx={{padding:'10px 50px',
-    justifyContent:"center"}}>
-      <Slider {...settings}>
-      {PropertyList.map((item)=>(
-              <div key={item.id}>
-                  <Pic
-                  imageUrl={item.imageUrl}
-                  />
-              </div>
-          ))}
-      </Slider>
-      
-    </Box>
-  );
+    return (
+        <Box className="center__carousel" sx={{ padding: "47px" }} >
+            <Slider {...settings}>
+              {eventsList?.map((item) => (
+                <EventCard key={item?._id} item={item} />
+              ))}
+                
+            </Slider>
+        </Box>
+    )
 }
 
-export default Duplicate;
+export default EventList
