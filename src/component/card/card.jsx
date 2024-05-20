@@ -38,7 +38,7 @@ function CommonCard({price, title, name,location, date,imageUrl}) {
           image={imageUrl}
           alt="Property Image"
           sx={{
-            height:{xs:"180px",md:"230px",lg:'280px'},width:{xs:"220px",md:"320px",lg:'380px'}
+            height:{xs:"230px",md:"230px",lg:'280px'},width:{xs:"380px",sm:"320px",md:"320px",lg:'380px'}
           }}
         />
         </div>
