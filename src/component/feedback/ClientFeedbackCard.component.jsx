@@ -8,13 +8,14 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 const ClientFeedbackCard = () => {
   return (
-    <Card style={{
-        margin:"30px 30px",
-        marginTop:"1rem",
-        marginLeft:"3.5rem",
-        // marginTop:"3rem",
-        maxWidth: 345 ,
+    <div style={{
+      display:"flex",
+      alignItems:"center",
+      justifyContent:"center",
+      padding:"2rem",
+      borderRadius: 5,
        }}>
+    <Card>
     {/* <Card style={{margin:"buttom"}}> */}
       <Box sx={{ 
          backgroundColor: "primary.main" }}>
@@ -28,7 +29,7 @@ const ClientFeedbackCard = () => {
         <Box>
       <CardHeader
         avatar={
-          <Avatar>
+          <Avatar sx={{backgroundColor:"#C77F05"}}>
             A
           </Avatar>
         }
@@ -39,10 +40,12 @@ const ClientFeedbackCard = () => {
         }
         title="Ashika Paudel"
         subheader="September 14, 2016"
+        sx={{backgroundColor:"#ECEEEE"}}
       />
     </Box>
-
+    
     </Card>
+    </div>
   )
 }
 

@@ -18,13 +18,10 @@ const ClientFeedback= () => {
            justifyContent: "center", 
           //  marginTop: "30px",
           // marginBottom: "4rem",
-           marginTop:"-30px", 
+           marginTop:"-20px", 
            gap: "1rem",
-           
-
-          
-          
-          }}
+          //  border:'1px solid black'
+           }}
          >  
           {/* <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center"}}></Box> */}
               <HorizontalDivider />
