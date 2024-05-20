@@ -33,7 +33,7 @@ function DetailForm() {
                 id="outlined-basic" 
                 label="Full Name" 
                 variant="outlined" 
-                sx={{ maxWidth: { xs: "1000%", md: "18rem" }}}
+                sx={{ maxWidth: { xs: "100%", md: "18rem" }}}
                 />
                 
             </FormControl>
@@ -46,7 +46,7 @@ function DetailForm() {
                   size="small"
                   id="outlined-basic" 
                   type="email" 
-                  label="Email Address" 
+                  label="Email" 
                   variant="outlined" 
                   sx={{ maxWidth: { xs: "100%", md: "19rem" }}}
                 />
@@ -62,7 +62,7 @@ function DetailForm() {
                 label="Phone No" 
                 type="number" 
                 variant="outlined" 
-                sx={{ maxWidth: { xs: "1000%", md: "18rem" }}}
+                sx={{ maxWidth: { xs: "100%", md: "18rem" }}}
                 />
             </FormControl>
           </Grid>

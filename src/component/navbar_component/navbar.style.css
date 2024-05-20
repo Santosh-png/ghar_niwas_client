@@ -4,16 +4,6 @@
     border: 1px solid red;
   
 }
-
-.logo-pic {
-        max-width: 100%;
-        height: auto;
-        width: auto;
-        max-height: 90px; /* Adjust this value to control the maximum height of the logo */
-}
-      
-
-
 .itemList{
     position: relative;
 }

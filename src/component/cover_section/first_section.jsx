@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 
 import './first_section.css';
 import PropertyFilter from '../filter_components/property_filter';
+import FormFormat from '../form_components/form_format';
 
 function FirstSection() {
 
@@ -91,7 +92,7 @@ function FirstSection() {
             {/* </Typography> */}
             </Box>
           </Box>
-
+                <FormFormat/>
             <PropertyFilter/>
         </Box>
 
