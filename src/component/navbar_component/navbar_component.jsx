@@ -10,15 +10,15 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import './navbar.style.css'
 import DetailForm from '../form_components/detail_form';
+import AddPropertyHome from "../form_components/add_property_house";
 
 const itemList = ['Home', 'Add Property', 'Sale','Rent','Request Property'];
 
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [opendetailDialog, setOpendetailDialog] = useState(false)
-
-  
+  const [opendetailDialog, setOpendetailDialog] = useState(false);
+  const [openAddPropertyDialog, setOpenAddPropertyDialog] = useState(false);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -30,6 +30,11 @@ function NavBar() {
   const handleOpenForm = () => {
     setOpendetailDialog(true);
     handleCloseNavMenu();  // Close the menu after opening the form
+  };
+
+  const handleOpenAddProperty = () => {
+    setOpenAddPropertyDialog(true);
+    handleCloseNavMenu();
   };
  
  
@@ -94,6 +99,12 @@ const drawerWidth=250;
                     {item}
                   </Typography>
                 </MenuItem>
+      ) : item === "Add Property" ? (
+        <MenuItem key={item} onClick={handleOpenAddProperty}>
+          <Typography className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', margin: '0px 20px', fontWeight: '600', textAlign: 'center', color: 'primary.main' }}>
+            {item}
+          </Typography>
+        </MenuItem>
       ) : (
         <MenuItem key={item} onClick={handleCloseNavMenu}>
           <Typography textAlign="center" className='itemList'>
@@ -170,6 +181,12 @@ const drawerWidth=250;
                     {item}
                   </Typography>
                 </MenuItem>
+      ) : item === "Add Property" ? (
+        <MenuItem key={item} onClick={handleOpenAddProperty} sx={{ padding: '0 10px', marginLeft: '25px', '&:hover': { backgroundColor: '#ffffff' } }}>
+          <Typography className='responsive_fontsize24 itemList' sx={{ fontFamily: 'Roboto Serif', fontWeight: '600', textAlign: 'center', color: "primary.main" }}>
+            {item}
+          </Typography>
+        </MenuItem>
       ) : (
         <MenuItem key={item} onClick={handleCloseNavMenu} sx={{padding:'0 9px', marginLeft:'25px','&:hover': { backgroundColor: '#ffffff' } }}>
           <Typography textAlign="center" className='itemList'>
@@ -194,11 +211,7 @@ const drawerWidth=250;
       </DialogContent>
     </Dialog>
 
-            
-          
-
-
-          </Box>
+    </Box>
          
 
          {/* for the desktop view  */}
@@ -272,6 +285,16 @@ const drawerWidth=250;
           </Box>
         </Toolbar>
       </Container>
+      <Dialog
+        open={openAddPropertyDialog}
+        onClose={() => setOpenAddPropertyDialog(false)}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogContent>
+          <AddPropertyHome />
+        </DialogContent>
+      </Dialog>
     </AppBar>
   );
 }

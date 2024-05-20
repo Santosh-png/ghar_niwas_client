@@ -1,26 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react';
+import { Box, Button, Dialog, Typography } from '@mui/material';
 
 // material icons
 import HomeWorkIcon from '@mui/icons-material/HomeWork';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import LandscapeIcon from '@mui/icons-material/Landscape';
-import { Box, Button, Dialog, Modal, Typography } from '@mui/material';
-import ButtonComponent from '../button_components/button';
-import AddPropertyHome from '../form_components/add_property_house';
 
+// button component 
+import ButtonComponent from '../button_components/button';
 
 
 function IconComponents() {
-
-    const [openForm, setOpenForm] = React.useState(false);
-
-    const clickAddOpen = (event) => {
-        event.preventDefault();
-        setOpenForm(true);
-    }
-
-    const handleClose =() => setOpenForm(false);
-
   return (
     <>    
         <Box
@@ -69,27 +59,18 @@ function IconComponents() {
                         color: "secondary.main",
                         }}/>
                     {/* <ButtonComponent className='responsive_fontsize24' */}
-                      <Button onClick={clickAddOpen}
+                      <Button
                         sx={{
                             display: "flex",
                             justifyContent :"center",
                             alignItems: 'center'
                         }}
                       >
-                        <ButtonComponent className='responsive_fontsize20'>
+                        <ButtonComponent>
                         HOME
                         </ButtonComponent>
                         </Button>
-                </Box>
-
-                <Dialog
-                    open={openForm}
-                    onClose={handleClose}
-                    
-                >
-                    <AddPropertyHome/>    
-                </Dialog>  
-
+                </Box>  
 
                 {/* apartment */}
                 <Box sx={{
@@ -112,7 +93,7 @@ function IconComponents() {
                             alignItems: 'center'
                         }}
                     >
-                        <ButtonComponent  className='responsive_fontsize20'>APARTMENT</ButtonComponent>
+                        <ButtonComponent>APARTMENT</ButtonComponent>
                     </Button>
                 </Box>
                 
@@ -129,7 +110,7 @@ function IconComponents() {
                         width: {xs: "40px", md: "60px", lg: "80px"},
                         color: "secondary.main",
                     }}/>
-                    <ButtonComponent className='responsive_fontsize20'>LAND</ButtonComponent>
+                    <ButtonComponent>LAND</ButtonComponent>
                 </Box>
                 </Box>
         </Box>
