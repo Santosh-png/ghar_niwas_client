@@ -39,7 +39,7 @@ function AboutSection() {
               fontWeight: "600",
               color: "primary.main",
               display:"flex",
-              marginTop: "1.5rem",
+              marginTop: "-1rem",
               // border: "1px solid red",
             }}
           >

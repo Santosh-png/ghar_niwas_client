@@ -10,16 +10,13 @@ const ClientFeedbackCard = () => {
   return (
     <Card style={{
         margin:"30px 30px",
-        marginTop:"2rem",
+        marginTop:"1rem",
         marginLeft:"3.5rem",
         // marginTop:"3rem",
-        
         maxWidth: 345 ,
        }}>
     {/* <Card style={{margin:"buttom"}}> */}
       <Box sx={{ 
-        
-       
          backgroundColor: "primary.main" }}>
       <CardContent>
         <Typography variant="body2" color= "accent.white" >
