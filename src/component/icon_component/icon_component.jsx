@@ -160,13 +160,15 @@ function IconComponents() {
                 <Box >
                     {renderForm()}
                 </Box>
+
+                {/* add peroperty button */}
                 <Box sx={{
                         display: "flex",
                         justifyContent: "center",
                         marginTop: "1rem"
                     }}>
                     <ButtonComponent >Add Property</ButtonComponent>
-                    </Box>
+                </Box>
         </Box>
     </>
   )
