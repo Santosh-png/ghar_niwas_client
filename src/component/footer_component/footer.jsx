@@ -8,6 +8,7 @@ function Footer() {
     <Box 
         sx={{
             display:"flex",
+            flexDirection:{xs:'column',md:'row'},
             backgroundColor:"#292C6A",
             justifyContent:"center",
             height:"100px",
@@ -17,9 +18,6 @@ function Footer() {
             }}>
           <Typography className='responsive_fontsize16'>
             Copyright@{new Date().getFullYear()} &nbsp;
-          </Typography>
-          
-          <Typography className='responsive_fontsize16'>
            by Ghar Niwas - Real Estate in Nepal -Buy, Rent, Sell Property (ghar, jagga) in Nepal. &nbsp;
           </Typography>
           
