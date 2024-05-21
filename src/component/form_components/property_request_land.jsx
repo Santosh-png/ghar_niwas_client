@@ -42,13 +42,6 @@ function PropertyRequest() {
       padding:'10px'
 
     }}>
-      {/* Heading */}
-      <Box
-        
-      >
-       
-       
-      </Box>
       {/* Actual Form */}
       <Box sx={{ mt: "1rem" }}>
         <form >
@@ -60,8 +53,8 @@ function PropertyRequest() {
             <Grid item xs={12} md={6} lg={3}>
             <FormControl size="small" fullWidth>
                 <Box
-                 sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                 gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
+                  sx={{display: 'grid',
+                  gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
                 }}
                 >
                   <TextField
@@ -69,6 +62,7 @@ function PropertyRequest() {
                     size='small'
                     id='outlined-required'
                     label='Province'
+                  
                   />
                   
                   <TextField
@@ -115,9 +109,9 @@ function PropertyRequest() {
               margin='12px'
             > Property Detail
           </Typography>
-            <Grid item xs={12} md={6} 
-                  sx={{  maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                        gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'}}>
+            <Grid
+                   sx={{display: 'grid',
+                   gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'}}>
               <FormControl
                 size="small"
                 fullWidth
@@ -279,7 +273,7 @@ function PropertyRequest() {
               margin='12px'
             > Price Range 
           </Typography>
-            <Grid item xs={12} md={6} sx={{display:'flex',textAlign:'center' ,alignItems:'center',justifyContent:'center',margin:'20px'}}>   
+            <Grid sx={{display:'flex',textAlign:'center' ,alignItems:'center',justifyContent:'center',margin:'20px'}}>   
            
                 <TextField 
                   id="standard-basic" 
@@ -330,28 +324,6 @@ function PropertyRequest() {
             </Grid>
           
     </form>
-    <Dialog
-      open={OpenHomeForm}
-      onClose={()=>setOpenHomeForm(false)}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
-    >
-      <DialogContent>
-        <HomeForm/>
-
-      </DialogContent>
-    </Dialog>
-    <Dialog
-      open={openApartmentForm}
-      onClose={()=>setOpenHomeForm(false)}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
-    >
-      <DialogContent>
-        <ApartmentForm/>
-
-      </DialogContent>
-    </Dialog>
     </Box>
     </Box>
   );

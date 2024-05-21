@@ -63,7 +63,7 @@ const drawerWidth=250;
               edge="end"
               sx={{ ...(open && { display: 'flex', left:'89%'}) }}             
             >
-              <MenuIcon className="responsive_fontsize28"/>
+              <MenuIcon className="responsive_fontsize24"/>
             </IconButton>
             
            

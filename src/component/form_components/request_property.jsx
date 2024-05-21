@@ -56,8 +56,8 @@ function PropertyRequest() {
             <Grid item xs={12} md={6} lg={3}>
             <FormControl size="small" fullWidth>
                 <Box
-                 sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                 gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
+                  sx={{display: 'grid',
+                  gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
                 }}
                 >
                   <TextField
@@ -113,8 +113,8 @@ function PropertyRequest() {
             > Property Detail
           </Typography>
             <Grid item xs={12} md={6} 
-                sx={{  maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'}}>
+                  sx={{display: 'grid',
+                  gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'}}>
               <FormControl
                 size="small"
                 fullWidth
@@ -272,7 +272,7 @@ function PropertyRequest() {
                     rows={3}
                     // variant="outlined"
                     placeholder="Description"
-        />
+                />
                
               </FormControl>
             </Grid>
@@ -295,28 +295,7 @@ function PropertyRequest() {
               </Button>
             </Grid>
           
-    </form>
-    <Dialog
-      open={openApartmentForm}
-      onClose={() => setOpenApartmentForm(false)}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
-    >
-      <DialogContent>
-        <ApartmentForm/> {/* Render the form component */}
-      </DialogContent>
-    </Dialog>
-
-    <Dialog
-      open={OpenLandForm}
-      onClose={() => setOpenLandForm(false)}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
-    >
-      <DialogContent>
-        <LandForm/> {/* Render the form component */}
-      </DialogContent>
-    </Dialog>
+    </form>  
     </Box>
     </Box>
   );

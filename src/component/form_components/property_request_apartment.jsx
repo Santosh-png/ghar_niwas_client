@@ -1,7 +1,4 @@
 import React, { useState }  from "react";
-import HouseIcon from '@mui/icons-material/House';
-import ApartmentIcon from '@mui/icons-material/Apartment';
-import LandscapeIcon from '@mui/icons-material/Landscape';
 import ApartmentForm from "./property_request_apartment"
 import LandForm from './property_request_land'
 import {
@@ -46,19 +43,22 @@ function PropertyRequest() {
       {/* Heading */}
      
       {/* Actual Form */}
-      <Box sx={{ mt: "1rem" }} className="responsive_fontsize16">
+      <Box sx={{ mt: "1rem"}}className="responsive_fontsize16">
         <form >
 
-           <Box>
+           <Box  >
             <Typography variant='h3'
               className='responsive_fontsize26'
-              marginBottom='12px'
+              marginBottom='12px'            
             > Location </Typography>
-            <Grid item xs={12} md={6} lg={3}>
-            <FormControl size="small" fullWidth>
+           
+            <Grid item xs={12} md={6} lg={3}  >
+            <FormControl size="small" fullWidth   className='responsive_fontsize14' >
+             
                 <Box
-                 sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                 gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
+               
+                 sx={{display: 'grid',
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
                 }}
                 >
                   <TextField
@@ -103,10 +103,11 @@ function PropertyRequest() {
                     label='Landmark'
                   />
                 </Box>
+                {/* </Box>   */}
               </FormControl>
           </Grid>
         </Box>
-            
+        
         <Typography variant='h3'
               className='responsive_fontsize26'
               // fontWeight='bold'
@@ -114,8 +115,9 @@ function PropertyRequest() {
             > Property Detail
           </Typography>
             <Grid item xs={12} md={6} 
-                sx={{  maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'}}>
+                sx={{display: 'grid',
+                gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'}}
+            >
               <FormControl
                 size="small"
                 fullWidth
@@ -272,7 +274,6 @@ function PropertyRequest() {
                     id="standard-multiline-static"                  
                     multiline
                     rows={3}
-                    // variant="outlined"
                     placeholder="Description"
         />
                
@@ -297,27 +298,6 @@ function PropertyRequest() {
             </Grid>
           
     </form>
-    <Dialog
-      open={openApartmentForm}
-      onClose={() => setOpenApartmentForm(false)}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
-    >
-      <DialogContent>
-        <ApartmentForm/> {/* Render the form component */}
-      </DialogContent>
-    </Dialog>
-
-    <Dialog
-      open={OpenLandForm}
-      onClose={() => setOpenLandForm(false)}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
-    >
-      <DialogContent>
-        <LandForm/> {/* Render the form component */}
-      </DialogContent>
-    </Dialog>
     </Box>
     </Box>
   );
