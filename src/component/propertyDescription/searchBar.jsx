@@ -40,7 +40,7 @@ function SearchBar() {
     <Box
       sx={{
         position: "fixed",
-        top: "12%",
+        top: "14%",
         left: "10px",
         zIndex: "100",
         transform: "translate(0, 50%)",
