@@ -18,8 +18,9 @@ function SampleNextArrow(props) {
           justifyContent: "center",
           alignItems:"center",
           borderRadius: "50%",
-          paddingTop: "2.5px"
-
+          paddingTop: "2.5px",
+          // border:"1px solid red",
+          
         }}
         onClick={onClick}
       /> 

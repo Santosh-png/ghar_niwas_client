@@ -16,7 +16,7 @@ function PropertyDetail(){
     return(
         // main div
         <div>
-            <Typography className="responsive_fontsize32" sx={{textAlign:"center",margin:'0px',fontWeight:'600',color:'primary.main'}}>$12000 House for Sale in Lalitpur</Typography>
+            <Typography className="responsive_fontsize32" sx={{textAlign:"center",margin:'5px 0 0 0',fontWeight:'600',color:'primary.main'}}>$12000 House for Sale in Lalitpur</Typography>
             <div>
                 <Box sx={{display:"grid",justifyContent:"end",marginRight:'50px'}}>
                     <ButtonShare/>
