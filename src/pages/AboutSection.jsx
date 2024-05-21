@@ -28,7 +28,7 @@ function AboutSection() {
             display: "flex",
             flexDirection: 'column',
             gap: "1rem",
-            ml:"2.5rem",
+            // ml:"2.5rem",
             // border: "1px solid black"
             
           }}
