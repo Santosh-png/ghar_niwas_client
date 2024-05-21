@@ -1,10 +1,7 @@
-
-
 import React from 'react';
 import { Card, CardContent, Typography, IconButton, Box } from '@mui/material';
 import CardHeader from '@mui/material/CardHeader';
 import Avatar from '@mui/material/Avatar';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 const ClientFeedbackCard = () => {
   return (
@@ -15,7 +12,7 @@ const ClientFeedbackCard = () => {
       padding:"1rem",
       borderRadius: 5,
        }}>
-    <Card   >   {/* <Card style={{margin:"buttom"}}> */}
+    <Card>   {/* <Card style={{margin:"buttom"}}> */}
       <Box sx={{ 
          backgroundColor: "primary.main" }}>
       <CardContent>
@@ -33,11 +30,11 @@ const ClientFeedbackCard = () => {
             A
           </Avatar>
         }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
+        // action={
+        //   <IconButton aria-label="settings">
+        //     <MoreVertIcon />
+        //   </IconButton>
+        // }
         title="Ashika Paudel"
         subheader="September 14, 2016"
         sx={{backgroundColor:"#ECEEEE"}}
@@ -50,3 +47,4 @@ const ClientFeedbackCard = () => {
 }
 
 export default ClientFeedbackCard;
+
