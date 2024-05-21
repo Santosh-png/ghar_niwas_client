@@ -70,8 +70,7 @@ function RequestIconComponents() {
                 display: {
                     sm: 'flex', xs: 'column'
                 },
-                padding: "1rem",
-                gap: "1.5rem",
+                gap: "1rem",
                 alignItems : 'center',
                 justifyContent: "center"
             }}> 
@@ -85,8 +84,8 @@ function RequestIconComponents() {
                 }}>
                     <HomeWorkIcon 
                     sx={{
-                        height: {xs: "35px", md: "60px", lg: "70px"},
-                        width: {xs: "40px", md: "60px", lg: "80px"},
+                        height: {xs: "35px", md: "40px", lg: "50px"},
+                        width: {xs: "40px", md: "50px", lg: "70px"},
                         color: "secondary.main",
                         }}/>
                     {/* <ButtonComponent className='responsive_fontsize24' */}
@@ -113,8 +112,8 @@ function RequestIconComponents() {
                 }}>
                     <ApartmentIcon 
                        sx={{
-                        height: {xs: "35px", md: "60px", lg: "70px"},
-                        width: {xs: "40px", md: "60px", lg: "80px"},
+                        height: {xs: "35px", md: "40px", lg: "50px"},
+                        width: {xs: "40px", md: "50px", lg: "70px"},
                         color: "secondary.main",
                         }} 
                     />
@@ -139,8 +138,8 @@ function RequestIconComponents() {
                 }}>
                     <LandscapeIcon 
                     sx={{
-                        height: {xs: "35px", md: "60px", lg: "70px"},
-                        width: {xs: "40px", md: "60px", lg: "80px"},
+                        height: {xs: "35px", md: "40px", lg: "50px"},
+                        width: {xs: "40px", md: "50px", lg: "70px"},
                         color: "secondary.main",
                     }}/>
                     <Button

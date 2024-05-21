@@ -48,71 +48,7 @@ function PropertyRequest() {
       {/* Actual Form */}
       <Box sx={{ mt: "1rem" }} className="responsive_fontsize16">
         <form >
-            {/* <InputLabel id="demo-simple-select-label">Location</InputLabel>
 
-            <Grid item xs={12} md={6} 
-                  sx={{ maxWidth: { xs: "90%", md: "55rem" },margin:' 0 25px', display:'flex'}}>
-          
-              <FormControl
-                size="small"
-                fullWidth
-                
-                sx={{ maxWidth: { xs: "90%", md: "25rem" },display: 'grid',
-                gridTemplateColumns: 'repeat(2,1fr)',margin:'20px',gap:'10px'
-                
-               }}
-                
-              >                
-                  <TextField
-                   fullWidth
-                    // required
-                    size="small"
-                    id="outlined-required"
-                    label="provinces"
-                  
-                 />
-                  <TextField
-                    // required
-                    size="small"
-                    id="outlined-required"
-                    label="zone"
-                  
-                 />
-                  <TextField
-                    // required
-                    size="small"
-                    id="outlined-required"
-                    label="District"
-                    // sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
-                    // defaultValue="Hello World"
-                 />
-                  <TextField
-                    // required
-                    size="small"
-                    id="outlined-required"
-                    label="Municipality"
-                    // sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
-                    // defaultValue="Hello World"
-                 />
-                  <TextField
-                  size="small"
-                    // required
-                    id="outlined-required"
-                    label="Ward"
-                    // sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
-                    // defaultValue="Hello World"
-                 />
-                  <TextField
-                    // required
-                    size="small"
-                    id="outlined-required"
-                    label="Landmark"
-                    // sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
-                    // defaultValue="Hello World"
-                 />
-
-              </FormControl>
-            </Grid> */}
            <Box>
             <Typography variant='h3'
               className='responsive_fontsize26'
@@ -216,7 +152,7 @@ function PropertyRequest() {
                    id="outlined-required"
                    label="Area(sq.ft)"
                    type="text"
-                   sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+                   sx={{ maxWidth: { xs: "100%", md: "100%" }}}
                 />
                 <TextField 
                 // required
@@ -315,14 +251,14 @@ function PropertyRequest() {
                 <TextField 
                   id="standard-basic" 
                   size="small" 
-                  sx={{ maxWidth: { xs: "40%", md: "7rem" },margin:'0 10px'}}
+                  sx={{ maxWidth: { xs: "30%", md: "7rem" },margin:'0 10px'}}
                   variant="standard" />
                 <InputLabel>To</InputLabel>
                 <TextField 
                   id="standard-basic" 
                   size="small" 
                   variant="standard"
-                  sx={{ maxWidth: { xs: "40%", md: "7rem" },margin:'0 10px'}} />
+                  sx={{ maxWidth: { xs: "30%", md: "7rem" },margin:'0 10px'}} />
 
             </Grid>
            
@@ -330,7 +266,7 @@ function PropertyRequest() {
               <FormControl
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "50%" } ,margin:'10px 0px'}}
+                sx={{ maxWidth: { xs: "70%",sm:"50%", md: "50%" } ,margin:{xs:'10px 45px',sm:'10px 125px',md:'10px 125px'},textAlign:'center'}}
               >
                 <TextField
                     id="standard-multiline-static"                  
@@ -341,6 +277,23 @@ function PropertyRequest() {
         />
                
               </FormControl>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <Button
+                type="submit"
+                variant="contained"
+                sx={{ backgroundColor: "secondary.main", color: "white" }}
+
+              >
+                Request
+              </Button>
             </Grid>
           
     </form>

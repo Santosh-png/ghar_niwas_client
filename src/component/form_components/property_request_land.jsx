@@ -284,27 +284,27 @@ function PropertyRequest() {
                 <TextField 
                   id="standard-basic" 
                   size="small" 
-                  sx={{ maxWidth: { xs: "40%", md: "7rem" },margin:'0 10px'}}
+                  sx={{ maxWidth: { xs: "30%", md: "7rem" },margin:'0 10px'}}
                   variant="standard" />
                 <InputLabel>To</InputLabel>
                 <TextField 
                   id="standard-basic" 
                   size="small" 
                   variant="standard"
-                  sx={{ maxWidth: { xs: "40%", md: "7rem" },margin:'0 10px'}} />
+                  sx={{ maxWidth: { xs: "30%", md: "7rem" },margin:'0 10px'}} />
 
             </Grid>
             <Grid item xs={12} md={6}>
               <FormControl
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "50%" } ,margin:'10px 0px'}}
+                sx={{ maxWidth: { xs: "70%",sm:"50%", md: "50%" } ,margin:{xs:'10px 45px',sm:'10px 125px',md:'10px 125px'},textAlign:'center'}}
               >
                 <TextField
+                  
                     id="standard-multiline-static"                  
                     multiline
                     rows={3}
-                    // variant="outlined"
                     placeholder="Description"
         />
                
