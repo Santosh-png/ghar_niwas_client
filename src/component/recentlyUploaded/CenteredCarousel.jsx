@@ -16,7 +16,7 @@ export default function CenteredCarousel(props) {
       style={{ 
         width: "100%", 
         position: "relative",
-        // border:'1px solid red',
+        border:'1px solid red',
         paddingBottom:'30px',
         marginTop:'20px',
         
@@ -47,18 +47,23 @@ export default function CenteredCarousel(props) {
       />
      
       <>
-        <Fab
-          style={{ position: "absolute", top: "40%", left: 10, zIndex: 10}}
+        <Fab sx={{position: "absolute", top: "40%",left: 10, zIndex: 10,
+          height:{xs:"18px",sm:"25px",md:"40px"},width:{xs:"18px",sm:"25px",md:"40px"}
+        }}
+         
           size="small"
+
           color="primary"
           onClick={() => {
             ref.current?.goBack();
           }}
         >
-          <ArrowBackIcon />
+          <ArrowBackIcon sx={{height:{xs:"15px",sm:"20px",md:"30px"},width:{xs:"13px",sm:"18px",md:"24px"}}}/>
         </Fab>
         <Fab
-          style={{ position: "absolute", top: "40%", right: 10, zIndex: 10 }}
+         sx={{position: "absolute", top: "40%",right: 10, zIndex: 10,
+         height:{xs:"18px",sm:"25px",md:"40px"},width:{xs:"18px",sm:"25px",md:"40px"}
+       }}
           size="small"
           color="primary"
           onClick={() => {
@@ -66,7 +71,7 @@ export default function CenteredCarousel(props) {
           }}
           
         >
-          <ArrowForwardIcon  />
+          <ArrowForwardIcon  sx={{height:{xs:"15px",sm:"20px",md:"30px"},width:{xs:"13px",sm:"18px",md:"24px"}}}  />
         </Fab>
       </>
     </div>
