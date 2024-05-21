@@ -1,6 +1,5 @@
 import { Grid, Typography } from "@mui/material";
 import PropertyPicList from './propertyPicList';
-import SearchBar from './searchBar';
 import CardService from '../card/cardServices';
 import {Box} from '@mui/material';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
@@ -26,26 +25,28 @@ function PropertyDetail(){
                     <Duplicate/>
                 </div>
                 
-            <div style={{display:'flex',justifyContent:'space-between',margin:'0 10px 0 20px'}}>
-                <Grid>
+            <div style={{display:'flex',flexWrap:"wrap",justifyContent:'space-between',margin:'0 10px 0 20px'}}>
+                <Grid item>
                     <BottomNavigationAction label="Bed" icon={<BedIcon/>} />
                     <Typography className="responsive_fontsize16" sx={{textAlign:"center",color:'primary.main'}}>Bed</Typography>
                 </Grid>
-                <Grid>
+                <Grid item>
                     <BottomNavigationAction label="WashRoom" icon={<ShowerIcon />} />
                     <Typography className="responsive_fontsize16" sx={{color:'primary.main',textAlign:"center"}}>WashRoom</Typography>
                 </Grid>
-                <Grid>
+                <Grid item>
                     <BottomNavigationAction label="Kitchen" icon={<SoupKitchenIcon />} />
                     <Typography className="responsive_fontsize16" sx={{color:'primary.main',textAlign:"center"}}>Kitchen</Typography>
                 </Grid>
-                <Grid>
+                <Grid item>
                     <BottomNavigationAction label="CarParking" icon={<TimeToLeaveIcon />} />
                     <Typography className="responsive_fontsize16" sx={{color:'primary.main',textAlign:"center"}}>CarParking</Typography>
                 </Grid>
-                <Grid sx={{}}>
-                    <BottomNavigationAction style={{marginRight:'20px'}} label="Aanas" icon={<ScaleIcon />} />
-                    <Typography className="responsive_fontsize16" sx={{color:'primary.main',marginRight:'20px',textAlign:"center"}}>Aanas</Typography>
+                <Grid item xs={12} sm={2} sx={{ order: { xs: 1, sm: 0 } }}>
+                        <Grid item xs={12} sm={2}>
+                            <BottomNavigationAction style={{ marginRight: '20px' }} label="Aanas" icon={<ScaleIcon />} />
+                            <Typography className="responsive_fontsize16" sx={{ color: 'primary.main', marginRight: '20px', textAlign: "center" }}>Aanas</Typography>
+                        </Grid>
                 </Grid>
             </div>
             </div>

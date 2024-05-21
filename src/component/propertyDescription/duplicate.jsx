@@ -3,8 +3,7 @@ import Slider from "react-slick";
 import { Box } from '@mui/material'
 import PropertyList from '../card/cardItems';
 import Pic from './propertyPic';
-// import SearchBar from './searchBar';
-// import SearchIcon from '@mui/icons-material/Search';
+import SearchBar from './searchBar';
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -88,7 +87,7 @@ function Duplicate() {
     };
   return (
     <Box className="center-carousel" sx={{padding:'10px 50px',
-    justifyContent:"center"}}>
+    justifyContent:"center"}}>   
       <Slider {...settings}>
       {PropertyList.map((item)=>(
               <div key={item.id}>
@@ -99,6 +98,8 @@ function Duplicate() {
           ))}
       </Slider>
       
+       <SearchBar/> 
+    
     </Box>
   );
 }
