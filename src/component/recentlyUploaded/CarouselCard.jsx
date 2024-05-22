@@ -12,7 +12,7 @@ const Card = React.memo(function (props) {
     <Box
       sx={{
         // width: "500px",
-        minWidth:{xs:"220px",sm:"350px",md:"500px"},
+        minWidth:{xs:"180px",sm:"350px",md:"500px"},
         height:{xs:"250px",md:"300px"},
         overflow:"hidden",
         userSelect: "none",
@@ -20,10 +20,12 @@ const Card = React.memo(function (props) {
         display:'flex',
         justifyContent:'center',
         alignItems: "center",
-        left:{sm:'6%',md:'18%'},
+        left:{xs:"0%",sm:'6%',md:'18%'},
+        right:{xs:"8%"},
         backgroundColor:"yellow",
-        // border: "1px solid blue"
-    
+        // border: "1px solid blue",
+        marginLeft:{sm:"60px"},
+       
       }}
       className="my-slide-component"
     >
