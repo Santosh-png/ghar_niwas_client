@@ -14,6 +14,7 @@ function DetailForm() {
   const handleRequestForm = (e) => {
     e.preventDefault();
     setOpenRequestIcon(true);
+    setDetailForm(false)
     handleCloseNavMenu(); // Close the menu after opening the form
   };
 
@@ -84,7 +85,7 @@ function DetailForm() {
                 variant="contained"
                 sx={{ backgroundColor: "secondary.main", color: "white" }}
                 onClick={handleRequestForm}
-                onClose={() => { setOpenRequestIcon(false)}}
+                
               >
                 Submit
               </Button>

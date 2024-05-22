@@ -28,13 +28,13 @@ function NavBar() {
 
   const handleOpenForm = () => {
     setOpendetailDialog(true);
-    setOpenAddPropertyDialog(false); // Ensure the other dialog is closed
+    // setOpenAddPropertyDialog(false); // Ensure the other dialog is closed
     handleCloseNavMenu(); // Close the menu after opening the form
   };
 
   const handleOpenAddProperty = () => {
     setOpenAddPropertyDialog(true);
-    setOpendetailDialog(false); // Ensure the other dialog is closed
+    // setOpendetailDialog(false); // Ensure the other dialog is closed
     handleCloseNavMenu();
   };
 
