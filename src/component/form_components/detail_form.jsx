@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Box, FormControl, Grid, TextField, Button, Dialog, DialogContent } from "@mui/material";
-import RequestForm from '../icon_component/request_icon';
+import RequestForm from '../icon_component/request_icon'
 
 function DetailForm() {
   const [openRequestIcon, setOpenRequestIcon] = useState(false);
+  const[detailform,setDetailForm]=useState(false);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleCloseNavMenu = () => {
@@ -17,9 +18,8 @@ function DetailForm() {
   };
 
   return (
-    <>
-      {!openRequestIcon && (
-        <Box sx={{ margin: '10px' }}>
+    <>    
+        <Box sx={{ margin: '10px' }} >
           <form style={{ borderRadius: '20px' }}>
             <Grid>
               <FormControl
@@ -84,21 +84,21 @@ function DetailForm() {
                 variant="contained"
                 sx={{ backgroundColor: "secondary.main", color: "white" }}
                 onClick={handleRequestForm}
+                onClose={() => { setOpenRequestIcon(false)}}
               >
                 Submit
               </Button>
             </Grid>
           </form>
         </Box>
-      )}
       <Dialog
         open={openRequestIcon}
-        onClose={() => setOpenRequestIcon(false)}
+        onClose={() => { setOpenRequestIcon(false)}}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogContent>
-          <RequestForm /> {/* Render the form component */}
+        <DialogContent >
+         <RequestForm/> {/* Render the form component */}
         </DialogContent>
       </Dialog>
     </>
