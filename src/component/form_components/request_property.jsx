@@ -39,122 +39,86 @@ function PropertyRequest() {
 
   return (
     <Box sx={{
-      textAlign:"center",
-      border:'1px solid black',
+      // textAlign:"center",
       padding:'10px'
 
     }}>
       {/* Heading */}
-      <Box
-        
-      >
-        <Box>
-          <Typography
-            className="responsive__fontsize18"
-            sx={{
-              fontWeight: "600",
-              lineHeight: "21px",
-              color: "primary.main",
-              textTransform: "uppercase",
-            }}
-          >
-            Request Property
-          </Typography>
-          
-        </Box>
-        <Box sx={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-          <IconButton sx={{backgroundColor:"white",boxShadow:" 0px 4px 4px 0px #292C6A"
-                    
-                  }}>           
-            <HouseIcon  />
-          </IconButton>
-          <IconButton onClick={handleApartmentForm}>
-            <ApartmentIcon/>
-          </IconButton>
-          <IconButton onClick={handleLandForm}>
-            <LandscapeIcon/>
-          </IconButton>
-  
-        </Box>
-       
-      </Box>
+     
       {/* Actual Form */}
       <Box sx={{ mt: "1rem" }} className="responsive_fontsize16">
         <form >
-            <InputLabel id="demo-simple-select-label">Location</InputLabel>
-            <Grid item xs={12} md={6}>
-          
-              <FormControl
-                size="small"
-                fullWidth
-                
-                sx={{ maxWidth: { xs: "90%", md: "25rem" },display: 'grid',
-                gridTemplateColumns: 'repeat(2,1fr)',margin:'20px',gap:'10px'
-                
-               }}
-                
-              >                
+           <Box>
+            <Typography variant='h3'
+              className='responsive_fontsize26'
+              marginBottom='12px'
+            > Location </Typography>
+            <Grid item xs={12} md={6} lg={3}>
+            <FormControl size="small" fullWidth>
+                <Box
+                  sx={{display: 'grid',
+                  gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
+                }}
+                >
                   <TextField
-                   fullWidth
-                    // required
-                    size="small"
-                    id="outlined-required"
-                    label="provinces"
-                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
-                    // defaultValue="Hello World"
-                 />
+                    fullWidth
+                    size='small'
+                    id='outlined-required'
+                    label='Province'
+                  />
+                  
                   <TextField
-                    // required
-                    size="small"
-                    id="outlined-required"
-                    label="zone"
-                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
-                    // defaultValue="Hello World"
-                 />
+                    fullWidth
+                    size='small'
+                    id='outlined-required'
+                    label='Zone'
+                  />
+                  
                   <TextField
-                    // required
-                    size="small"
-                    id="outlined-required"
-                    label="District"
-                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
-                    // defaultValue="Hello World"
-                 />
-                  <TextField
-                    // required
-                    size="small"
-                    id="outlined-required"
-                    label="Municipality"
-                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
-                    // defaultValue="Hello World"
-                 />
-                  <TextField
-                  size="small"
-                    // required
-                    id="outlined-required"
-                    label="Ward"
-                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
-                    // defaultValue="Hello World"
-                 />
-                  <TextField
-                    // required
-                    size="small"
-                    id="outlined-required"
-                    label="Landmark"
-                    sx={{ maxWidth: { xs: "90%", md: "12rem" }}}
-                    // defaultValue="Hello World"
-                 />
+                    fullWidth
+                    size='small'
+                    id='outlined-required'
+                    label='District'
+                  />
 
+                  <TextField
+                    fullWidth
+                    size='small'
+                    id='outlined-required'
+                    label='Municipality'
+                  />
+
+                  <TextField
+                    fullWidth
+                    size='small'
+                    id='outlined-required'
+                    label='Ward'
+                  />
+
+                  <TextField
+                    fullWidth
+                    size='small'
+                    id='outlined-required'
+                    label='Landmark'
+                  />
+                </Box>
               </FormControl>
-            </Grid>
-          
+          </Grid>
+        </Box>
             
-            <InputLabel id="demo-simple-select-label">Property Detail</InputLabel>
-            <Grid item xs={12} md={6} sx={{ display: 'grid',
-                gridTemplateColumns: 'repeat(2,1fr)',alignItems:'center',margin:'20px',gap:'10px'}}>
+        <Typography variant='h3'
+              className='responsive_fontsize26'
+              // fontWeight='bold'
+              margin='12px'
+            > Property Detail
+          </Typography>
+            <Grid item xs={12} md={6} 
+                  sx={{display: 'grid',
+                  gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'}}>
               <FormControl
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+                sx={{ maxWidth: { xs: "100%", md: "100%" }}}
                 
               >      
               <InputLabel id="demo-simple-select-label">Type</InputLabel>
@@ -178,7 +142,7 @@ function PropertyRequest() {
                     // required
                     size="small"
                     id="outlined-required"
-                    sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+                    sx={{ maxWidth: { xs: "100%", md: "100%" }}}
                     label="Total Floor"/>
 
                 <TextField  
@@ -187,7 +151,7 @@ function PropertyRequest() {
                    id="outlined-required"
                    label="Area(sq.ft)"
                    type="text"
-                   sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+                   sx={{ maxWidth: { xs: "100%", md: "100%" }}}
                 />
                 <TextField 
                 // required
@@ -195,13 +159,13 @@ function PropertyRequest() {
                 id="outlined-required"
                 label="BHK"
                 type="text"
-                sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+                sx={{ maxWidth: { xs: "100%", md: "100%" }}}
                 />
 
               <FormControl
                size="small"
                fullWidth
-               sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+               sx={{ maxWidth: { xs: "100%", md: "100%" }}}
               >
                 <InputLabel>Facing</InputLabel>
                <Select
@@ -222,14 +186,14 @@ function PropertyRequest() {
                 <TextField 
                     size="small"
                     id="outlined-required"
-                    sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+                    sx={{ maxWidth: { xs: "100%", md: "100%" }}}
                     label="Property Age"/>
 
 
                 <FormControl  
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "14rem" }}}>   
+                sx={{ maxWidth: { xs: "100%", md: "100%" }}}>   
 
                 <InputLabel>Furnishing</InputLabel>
                 <Select
@@ -238,6 +202,7 @@ function PropertyRequest() {
                   id="demo-simple-select"
                 //   value={WardNumber}
                   label="Furnishing"
+                  sx={{ maxWidth: { xs: "100%", md: "100%" }}}
                   type="text"
                 >
                   <MenuItem value="Non">Non</MenuItem>
@@ -251,20 +216,21 @@ function PropertyRequest() {
                     size="small"
                     id="outlined-required"
                     label="Road Size"
-                    sx={{ maxWidth: { xs: "100%", md: "12rem" }}}
+                    sx={{ maxWidth: { xs: "100%", md: "100%" }}}
               />
 
           
             <FormControl   
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "14rem" }}}>
+                sx={{ maxWidth: { xs: "100%", md: "100%" }}}>
                 <InputLabel>Urgency</InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                 //   value={urgency}
                   label="Urgency"
+                  sx={{ maxWidth: { xs: "100%", md: "100%" }}}
                   type="text"
                 >
                   <MenuItem value="Very Urgent">Very Urgent</MenuItem>
@@ -274,27 +240,31 @@ function PropertyRequest() {
 
             </FormControl>
             </Grid>
-            <InputLabel>Price Range</InputLabel>
+            <Typography variant='h2'
+              className='responsive_fontsize18'
+              margin='12px'
+            > Price Range </Typography>
+          
             <Grid item xs={12} md={6} sx={{display:'flex', textAlign:'center' ,alignItems:'center',justifyContent:'center',margin:'20px'}}>   
-            
+             
                 <TextField 
                   id="standard-basic" 
                   size="small" 
-                  sx={{ maxWidth: { xs: "40%", md: "7rem" },margin:'0 10px'}}
+                  sx={{ maxWidth: { xs: "30%", md: "7rem" },margin:'0 10px'}}
                   variant="standard" />
                 <InputLabel>To</InputLabel>
                 <TextField 
                   id="standard-basic" 
                   size="small" 
                   variant="standard"
-                  sx={{ maxWidth: { xs: "40%", md: "7rem" },margin:'0 10px'}} />
+                  sx={{ maxWidth: { xs: "30%", md: "7rem" },margin:'0 10px'}} />
 
             </Grid>
             <Grid item xs={12} md={6}>
               <FormControl
                 size="small"
                 fullWidth
-                sx={{ maxWidth: { xs: "100%", md: "14rem" } ,margin:'10px 0px'}}
+                sx={{ maxWidth: { xs: "70%",sm:"50%", md: "50%" } ,margin:{xs:'10px 45px',sm:'10px 125px',md:'10px 125px'},textAlign:'center'}}
               >
                 <TextField
                     id="standard-multiline-static"                  
@@ -302,7 +272,7 @@ function PropertyRequest() {
                     rows={3}
                     // variant="outlined"
                     placeholder="Description"
-        />
+                />
                
               </FormControl>
             </Grid>
@@ -325,28 +295,7 @@ function PropertyRequest() {
               </Button>
             </Grid>
           
-    </form>
-    <Dialog
-      open={openApartmentForm}
-      onClose={() => setOpenApartmentForm(false)}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
-    >
-      <DialogContent>
-        <ApartmentForm/> {/* Render the form component */}
-      </DialogContent>
-    </Dialog>
-
-    <Dialog
-      open={OpenLandForm}
-      onClose={() => setOpenLandForm(false)}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
-    >
-      <DialogContent>
-        <LandForm/> {/* Render the form component */}
-      </DialogContent>
-    </Dialog>
+    </form>  
     </Box>
     </Box>
   );
