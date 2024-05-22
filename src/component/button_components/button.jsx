@@ -9,7 +9,10 @@ function ButtonComponent({ children, ...props }) {
                 sx={{
                     backgroundColor: "primary.main",
                     color: "white",
-                    minWidth: 150,
+                    padding: "0.3rem 1rem",                   
+                    minWidth:{
+                      xs: 65, sm: 90, md: 120
+                    },
                     fontFamily: 'Roboto Serif',
                 }}
             >
