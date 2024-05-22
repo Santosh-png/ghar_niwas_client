@@ -9,6 +9,7 @@ import VideoCallIcon from '@mui/icons-material/VideoCall';
 import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
 
 import VerticalDivider from '../ui/divider';
+import FileUpload from '../icon_component/file_upload_cotent';
 
 function AddPropertyHome() {
   const [selected, setSelected] = React.useState('');
@@ -53,7 +54,7 @@ function AddPropertyHome() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        padding: "2rem 1rem"
+        padding: "2rem 0.5rem"
         }}>
 
           {/* Location */}
@@ -63,13 +64,11 @@ function AddPropertyHome() {
               fontWeight='bold'
               marginBottom='12px'
             > Location/Address </Typography>
-            <Grid item xs={12} md={6} lg={3}>
             <FormControl size="small" fullWidth>
                 <Box
-                 sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                 gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
-                }}
-                >
+                 sx={{display: 'grid',
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
+               }}>
                   <TextField
                     fullWidth
                     size='small'
@@ -113,7 +112,6 @@ function AddPropertyHome() {
                   />
                 </Box>
               </FormControl>
-          </Grid>
         </Box>
 
         {/* Property Details */}
@@ -124,12 +122,11 @@ function AddPropertyHome() {
             marginBottom='12px'
             sx={{opacity: "90%"}}
           > Property Details </Typography>
-          <Grid item xs={12} md={6} lg={3}>
             <FormControl size="small" fullWidth>
                 <Box
-                 sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                 gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
-                }}
+                 sx={{display: 'grid',
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
+               }}
                 >
                 <TextField
                   id="outlined-select-type-select"
@@ -200,7 +197,6 @@ function AddPropertyHome() {
                 </TextField>
                 </Box>
               </FormControl>
-          </Grid>
         </Box>
 
         {/* Price and amenities */}
@@ -215,12 +211,11 @@ function AddPropertyHome() {
           >
               Price Range
           </Typography>
-          <Grid item xs={12} md={6} lg={3}>
             <FormControl size="small" fullWidth >
                 <Box
-                 sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                 gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
-                }}
+                 sx={{display: 'grid',
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'},
+               }}
                 > 
                   <TextField
                     fullWidth
@@ -228,7 +223,7 @@ function AddPropertyHome() {
                     id='outlined-required'
                     label='Total Price'
                   />
-                  <FormControl sx={{ml: "2rem"}}> 
+                  <FormControl> 
                   <RadioGroup
                     row
                     aria-labelledby="demo-controlled-radio-buttons-group"
@@ -242,7 +237,6 @@ function AddPropertyHome() {
                 </FormControl>
                 </Box>
               </FormControl>
-          </Grid>
         </Box>
 
         {/* furnishing */}
@@ -257,9 +251,10 @@ function AddPropertyHome() {
             >
                 Furnishing
             </Typography>
-            <Grid item xs={12} md={6} lg={3}>
               <FormControl size="small"  fullWidth >
-                  <Box sx={{ maxWidth: { xs: "100%", md: "100%" }}}>
+                  <Box sx={{display: 'grid',
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
+               }}>
                     <FormControl>
                       <RadioGroup
                         row
@@ -276,7 +271,6 @@ function AddPropertyHome() {
                     </FormControl>
                   </Box>
                 </FormControl>
-            </Grid>
         </Box>
 
         {/* parking */}
@@ -291,9 +285,10 @@ function AddPropertyHome() {
             >
                 Parking
             </Typography>
-            <Grid item xs={12} md={6} lg={3}>
               <FormControl size="small" fullWidth >
-                  <Box sx={{ maxWidth: { xs: "100%", md: "100%"}}}>
+                  <Box sx={{display: 'grid',
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
+               }}>
                     <FormControl>
                       <RadioGroup
                         row
@@ -309,7 +304,6 @@ function AddPropertyHome() {
                     </FormControl>
                   </Box>
                 </FormControl>
-            </Grid>
         </Box>
 
         {/* Bathrooms */}
@@ -324,9 +318,10 @@ function AddPropertyHome() {
             >
                 Bathrooms
             </Typography>
-            <Grid item xs={12} md={6} lg={3}>
               <FormControl size="small" fullWidth>
-                  <Box sx={{ maxWidth: { xs: "100%", md: "100%"}}}>
+                  <Box sx={{display: 'grid',
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'},
+               }}>
                     <FormControl>
                       <RadioGroup
                         row
@@ -343,8 +338,6 @@ function AddPropertyHome() {
                     </FormControl>
                   </Box>
                 </FormControl>
-
-            </Grid>
         </Box>
 
         {/* Amenitites */}
@@ -359,9 +352,10 @@ function AddPropertyHome() {
             >
                 Amenities
             </Typography>
-            <Grid item xs={12} md={6} lg={3}>
               <FormControl size="small" fullWidth>
-                  <Box sx={{ maxWidth: { xs: "100%", md: "100%"}}}>
+                  <Box sx={{display: 'grid',
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
+               }}>
                     <FormControl>
                       <RadioGroup
                         row
@@ -371,10 +365,8 @@ function AddPropertyHome() {
                         onChange={handleSelect}
                         defaultValue="attached"
                         sx={{
-                          border: "1px solid black",
                           borderRadius: "5px",
                           display: "flex",
-                          padding:"1rem"
                         }}
                       >
                         <FormControlLabel value="attached" control={<Radio />} label="Attached 2+"/> 
@@ -385,7 +377,6 @@ function AddPropertyHome() {
                     </FormControl>
                   </Box>
                 </FormControl>
-            </Grid>
         </Box>
 
         {/* description box */}
@@ -396,7 +387,6 @@ function AddPropertyHome() {
               marginBottom='12px'
               sx={{opacity: "70%"}}
             > Description </Typography>
-            <Grid item xs={12} md={6} lg={3}>
                 <FormControl size="small" fullWidth>
                     <TextField
                     id="outlined-multiline-static"
@@ -406,14 +396,9 @@ function AddPropertyHome() {
                     defaultValue="Write any additional information."
                     /> 
                 </FormControl>
-            </Grid>
         </Box>
-
-
-         {/* file upload gallery and map */}
-         <Box sx={{display: {xs: "Column",sm: 'flex', md: "flex", lg: "flex"}}}>
           {/* gallery */}
-          <Box sx={{mb: "1rem"}}>
+          <Box sx={{mb: "1rem" }}>
             <Typography variant='h6'
                 className='responsive_fontsize20'
                 fontWeight='bold'
@@ -422,45 +407,11 @@ function AddPropertyHome() {
                   opacity: "70%"
                 }}
               > Gallery </Typography>
-              <Grid item xs={12} md={6} lg={3}>
                 <FormControl size="small" fullWidth>
-                  <Box
-                    sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                    gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
-                    }}
-                  >
-                    <Box sx={{
-                        display: 'flex',
-                        justifyContent: "center",
-                        padding: "0.5rem",
-                        ml: "0.5rem",
-                        border: "1px solid black",
-                        borderRadius: "5px",
-                        opacity: "70%"
-                    }}
-                    > 
-                        <Button component="label">
-                            <AddToPhotosIcon className='gallery'
-                              sx={{
-                                height: "60px",
-                                width: "60px",
-                                mr: '0.8rem'
-                              }}
-                            />
-                            <input type="file" hidden />
-                        </Button>
-                        <VerticalDivider/>
-                        <Button component="label">
-                            <VideoCallIcon className='gallery' sx={{
-                                height: "60px",
-                                width: "60px"
-                              }}/>
-                            <input type="file" hidden />
-                        </Button>
-                    </Box>
+                <Box>
+                    <FileUpload/>
                   </Box>
-                </FormControl>      
-              </Grid>
+                </FormControl>
           </Box>
 
           {/* map */}
@@ -473,34 +424,27 @@ function AddPropertyHome() {
                     opacity: "70%"
                 }}
                 >Map</Typography>
-                <Grid item xs={12} md={6} lg={3}>
-                    <FormControl
-                        size="small"
-                        fullWidth>
-                        <Box
-                        sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                        gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
-                        }}
-                        >
-                            <Box sx={{
-                            display: 'flex',
-                            border: "1px solid black",
-                            borderRadius: "5px",
-                            opacity: "70%",
-                            height:"auto",
-                            width: "auto"
+                    <FormControl size="small" fullWidth>
+                        <Box >
+                            <Box sx={{ 
+                             display: 'flex',
+                              borderRadius: "5px",
+                              opacity: "70%",
+                              height:"auto",
+                              maxWidth:"100%",
+                              width:"100%",
+                              overflow: "hidden",
+                              border: '1px solid black'
                             }}
                             >
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28271.991916311705!2d85.29495851139528!3d27.655502971182738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb177f078f1cd9%3A0xb514415c5a76afb3!2sKusunti%2C%20Lalitpur%2044700!5e0!3m2!1sen!2snp!4v1715060575540!5m2!1sen!2snp" 
-                                style={{ border: "0" }} 
+                                style={{borderRadius:"5px", border: "0", width:"100%"}} 
                                 allowFullScreen="" 
                                 loading="lazy" 
                                 referrerPolicy="no-referrer-when-downgrade"></iframe>
                             </Box>
                         </Box>
-                </FormControl>      
-            </Grid>
-        </Box>
+                </FormControl>  
         </Box>
     </Box>
     </div>

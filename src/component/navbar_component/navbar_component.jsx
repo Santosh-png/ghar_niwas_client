@@ -12,6 +12,7 @@ import './navbar.style.css'
 import DetailForm from '../form_components/detail_form';
 import FormFormat from "../form_components/form_format";
 import IconComponents from "../icon_component/icon_component";
+import AddPropertyDetailForm from "../form_components/add_detail_form";
 
 const itemList = ['Home', 'Add Property', 'Sale','Rent','Request Property'];
 
@@ -281,7 +282,6 @@ const drawerWidth=250;
                 
               }}
             />
-           
           </Box>
           </Box>
         </Toolbar>
@@ -293,8 +293,7 @@ const drawerWidth=250;
         aria-describedby="alert-dialog-description"
       >
         <DialogContent>
-          {/* <FormFormat/> */}
-          <IconComponents/>
+          <AddPropertyDetailForm/>
         </DialogContent>
       </Dialog>
     </AppBar>
