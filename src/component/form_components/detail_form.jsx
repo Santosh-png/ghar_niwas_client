@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, FormControl, Grid, TextField, Button, Dialog, DialogContent } from "@mui/material";
-import RequestIcon from "../icon_component/request_icon";
+import RequestForm from '../icon_component/request_icon';
 
 function DetailForm() {
   const [openRequestIcon, setOpenRequestIcon] = useState(false);
@@ -18,84 +18,87 @@ function DetailForm() {
 
   return (
     <>
-      <Box sx={{ margin: '10px' }}>
-        <form style={{ borderRadius: '20px' }}>
-          <Grid >
-            <FormControl
-              size="large"
-              fullWidth
-              sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px' }}>
-
-              <TextField
-                size="small"
-                id="outlined-basic"
-                label="Full Name"
-                variant="outlined"
-                sx={{ maxWidth: { xs: "100%", md: "25rem" } }}
-              />
-
-            </FormControl>
-          </Grid>
-          <Grid>
-            <FormControl
-              size="small"
-              className="formControl"
-              fullWidth
-              sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px'}}>
-              <TextField
+      {!openRequestIcon && (
+        <Box sx={{ margin: '10px' }}>
+          <form style={{ borderRadius: '20px' }}>
+            <Grid>
+              <FormControl
+                size="large"
                 fullWidth
+                sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px' }}
+              >
+                <TextField
+                  size="small"
+                  id="outlined-basic"
+                  label="Full Name"
+                  variant="outlined"
+                  sx={{ maxWidth: { xs: "100%", md: "25rem" } }}
+                />
+              </FormControl>
+            </Grid>
+            <Grid>
+              <FormControl
                 size="small"
-                id="outlined-basic"
-                type="email"
-                label="Email"
-                variant="outlined"
-                sx={{ maxWidth: { xs: "100%", md: "25rem" } }}
-              />
-            </FormControl>
-          </Grid>
-          <Grid>
-            <FormControl
-              size="small"
-              fullWidth
-              sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px' }}>
-              <TextField
+                className="formControl"
+                fullWidth
+                sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px'}}
+              >
+                <TextField
+                  fullWidth
+                  size="small"
+                  id="outlined-basic"
+                  type="email"
+                  label="Email"
+                  variant="outlined"
+                  sx={{ maxWidth: { xs: "100%", md: "25rem" } }}
+                />
+              </FormControl>
+            </Grid>
+            <Grid>
+              <FormControl
                 size="small"
-                id="outlined-basic"
-                label="Phone no"
-                type="number"
-                variant="outlined"
-                sx={{ maxWidth: { xs: "100%", md: "25rem" } }}
-              />
-            </FormControl>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              padding:'0 100px'
-            }}
-          >
-            <Button
-              type="submit"
-              variant="contained"
-              sx={{ backgroundColor: "secondary.main", color: "white" }}
-              onClick={handleRequestForm}
+                fullWidth
+                sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px' }}
+              >
+                <TextField
+                  size="small"
+                  id="outlined-basic"
+                  label="Phone no"
+                  type="number"
+                  variant="outlined"
+                  sx={{ maxWidth: { xs: "100%", md: "25rem" } }}
+                />
+              </FormControl>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                padding:'0 100px'
+              }}
             >
-              Submit
-            </Button>
-          </Grid>
-        </form>
-      </Box>
+              <Button
+                type="submit"
+                variant="contained"
+                sx={{ backgroundColor: "secondary.main", color: "white" }}
+                onClick={handleRequestForm}
+              >
+                Submit
+              </Button>
+            </Grid>
+          </form>
+        </Box>
+      )}
       <Dialog
         open={openRequestIcon}
-        onClose={() => { setOpenRequestIcon(false); handleCloseNavMenu() }}
+        onClose={() => setOpenRequestIcon(false)}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogContent sx={{ backgroundColor: "transparent" }}>
-          <RequestIcon /> {/* Render the form component */}
+        <DialogContent>
+          <RequestForm /> {/* Render the form component */}
         </DialogContent>
       </Dialog>
     </>
