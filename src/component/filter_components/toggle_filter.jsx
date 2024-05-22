@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import Popover from '@mui/material/Popover';
 import CustomFilterPanelContent from './filter_panel_content';
 import { Modal, Typography } from '@mui/material';
 
@@ -19,7 +18,7 @@ function ToggleFilter() {
   };
 
   const open = Boolean(anchorEl);
-  const id = open ? 'simple-popover' : undefined;
+  const id = open ? 'simple-modal' : undefined;
 
   return (
     <>
@@ -51,11 +50,11 @@ function ToggleFilter() {
         </ToggleButton>
       </ToggleButtonGroup>
 
-      {/* Popover */}
+      {/* Modal */}
       <Modal
         id={id}
         open={open}
-        anchorEl={anchorEl}
+        // anchorEl={anchorEl} - used for forward referencing (so commented out)
         onClose={handleClose}
         anchorOrigin={{
           vertical: 'bottom',
@@ -72,7 +71,7 @@ function ToggleFilter() {
           }
         }}
       >
-        <CustomFilterPanelContent />
+        <CustomFilterPanelContent  alignment={alignment} />
       </Modal>
     </>
   );

@@ -14,56 +14,58 @@ function DetailForm() {
     e.preventDefault();
     setOpenRequestForm(true);
     handleCloseNavMenu(); // Close the menu after opening the form
-    
   };
 
   return (
     <>
-      <Box sx={{ margin: '20px' }}>
+      <Box sx={{ margin: '10px' }}>
         <form style={{ borderRadius: '20px' }}>
+          <Grid >
+            <FormControl
+              size="large"
+              fullWidth
+              sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px' }}>
 
+              <TextField
+                size="small"
+                id="outlined-basic"
+                label="Full Name"
+                variant="outlined"
+                sx={{ maxWidth: { xs: "100%", md: "25rem" } }}
+              />
+
+            </FormControl>
+          </Grid>
           <Grid>
-            <FormControl 
+            <FormControl
+              size="small"
+              className="formControl"
+              fullWidth
+              sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px'}}>
+              <TextField
+                fullWidth
+                size="small"
+                id="outlined-basic"
+                type="email"
+                label="Email"
+                variant="outlined"
+                sx={{ maxWidth: { xs: "100%", md: "25rem" } }}
+              />
+            </FormControl>
+          </Grid>
+          <Grid>
+            <FormControl
               size="small"
               fullWidth
-              sx={{ maxWidth: { xs: "100%", md: "18rem" },margin:'10px 0px'}}>
-
-              <TextField 
+              sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px' }}>
+              <TextField
                 size="small"
-                id="outlined-basic" 
-                label="Full Name" 
-                variant="outlined" 
-                sx={{ maxWidth: { xs: "1000%", md: "18rem" }}}
-                />
-                
-            </FormControl>
-          </Grid>
-          <Grid>
-            <FormControl size="small"
-              fullWidth
-              sx={{ maxWidth: { xs: "100%", md: "18rem" }, margin: '10px 0px' }}>
-              <TextField 
-                  size="small"
-                  id="outlined-basic" 
-                  type="email" 
-                  label="Email Address" 
-                  variant="outlined" 
-                  sx={{ maxWidth: { xs: "100%", md: "19rem" }}}
-                />
-            </FormControl>
-          </Grid>
-          <Grid>
-            <FormControl size="small"
-              fullWidth
-              sx={{ maxWidth: { xs: "100%", md: "14rem" }, margin: '10px 0px' }}>
-              <TextField 
-                size="small"
-                id="outlined-basic" 
-                label="Phone No" 
-                type="number" 
-                variant="outlined" 
-                sx={{ maxWidth: { xs: "1000%", md: "18rem" }}}
-                />
+                id="outlined-basic"
+                label="Phone no"
+                type="number"
+                variant="outlined"
+                sx={{ maxWidth: { xs: "100%", md: "25rem" } }}
+              />
             </FormControl>
           </Grid>
           <Grid
@@ -72,29 +74,25 @@ function DetailForm() {
             sx={{
               display: "flex",
               justifyContent: "center",
+              padding:'0 100px'
             }}
-            
           >
             <Button
               type="submit"
               variant="contained"
               sx={{ backgroundColor: "secondary.main", color: "white" }}
               onClick={handleRequestForm}
-             
             >
               Submit
             </Button>
           </Grid>
-
         </form>
-
       </Box>
       <Dialog
         open={openRequestForm}
-        onClose={() =>{ setOpenRequestForm(false); handleCloseNavMenu()}}
+        onClose={() => { setOpenRequestForm(false); handleCloseNavMenu() }}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
-      
       >
         <DialogContent sx={{ backgroundColor: "transparent" }}>
           <RequestForm /> {/* Render the form component */}
@@ -102,7 +100,6 @@ function DetailForm() {
       </Dialog>
     </>
   );
-
 }
 
 export default DetailForm;
