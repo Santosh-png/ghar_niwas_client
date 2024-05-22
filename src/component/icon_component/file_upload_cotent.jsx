@@ -15,9 +15,10 @@ const FileUpload = () => {
     <Box
       {...getRootProps()}
       sx={{
-        border: '2px dashed #3f51b5',
-        borderRadius: '8px',
+        border: '1px solid black',
+        borderRadius: '5px',
         padding: '8px',
+        opacity: "70%",
         textAlign: 'center',
         cursor: 'pointer',
         '&:hover': {

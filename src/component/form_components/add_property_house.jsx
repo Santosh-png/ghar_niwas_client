@@ -199,7 +199,7 @@ function AddPropertyHome() {
               </FormControl>
         </Box>
 
-        {/* Price and amenities */}
+                {/* Price and amenities */}
         <Box>
         <Typography variant='h6'
             className='responsive_fontsize20'
@@ -214,7 +214,7 @@ function AddPropertyHome() {
             <FormControl size="small" fullWidth >
                 <Box
                  sx={{display: 'grid',
-                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'},
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap: "12px"
                }}
                 > 
                   <TextField
@@ -253,9 +253,9 @@ function AddPropertyHome() {
             </Typography>
               <FormControl size="small"  fullWidth >
                   <Box sx={{display: 'grid',
-                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
+                  gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(1,1fr)',md:'repeat(1,1fr)'}, gap:'12px'
                }}>
-                    <FormControl>
+                    {/* <FormControl> */}
                       <RadioGroup
                         row
                         aria-labelledby="demo-controlled-radio-buttons-group"
@@ -268,7 +268,7 @@ function AddPropertyHome() {
                         <FormControlLabel value="non-furnished" control={<Radio />} label="Non-Furnished" />
                         <FormControlLabel value="semi-furnished" control={<Radio />} label="Semi-Furnished" />
                       </RadioGroup>
-                    </FormControl>
+                    {/* </FormControl> */}
                   </Box>
                 </FormControl>
         </Box>
@@ -287,7 +287,7 @@ function AddPropertyHome() {
             </Typography>
               <FormControl size="small" fullWidth >
                   <Box sx={{display: 'grid',
-                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(1,1fr)',md:'repeat(1,1fr)'}, gap:'12px'
                }}>
                     <FormControl>
                       <RadioGroup
@@ -320,7 +320,7 @@ function AddPropertyHome() {
             </Typography>
               <FormControl size="small" fullWidth>
                   <Box sx={{display: 'grid',
-                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'},
+                gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(1,1fr)',md:'repeat(1,1fr)'}, gap:'12px'
                }}>
                     <FormControl>
                       <RadioGroup
@@ -352,11 +352,9 @@ function AddPropertyHome() {
             >
                 Amenities
             </Typography>
-              <FormControl size="small" fullWidth>
-                  <Box sx={{display: 'grid',
-                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
-               }}>
-                    <FormControl>
+              {/* <FormControl size="small" fullWidth> */}
+                  <Box>
+                    <FormControl size="small" fullWidth>
                       <RadioGroup
                         row
                         aria-labelledby="demo-controlled-radio-buttons-group"
@@ -366,17 +364,20 @@ function AddPropertyHome() {
                         defaultValue="attached"
                         sx={{
                           borderRadius: "5px",
-                          display: "flex",
+                          display: {xs: "flex", md: "column"},
+                          display: 'grid', 
+                          gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(3,1fr)'}, gap:'12px',
                         }}
                       >
-                        <FormControlLabel value="attached" control={<Radio />} label="Attached 2+"/> 
-                        <FormControlLabel value="common" control={<Radio />} label="Common 2+" />
-                        <FormControlLabel value="attached" control={<Radio />} label="Attached 2+"/> 
-                        <FormControlLabel value="common" control={<Radio />} label="Common 2+" />
+                         <FormControlLabel value="hot water" control={<Radio />} label="Hot water"/> 
+                        <FormControlLabel value="security" control={<Radio />} label="Security" />
+                        <FormControlLabel value="gym" control={<Radio />} label="Gym"/> 
+                        <FormControlLabel value="lift" control={<Radio />} label="Lift" />
+                        <FormControlLabel value="swimming" control={<Radio />} label="Swimming" />
                       </RadioGroup>
                     </FormControl>
                   </Box>
-                </FormControl>
+                {/* </FormControl> */}
         </Box>
 
         {/* description box */}
