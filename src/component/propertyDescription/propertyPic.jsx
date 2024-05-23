@@ -9,10 +9,10 @@ function PropertyCard({imageUrl}) {
       <CardActionArea>
         <CardMedia
           component="img"
-          height="400"
+          height="480"
           image={imageUrl}
           alt="Property Image"
-          sx={{height:{xs:'250px',sm:'300px',md:'350px',lg:'400px'}}}
+          sx={{height:{xs:'300px',sm:'350px',md:'400px',lg:'480px'}}}
         />
       </CardActionArea>
     </Card>

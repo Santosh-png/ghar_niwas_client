@@ -1,48 +1,26 @@
-
 import React from 'react';
 import { Typography,Box, Grid, TextField, Button, IconButton,} from '@mui/material';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
-import VideoCallIcon from '@mui/icons-material/VideoCall';
-import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
+import FileUpload from '../icon_component/file_upload_cotent';
 
-import VerticalDivider from '../ui/divider';
-
-function AddPropertyApartment() {
+function AddPropertyHome() {
   const [selected, setSelected] = React.useState('');
   const handleSelect = (event) => {
     setSelected(event.target.value);
   }
   const type = [
-    {
-      value: 'commercial',
-      label: 'Commercial'
-    },
-    {
-      value: 'non-commercial',
-      label: 'Non Commercial'
-    },
+    { value: 'commercial', label: 'Commercial'},
+    { value: 'non-commercial', label: 'Non Commercial'},
   ];
 
   const facing = [
-    {
-      value: 'north',
-      label: 'North'
-    },
-    {
-      value: 'south',
-      label: 'South'
-    },
-    {
-      value: 'east',
-      label: 'East'
-    },
-    {
-      value: 'west',
-      label: 'West'
-    },
+    {value: 'north', label: 'North'},
+    { value: 'south', label: 'South'},
+    { value: 'east', label: 'East'},
+    { value: 'west', label: 'West'},
   ];
   return (
     <div>
@@ -53,7 +31,7 @@ function AddPropertyApartment() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        padding: "2rem 1rem"
+        padding: "2rem 0.5rem"
         }}>
 
           {/* Location */}
@@ -63,13 +41,11 @@ function AddPropertyApartment() {
               fontWeight='bold'
               marginBottom='12px'
             > Location/Address </Typography>
-            <Grid item xs={12} md={6} lg={3}>
             <FormControl size="small" fullWidth>
                 <Box
-                 sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                 gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
-                }}
-                >
+                 sx={{display: 'grid',
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
+               }}>
                   <TextField
                     fullWidth
                     size='small'
@@ -113,7 +89,6 @@ function AddPropertyApartment() {
                   />
                 </Box>
               </FormControl>
-          </Grid>
         </Box>
 
         {/* Property Details */}
@@ -124,12 +99,11 @@ function AddPropertyApartment() {
             marginBottom='12px'
             sx={{opacity: "90%"}}
           > Property Details </Typography>
-          <Grid item xs={12} md={6} lg={3}>
             <FormControl size="small" fullWidth>
                 <Box
-                 sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                 gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
-                }}
+                 sx={{display: 'grid',
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
+               }}
                 >
                 <TextField
                   id="outlined-select-type-select"
@@ -200,7 +174,6 @@ function AddPropertyApartment() {
                 </TextField>
                 </Box>
               </FormControl>
-          </Grid>
         </Box>
 
         {/* Price and amenities */}
@@ -215,12 +188,11 @@ function AddPropertyApartment() {
           >
               Price Range
           </Typography>
-          <Grid item xs={12} md={6} lg={3}>
             <FormControl size="small" fullWidth >
                 <Box
-                 sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                 gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
-                }}
+                 sx={{display: 'grid',
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap: "12px"
+               }}
                 > 
                   <TextField
                     fullWidth
@@ -228,55 +200,14 @@ function AddPropertyApartment() {
                     id='outlined-required'
                     label='Total Price'
                   />
-                  <FormControl sx={{ml: "2rem"}}> 
-                  <RadioGroup
-                    row
-                    aria-labelledby="demo-controlled-radio-buttons-group"
-                    name="controlled-radio-buttons-group"
-                    value={selected}
-                    onChange={handleSelect}
-                  >
+                  <FormControl> 
+                  <RadioGroup>
                     <FormControlLabel value="fixed" control={<Radio />} label="Fixed" />
                     <FormControlLabel value="negotiable" control={<Radio />} label="Negotiable" />
                   </RadioGroup>
                 </FormControl>
                 </Box>
               </FormControl>
-          </Grid>
-        </Box>
-
-        {/* furnishing */}
-        <Box>
-          <Typography variant='h4'
-              className='responsive_fontsize24'
-              fontWeight='bold'
-              marginBottom='12px'
-              sx={{
-                opacity: "70%"
-              }}
-            >
-                Furnishing
-            </Typography>
-            <Grid item xs={12} md={6} lg={3}>
-              <FormControl size="small"  fullWidth >
-                  <Box sx={{ maxWidth: { xs: "100%", md: "100%" }}}>
-                    <FormControl>
-                      <RadioGroup
-                        row
-                        aria-labelledby="demo-controlled-radio-buttons-group"
-                        name="controlled-radio-buttons-group"
-                        value={selected}
-                        onChange={handleSelect}
-                        defaultValue="furnished"
-                      >
-                        <FormControlLabel value="furnished" control={<Radio />} label="Furnished"/> 
-                        <FormControlLabel value="non-furnished" control={<Radio />} label="Non-Furnished" />
-                        <FormControlLabel value="semi-furnished" control={<Radio />} label="Semi-Furnished" />
-                      </RadioGroup>
-                    </FormControl>
-                  </Box>
-                </FormControl>
-            </Grid>
         </Box>
 
         {/* parking */}
@@ -291,9 +222,8 @@ function AddPropertyApartment() {
             >
                 Parking
             </Typography>
-            <Grid item xs={12} md={6} lg={3}>
-              <FormControl size="small" fullWidth >
-                  <Box sx={{ maxWidth: { xs: "100%", md: "100%"}}}>
+            <FormControl size="small" fullWidth>
+                  <Box>
                     <FormControl>
                       <RadioGroup
                         row
@@ -301,15 +231,55 @@ function AddPropertyApartment() {
                         name="controlled-radio-buttons-group"
                         value={selected}
                         onChange={handleSelect}
-                        defaultValue="furnished"
+                        defaultValue="attached"
+                        sx={{
+                          borderRadius: "5px",
+                          display: 'grid', 
+                          gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(1,1fr)',md:'repeat(1,1fr)'}, gap:'12px',
+                        }}
+                      >
+                        <FormControlLabel value="bike" control={<Radio />} label="Furnished"/> 
+                        <FormControlLabel value="car" control={<Radio />} label="Semi-furnished" />
+                        </RadioGroup>
+                      </FormControl>
+                    </Box>
+                  </FormControl>
+        </Box>
+
+        {/* parking */}
+        <Box>
+          <Typography variant='h4'
+              className='responsive_fontsize24'
+              fontWeight='bold'
+              marginBottom='12px'
+              sx={{
+                opacity: "70%"
+              }}
+            >
+                Parking
+            </Typography>
+            <FormControl size="small" fullWidth>
+                  <Box>
+                    <FormControl>
+                      <RadioGroup
+                        row
+                        aria-labelledby="demo-controlled-radio-buttons-group"
+                        name="controlled-radio-buttons-group"
+                        value={selected}
+                        onChange={handleSelect}
+                        defaultValue="attached"
+                        sx={{
+                          borderRadius: "5px",
+                          display: 'grid', 
+                          gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(3,1fr)'}, gap:'12px',
+                        }}
                       >
                         <FormControlLabel value="bike" control={<Radio />} label="Bike 2+"/> 
                         <FormControlLabel value="car" control={<Radio />} label="Car 2+" />
-                      </RadioGroup>
-                    </FormControl>
-                  </Box>
-                </FormControl>
-            </Grid>
+                        </RadioGroup>
+                      </FormControl>
+                    </Box>
+                  </FormControl>
         </Box>
 
         {/* Bathrooms */}
@@ -324,9 +294,8 @@ function AddPropertyApartment() {
             >
                 Bathrooms
             </Typography>
-            <Grid item xs={12} md={6} lg={3}>
               <FormControl size="small" fullWidth>
-                  <Box sx={{ maxWidth: { xs: "100%", md: "100%"}}}>
+                  <Box>
                     <FormControl>
                       <RadioGroup
                         row
@@ -335,6 +304,11 @@ function AddPropertyApartment() {
                         value={selected}
                         onChange={handleSelect}
                         defaultValue="attached"
+                        sx={{
+                          borderRadius: "5px",
+                          display: 'grid', 
+                          gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(3,1fr)'}, gap:'12px',
+                        }}
                       >
                         <FormControlLabel value="attached" control={<Radio />} label="Attached 2+"/> 
                         <FormControlLabel value="common" control={<Radio />} label="Common 2+" />
@@ -343,8 +317,6 @@ function AddPropertyApartment() {
                     </FormControl>
                   </Box>
                 </FormControl>
-
-            </Grid>
         </Box>
 
         {/* Amenitites */}
@@ -359,9 +331,8 @@ function AddPropertyApartment() {
             >
                 Amenities
             </Typography>
-            <Grid item xs={12} md={6} lg={3}>
               <FormControl size="small" fullWidth>
-                  <Box sx={{ maxWidth: { xs: "100%", md: "100%"}}}>
+                  <Box>
                     <FormControl>
                       <RadioGroup
                         row
@@ -371,21 +342,20 @@ function AddPropertyApartment() {
                         onChange={handleSelect}
                         defaultValue="attached"
                         sx={{
-                          border: "1px solid black",
                           borderRadius: "5px",
-                          display: "flex",
-                          padding:"1rem"
+                          display: 'grid', 
+                          gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(3,1fr)'}, gap:'12px',
                         }}
                       >
-                        <FormControlLabel value="attached" control={<Radio />} label="Attached 2+"/> 
-                        <FormControlLabel value="common" control={<Radio />} label="Common 2+" />
-                        <FormControlLabel value="attached" control={<Radio />} label="Attached 2+"/> 
-                        <FormControlLabel value="common" control={<Radio />} label="Common 2+" />
+                        <FormControlLabel value="hot water" control={<Radio />} label="Hot water"/> 
+                        <FormControlLabel value="security" control={<Radio />} label="Security" />
+                        <FormControlLabel value="gym" control={<Radio />} label="Gym"/> 
+                        <FormControlLabel value="lift" control={<Radio />} label="Lift" />
+                        <FormControlLabel value="swimming" control={<Radio />} label="Swimming" />
                       </RadioGroup>
                     </FormControl>
                   </Box>
                 </FormControl>
-            </Grid>
         </Box>
 
         {/* description box */}
@@ -396,7 +366,6 @@ function AddPropertyApartment() {
               marginBottom='12px'
               sx={{opacity: "70%"}}
             > Description </Typography>
-            <Grid item xs={12} md={6} lg={3}>
                 <FormControl size="small" fullWidth>
                     <TextField
                     id="outlined-multiline-static"
@@ -406,14 +375,9 @@ function AddPropertyApartment() {
                     defaultValue="Write any additional information."
                     /> 
                 </FormControl>
-            </Grid>
         </Box>
-
-
-         {/* file upload gallery and map */}
-         <Box sx={{display: {xs: "Column",sm: 'flex', md: "flex", lg: "flex"}}}>
           {/* gallery */}
-          <Box sx={{mb: "1rem"}}>
+          <Box sx={{mb: "1rem" }}>
             <Typography variant='h6'
                 className='responsive_fontsize20'
                 fontWeight='bold'
@@ -422,45 +386,11 @@ function AddPropertyApartment() {
                   opacity: "70%"
                 }}
               > Gallery </Typography>
-              <Grid item xs={12} md={6} lg={3}>
                 <FormControl size="small" fullWidth>
-                  <Box
-                    sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                    gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
-                    }}
-                  >
-                    <Box sx={{
-                        display: 'flex',
-                        justifyContent: "center",
-                        padding: "0.5rem",
-                        ml: "0.5rem",
-                        border: "1px solid black",
-                        borderRadius: "5px",
-                        opacity: "70%"
-                    }}
-                    > 
-                        <Button component="label">
-                            <AddToPhotosIcon className='gallery'
-                              sx={{
-                                height: "60px",
-                                width: "60px",
-                                mr: '0.8rem'
-                              }}
-                            />
-                            <input type="file" hidden />
-                        </Button>
-                        <VerticalDivider/>
-                        <Button component="label">
-                            <VideoCallIcon className='gallery' sx={{
-                                height: "60px",
-                                width: "60px"
-                              }}/>
-                            <input type="file" hidden />
-                        </Button>
-                    </Box>
+                <Box>
+                    <FileUpload/>
                   </Box>
-                </FormControl>      
-              </Grid>
+                </FormControl>
           </Box>
 
           {/* map */}
@@ -473,37 +403,30 @@ function AddPropertyApartment() {
                     opacity: "70%"
                 }}
                 >Map</Typography>
-                <Grid item xs={12} md={6} lg={3}>
-                    <FormControl
-                        size="small"
-                        fullWidth>
-                        <Box
-                        sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                        gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
-                        }}
-                        >
-                            <Box sx={{
-                            display: 'flex',
-                            border: "1px solid black",
-                            borderRadius: "5px",
-                            opacity: "70%",
-                            height:"auto",
-                            width: "auto"
+                    <FormControl size="small" fullWidth>
+                        <Box >
+                            <Box sx={{ 
+                             display: 'flex',
+                              borderRadius: "5px",
+                              opacity: "70%",
+                              height:"auto",
+                              maxWidth:"100%",
+                              width:"100%",
+                              overflow: "hidden",
+                              border: '1px solid black'
                             }}
                             >
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28271.991916311705!2d85.29495851139528!3d27.655502971182738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb177f078f1cd9%3A0xb514415c5a76afb3!2sKusunti%2C%20Lalitpur%2044700!5e0!3m2!1sen!2snp!4v1715060575540!5m2!1sen!2snp" 
-                                style={{ border: "0" }} 
+                                style={{borderRadius:"5px", border: "0", width:"100%"}} 
                                 allowFullScreen="" 
                                 loading="lazy" 
                                 referrerPolicy="no-referrer-when-downgrade"></iframe>
                             </Box>
                         </Box>
-                </FormControl>      
-            </Grid>
-        </Box>
+                </FormControl>  
         </Box>
     </Box>
     </div>
   )
 }
-export default AddPropertyApartment;
+export default AddPropertyHome;

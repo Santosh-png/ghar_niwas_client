@@ -8,20 +8,24 @@ import FormControl from '@mui/material/FormControl';
 import VideoCallIcon from '@mui/icons-material/VideoCall';
 import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
 
-// files
 import VerticalDivider from '../ui/divider';
+import FileUpload from '../icon_component/file_upload_cotent';
 
-function AddPropertyLand() {
+function a() {
+  const [selected, setSelected] = React.useState('');
+  const handleSelect = (event) => {
+    setSelected(event.target.value);
+  }
   const type = [
     {
-      value: 'plotted',
-      label: 'Plotted'
+      value: 'commercial',
+      label: 'Commercial'
     },
     {
-      value: 'non-plotted',
-      label: 'Non Plotted'
+      value: 'non-commercial',
+      label: 'Non Commercial'
     },
-  ]
+  ];
 
   const facing = [
     {
@@ -40,21 +44,18 @@ function AddPropertyLand() {
       value: 'west',
       label: 'West'
     },
-  ]
-  
+  ];
   return (
     <div>
       {/* Actual form */}
-        <Box sx={{
-            backgroundColor: 'accent.white',
-            gap:"2rem",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            padding: "2rem 1rem"
-
+    <Box sx={{
+        backgroundColor: 'accent.white',
+        gap:"2rem",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        padding: "2rem 0.5rem"
         }}>
-
 
           {/* Location */}
           <Box>
@@ -62,19 +63,12 @@ function AddPropertyLand() {
               className='responsive_fontsize26'
               fontWeight='bold'
               marginBottom='12px'
-            >
-              Location/Address
-            </Typography>
-            <Grid item xs={12} md={6} lg={3}>
-            <FormControl
-              size="small"
-              fullWidth
-            >
+            > Location/Address </Typography>
+            <FormControl size="small" fullWidth>
                 <Box
-                 sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                 gridTemplateColumns: 'repeat(2,1fr)', gap:'12px', 
-                }}
-                >
+                 sx={{display: 'grid',
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
+               }}>
                   <TextField
                     fullWidth
                     size='small'
@@ -118,9 +112,7 @@ function AddPropertyLand() {
                   />
                 </Box>
               </FormControl>
-          </Grid>
         </Box>
-
 
         {/* Property Details */}
         <Box>
@@ -129,19 +121,12 @@ function AddPropertyLand() {
             fontWeight='bold'
             marginBottom='12px'
             sx={{opacity: "90%"}}
-          >
-              Property Details
-          </Typography>
-          <Grid item xs={12} md={6} lg={3}
-          >
-            <FormControl
-              size="small"
-              fullWidth
-            >
+          > Property Details </Typography>
+            <FormControl size="small" fullWidth>
                 <Box
-                 sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                 gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
-                }}
+                 sx={{display: 'grid',
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
+               }}
                 >
                 <TextField
                   id="outlined-select-type-select"
@@ -167,7 +152,7 @@ function AddPropertyLand() {
                   fullWidth
                   size='small'
                   id='outlined-required'
-                  label='Twist (Moda)'
+                  label='Twist(moda)'
                 />
                 
                 <TextField
@@ -183,6 +168,13 @@ function AddPropertyLand() {
                   id='outlined-required'
                   label='Road Size'
                 />
+
+                <TextField
+                  fullWidth
+                  size='small'
+                  id='outlined-required'
+                  label='Property Age'
+                />  
 
                 <TextField
                   id="outlined-select-facing-select"
@@ -205,10 +197,7 @@ function AddPropertyLand() {
                 </TextField>
                 </Box>
               </FormControl>
-          </Grid>
         </Box>
-
-
         {/* Price and amenities */}
         <Box>
         <Typography variant='h6'
@@ -217,132 +206,76 @@ function AddPropertyLand() {
             marginBottom='12px'
             sx={{
               opacity: "70%"
-            }}>
+            }}
+          >
               Price Range
           </Typography>
-          <Grid item xs={12} md={6} lg={3}>
-            <FormControl
-              size="small"
-              fullWidth
-            >
+            <FormControl size="small" fullWidth >
                 <Box
-                 sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                 gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
-                }}
-                >
+                 sx={{display: 'grid',
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap: "12px"
+               }}
+                > 
                   <TextField
                     fullWidth
                     size='small'
                     id='outlined-required'
                     label='Total Price'
                   />
-                  
+                  <FormControl> 
+                  <RadioGroup
+                    row
+                    aria-labelledby="demo-controlled-radio-buttons-group"
+                    name="controlled-radio-buttons-group"
+                    value={selected}
+                    onChange={handleSelect}
+                  >
+                    <FormControlLabel value="fixed" control={<Radio />} label="Fixed" />
+                    <FormControlLabel value="negotiable" control={<Radio />} label="Negotiable" />
+                  </RadioGroup>
+                </FormControl>
                 </Box>
               </FormControl>
-          </Grid>
         </Box>
 
+       
         {/* description box */}
         <Box>
           <Typography variant='h4'
               className='responsive_fontsize24'
               fontWeight='bold'
               marginBottom='12px'
-              sx={{
-                opacity: "70%"
-              }}
-            >
-                Description
-            </Typography>
-            <Grid item xs={12} md={6} lg={3}>
-              <FormControl
-                size="small"
-                fullWidth
-              >
-
-            <TextField
-              id="outlined-multiline-static"
-              label="Description"
-              multiline
-              rows={4}
-              defaultValue="Write any additional information."
-            /> 
+              sx={{opacity: "70%"}}
+            > Description </Typography>
+                <FormControl size="small" fullWidth>
+                    <TextField
+                    id="outlined-multiline-static"
+                    label="Description"
+                    multiline
+                    rows={4}
+                    defaultValue="Write any additional information."
+                    /> 
                 </FormControl>
-            </Grid>
         </Box>
+          {/* gallery */}
+          <Box sx={{mb: "1rem" }}>
+            <Typography variant='h6'
+                className='responsive_fontsize20'
+                fontWeight='bold'
+                marginBottom='12px'
+                sx={{
+                  opacity: "70%"
+                }}
+              > Gallery </Typography>
+                <FormControl size="small" fullWidth>
+                <Box>
+                    <FileUpload/>
+                  </Box>
+                </FormControl>
+          </Box>
 
-
-         {/* file upload gallery and map */}
-         <Box sx={{
-          display: {xs: "Column",sm: 'flex', md: "flex", lg: "flex"}
-         }}>
-            {/* gallery */}
-            <Box sx={{mb: "1rem"}}>
-                <Typography variant='h6'
-                    className='responsive_fontsize20'
-                    fontWeight='bold'
-                    marginBottom='12px'
-                    sx={{
-                    opacity: "70%"
-                    }}
-                >
-                    Gallery
-                </Typography>
-                <Grid item xs={12} md={6} lg={3}>
-                    <FormControl
-                    size="small"
-                    fullWidth>
-                    <Box
-                    sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                    gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
-                        }}
-                    >
-                    <Box sx={{
-                        display: 'flex',
-                        justifyContent: "center",
-                        padding: "0.5rem",
-                        ml: "0.5rem",
-                        border: "1px solid black",
-                        borderRadius: "5px",
-                        opacity: "70%"
-                    }}
-                    > 
-                            <Button component="label"
-                            >
-                                <AddToPhotosIcon className='gallery'
-                                sx={{
-                                    height: "60px",
-                                    width: "60px",
-                                    mr: '0.8rem'
-                                }}
-                                />
-                                <input
-                                type="file"
-                                hidden
-                                />
-                            </Button>
-                            
-                        <VerticalDivider/>
-
-                        <Button component="label">
-                                <VideoCallIcon className='gallery' sx={{
-                                    height: "60px",
-                                    width: "60px"
-                                }}/>
-                                <input
-                                type="file"
-                                hidden
-                                />
-                            </Button>
-                        </Box>
-                    </Box>
-                    </FormControl>      
-                </Grid>
-            </Box>
-
-            {/* map */}
-            <Box
-            >
+          {/* map */}
+          <Box>
             <Typography variant='h6'
                 className='responsive_fontsize20'
                 fontWeight='bold'
@@ -350,41 +283,31 @@ function AddPropertyLand() {
                 sx={{
                     opacity: "70%"
                 }}
-                >
-                    Map
-                </Typography>
-                <Grid item xs={12} md={6} lg={3}>
-                <FormControl
-                    size="small"
-                    fullWidth>
-                    <Box
-                    sx={{ maxWidth: { xs: "100%", md: "100%" } ,display: 'grid',
-                    gridTemplateColumns: 'repeat(2,1fr)', gap:'12px'
-                    }}
-                    >
-                    <Box sx={{
-                    display: 'flex',
-                    border: "1px solid black",
-                    borderRadius: "5px",
-                    opacity: "70%",
-                    height:"auto",
-                    width: "auto"
-                    }}
-                    >
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28271.991916311705!2d85.29495851139528!3d27.655502971182738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb177f078f1cd9%3A0xb514415c5a76afb3!2sKusunti%2C%20Lalitpur%2044700!5e0!3m2!1sen!2snp!4v1715060575540!5m2!1sen!2snp" 
-                                style={{ border: "0" }} 
+                >Map</Typography>
+                    <FormControl size="small" fullWidth>
+                        <Box >
+                            <Box sx={{ 
+                             display: 'flex',
+                              borderRadius: "5px",
+                              opacity: "70%",
+                              height:"auto",
+                              maxWidth:"100%",
+                              width:"100%",
+                              overflow: "hidden",
+                              border: '1px solid black'
+                            }}
+                            >
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28271.991916311705!2d85.29495851139528!3d27.655502971182738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb177f078f1cd9%3A0xb514415c5a76afb3!2sKusunti%2C%20Lalitpur%2044700!5e0!3m2!1sen!2snp!4v1715060575540!5m2!1sen!2snp" 
+                                style={{borderRadius:"5px", border: "0", width:"100%"}} 
                                 allowFullScreen="" 
                                 loading="lazy" 
                                 referrerPolicy="no-referrer-when-downgrade"></iframe>
-                    </Box>
-                    </Box>
-                    </FormControl>      
-                </Grid>
-            </Box>
-         </Box>
-      </Box>
+                            </Box>
+                        </Box>
+                </FormControl>  
+        </Box>
+    </Box>
     </div>
   )
 }
-
-export default AddPropertyLand;
+export default a;
