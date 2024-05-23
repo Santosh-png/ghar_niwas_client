@@ -20,7 +20,7 @@ function LandingPage() {
     sx={{
       background: {
         xs: 'none',  // Hide background on extra-small screens
-        // sm:'linear-gradient(to right, #57618A, #C77F05)',
+        sm:'linear-gradient(to right, #57618A, #C77F05)',
         md: 'linear-gradient(to right, #57618A, #C77F05)',  // Apply gradient on medium screens and larger
         lg: 'linear-gradient(to bottom, #57618A, #C77F05)',  // Change direction on large screens
       },
