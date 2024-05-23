@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, FormControl, Grid, TextField, Button, Dialog, DialogContent } from "@mui/material";
 import IconComponents from "../icon_component/icon_component";
 
+
 function AddPropertyDetailForm({ onSubmit, handleCloseForm }) {
   const [openRequestForm, setOpenRequestForm] = useState(false);
 
@@ -12,6 +13,7 @@ function AddPropertyDetailForm({ onSubmit, handleCloseForm }) {
       onSubmit();
     }
     handleCloseForm(); // Call the parent component function to close the form
+
   };
 
   return (
@@ -84,8 +86,12 @@ function AddPropertyDetailForm({ onSubmit, handleCloseForm }) {
         </form>
       </Box>
       <Dialog
+
         open={openRequestForm}
         onClose={() => setOpenRequestForm(false)}
+        open={openAddPropertyForm}
+        onClose={() => { setOpenAddPropertyForm(false); handleCloseNavMenu(false) }}
+
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >

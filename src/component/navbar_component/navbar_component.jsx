@@ -13,6 +13,7 @@ import AddPropertyDetailForm from "../form_components/add_detail_form";
 import RequestForm from '../icon_component/request_icon';
 import AddForm from "../icon_component/icon_component";
 
+
 const itemList = ['Home', 'Add Property', 'Sale', 'Rent', 'Request Property'];
 
 function NavBar() {
@@ -47,7 +48,9 @@ function NavBar() {
 
   const handleAddPropertyFormSubmit = () => {
     setOpenAddPropertyDialog(false);
+
     setOpenAddForm(true);
+
   };
 
   const drawerWidth = 250;
@@ -237,6 +240,7 @@ function NavBar() {
           <AddPropertyDetailForm onSubmit={handleAddPropertyFormSubmit} />
         </DialogContent>
       </Dialog>
+
       
       <Dialog
         open={openAddForm}
