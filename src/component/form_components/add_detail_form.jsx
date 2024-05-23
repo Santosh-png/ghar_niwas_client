@@ -2,30 +2,29 @@ import React, { useState } from "react";
 import { Box, FormControl, Grid, TextField, Button, Dialog, DialogContent } from "@mui/material";
 import IconComponents from "../icon_component/icon_component";
 
-function AddPropertyDetailForm() {
-  const [openAddPropertyForm, setOpenAddPropertyForm] = useState(false);
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+function AddPropertyDetailForm({ onSubmit, handleCloseForm }) {
+  const [openRequestForm, setOpenRequestForm] = useState(false);
 
   const handleRequestForm = (e) => {
     e.preventDefault();
-    setOpenAddPropertyForm(true);
-    handleCloseNavMenu(); // Close the menu after opening the form
+    setOpenRequestForm(true);
+    if (onSubmit) {
+      onSubmit();
+    }
+    handleCloseForm(); // Call the parent component function to close the form
+
   };
 
   return (
     <>
       <Box sx={{ margin: '10px' }}>
-        <form style={{ borderRadius: '20px' }}>
+        <form style={{ borderRadius: '20px' }} onSubmit={handleRequestForm}>
           <Grid >
             <FormControl
               size="large"
               fullWidth
               sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px' }}>
-
               <TextField
                 size="small"
                 id="outlined-basic"
@@ -33,7 +32,6 @@ function AddPropertyDetailForm() {
                 variant="outlined"
                 sx={{ maxWidth: { xs: "100%", md: "25rem" } }}
               />
-
             </FormControl>
           </Grid>
           <Grid>
@@ -81,7 +79,6 @@ function AddPropertyDetailForm() {
               type="submit"
               variant="contained"
               sx={{ backgroundColor: "secondary.main", color: "white" }}
-              onClick={handleRequestForm}
             >
               Submit
             </Button>
@@ -89,8 +86,12 @@ function AddPropertyDetailForm() {
         </form>
       </Box>
       <Dialog
+
+        open={openRequestForm}
+        onClose={() => setOpenRequestForm(false)}
         open={openAddPropertyForm}
         onClose={() => { setOpenAddPropertyForm(false); handleCloseNavMenu(false) }}
+
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
