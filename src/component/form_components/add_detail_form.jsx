@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Box, FormControl, Grid, TextField, Button, Dialog, DialogContent } from "@mui/material";
-import RequestForm from "./request_property";
 import IconComponents from "../icon_component/icon_component";
 
 function AddPropertyDetailForm() {
-  const [openRequestForm, setOpenRequestForm] = useState(false);
+  const [openAddPropertyForm, setOpenAddPropertyForm] = useState(false);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleCloseNavMenu = () => {
@@ -13,7 +12,7 @@ function AddPropertyDetailForm() {
 
   const handleRequestForm = (e) => {
     e.preventDefault();
-    setOpenRequestForm(true);
+    setOpenAddPropertyForm(true);
     handleCloseNavMenu(); // Close the menu after opening the form
   };
 
@@ -90,8 +89,8 @@ function AddPropertyDetailForm() {
         </form>
       </Box>
       <Dialog
-        open={openRequestForm}
-        onClose={() => { setOpenRequestForm(false); handleCloseNavMenu() }}
+        open={openAddPropertyForm}
+        onClose={() => { setOpenAddPropertyForm(false); handleCloseNavMenu(false) }}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
