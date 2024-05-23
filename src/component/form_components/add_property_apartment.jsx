@@ -11,7 +11,7 @@ import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
 import VerticalDivider from '../ui/divider';
 import FileUpload from '../icon_component/file_upload_cotent';
 
-function AddPropertyApartment() {
+function AddPropertyHome() {
   const [selected, setSelected] = React.useState('');
   const handleSelect = (event) => {
     setSelected(event.target.value);
@@ -199,7 +199,7 @@ function AddPropertyApartment() {
               </FormControl>
         </Box>
 
-        {/* Price and amenities */}
+                {/* Price and amenities */}
         <Box>
         <Typography variant='h6'
             className='responsive_fontsize20'
@@ -214,7 +214,7 @@ function AddPropertyApartment() {
             <FormControl size="small" fullWidth >
                 <Box
                  sx={{display: 'grid',
-                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'},
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap: "12px"
                }}
                 > 
                   <TextField
@@ -253,9 +253,9 @@ function AddPropertyApartment() {
             </Typography>
               <FormControl size="small"  fullWidth >
                   <Box sx={{display: 'grid',
-                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
+                  gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(1,1fr)',md:'repeat(1,1fr)'}, gap:'12px'
                }}>
-                    <FormControl>
+                    {/* <FormControl> */}
                       <RadioGroup
                         row
                         aria-labelledby="demo-controlled-radio-buttons-group"
@@ -268,7 +268,7 @@ function AddPropertyApartment() {
                         <FormControlLabel value="non-furnished" control={<Radio />} label="Non-Furnished" />
                         <FormControlLabel value="semi-furnished" control={<Radio />} label="Semi-Furnished" />
                       </RadioGroup>
-                    </FormControl>
+                    {/* </FormControl> */}
                   </Box>
                 </FormControl>
         </Box>
@@ -287,7 +287,7 @@ function AddPropertyApartment() {
             </Typography>
               <FormControl size="small" fullWidth >
                   <Box sx={{display: 'grid',
-                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(1,1fr)',md:'repeat(1,1fr)'}, gap:'12px'
                }}>
                     <FormControl>
                       <RadioGroup
@@ -320,7 +320,7 @@ function AddPropertyApartment() {
             </Typography>
               <FormControl size="small" fullWidth>
                   <Box sx={{display: 'grid',
-                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'},
+                gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(1,1fr)',md:'repeat(1,1fr)'}, gap:'12px'
                }}>
                     <FormControl>
                       <RadioGroup
@@ -353,9 +353,7 @@ function AddPropertyApartment() {
                 Amenities
             </Typography>
               <FormControl size="small" fullWidth>
-                  <Box sx={{display: 'grid',
-                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
-               }}>
+                  <Box>
                     <FormControl>
                       <RadioGroup
                         row
@@ -366,13 +364,16 @@ function AddPropertyApartment() {
                         defaultValue="attached"
                         sx={{
                           borderRadius: "5px",
-                          display: "flex",
+                          display: {xs: "flex", md: "column"},
+                          display: 'grid', 
+                          gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(3,1fr)'}, gap:'12px',
                         }}
                       >
-                        <FormControlLabel value="attached" control={<Radio />} label="Attached 2+"/> 
-                        <FormControlLabel value="common" control={<Radio />} label="Common 2+" />
-                        <FormControlLabel value="attached" control={<Radio />} label="Attached 2+"/> 
-                        <FormControlLabel value="common" control={<Radio />} label="Common 2+" />
+                         <FormControlLabel value="hot water" control={<Radio />} label="Hot water"/> 
+                        <FormControlLabel value="security" control={<Radio />} label="Security" />
+                        <FormControlLabel value="gym" control={<Radio />} label="Gym"/> 
+                        <FormControlLabel value="lift" control={<Radio />} label="Lift" />
+                        <FormControlLabel value="swimming" control={<Radio />} label="Swimming" />
                       </RadioGroup>
                     </FormControl>
                   </Box>
@@ -450,4 +451,4 @@ function AddPropertyApartment() {
     </div>
   )
 }
-export default AddPropertyApartment;
+export default AddPropertyHome;
