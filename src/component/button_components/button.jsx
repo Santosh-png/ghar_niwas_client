@@ -1,16 +1,23 @@
 import React from 'react';
 import { Button} from '@mui/material';
 
-function ButtonComponent({ children, ...props }) {
+function ButtonComponent({  onClick, children, ...props }) {
   return (
     <div>
         <Button variant="contained" 
-        className='responsive_fontsize20'
+          onClick={onClick}
+          className='responsive_fontsize20'
                 sx={{
                     backgroundColor: "primary.main",
                     color: "white",
-                    minWidth: 150,
+                    padding: "0.3rem 1rem",                   
+                    minWidth:{
+                      xs: 65, sm: 90, md: 120
+                    },
                     fontFamily: 'Roboto Serif',
+                    '&:hover': {
+                      backgroundColor: 'secondary.main',
+                    },
                 }}
             >
                       {children}

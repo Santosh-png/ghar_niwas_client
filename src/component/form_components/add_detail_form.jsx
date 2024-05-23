@@ -1,29 +1,30 @@
 import React, { useState } from "react";
 import { Box, FormControl, Grid, TextField, Button, Dialog, DialogContent } from "@mui/material";
-import RequestForm from '../icon_component/request_icon';
+import IconComponents from "../icon_component/icon_component";
 
-function DetailForm({ onSubmit }) {
-  const [openRequestIcon, setOpenRequestIcon] = useState(false);
+
+function AddPropertyDetailForm({ onSubmit, handleCloseForm }) {
+  const [openRequestForm, setOpenRequestForm] = useState(false);
 
   const handleRequestForm = (e) => {
     e.preventDefault();
-    setOpenRequestIcon(true);
-
+    setOpenRequestForm(true);
     if (onSubmit) {
       onSubmit();
     }
+    handleCloseForm(); // Call the parent component function to close the form
+
   };
 
   return (
-    <>    
-      <Box sx={{ margin: '10px' }} >
+    <>
+      <Box sx={{ margin: '10px' }}>
         <form style={{ borderRadius: '20px' }} onSubmit={handleRequestForm}>
-          <Grid>
+          <Grid >
             <FormControl
               size="large"
               fullWidth
-              sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px' }}
-            >
+              sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px' }}>
               <TextField
                 size="small"
                 id="outlined-basic"
@@ -38,8 +39,7 @@ function DetailForm({ onSubmit }) {
               size="small"
               className="formControl"
               fullWidth
-              sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px'}}
-            >
+              sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px'}}>
               <TextField
                 fullWidth
                 size="small"
@@ -55,8 +55,7 @@ function DetailForm({ onSubmit }) {
             <FormControl
               size="small"
               fullWidth
-              sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px' }}
-            >
+              sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px' }}>
               <TextField
                 size="small"
                 id="outlined-basic"
@@ -86,8 +85,22 @@ function DetailForm({ onSubmit }) {
           </Grid>
         </form>
       </Box>
+      <Dialog
+
+        open={openRequestForm}
+        onClose={() => setOpenRequestForm(false)}
+        open={openAddPropertyForm}
+        onClose={() => { setOpenAddPropertyForm(false); handleCloseNavMenu(false) }}
+
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogContent sx={{ backgroundColor: "transparent" }}>
+            <IconComponents/>
+        </DialogContent>
+      </Dialog>
     </>
   );
 }
 
-export default DetailForm;
+export default AddPropertyDetailForm;

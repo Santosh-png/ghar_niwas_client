@@ -59,7 +59,8 @@ function IconComponents() {
                 sx={{
                     color:'primary.main',
                     fontWeight: 'bold',
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    mb: "0.8rem"
                 }}    
             >
                     Add Your Property
@@ -67,13 +68,11 @@ function IconComponents() {
 
             {/* icons */}
             <Box sx={{
-                display: {
-                    sm: 'flex', xs: 'column'
-                },
-                padding: "1rem",
-                gap: "1.5rem",
+                display: "flex",
+                padding: "10px",
                 alignItems : 'center',
-                justifyContent: "center"
+                justifyContent: "center",
+                gap: "2rem"
             }}> 
 
             {/* home */}
@@ -85,23 +84,14 @@ function IconComponents() {
                 }}>
                     <HomeWorkIcon 
                     sx={{
-                        height: {xs: "35px", md: "60px", lg: "70px"},
-                        width: {xs: "40px", md: "60px", lg: "80px"},
+                        height: {md: "40px", lg: "50px"},
+                        width: {md: "30px", lg: "40px"},
                         color: "secondary.main",
+                        display: {xs: "none", md: "flex"}
                         }}/>
-                    {/* <ButtonComponent className='responsive_fontsize24' */}
-                      <Button
-                        onClick={() => handleClickOpen('home')}
-                        sx={{
-                            display: "flex",
-                            justifyContent :"center",
-                            alignItems: 'center'
-                        }}
-                      >
-                        <ButtonComponent>
-                            HOME
-                        </ButtonComponent>
-                        </Button>
+                         <ButtonComponent onClick={() => handleClickOpen('home')}> 
+                            HOME 
+                         </ButtonComponent> 
                 </Box>  
 
                 {/* apartment */}
@@ -109,25 +99,17 @@ function IconComponents() {
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
-                    alignItems: 'center'
+                    alignItems: "center"
                 }}>
                     <ApartmentIcon 
                        sx={{
-                        height: {xs: "35px", md: "60px", lg: "70px"},
-                        width: {xs: "40px", md: "60px", lg: "80px"},
+                        height: {md: "40px", lg: "50px"},
+                        width: {md: "30px", lg: "40px"},
                         color: "secondary.main",
+                        display: {xs: "none" ,md: "flex"}
                         }} 
                     />
-                    <Button
-                        onClick={() => handleClickOpen('apartment')}
-                        sx={{
-                            display: "flex",
-                            justifyContent :"center",
-                            alignItems: 'center'
-                        }}
-                        >
-                        <ButtonComponent>APARTMENT</ButtonComponent>
-                    </Button>
+                        <ButtonComponent onClick={() => handleClickOpen('apartment')}>APARTMENT</ButtonComponent>
                 </Box>
                 
                 {/* land */}
@@ -139,25 +121,17 @@ function IconComponents() {
                 }}>
                     <LandscapeIcon 
                     sx={{
-                        height: {xs: "35px", md: "60px", lg: "70px"},
-                        width: {xs: "40px", md: "60px", lg: "80px"},
+                        height: {md: "40px", lg: "50px"},
+                        width: {md: "30px", lg: "40px"},
                         color: "secondary.main",
+                        display: {xs: "none", md: "flex"}
                     }}/>
-                    <Button
-                        onClick={() => handleClickOpen('land')}
-                        sx={{
-                            display: "flex",
-                            justifyContent :"center",
-                            alignItems: 'center'
-                        }}
-                        >
-                        <ButtonComponent>LAND</ButtonComponent>
-                    </Button>
+                        <ButtonComponent onClick={() => handleClickOpen('land')}>LAND</ButtonComponent>
                 </Box>
-                </Box>
+            </Box>
 
                 {/* Render form based on selected icon */}
-                <Box >
+                <Box>
                     {renderForm()}
                 </Box>
 
