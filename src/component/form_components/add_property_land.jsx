@@ -11,7 +11,7 @@ import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
 import VerticalDivider from '../ui/divider';
 import FileUpload from '../icon_component/file_upload_cotent';
 
-function AddPropertyLand() {
+function a() {
   const [selected, setSelected] = React.useState('');
   const handleSelect = (event) => {
     setSelected(event.target.value);
@@ -152,7 +152,7 @@ function AddPropertyLand() {
                   fullWidth
                   size='small'
                   id='outlined-required'
-                  label='Total Floor'
+                  label='Twist(moda)'
                 />
                 
                 <TextField
@@ -166,15 +166,15 @@ function AddPropertyLand() {
                   fullWidth
                   size='small'
                   id='outlined-required'
-                  label='Bedrooms'
+                  label='Road Size'
                 />
 
                 <TextField
                   fullWidth
                   size='small'
                   id='outlined-required'
-                  label='Kitchen'
-                />
+                  label='Property Age'
+                />  
 
                 <TextField
                   id="outlined-select-facing-select"
@@ -198,7 +198,6 @@ function AddPropertyLand() {
                 </Box>
               </FormControl>
         </Box>
-
         {/* Price and amenities */}
         <Box>
         <Typography variant='h6'
@@ -214,7 +213,7 @@ function AddPropertyLand() {
             <FormControl size="small" fullWidth >
                 <Box
                  sx={{display: 'grid',
-                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'},
+                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap: "12px"
                }}
                 > 
                   <TextField
@@ -239,40 +238,7 @@ function AddPropertyLand() {
               </FormControl>
         </Box>
 
-        {/* furnishing */}
-        <Box>
-          <Typography variant='h4'
-              className='responsive_fontsize24'
-              fontWeight='bold'
-              marginBottom='12px'
-              sx={{
-                opacity: "70%"
-              }}
-            >
-                Furnishing
-            </Typography>
-              <FormControl size="small"  fullWidth >
-                  <Box sx={{display: 'grid',
-                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(2,1fr)'}, gap:'12px'
-               }}>
-                    <FormControl>
-                      <RadioGroup
-                        row
-                        aria-labelledby="demo-controlled-radio-buttons-group"
-                        name="controlled-radio-buttons-group"
-                        value={selected}
-                        onChange={handleSelect}
-                        defaultValue="furnished"
-                      >
-                        <FormControlLabel value="furnished" control={<Radio />} label="Furnished"/> 
-                        <FormControlLabel value="non-furnished" control={<Radio />} label="Non-Furnished" />
-                        <FormControlLabel value="semi-furnished" control={<Radio />} label="Semi-Furnished" />
-                      </RadioGroup>
-                    </FormControl>
-                  </Box>
-                </FormControl>
-        </Box>
-
+       
         {/* description box */}
         <Box>
           <Typography variant='h4'
@@ -344,4 +310,4 @@ function AddPropertyLand() {
     </div>
   )
 }
-export default AddPropertyLand;
+export default a;
