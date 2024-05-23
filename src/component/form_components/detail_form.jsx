@@ -8,6 +8,7 @@ function DetailForm({ onSubmit }) {
   const handleRequestForm = (e) => {
     e.preventDefault();
     setOpenRequestIcon(true);
+    
     if (onSubmit) {
       onSubmit();
     }

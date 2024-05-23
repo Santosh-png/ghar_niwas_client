@@ -11,6 +11,7 @@ import './navbar.style.css';
 import DetailForm from '../form_components/detail_form';
 import AddPropertyDetailForm from "../form_components/add_detail_form";
 import RequestForm from '../icon_component/request_icon';
+import AddForm from "../icon_component/icon_component";
 
 const itemList = ['Home', 'Add Property', 'Sale', 'Rent', 'Request Property'];
 
@@ -19,6 +20,7 @@ function NavBar() {
   const [openDetailDialog, setOpenDetailDialog] = useState(false);
   const [openRequestFormDialog, setOpenRequestFormDialog] = useState(false);
   const [openAddPropertyDialog, setOpenAddPropertyDialog] = useState(false);
+  const [openAddForm, setOpenAddForm] = useState(false);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -45,7 +47,7 @@ function NavBar() {
 
   const handleAddPropertyFormSubmit = () => {
     setOpenAddPropertyDialog(false);
-    
+    setOpenAddForm(true);
   };
 
   const drawerWidth = 250;
@@ -221,6 +223,15 @@ function NavBar() {
       >
         <DialogContent>
           <AddPropertyDetailForm onSubmit={handleAddPropertyFormSubmit} />
+        </DialogContent>
+      </Dialog>
+      
+      <Dialog
+        open={openAddForm}
+        onClose={() => setOpenAddForm(false)}
+      >
+        <DialogContent>
+          <AddForm />
         </DialogContent>
       </Dialog>
     </AppBar>
