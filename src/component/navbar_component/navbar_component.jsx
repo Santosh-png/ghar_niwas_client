@@ -10,12 +10,14 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import './navbar.style.css';
 import DetailForm from '../form_components/detail_form';
 import AddPropertyDetailForm from "../form_components/add_detail_form";
+import RequestForm from '../icon_component/request_icon';
 
 const itemList = ['Home', 'Add Property', 'Sale', 'Rent', 'Request Property'];
 
 function NavBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [opendetailDialog, setOpendetailDialog] = useState(false);
+  const [anchorElNav, setAnchorElNav] = useState(null);
+  const [openDetailDialog, setOpenDetailDialog] = useState(false);
+  const [openRequestFormDialog, setOpenRequestFormDialog] = useState(false);
   const [openAddPropertyDialog, setOpenAddPropertyDialog] = useState(false);
 
   const handleOpenNavMenu = (event) => {
@@ -26,16 +28,24 @@ function NavBar() {
     setAnchorElNav(null);
   };
 
-  const handleOpenForm = () => {
-    setOpendetailDialog(true);
-    // setOpenAddPropertyDialog(false); // Ensure the other dialog is closed
-    handleCloseNavMenu(); // Close the menu after opening the form
+  const handleOpenDetailForm = () => {
+    setOpenDetailDialog(true);
+    handleCloseNavMenu();
   };
 
   const handleOpenAddProperty = () => {
     setOpenAddPropertyDialog(true);
-    // setOpendetailDialog(false); // Ensure the other dialog is closed
     handleCloseNavMenu();
+  };
+
+  const handleDetailFormSubmit = () => {
+    setOpenDetailDialog(false);
+    setOpenRequestFormDialog(true);
+  };
+
+  const handleAddPropertyFormSubmit = () => {
+    setOpenAddPropertyDialog(false);
+    
   };
 
   const drawerWidth = 250;
@@ -79,7 +89,7 @@ function NavBar() {
             >
               {itemList.map((item) => (
                 item === "Request Property" ? (
-                  <MenuItem key={item} onClick={handleOpenForm}>
+                  <MenuItem key={item} onClick={handleOpenDetailForm}>
                     <Typography className='responsive_fontsize18' sx={{ fontFamily: 'Roboto Serif', margin: '0px 20px', fontWeight: '600', textAlign: 'center', color: 'primary.main' }}>
                       {item}
                     </Typography>
@@ -126,7 +136,7 @@ function NavBar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {itemList.map((item) => (
               item === "Request Property" ? (
-                <MenuItem key={item} onClick={handleOpenForm} sx={{ padding: '0 10px', marginLeft: '25px', '&:hover': { backgroundColor: '#ffffff' } }}>
+                <MenuItem key={item} onClick={handleOpenDetailForm} sx={{ padding: '0 10px', marginLeft: '25px', '&:hover': { backgroundColor: '#ffffff' } }}>
                   <Typography className='responsive_fontsize24 itemList' sx={{ fontFamily: 'Roboto Serif', fontWeight: '600', textAlign: 'center', color: "primary.main" }}>
                     {item}
                   </Typography>
@@ -169,54 +179,50 @@ function NavBar() {
                 <IconButton sx={{ backgroundColor: "white", boxShadow: " 0px 4px 4px 0px #292C6A" }}>
                   <InstagramIcon sx={{ color: "orange" }} />
                 </IconButton>
-                <IconButton sx={{ backgroundColor: "white", boxShadow: " 0px 4px 4px 0px #292C6A", }}>
+                <IconButton sx={{ backgroundColor: "white", boxShadow: " 0px 4px 4px 0px #292C6A" }}>
                   <FacebookIcon sx={{ color: "blue" }} />
                 </IconButton>
                 <IconButton sx={{ backgroundColor: "white", boxShadow: " 0px 4px 4px 0px #292C6A", }}>
-                  <YouTubeIcon sx={{ color: "#FA0505" }} />
-                </IconButton>
-                <IconButton sx={{ backgroundColor: "white", boxShadow: " 0px 4px 4px 0px #292C6A", }}>
-                  <LinkedInIcon sx={{ color: "#78A1DE" }} />
+                  <YouTubeIcon sx={{ color: "red" }} />
                 </IconButton>
                 <IconButton sx={{ backgroundColor: "white", boxShadow: " 0px 4px 4px 0px #292C6A", }}>
                   <PinterestIcon sx={{ color: "red" }} />
                 </IconButton>
+                <IconButton sx={{ backgroundColor: "white", boxShadow: " 0px 4px 4px 0px #292C6A", }}>
+                  <LinkedInIcon sx={{ color: "blue" }} />
+                </IconButton>
               </Box>
-              <Divider
-                orientation="vertical"
-                variant="middle"
-                flexItem
-                sx={{
-                  borderLeftWidth: 1.5,
-                  borderColor: "#232323",
-                  height: "35px",
-                  mx: 1
-                }}
-              />
             </Box>
           </Box>
         </Toolbar>
       </Container>
+
+      <Dialog
+        open={openDetailDialog}
+        onClose={() => setOpenDetailDialog(false)}
+      >
+        <DialogContent>
+          <DetailForm onSubmit={handleDetailFormSubmit} />
+        </DialogContent>
+      </Dialog>
+
+      <Dialog
+        open={openRequestFormDialog}
+        onClose={() => setOpenRequestFormDialog(false)}
+      >
+        <DialogContent>
+          <RequestForm />
+        </DialogContent>
+      </Dialog>
+
       <Dialog
         open={openAddPropertyDialog}
         onClose={() => setOpenAddPropertyDialog(false)}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
       >
         <DialogContent>
-          <AddPropertyDetailForm />
+          <AddPropertyDetailForm onSubmit={handleAddPropertyFormSubmit} />
         </DialogContent>
       </Dialog>
-      <Dialog
-              open={opendetailDialog}
-              onClose={() => setOpendetailDialog(false)}
-              aria-labelledby="alert-dialog-title"
-              aria-describedby="alert-dialog-description"
-            >
-              <DialogContent>
-                <DetailForm /> {/* Render the form component */}
-              </DialogContent>
-            </Dialog>
     </AppBar>
   );
 }

@@ -12,18 +12,13 @@ import ButtonComponent from '../button_components/button';
 import Homeform from '../form_components/request_property';
 import RequestPropertyApartment from '../form_components/property_request_apartment';
 import RequestPropertyLand from '../form_components/property_request_land';
-import DetailForm from '../form_components/detail_form';
 
 function RequestIconComponents() {
         const [selectedForm, setSelectedForm] = useState('home');
        
         const handleClickOpen = (form) => {
+            
             setSelectedForm(form);
-        };
-
-        const handleClose = () => {
-            setOpen(false);
-            setSelectedForm(null);
         };
 
         const renderForm = () => {
@@ -155,13 +150,12 @@ function RequestIconComponents() {
                 </Box>
                 </Box>
 
-                {/* Render form based on selected icon */}
+               
                 <Box >
                     {renderForm()}
                 </Box>
 
-                {/* add peroperty button */}
-               
+              
         </Box>
     </>
   )
