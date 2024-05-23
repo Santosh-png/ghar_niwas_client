@@ -89,9 +89,6 @@ function AddPropertyDetailForm({ onSubmit, handleCloseForm }) {
 
         open={openRequestForm}
         onClose={() => setOpenRequestForm(false)}
-        open={openAddPropertyForm}
-        onClose={() => { setOpenAddPropertyForm(false); handleCloseNavMenu(false) }}
-
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
