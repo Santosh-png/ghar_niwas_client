@@ -193,6 +193,18 @@ function NavBar() {
                 <IconButton sx={{ backgroundColor: "white", boxShadow: " 0px 4px 4px 0px #292C6A", }}>
                   <LinkedInIcon sx={{ color: "blue" }} />
                 </IconButton>
+                <Divider
+                className='responsive_fontsize18'
+                orientation="vertical"
+                variant="middle"
+                flexItem
+                sx={{
+                  borderLeftWidth: 1.5,
+                  borderColor: "#232323",
+                  height: "35px",
+                  mx: 1
+                }}
+              />
               </Box>
             </Box>
           </Box>
