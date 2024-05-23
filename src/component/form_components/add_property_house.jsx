@@ -1,14 +1,9 @@
-
 import React from 'react';
 import { Typography,Box, Grid, TextField, Button, IconButton,} from '@mui/material';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
-import VideoCallIcon from '@mui/icons-material/VideoCall';
-import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
-
-import VerticalDivider from '../ui/divider';
 import FileUpload from '../icon_component/file_upload_cotent';
 
 function AddPropertyHome() {
@@ -17,33 +12,15 @@ function AddPropertyHome() {
     setSelected(event.target.value);
   }
   const type = [
-    {
-      value: 'commercial',
-      label: 'Commercial'
-    },
-    {
-      value: 'non-commercial',
-      label: 'Non Commercial'
-    },
+    { value: 'commercial', label: 'Commercial'},
+    { value: 'non-commercial', label: 'Non Commercial'},
   ];
 
   const facing = [
-    {
-      value: 'north',
-      label: 'North'
-    },
-    {
-      value: 'south',
-      label: 'South'
-    },
-    {
-      value: 'east',
-      label: 'East'
-    },
-    {
-      value: 'west',
-      label: 'West'
-    },
+    {value: 'north', label: 'North'},
+    { value: 'south', label: 'South'},
+    { value: 'east', label: 'East'},
+    { value: 'west', label: 'West'},
   ];
   return (
     <div>
@@ -199,7 +176,7 @@ function AddPropertyHome() {
               </FormControl>
         </Box>
 
-                {/* Price and amenities */}
+        {/* Price and amenities */}
         <Box>
         <Typography variant='h6'
             className='responsive_fontsize20'
@@ -224,53 +201,13 @@ function AddPropertyHome() {
                     label='Total Price'
                   />
                   <FormControl> 
-                  <RadioGroup
-                    row
-                    aria-labelledby="demo-controlled-radio-buttons-group"
-                    name="controlled-radio-buttons-group"
-                    value={selected}
-                    onChange={handleSelect}
-                  >
+                  <RadioGroup>
                     <FormControlLabel value="fixed" control={<Radio />} label="Fixed" />
                     <FormControlLabel value="negotiable" control={<Radio />} label="Negotiable" />
                   </RadioGroup>
                 </FormControl>
                 </Box>
               </FormControl>
-        </Box>
-
-        {/* furnishing */}
-        <Box>
-          <Typography variant='h4'
-              className='responsive_fontsize24'
-              fontWeight='bold'
-              marginBottom='12px'
-              sx={{
-                opacity: "70%"
-              }}
-            >
-                Furnishing
-            </Typography>
-              <FormControl size="small"  fullWidth >
-                  <Box sx={{display: 'grid',
-                  gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(1,1fr)',md:'repeat(1,1fr)'}, gap:'12px'
-               }}>
-                    {/* <FormControl> */}
-                      <RadioGroup
-                        row
-                        aria-labelledby="demo-controlled-radio-buttons-group"
-                        name="controlled-radio-buttons-group"
-                        value={selected}
-                        onChange={handleSelect}
-                        defaultValue="furnished"
-                      >
-                        <FormControlLabel value="furnished" control={<Radio />} label="Furnished"/> 
-                        <FormControlLabel value="non-furnished" control={<Radio />} label="Non-Furnished" />
-                        <FormControlLabel value="semi-furnished" control={<Radio />} label="Semi-Furnished" />
-                      </RadioGroup>
-                    {/* </FormControl> */}
-                  </Box>
-                </FormControl>
         </Box>
 
         {/* parking */}
@@ -285,10 +222,8 @@ function AddPropertyHome() {
             >
                 Parking
             </Typography>
-              <FormControl size="small" fullWidth >
-                  <Box sx={{display: 'grid',
-                 gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(1,1fr)',md:'repeat(1,1fr)'}, gap:'12px'
-               }}>
+            <FormControl size="small" fullWidth>
+                  <Box>
                     <FormControl>
                       <RadioGroup
                         row
@@ -296,14 +231,55 @@ function AddPropertyHome() {
                         name="controlled-radio-buttons-group"
                         value={selected}
                         onChange={handleSelect}
-                        defaultValue="furnished"
+                        defaultValue="attached"
+                        sx={{
+                          borderRadius: "5px",
+                          display: 'grid', 
+                          gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(1,1fr)',md:'repeat(1,1fr)'}, gap:'12px',
+                        }}
+                      >
+                        <FormControlLabel value="bike" control={<Radio />} label="Furnished"/> 
+                        <FormControlLabel value="car" control={<Radio />} label="Semi-furnished" />
+                        </RadioGroup>
+                      </FormControl>
+                    </Box>
+                  </FormControl>
+        </Box>
+
+        {/* parking */}
+        <Box>
+          <Typography variant='h4'
+              className='responsive_fontsize24'
+              fontWeight='bold'
+              marginBottom='12px'
+              sx={{
+                opacity: "70%"
+              }}
+            >
+                Parking
+            </Typography>
+            <FormControl size="small" fullWidth>
+                  <Box>
+                    <FormControl>
+                      <RadioGroup
+                        row
+                        aria-labelledby="demo-controlled-radio-buttons-group"
+                        name="controlled-radio-buttons-group"
+                        value={selected}
+                        onChange={handleSelect}
+                        defaultValue="attached"
+                        sx={{
+                          borderRadius: "5px",
+                          display: 'grid', 
+                          gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(3,1fr)'}, gap:'12px',
+                        }}
                       >
                         <FormControlLabel value="bike" control={<Radio />} label="Bike 2+"/> 
                         <FormControlLabel value="car" control={<Radio />} label="Car 2+" />
-                      </RadioGroup>
-                    </FormControl>
-                  </Box>
-                </FormControl>
+                        </RadioGroup>
+                      </FormControl>
+                    </Box>
+                  </FormControl>
         </Box>
 
         {/* Bathrooms */}
@@ -319,9 +295,7 @@ function AddPropertyHome() {
                 Bathrooms
             </Typography>
               <FormControl size="small" fullWidth>
-                  <Box sx={{display: 'grid',
-                gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(1,1fr)',md:'repeat(1,1fr)'}, gap:'12px'
-               }}>
+                  <Box>
                     <FormControl>
                       <RadioGroup
                         row
@@ -330,6 +304,11 @@ function AddPropertyHome() {
                         value={selected}
                         onChange={handleSelect}
                         defaultValue="attached"
+                        sx={{
+                          borderRadius: "5px",
+                          display: 'grid', 
+                          gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(3,1fr)'}, gap:'12px',
+                        }}
                       >
                         <FormControlLabel value="attached" control={<Radio />} label="Attached 2+"/> 
                         <FormControlLabel value="common" control={<Radio />} label="Common 2+" />
@@ -352,9 +331,9 @@ function AddPropertyHome() {
             >
                 Amenities
             </Typography>
-              {/* <FormControl size="small" fullWidth> */}
+              <FormControl size="small" fullWidth>
                   <Box>
-                    <FormControl size="small" fullWidth>
+                    <FormControl>
                       <RadioGroup
                         row
                         aria-labelledby="demo-controlled-radio-buttons-group"
@@ -364,12 +343,11 @@ function AddPropertyHome() {
                         defaultValue="attached"
                         sx={{
                           borderRadius: "5px",
-                          display: {xs: "flex", md: "column"},
                           display: 'grid', 
                           gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(3,1fr)'}, gap:'12px',
                         }}
                       >
-                         <FormControlLabel value="hot water" control={<Radio />} label="Hot water"/> 
+                        <FormControlLabel value="hot water" control={<Radio />} label="Hot water"/> 
                         <FormControlLabel value="security" control={<Radio />} label="Security" />
                         <FormControlLabel value="gym" control={<Radio />} label="Gym"/> 
                         <FormControlLabel value="lift" control={<Radio />} label="Lift" />
@@ -377,7 +355,7 @@ function AddPropertyHome() {
                       </RadioGroup>
                     </FormControl>
                   </Box>
-                {/* </FormControl> */}
+                </FormControl>
         </Box>
 
         {/* description box */}
