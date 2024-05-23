@@ -1,17 +1,17 @@
 import React from 'react';
-import { Card, CardContent, Typography, IconButton, Box } from '@mui/material';
-import CardHeader from '@mui/material/CardHeader';
-import Avatar from '@mui/material/Avatar';
+import { Card, CardContent, Typography, Box, CardHeader, Avatar } from '@mui/material';
 
 const ClientFeedbackCard = () => {
   return (
-    <div style={{
-      display:"flex",
-      alignItems:"center",
-      justifyContent:"center",
-      padding:"1rem",
-      borderRadius: 5,
-       }}>
+    <Box sx={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      // padding: "1rem",
+      borderRadius: 1,
+      marginBottom: '1rem',
+      mx: { xs: 0, sm: 2, md: 3, lg: 4 }  // Adjust horizontal margins responsively
+    }}>
     <Card>   {/* <Card style={{margin:"buttom"}}> */}
       <Box sx={{ 
          backgroundColor: "primary.main" }}>
@@ -40,11 +40,9 @@ const ClientFeedbackCard = () => {
         sx={{backgroundColor:"#ECEEEE"}}
       />
     </Box>
-    
     </Card>
-    </div>
-  )
+  </Box>
+  );
 }
 
 export default ClientFeedbackCard;
-
