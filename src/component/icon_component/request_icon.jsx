@@ -84,18 +84,11 @@ function RequestIconComponents() {
                         color: "secondary.main",
                         }}/>
                     {/* <ButtonComponent className='responsive_fontsize24' */}
-                      <Button
-                        onClick={() => handleClickOpen('home')}
-                        sx={{
-                            display: "flex",
-                            justifyContent :"center",
-                            alignItems: 'center'
-                        }}
-                      >
-                        <ButtonComponent>
+                     
+                        <ButtonComponent   onClick={() => handleClickOpen('home')}>
                             HOME
                         </ButtonComponent>
-                        </Button>
+                      
                 </Box>  
 
                 {/* apartment */}
@@ -112,16 +105,9 @@ function RequestIconComponents() {
                         color: "secondary.main",
                         }} 
                     />
-                    <Button
-                        onClick={() => handleClickOpen('apartment')}
-                        sx={{
-                            display: "flex",
-                            justifyContent :"center",
-                            alignItems: 'center'
-                        }}
-                        >
-                        <ButtonComponent>APARTMENT</ButtonComponent>
-                    </Button>
+                   
+                        <ButtonComponent  onClick={() => handleClickOpen('apartment')}>APARTMENT</ButtonComponent>
+                    
                 </Box>
                 
                 {/* land */}
@@ -137,16 +123,9 @@ function RequestIconComponents() {
                         width: {xs: "40px", md: "50px", lg: "70px"},
                         color: "secondary.main",
                     }}/>
-                    <Button
-                        onClick={() => handleClickOpen('land')}
-                        sx={{
-                            display: "flex",
-                            justifyContent :"center",
-                            alignItems: 'center'
-                        }}
-                        >
-                        <ButtonComponent>LAND</ButtonComponent>
-                    </Button>
+                    
+                        <ButtonComponent onClick={() => handleClickOpen('land')}>LAND</ButtonComponent>
+                   
                 </Box>
                 </Box>
 
