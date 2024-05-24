@@ -6,12 +6,13 @@ import Typography from '@mui/material/Typography';
 
 function RequestForm() {
   return (
+    <form>
     <Box
       sx={{
         width: '100%',
         maxWidth: 500,
         border: "1px solid #9e9e99",
-        boxShadow: "5px 5px 5px #292C6A",
+        boxShadow: "2px 2px 5px #292C6A",
         padding: 2,
         display: 'flex',
         flexDirection: 'column',
@@ -36,6 +37,7 @@ function RequestForm() {
         <Button variant="contained">Send Message</Button>
       </Box>
     </Box>
+    </form>
   );
 }
 
