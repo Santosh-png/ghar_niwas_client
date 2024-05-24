@@ -12,7 +12,6 @@ function AddPropertyDetailForm({ onSubmit, handleCloseForm }) {
     if (onSubmit) {
       onSubmit();
     }
-    handleCloseForm(); // Call the parent component function to close the form
 
   };
 
@@ -89,9 +88,6 @@ function AddPropertyDetailForm({ onSubmit, handleCloseForm }) {
 
         open={openRequestForm}
         onClose={() => setOpenRequestForm(false)}
-        open={openAddPropertyForm}
-        onClose={() => { setOpenAddPropertyForm(false); handleCloseNavMenu(false) }}
-
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
