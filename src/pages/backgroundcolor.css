@@ -1,6 +1,4 @@
-
 .gradient-background {
-  /* Linear gradient */
   background: linear-gradient(to right, #57618A, #C77F05);
   /* For webkit (Safari, Chrome) */
   background: -webkit-linear-gradient(to right, #57618A, #C77F05);
@@ -8,4 +6,16 @@
   background: -moz-linear-gradient(to right, #57618A, #C77F05);
   /* For Opera */
   background: -o-linear-gradient(to right, #57618A, #C77F05);
+}
+
+@media only screen and (max-width: 335px) {
+  .gradient-background {
+    background: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .gradient-background {
+    background: linear-gradient(to bottom, #57618A, #C77F05);
+  }
 }

@@ -1,28 +1,32 @@
 import React, { useState } from "react";
 import { Box, FormControl, Grid, TextField, Button, Dialog, DialogContent } from "@mui/material";
-import RequestForm from '../icon_component/request_icon';
+import RequestForm from "./request_property";
+import IconComponents from "../icon_component/icon_component";
 
-function DetailForm({ onSubmit }) {
-  const [openRequestIcon, setOpenRequestIcon] = useState(false);
+function AddPropertyDetailForm() {
+  const [openRequestForm, setOpenRequestForm] = useState(false);
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
 
   const handleRequestForm = (e) => {
     e.preventDefault();
-    setOpenRequestIcon(true);
-    if (onSubmit) {
-      onSubmit();
-    }
+    setOpenRequestForm(true);
+    handleCloseNavMenu(); // Close the menu after opening the form
   };
 
   return (
-    <>    
-      <Box sx={{ margin: '10px' }} >
-        <form style={{ borderRadius: '20px' }} onSubmit={handleRequestForm}>
-          <Grid>
+    <>
+      <Box sx={{ margin: '10px' }}>
+        <form style={{ borderRadius: '20px' }}>
+          <Grid >
             <FormControl
               size="large"
               fullWidth
-              sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px' }}
-            >
+              sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px' }}>
+
               <TextField
                 size="small"
                 id="outlined-basic"
@@ -30,6 +34,7 @@ function DetailForm({ onSubmit }) {
                 variant="outlined"
                 sx={{ maxWidth: { xs: "100%", md: "25rem" } }}
               />
+
             </FormControl>
           </Grid>
           <Grid>
@@ -37,8 +42,7 @@ function DetailForm({ onSubmit }) {
               size="small"
               className="formControl"
               fullWidth
-              sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px'}}
-            >
+              sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px'}}>
               <TextField
                 fullWidth
                 size="small"
@@ -54,8 +58,7 @@ function DetailForm({ onSubmit }) {
             <FormControl
               size="small"
               fullWidth
-              sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px' }}
-            >
+              sx={{ maxWidth: { xs: "100%", md: "25rem" }, margin: '10px 0px' }}>
               <TextField
                 size="small"
                 id="outlined-basic"
@@ -79,14 +82,25 @@ function DetailForm({ onSubmit }) {
               type="submit"
               variant="contained"
               sx={{ backgroundColor: "secondary.main", color: "white" }}
+              onClick={handleRequestForm}
             >
               Submit
             </Button>
           </Grid>
         </form>
       </Box>
+      <Dialog
+        open={openRequestForm}
+        onClose={() => { setOpenRequestForm(false); handleCloseNavMenu() }}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogContent sx={{ backgroundColor: "transparent" }}>
+            <IconComponents/>
+        </DialogContent>
+      </Dialog>
     </>
   );
 }
 
-export default DetailForm;
+export default AddPropertyDetailForm;
