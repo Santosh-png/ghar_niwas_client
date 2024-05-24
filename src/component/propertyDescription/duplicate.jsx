@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import { Box } from '@mui/material'
 import PropertyList from '../card/cardItems';
 import Pic from './propertyPic';
-import SearchBar from './searchBar';
+// import SearchBar from './searchBar';
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -98,9 +98,6 @@ function Duplicate() {
               </div>
           ))}
       </Slider>
-      
-       <SearchBar/> 
-    
     </Box>
   );
 }
