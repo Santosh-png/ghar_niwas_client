@@ -12,7 +12,6 @@ function AddPropertyDetailForm({ onSubmit, handleCloseForm }) {
     if (onSubmit) {
       onSubmit();
     }
-    handleCloseForm(); // Call the parent component function to close the form
 
   };
 
