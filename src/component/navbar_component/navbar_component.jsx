@@ -180,7 +180,7 @@ function NavBar() {
                   mx: 1
                 }}
               />
-              <Box sx={{ mx: "0rem", display: "flex", alignItems: "center", paddingBottom: '5px', gap: "0.5rem" }}>
+              <Box sx={{ mx: "0rem", display: "flex", alignItems: "center", paddingBottom: '2px', gap: "0.3rem" }}>
                 <IconButton sx={{ backgroundColor: "white", boxShadow: " 0px 4px 4px 0px #292C6A" }}>
                   <InstagramIcon sx={{ color: "orange" }} />
                 </IconButton>
@@ -196,7 +196,8 @@ function NavBar() {
                 <IconButton sx={{ backgroundColor: "white", boxShadow: " 0px 4px 4px 0px #292C6A", }}>
                   <LinkedInIcon sx={{ color: "blue" }} />
                 </IconButton>
-                <Divider
+              </Box>
+              <Divider
                 className='responsive_fontsize18'
                 orientation="vertical"
                 variant="middle"
@@ -208,7 +209,6 @@ function NavBar() {
                   mx: 1
                 }}
               />
-              </Box>
             </Box>
           </Box>
         </Toolbar>
