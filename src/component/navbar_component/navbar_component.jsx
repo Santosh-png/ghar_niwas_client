@@ -11,6 +11,8 @@ import './navbar.style.css';
 import DetailForm from '../form_components/detail_form';
 import AddPropertyDetailForm from "../form_components/add_detail_form";
 import RequestForm from '../icon_component/request_icon';
+import AddForm from "../icon_component/icon_component";
+
 
 const itemList = ['Home', 'Add Property', 'Sale', 'Rent', 'Request Property'];
 
@@ -19,6 +21,7 @@ function NavBar() {
   const [openDetailDialog, setOpenDetailDialog] = useState(false);
   const [openRequestFormDialog, setOpenRequestFormDialog] = useState(false);
   const [openAddPropertyDialog, setOpenAddPropertyDialog] = useState(false);
+  const [openAddForm, setOpenAddForm] = useState(false);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -45,7 +48,9 @@ function NavBar() {
 
   const handleAddPropertyFormSubmit = () => {
     setOpenAddPropertyDialog(false);
-    
+
+    setOpenAddForm(true);
+
   };
 
   const drawerWidth = 250;
@@ -191,6 +196,18 @@ function NavBar() {
                 <IconButton sx={{ backgroundColor: "white", boxShadow: " 0px 4px 4px 0px #292C6A", }}>
                   <LinkedInIcon sx={{ color: "blue" }} />
                 </IconButton>
+                <Divider
+                className='responsive_fontsize18'
+                orientation="vertical"
+                variant="middle"
+                flexItem
+                sx={{
+                  borderLeftWidth: 1.5,
+                  borderColor: "#232323",
+                  height: "35px",
+                  mx: 1
+                }}
+              />
               </Box>
             </Box>
           </Box>
@@ -221,6 +238,16 @@ function NavBar() {
       >
         <DialogContent>
           <AddPropertyDetailForm onSubmit={handleAddPropertyFormSubmit} />
+        </DialogContent>
+      </Dialog>
+
+      
+      <Dialog
+        open={openAddForm}
+        onClose={() => setOpenAddForm(false)}
+      >
+        <DialogContent>
+          <AddForm />
         </DialogContent>
       </Dialog>
     </AppBar>
