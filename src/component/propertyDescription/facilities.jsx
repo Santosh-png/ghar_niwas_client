@@ -2,6 +2,7 @@ import {Box, Button, Typography,Dialog,DialogContent,Grid } from "@mui/material"
 import VideoSection from "./videoSection";
 import RequestForm from './requestForm';
 import { useState } from "react";
+import SearchBar from './searchBar';
 
 function Detail(){
     const [openRequestForm,setOpenRequestForm]=useState(false);
@@ -11,14 +12,15 @@ function Detail(){
     }
     return(
         <Box>
-            <Box sx={{margin:'20px 30px',border:"1px solid red",display:"flex",justifyContent:"space-between"}}>
+            <Box sx={{margin:'20px 30px',display:"flex",alignItem:"center"}}>
                 <Box>
-                <Typography className="responsive_fontsize26" sx={{textDecoration:'underline',color:'primary.main'}}>Facilities</Typography>
-                <Typography className="responsive_fontsize16" sx={{color:'primary.main'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat?</Typography>
+                    <Typography className="responsive_fontsize26" sx={{textDecoration:'underline',color:'primary.main'}}>Facilities</Typography>
+                    <Typography className="responsive_fontsize16" sx={{color:'primary.main'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat?</Typography>
                 </Box>
 
-                <Grid sx={{margin:"15px"}}>
-                    <Button onClick={form}  variant="contained">Request</Button>
+                <Grid sx={{display:"flex",alignItems:"center",gap:"1rem"}}>
+                    <Button sx={{marginLeft:"20px"}} className="responsive_fontsize14"  onClick={form}  variant="contained">Request</Button>
+                    <SearchBar />
                 </Grid>
 
             </Box>

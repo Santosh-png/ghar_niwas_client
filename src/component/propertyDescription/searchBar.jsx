@@ -39,11 +39,11 @@ function SearchBar() {
   return (
     <Box
       sx={{
-        position: "fixed",
-        top: "26px",
-        left: "10px",
-        zIndex: "100",
-        transform: "translate(0, 50%)",
+        // position: "fixed",
+        // top: "50%",
+        // left: "50%",
+        // zIndex: "100",
+        // transform: "translate(0, 50%)",
       }}
     >
       <Box sx={{ display: "flex" }}>
