@@ -220,7 +220,7 @@ function AddPropertyHome() {
                 opacity: "70%"
               }}
             >
-                Parking
+                Furnished
             </Typography>
             <FormControl size="small" fullWidth>
                   <Box>
@@ -238,8 +238,10 @@ function AddPropertyHome() {
                           gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(1,1fr)',md:'repeat(1,1fr)'}, gap:'12px',
                         }}
                       >
-                        <FormControlLabel value="bike" control={<Radio />} label="Furnished"/> 
-                        <FormControlLabel value="car" control={<Radio />} label="Semi-furnished" />
+                        <FormControlLabel value="furnished" control={<Radio />} label="Furnished"/> 
+                        <FormControlLabel value="semi" control={<Radio />} label="Semi-furnished" />
+                        <FormControlLabel value="non" control={<Radio />} label="Non-furnished" />
+                        
                         </RadioGroup>
                       </FormControl>
                     </Box>
