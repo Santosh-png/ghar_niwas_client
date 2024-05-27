@@ -134,7 +134,7 @@ function PropertyRequest() {
 
                 >
                   <MenuItem value="Commercial">commercial</MenuItem>
-                  <MenuItem value="Non Commercial">non commercial</MenuItem>               
+                  <MenuItem value="Residential">Residential</MenuItem>               
                 </Select>
              
                </FormControl>
@@ -206,6 +206,7 @@ function PropertyRequest() {
                   type="text"
                 >
                   <MenuItem value="Non">Non</MenuItem>
+                  <MenuItem value="Semi">Semi</MenuItem> 
                   <MenuItem value="Full">Full</MenuItem>                  
                 </Select>
               </FormControl>
