@@ -5,10 +5,7 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
-import VideoCallIcon from '@mui/icons-material/VideoCall';
-import AddToPhotosIcon from '@mui/icons-material/AddToPhotos';
 
-import VerticalDivider from '../ui/divider';
 import FileUpload from '../icon_component/file_upload_cotent';
 
 function a() {
@@ -23,7 +20,7 @@ function a() {
     },
     {
       value: 'non-commercial',
-      label: 'Non Commercial'
+      label: 'Residential'
     },
   ];
 
