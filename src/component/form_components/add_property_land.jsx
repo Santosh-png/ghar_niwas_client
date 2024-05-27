@@ -56,10 +56,11 @@ function a() {
 
           {/* Location */}
           <Box>
-            <Typography variant='h4'
-              className='responsive_fontsize26'
+          <Typography variant='h4'
+              className='responsive_fontsize24'
               fontWeight='bold'
               marginBottom='12px'
+              sx={{opacity: "70%"}}
             > Location/Address </Typography>
             <FormControl size="small" fullWidth>
                 <Box
@@ -114,11 +115,11 @@ function a() {
         {/* Property Details */}
         <Box>
         <Typography variant='h4'
-            className='responsive_fontsize26'
-            fontWeight='bold'
-            marginBottom='12px'
-            sx={{opacity: "90%"}}
-          > Property Details </Typography>
+              className='responsive_fontsize24'
+              fontWeight='bold'
+              marginBottom='12px'
+              sx={{opacity: "70%"}}
+            > Property  Details </Typography>
             <FormControl size="small" fullWidth>
                 <Box
                  sx={{display: 'grid',
@@ -197,16 +198,12 @@ function a() {
         </Box>
         {/* Price and amenities */}
         <Box>
-        <Typography variant='h6'
-            className='responsive_fontsize20'
-            fontWeight='bold'
-            marginBottom='12px'
-            sx={{
-              opacity: "70%"
-            }}
-          >
-              Price Range
-          </Typography>
+        <Typography variant='h4'
+              className='responsive_fontsize24'
+              fontWeight='bold'
+              marginBottom='12px'
+              sx={{opacity: "70%"}}
+            > Price Range </Typography>
             <FormControl size="small" fullWidth >
                 <Box
                  sx={{display: 'grid',
@@ -256,14 +253,12 @@ function a() {
         </Box>
           {/* gallery */}
           <Box sx={{mb: "1rem" }}>
-            <Typography variant='h6'
-                className='responsive_fontsize20'
-                fontWeight='bold'
-                marginBottom='12px'
-                sx={{
-                  opacity: "70%"
-                }}
-              > Gallery </Typography>
+          <Typography variant='h4'
+              className='responsive_fontsize24'
+              fontWeight='bold'
+              marginBottom='12px'
+              sx={{opacity: "70%"}}
+            > Gallery </Typography>
                 <FormControl size="small" fullWidth>
                 <Box>
                     <FileUpload/>
@@ -273,14 +268,12 @@ function a() {
 
           {/* map */}
           <Box>
-            <Typography variant='h6'
-                className='responsive_fontsize20'
-                fontWeight='bold'
-                marginBottom='12px'
-                sx={{
-                    opacity: "70%"
-                }}
-                >Map</Typography>
+          <Typography variant='h4'
+              className='responsive_fontsize24'
+              fontWeight='bold'
+              marginBottom='12px'
+              sx={{opacity: "70%"}}
+            > Map </Typography>
                     <FormControl size="small" fullWidth>
                         <Box >
                             <Box sx={{ 
