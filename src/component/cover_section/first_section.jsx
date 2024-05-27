@@ -86,6 +86,7 @@ function FirstSection() {
               className='responsive_fontsize16'
               placeholder="Search By City, State "
               inputProps={{ 'aria-label': 'search google maps' }}
+              sx={{width: "100%"}}
             />
             </Box>
           </Box>
