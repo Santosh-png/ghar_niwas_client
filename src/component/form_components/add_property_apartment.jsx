@@ -1,19 +1,19 @@
 import React from 'react';
-import { Typography,Box, Grid, TextField, Button, IconButton,} from '@mui/material';
+import { Typography,Box, TextField, FormGroup, Checkbox,} from '@mui/material';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FileUpload from '../icon_component/file_upload_cotent';
 
-function AddPropertyHome() {
+function AddPropertyApartment() {
   const [selected, setSelected] = React.useState('');
   const handleSelect = (event) => {
     setSelected(event.target.value);
   }
   const type = [
     { value: 'commercial', label: 'Commercial'},
-    { value: 'non-commercial', label: 'Non Commercial'},
+    { value: 'non-commercial', label: 'Residential'},
   ];
 
   const facing = [
@@ -36,11 +36,16 @@ function AddPropertyHome() {
 
           {/* Location */}
           <Box>
-            <Typography variant='h4'
-              className='responsive_fontsize26'
+          <Typography variant='h4'
+              className='responsive_fontsize24'
               fontWeight='bold'
               marginBottom='12px'
-            > Location/Address </Typography>
+              sx={{
+                opacity: "70%"
+              }}
+            >
+                Location/Address
+            </Typography>
             <FormControl size="small" fullWidth>
                 <Box
                  sx={{display: 'grid',
@@ -94,11 +99,15 @@ function AddPropertyHome() {
         {/* Property Details */}
         <Box>
         <Typography variant='h4'
-            className='responsive_fontsize26'
-            fontWeight='bold'
-            marginBottom='12px'
-            sx={{opacity: "90%"}}
-          > Property Details </Typography>
+              className='responsive_fontsize24'
+              fontWeight='bold'
+              marginBottom='12px'
+              sx={{
+                opacity: "70%"
+              }}
+            >
+                Property Details
+            </Typography>
             <FormControl size="small" fullWidth>
                 <Box
                  sx={{display: 'grid',
@@ -178,16 +187,16 @@ function AddPropertyHome() {
 
         {/* Price and amenities */}
         <Box>
-        <Typography variant='h6'
-            className='responsive_fontsize20'
-            fontWeight='bold'
-            marginBottom='12px'
-            sx={{
-              opacity: "70%"
-            }}
-          >
-              Price Range
-          </Typography>
+        <Typography variant='h4'
+              className='responsive_fontsize24'
+              fontWeight='bold'
+              marginBottom='12px'
+              sx={{
+                opacity: "70%"
+              }}
+            >
+                Price Range
+            </Typography>
             <FormControl size="small" fullWidth >
                 <Box
                  sx={{display: 'grid',
@@ -276,50 +285,14 @@ function AddPropertyHome() {
                           gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(3,1fr)'}, gap:'12px',
                         }}
                       >
-                        <FormControlLabel value="bike" control={<Radio />} label="Bike 2+"/> 
-                        <FormControlLabel value="car" control={<Radio />} label="Car 2+" />
+                        <FormControlLabel value="bike" control={<Checkbox />} label="Bike 2+"/> 
+                        <FormControlLabel value="car" control={<Checkbox />} label="Car 2+" />
                         </RadioGroup>
                       </FormControl>
                     </Box>
                   </FormControl>
         </Box>
 
-        {/* Bathrooms */}
-        <Box>
-          <Typography variant='h4'
-              className='responsive_fontsize24'
-              fontWeight='bold'
-              marginBottom='12px'
-              sx={{
-                opacity: "70%"
-              }}
-            >
-                Bathrooms
-            </Typography>
-              <FormControl size="small" fullWidth>
-                  <Box>
-                    <FormControl>
-                      <RadioGroup
-                        row
-                        aria-labelledby="demo-controlled-radio-buttons-group"
-                        name="controlled-radio-buttons-group"
-                        value={selected}
-                        onChange={handleSelect}
-                        defaultValue="attached"
-                        sx={{
-                          borderRadius: "5px",
-                          display: 'grid', 
-                          gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(3,1fr)'}, gap:'12px',
-                        }}
-                      >
-                        <FormControlLabel value="attached" control={<Radio />} label="Attached 2+"/> 
-                        <FormControlLabel value="common" control={<Radio />} label="Common 2+" />
-                      </RadioGroup>
-                      
-                    </FormControl>
-                  </Box>
-                </FormControl>
-        </Box>
 
         {/* Amenitites */}
         <Box>
@@ -336,25 +309,25 @@ function AddPropertyHome() {
               <FormControl size="small" fullWidth>
                   <Box>
                     <FormControl>
-                      <RadioGroup
+                      <FormGroup
                         row
                         aria-labelledby="demo-controlled-radio-buttons-group"
                         name="controlled-radio-buttons-group"
                         value={selected}
                         onChange={handleSelect}
-                        defaultValue="attached"
+                        // defaultValue="attached"
                         sx={{
                           borderRadius: "5px",
                           display: 'grid', 
                           gridTemplateColumns: {xs:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(3,1fr)'}, gap:'12px',
                         }}
                       >
-                        <FormControlLabel value="hot water" control={<Radio />} label="Hot water"/> 
-                        <FormControlLabel value="security" control={<Radio />} label="Security" />
-                        <FormControlLabel value="gym" control={<Radio />} label="Gym"/> 
-                        <FormControlLabel value="lift" control={<Radio />} label="Lift" />
-                        <FormControlLabel value="swimming" control={<Radio />} label="Swimming" />
-                      </RadioGroup>
+                        <FormControlLabel  value="hot water" control={<Checkbox />} label="Hot water"/> 
+                        <FormControlLabel value="security" control={<Checkbox />} label="Security" />
+                        <FormControlLabel value="gym" control={<Checkbox />} label="Gym"/> 
+                        <FormControlLabel value="lift" control={<Checkbox />} label="Lift" />
+                        <FormControlLabel value="swimming" control={<Checkbox />} label="Swimming" />
+                      </FormGroup>
                     </FormControl>
                   </Box>
                 </FormControl>
@@ -380,14 +353,16 @@ function AddPropertyHome() {
         </Box>
           {/* gallery */}
           <Box sx={{mb: "1rem" }}>
-            <Typography variant='h6'
-                className='responsive_fontsize20'
-                fontWeight='bold'
-                marginBottom='12px'
-                sx={{
-                  opacity: "70%"
-                }}
-              > Gallery </Typography>
+          <Typography variant='h4'
+              className='responsive_fontsize24'
+              fontWeight='bold'
+              marginBottom='12px'
+              sx={{
+                opacity: "70%"
+              }}
+            >
+                Gallery
+            </Typography>
                 <FormControl size="small" fullWidth>
                 <Box>
                     <FileUpload/>
@@ -397,14 +372,16 @@ function AddPropertyHome() {
 
           {/* map */}
           <Box>
-            <Typography variant='h6'
-                className='responsive_fontsize20'
-                fontWeight='bold'
-                marginBottom='12px'
-                sx={{
-                    opacity: "70%"
-                }}
-                >Map</Typography>
+          <Typography variant='h4'
+              className='responsive_fontsize24'
+              fontWeight='bold'
+              marginBottom='12px'
+              sx={{
+                opacity: "70%"
+              }}
+            >
+                Map
+            </Typography>
                     <FormControl size="small" fullWidth>
                         <Box >
                             <Box sx={{ 
@@ -431,4 +408,4 @@ function AddPropertyHome() {
     </div>
   )
 }
-export default AddPropertyHome;
+export default AddPropertyApartment;
